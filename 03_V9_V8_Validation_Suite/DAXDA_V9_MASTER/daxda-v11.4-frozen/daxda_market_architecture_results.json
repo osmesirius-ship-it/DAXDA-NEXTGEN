@@ -1,0 +1,12 @@
+{
+  "engine_version": "12.0.1-GOVERNED",
+  "domain": "Software Engineering",
+  "verdict": "PASS",
+  "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+  "publication_permitted": true,
+  "reconstruction_residual": 1.375947168856046e-15,
+  "audit_sha256": "d3c344a2d929d250c56b16967acfb2062f34e9db107a8ea439057cd5dc42c1bc",
+  "master_plan_file": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/DAXDA_NextGen_Market_Architecture_Master_Plan.md",
+  "word_count": 1648,
+  "doc_sha256": "4bcddfe535d539c420c6bd7d37c4a1de18a7590b267455cbe52b13922f9d960f"
+}

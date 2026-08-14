@@ -1,0 +1,11 @@
+{
+  "creator": "Nicole Bess",
+  "dob": "1996-03-06",
+  "tob": "17:46 MST",
+  "location": "Phoenix, Arizona, USA",
+  "verdict": "PASS",
+  "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+  "reconstruction_residual": 1.4594298905810487e-15,
+  "audit_sha256": "9d6a96336dd720d876ff4d7a1659597fb84e894b23537bedded677b8ec9af600",
+  "manuscript_filename": "journal_paper_nicole_bess_daxda_creator.md"
+}

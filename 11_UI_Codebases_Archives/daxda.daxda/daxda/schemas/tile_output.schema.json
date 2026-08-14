@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DAXDA Tile Output",
+  "type": "object",
+  "required": ["tile_id", "function_name", "layer_id", "gate", "score_before", "score_after", "warnings"],
+  "properties": {
+    "tile_id":       { "type": "string", "pattern": "^DAX_\\d{2}_\\d{2}$|^SYS_88[1-6]$" },
+    "function_name": { "type": "string" },
+    "layer_id":      { "type": "string" },
+    "gate":          { "type": "string", "enum": ["PASS","WARN","CAUTION","RECURSE","BLOCK","RELEASE"] },
+    "score_before":  { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+    "score_after":   { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+    "warnings":      { "type": "array", "items": { "type": "string" } },
+    "notes":         { "type": "string" },
+    "timestamp":     { "type": "number" }
+  }
+}

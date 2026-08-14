@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DAXDA V11.4 Frozen Benchmark Evaluation Schema",
+  "description": "Expected input and output format for the DAXDA V11.4 engine evaluation.",
+  "type": "object",
+  "definitions": {
+    "Input": {
+      "type": "object",
+      "required": ["prompt_text", "expected_verdict"],
+      "properties": {
+        "case_id": { "type": "string" },
+        "prompt_text": { "type": "string" },
+        "expected_verdict": { "type": "string", "enum": ["PASS", "WARN", "RELEASE/CAUTION", "BLOCK"] },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["text", "provenance"],
+            "properties": {
+              "text": { "type": "string" },
+              "provenance": { "type": "string" },
+              "integrity": { "type": "string" }
+            }
+          }
+        },
+        "is_simulated": { "type": "boolean", "default": false }
+      }
+    },
+    "Output": {
+      "type": "object",
+      "required": ["verdict", "audit_sha256"],
+      "properties": {
+        "verdict": { "type": "string", "enum": ["PASS", "RELEASE/CAUTION", "BLOCK"] },
+        "decision_rule": { "type": "string" },
+        "flags": { "type": "object" },
+        "source_analysis": { "type": "array" },
+        "decoded_state": { "type": "object" },
+        "reconstruction_residual": { "type": "number" },
+        "layer_trace": { "type": "array" },
+        "audit_sha256": { "type": "string" },
+        "receipt": { "type": "string" }
+      }
+    }
+  }
+}

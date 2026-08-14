@@ -1,0 +1,19 @@
+TO: [No verified public email — use listed delivery route]
+CONTACT ROUTE: Official site: https://eladgil.com/; official site links to X and writing channels.
+PHONE: No public business phone verified.
+SUBJECT: DAXDA — auditable AI evaluation and governance
+
+Hi Elad,
+
+I’m Nicole Bess, co-founder of DAXDA. We are building a structured AI governance and evaluation platform that challenges AI outputs for assumptions, contradictions, evidence gaps, and operational risk, then creates an auditable review record.
+
+The immediate problem is straightforward: organizations are deploying AI into consequential workflows without a disciplined, reproducible way to challenge outputs, expose weak assumptions, and preserve an audit trail of the decision process. DAXDA is being productized as that governance layer.
+
+We are beginning a focused pre-seed process to hire core engineers, productize evaluation and integration infrastructure, and execute early go-to-market with design partners. Given your work with AI-native companies and systems that serve major institutions, I would value a brief conversation about the thesis and a possible $250k–$500k anchor allocation if there is fit.
+
+I can send a one-page overview before a 20-minute call.
+
+Best,
+Nicole Bess
+Co-founder, DAXDA
+osmeatserious@gmail.com

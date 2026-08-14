@@ -1,0 +1,21 @@
+TO: feedback@sourcegraph.com
+CONTACT ROUTE: Official general contact: feedback@sourcegraph.com (request routing to Beyang); official contact page: https://sourcegraph.com/contact.
+PHONE: No public business phone verified.
+SUBJECT: For Beyang Liu — DAXDA pre-seed conversation
+
+Hello,
+
+Please route this to Beyang Liu if appropriate.
+
+I’m Nicole Bess, co-founder of DAXDA, a structured AI governance and evaluation platform designed to make AI-assisted decisions and workflows more inspectable before they are trusted.
+
+DAXDA challenges claims and outputs for assumptions, contradictions, missing evidence, and operational risk, then preserves a structured record that teams can use for oversight, iteration, and accountability.
+
+We are preparing a focused pre-seed round to hire core engineers, productize evaluation and integration infrastructure, and execute early go-to-market with design partners. Beyang’s experience helping technical teams build developer tools and form go-to-market strategy makes him a particularly relevant early conversation.
+
+Would Beyang be open to a 20-minute discussion about a possible $25k–$50k strategic allocation, or direct feedback on our product thesis and early customer wedge? I can send a concise one-page overview in advance.
+
+Best,
+Nicole Bess
+Co-founder, DAXDA
+osmeatserious@gmail.com

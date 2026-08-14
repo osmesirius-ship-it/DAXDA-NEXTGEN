@@ -1,0 +1,1069 @@
+{
+  "total_manuscripts": 133,
+  "manuscripts": [
+    {
+      "suite": "115 Baseline",
+      "case_id": 1,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_001_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_001_mathematics.md",
+      "sha256": "deee74f798c3c9433273c4011c2bb12c2544ddf03f55fc8283678ba05831d5f1"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 2,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_002_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_002_mathematics.md",
+      "sha256": "7864cbff6395100a6c0b6b25470729c704a20fc6160bd066aff22950c1047c73"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 3,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_003_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_003_mathematics.md",
+      "sha256": "8e3dfbdeaa542c6d17a0d40dd3f77e1936544ebbc3cfb0249c6fc8ec679162f9"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 4,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_004_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_004_mathematics.md",
+      "sha256": "281ee27b5aa022139e7021273c6e716e48068d2be36f48583561ff4c4ad9a484"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 5,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_005_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_005_mathematics.md",
+      "sha256": "ed3e69cb5746d75a784e9d7c487e4ba52b4ea6b51e9cb312e394da8489d32eb4"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 6,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_006_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_006_mathematics.md",
+      "sha256": "ae3a2c77aead3e1df31487cf896b17ca8c4bc8813c4617c572ca039d3c1f2978"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 7,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_007_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_007_mathematics.md",
+      "sha256": "42bfab01c11af8ce30136a3d6e6f7e4c47b171a311001614b6756cc3c732df67"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 8,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_008_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_008_mathematics.md",
+      "sha256": "94905e0cea70d3754dfd889a943b01306fb3de919775c637477ecc3a149e13d3"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 9,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_009_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_009_mathematics.md",
+      "sha256": "ee5698b03d654943c4affe2a5ee85c9818ae06d28113cb5cbe1cb80c227721f4"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 10,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_010_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_010_mathematics.md",
+      "sha256": "5c996fbb7be1cd8ef530a4c679832f0e128f205e7a844289ebd04e01555618f3"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 11,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_011_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_011_mathematics.md",
+      "sha256": "cc9a9ada1baec63e2fd46dae008308606369fb7accfc3b9c417e507a143cad15"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 12,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_012_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_012_mathematics.md",
+      "sha256": "cca058d825f9bd1367a01efad0ef74ec7a1688a0c746fecef94c83c97fb5a92d"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 13,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_013_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_013_mathematics.md",
+      "sha256": "8ba3a38db152492c73ebdf7a92caaa2f09dcf1870fa827fd120bef775e3ecb14"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 14,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_014_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_014_mathematics.md",
+      "sha256": "a9b3a1d73805c636da0ed1bc31dacea5bf6c368675f988cb211d42d3a3156012"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 15,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_015_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_015_mathematics.md",
+      "sha256": "87881721d766ee3216bf2e449393c8b4154378d4a1ae6c1f70a1349e5f250d1f"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 16,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_016_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_016_mathematics.md",
+      "sha256": "4f397fe3d2d0107a02b6656ea9692bdcb66c403c17f3feea2b01d83a47c366b9"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 17,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_017_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_017_mathematics.md",
+      "sha256": "3a7e0c15cfb7cf318f93eb5e960b282d466eaf7b27b692f38f3b1bf5ac2e7763"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 18,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_018_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_018_mathematics.md",
+      "sha256": "58b84ea916ae0dc7a999b49ad1abb8fcedc2a6a4d4c33469f4fd1c8bdc6cfbe4"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 19,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_019_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_019_mathematics.md",
+      "sha256": "5b95b26d38a9352d59c090c31d86fb8fe9fdce79eb914a367809c4b3e6ead98b"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 20,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_020_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_020_mathematics.md",
+      "sha256": "e12d2ebd4fc5ae9e595692d96ee0b01c8f0d2549661d27e283a5ff5f90b60ad2"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 21,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_021_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_021_mathematics.md",
+      "sha256": "a87231905d0f3436e258b0bcb12dba964dd241a935b14d62a3092fa3a0f3a378"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 22,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_022_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_022_mathematics.md",
+      "sha256": "c6486b2d35551a5efa285297857c13ca0dce4bf7c7f66e80ec684a9d680f5dbf"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 23,
+      "domain": "Mathematics",
+      "filename": "journal_paper_baseline_023_mathematics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_023_mathematics.md",
+      "sha256": "c6c4e69267801a46c56c330d43629aecd02e87801677313ea6596d7856421971"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 24,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_024_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_024_software_engineering.md",
+      "sha256": "6999f5242d5972d19fe597a2d86d9a86d57457777262ec5ca491816503617e75"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 25,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_025_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_025_software_engineering.md",
+      "sha256": "b0f28e46aa522b587c5d8652d50629d2e4d712f86e59dce61f0a712cb5dd91b7"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 26,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_026_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_026_software_engineering.md",
+      "sha256": "477c824686c0f5cc7ce8968a644db8192e174ccf90d07303784028fb53d6f639"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 27,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_027_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_027_software_engineering.md",
+      "sha256": "8de329229a8560ed3c6f536924d31f556d67e2103a2abc3bbdffaf3557edacbb"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 28,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_028_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_028_software_engineering.md",
+      "sha256": "1b75b074fccb2f8ebbdf912e152bb34d3d7e5cee03bc9721049dc9c3d8eca880"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 29,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_029_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_029_software_engineering.md",
+      "sha256": "0ef20a0e8ad54486a4ab523b3c2b9a6e5ac6d6c2df1f6bbfb984239c48ef8168"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 30,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_030_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_030_software_engineering.md",
+      "sha256": "19076e0230f037cfa29614e592732fe8b8857a9ef490853ed332c18a8f568c30"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 31,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_031_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_031_software_engineering.md",
+      "sha256": "cf96440aa6970439277af05d6b4df03f71cced67a9c9a8b6fc817f5a028c78f9"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 32,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_032_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_032_software_engineering.md",
+      "sha256": "e83e18878576e3678613a64bb4f133ad62dcca9948d71d79fc19062a202a413a"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 33,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_033_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_033_software_engineering.md",
+      "sha256": "1a3678700ede83ae927f7ea67f7a605b21175f90ee0820cc10dc4a92aadeee56"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 34,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_034_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_034_software_engineering.md",
+      "sha256": "11ecf014c0614cc5c3f9a28166da5da8b2d7d2a8666e886cbc2df72eb58d0341"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 35,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_035_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_035_software_engineering.md",
+      "sha256": "b44847026346e09daa4096f28036dae9318dc4a3bd5729ec7c94c9506baf310a"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 36,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_036_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_036_software_engineering.md",
+      "sha256": "c3a35322f3947f7398390d71ff02420c735efce146ed5698d32059c429f8d51f"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 37,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_037_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_037_software_engineering.md",
+      "sha256": "dcc83a17694b811e1d8323f09866df745fd73faf2a1a45978bd225a43f1426fc"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 38,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_038_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_038_software_engineering.md",
+      "sha256": "4bae0fc3cc74d8f7ba7c580de55914254a39788c948a1d59337da6f3b7151b40"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 39,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_039_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_039_software_engineering.md",
+      "sha256": "05eaf17a7a181a214050a864006a03ef4c77ea7829299ac8b8ee48df13b6069c"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 40,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_040_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_040_software_engineering.md",
+      "sha256": "7f7fee7867de58e3130f5797e9fe2687aa3c2e3c4dae4d4a4b6a51ac91c415b6"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 41,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_041_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_041_software_engineering.md",
+      "sha256": "ed92c90e31d2b058e2cf4ef2b35c5f069d08221cc3fa28823356dfb543f6488d"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 42,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_042_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_042_software_engineering.md",
+      "sha256": "e406a358a03604f2b17003c199211b84c8e1a982e616ce27e789e47002239012"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 43,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_043_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_043_software_engineering.md",
+      "sha256": "1cd02d8d8e7b1c81336d59f58b96d185427569edbb6ac9285aae2e6d9d850ae9"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 44,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_044_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_044_software_engineering.md",
+      "sha256": "befd3f43093e9ac5c63451650c4da07859f4a35a92f1d22c2b23d822975a0c2c"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 45,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_045_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_045_software_engineering.md",
+      "sha256": "5b7edfa31af60787bb4e79da7587696fbc19b3e755ab6fd8bd017afae680bece"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 46,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_baseline_046_software_engineering.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_046_software_engineering.md",
+      "sha256": "b570087ef41fbcb39787a3abec59872cf64c6c145565c93b6212d67e289e5f29"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 47,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_047_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_047_physics.md",
+      "sha256": "8fe9cdb0cd7606325d9fd37252815e5069789007b3b39f02968da26ff0df30e7"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 48,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_048_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_048_physics.md",
+      "sha256": "33e2dd87c2ac3be05c5619dae6d67f97ac8c7423f8d55f9a0b90f37990fb7268"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 49,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_049_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_049_physics.md",
+      "sha256": "4797728abdc253ebcc7ddec76ea192a25ac9af6ca444e1552fe915857d3d2058"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 50,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_050_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_050_physics.md",
+      "sha256": "7ae634ecc8e13016d84e1e8a39de6d5080281cf57dba9a6e78c7361c90a209cf"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 51,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_051_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_051_physics.md",
+      "sha256": "7386308f5d6280472965c50906258a2cbad5ec41a3b7921b08ffd40b6a3465fc"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 52,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_052_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_052_physics.md",
+      "sha256": "69c16b0c244f1174c80e58a06fc801af706645fcc0ab0828f91b77eb5fe28430"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 53,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_053_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_053_physics.md",
+      "sha256": "edf107a77306cbdc213a2c19bdd4b8283382f0351cd923cbb1d2a74300bc51a6"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 54,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_054_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_054_physics.md",
+      "sha256": "5c8a716f2e145259bda7997903d87e082b01e2daa8d035fafbd7b49f0d13ec4e"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 55,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_055_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_055_physics.md",
+      "sha256": "0b1d5fc4a583a9f26f18284c65ecf6dc051b7d9aaf8057e0ec5b4386808fd90c"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 56,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_056_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_056_physics.md",
+      "sha256": "b46bd90e9d724957ee1ea5d862c89c455b3bb33915aa61aa896dba0423ed1dc8"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 57,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_057_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_057_physics.md",
+      "sha256": "0ca91297a561bb1e1bcabb272174a88c14556679cdf5fa2ad3ff2b614e2a5988"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 58,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_058_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_058_physics.md",
+      "sha256": "a5d0e3aed2be6024b25525aa450f41c4b8176a436051001ae6bae12edf0d307d"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 59,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_059_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_059_physics.md",
+      "sha256": "5826d8044302d22a60d7375c00dab6c56f7b7137489b8689f78471ebded26b25"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 60,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_060_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_060_physics.md",
+      "sha256": "fcdf8d0c3d7eaa047fab0183209b7e2737ad9d4dcddac8a25de22a4940b65d22"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 61,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_061_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_061_physics.md",
+      "sha256": "a7cf286ece6d554a7c6a0fa6def3d330db78aa2c460e6d01cc985d32bb96219e"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 62,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_062_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_062_physics.md",
+      "sha256": "bf3d41570c1342010c12543b29a3350c5ab2a419053ff7fcba7439c25ddcd2ee"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 63,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_063_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_063_physics.md",
+      "sha256": "7a4259dd40d095806dea7b437d1bc5db90ec99f2edefb64772a87f9e9220fc16"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 64,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_064_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_064_physics.md",
+      "sha256": "368a2c66cdfef46cb7a1f699cf644f4c3c2c02cba812442369dc51e3ce825d43"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 65,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_065_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_065_physics.md",
+      "sha256": "f41a04b432ae5d80887d6a9f9905956b449ec57fe7e10fb842f3505fa3f24a3c"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 66,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_066_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_066_physics.md",
+      "sha256": "2a8a0dbe957beaa8b5b5dc04c85bc7a04fb9e689f5d90ae132a3ca0ece803a91"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 67,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_067_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_067_physics.md",
+      "sha256": "ee1b8f26f22bdde93339718c2c3aec6ab75b89b9f1214de27495f996292f91cf"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 68,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_068_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_068_physics.md",
+      "sha256": "7e8c233d45caa723177e8efd164fcf82aba24461267d6d458e0e514f48c69c0e"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 69,
+      "domain": "Physics",
+      "filename": "journal_paper_baseline_069_physics.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_069_physics.md",
+      "sha256": "c69074b7508ed25eff15c24a01e9a54836706f86611f544863da80b472f22a04"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 70,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_070_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_070_logic.md",
+      "sha256": "f9f618086608fc1bd25d93551cfe6b1ab0c79bb45862e9896c4b825c5ff7b45c"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 71,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_071_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_071_logic.md",
+      "sha256": "6428076126c3348e7c970312b02b22c9d2e81cc8ce348be438e9d5c0ed2406e8"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 72,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_072_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_072_logic.md",
+      "sha256": "1e2cac2a34ba3fc2c92e46cadfccfd30609b84844bc450478495b555fee7886d"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 73,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_073_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_073_logic.md",
+      "sha256": "583a4480cb1e044aa0678c19fb3434e569826eab8a03eb6c27da45361a32ebb5"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 74,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_074_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_074_logic.md",
+      "sha256": "80975923538733d57ca2cee3265e3ebc00f1441557680bda37c88c9696510813"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 75,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_075_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_075_logic.md",
+      "sha256": "d50bed949a5e5679d184f33efadb35d707bb0c84442e64a5af7d2c70a792f54d"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 76,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_076_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_076_logic.md",
+      "sha256": "117315e6b4bfeb2a5eaf7bcb1a26b69a54d8a127fef1bb7d160f9e017afda435"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 77,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_077_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_077_logic.md",
+      "sha256": "d23e214219e49578bd5d68c88970fc6d5a1130af69520d08a8336cac78277dba"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 78,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_078_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_078_logic.md",
+      "sha256": "60981ba789b89fa0bd54fac70771895a784b63005d003b9fb6648c3903d3c20c"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 79,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_079_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_079_logic.md",
+      "sha256": "d56ae5d0427497683c16c1b29872612232fc23c234f415c9b48adfd1ed120376"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 80,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_080_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_080_logic.md",
+      "sha256": "c2b5dc8651f1173a3cf4c59c7bbf9aa13e37c3748f1a55adcfb9b165c2c74410"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 81,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_081_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_081_logic.md",
+      "sha256": "4da4c5a438def60aaf03b91ed00b9a8c64484a44d34d13d77377059b4da69960"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 82,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_082_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_082_logic.md",
+      "sha256": "d519b6d183696ae5592baa3429df55054f179cdafe0701fca475cf1de4178b7e"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 83,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_083_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_083_logic.md",
+      "sha256": "7f6eac95c0d426718461bed08d64f61c07a7c58e886eee01765752b591aea8b9"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 84,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_084_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_084_logic.md",
+      "sha256": "612e51b382553626ba4cd0f9e4d23718d77aa6957675e8c9d50bc789b53705db"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 85,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_085_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_085_logic.md",
+      "sha256": "3e78440e0854b4843bd8eb382c4419a25131890b02d7523842d5c3e8c8b7dd5f"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 86,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_086_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_086_logic.md",
+      "sha256": "6ee743923f888bd2924b9c2d6cc91876f8fcbbd30659f95af976321cf58dfc5b"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 87,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_087_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_087_logic.md",
+      "sha256": "ab2a9b33ab79f47c6db514963189263fa03363fa406e3c27f47763a835c157c0"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 88,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_088_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_088_logic.md",
+      "sha256": "82dc74cd01e886a4624dd37f9604f9481e7a31b36f1584429b6913344689fbcf"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 89,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_089_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_089_logic.md",
+      "sha256": "611bf68b25623f55a81a3eadde10d55196f4641714df40a84375d3aaa7204ec9"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 90,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_090_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_090_logic.md",
+      "sha256": "18590c378c56efd47f526531c8fce0fc8d026a021ec07651b6a145fe9467061b"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 91,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_091_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_091_logic.md",
+      "sha256": "d30528111f809c59fafb50ffe912de4de676ed5aa0508b1a63c18982fdf85e84"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 92,
+      "domain": "Logic",
+      "filename": "journal_paper_baseline_092_logic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_092_logic.md",
+      "sha256": "4fcf6dc7a4782bf3480b9b87b20b471055d35ecd958cdbfd636df78772af8306"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 93,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_093_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_093_cross-domain.md",
+      "sha256": "710568b72d7871451b616c9244310bc4c16caf967c29f89a5e11a759b23630fb"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 94,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_094_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_094_cross-domain.md",
+      "sha256": "81fa559ad0c4f04ce2e5f3be7ebe7b227ad131f0581d42f8d04ad1340cd0f69c"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 95,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_095_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_095_cross-domain.md",
+      "sha256": "d3d1dafe1f6ec103959de3162d0c300309d1f6c2e7912d835b691dc0be47b3da"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 96,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_096_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_096_cross-domain.md",
+      "sha256": "5ff7c0bebbd00f42d3589267225bc7cfa19287660d51211252d09c1466d18ccd"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 97,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_097_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_097_cross-domain.md",
+      "sha256": "cdf7b198861578134f66363474b5142132df818d11fd2470c04aeb41e505dfd6"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 98,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_098_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_098_cross-domain.md",
+      "sha256": "890226226f612c9216f29b2a2f95f2aeee9529fb4bcc5da196f413851f621212"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 99,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_099_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_099_cross-domain.md",
+      "sha256": "779f4c28462237edbb7c783e97198a1a2b5cb97e8900551cce45028de89f82e0"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 100,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_100_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_100_cross-domain.md",
+      "sha256": "b42e273ab7704172a4085958d893ef88f69886cdc7a68b08dbaf36e1d1258f51"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 101,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_101_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_101_cross-domain.md",
+      "sha256": "cabd39b1e296dc118eebd0f4133441809ed6032dfc824387af1546662d00f5c6"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 102,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_102_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_102_cross-domain.md",
+      "sha256": "2875206071526b30e588edf381c8051a33429b462d20c3263d761d6e160c4d0e"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 103,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_103_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_103_cross-domain.md",
+      "sha256": "b34f1999a372f5b2e307364c007d6c0b344742074a0aa728fe8002b81273a0d2"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 104,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_104_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_104_cross-domain.md",
+      "sha256": "5cb6e5bde10eddd73bf49ab375ec9eb2b9cde333c2173a2915f020bd808092e1"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 105,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_105_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_105_cross-domain.md",
+      "sha256": "d7a5cefe51537b2300ef3c7376630504ef965aec0e7911a64da504c8348f4a3e"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 106,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_106_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_106_cross-domain.md",
+      "sha256": "481352809b7f3399064b07688fe23e4e47786e7e4dfafbd1a81e3e0521ee959a"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 107,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_107_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_107_cross-domain.md",
+      "sha256": "b85fb08f9bc9d3e4b9daafd45ff5fcde30f534a1279494c33c1c95663b42b130"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 108,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_108_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_108_cross-domain.md",
+      "sha256": "e3aa411c055efc67056bc24051078cc1e5fb73f37eb09e631b55e646d9b7472b"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 109,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_109_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_109_cross-domain.md",
+      "sha256": "299e8359faae3837e3f0612532cc74c07cd1d9e03cf457eee26c095466bc9ed4"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 110,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_110_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_110_cross-domain.md",
+      "sha256": "4294cf031853b3d97e53c2ef564776bf87d7ae781f6b35276c825bcb1b3c3812"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 111,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_111_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_111_cross-domain.md",
+      "sha256": "507484c9a3462bfb9701297ac0314acf76b707174f5528fe1378b85e50a11662"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 112,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_112_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_112_cross-domain.md",
+      "sha256": "3dae276e7f7c157e5b4499ab3a16e41b8931b072e9bcfa030f804ec1dbdd7b0a"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 113,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_113_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_113_cross-domain.md",
+      "sha256": "6db693b2a75e06181cb00c3b26bad87d063248e14679520993cf603d5c63d6c5"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 114,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_114_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_114_cross-domain.md",
+      "sha256": "0e6a30782a6b761f93165e2e70edd353b2530e7bae0d7f3552253a9572b23bf3"
+    },
+    {
+      "suite": "115 Baseline",
+      "case_id": 115,
+      "domain": "Cross-Domain",
+      "filename": "journal_paper_baseline_115_cross-domain.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_baseline_115_cross-domain.md",
+      "sha256": "7e8f0cc952b31924ada042d9d1723b62621869b1ad1092686543cdb77c85c5c5"
+    },
+    {
+      "suite": "Treasure Puzzles",
+      "case_id": 1,
+      "domain": "Physics/Spatial",
+      "filename": "journal_paper_treasure_case_01_verse_1_unknown_city.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_treasure_case_01_verse_1_unknown_city.md",
+      "sha256": "7df059d1c19c800598c471551c24444dca9af88d4ece32fbb59f2e2c45c7b8de"
+    },
+    {
+      "suite": "Treasure Puzzles",
+      "case_id": 2,
+      "domain": "Physics/Spatial",
+      "filename": "journal_paper_treasure_case_02_verse_2_new_orleans___french_quarter.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_treasure_case_02_verse_2_new_orleans___french_quarter.md",
+      "sha256": "312f3d086b63ccc957e7409baa18df697edec15f14bff4e8a0fcc4a807153675"
+    },
+    {
+      "suite": "Treasure Puzzles",
+      "case_id": 3,
+      "domain": "Physics/Spatial",
+      "filename": "journal_paper_treasure_case_03_verse_5_montreal___mount_royal.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_treasure_case_03_verse_5_montreal___mount_royal.md",
+      "sha256": "ee9ddc603cc899afffad31fdc9261f9b6310e4c32b5ede042b3e6178218c5755"
+    },
+    {
+      "suite": "Treasure Puzzles",
+      "case_id": 4,
+      "domain": "Physics/Spatial",
+      "filename": "journal_paper_treasure_case_04_verse_6_st._augustine___fountain_of_youth.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_treasure_case_04_verse_6_st._augustine___fountain_of_youth.md",
+      "sha256": "fa6dc37b2197234d06e6ca5ed8dc20e53eb928483473db2dbf43303d7a26e967"
+    },
+    {
+      "suite": "Treasure Puzzles",
+      "case_id": 5,
+      "domain": "Physics/Spatial",
+      "filename": "journal_paper_treasure_case_05_verse_7_san_francisco___golden_gate.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_treasure_case_05_verse_7_san_francisco___golden_gate.md",
+      "sha256": "d89922c32e5e8d835b411186e297227af5124ab49f981ddd5f26ca5e21f26490"
+    },
+    {
+      "suite": "Treasure Puzzles",
+      "case_id": 6,
+      "domain": "Physics/Spatial",
+      "filename": "journal_paper_treasure_case_06_verse_9_houston___galveston.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_treasure_case_06_verse_9_houston___galveston.md",
+      "sha256": "d30231e45633c65d7ab89a34563594ea7cee775f42465d0fb939860142c592c9"
+    },
+    {
+      "suite": "Treasure Puzzles",
+      "case_id": 7,
+      "domain": "Physics/Spatial",
+      "filename": "journal_paper_treasure_case_07_verse_10_new_york_city___battery_park.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_treasure_case_07_verse_10_new_york_city___battery_park.md",
+      "sha256": "af73f9f37bd3160d9dc96279d7e42f6057744c4ca1c1901d1bae3a3156ef993e"
+    },
+    {
+      "suite": "Treasure Puzzles",
+      "case_id": 8,
+      "domain": "Physics/Spatial",
+      "filename": "journal_paper_treasure_case_08_verse_11_roanoke_island___fort_raleigh.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_treasure_case_08_verse_11_roanoke_island___fort_raleigh.md",
+      "sha256": "20577b4881934bf0fddb68356fda62786fb0d47485d5e1d2c2e150eae73f8692"
+    },
+    {
+      "suite": "Treasure Puzzles",
+      "case_id": 9,
+      "domain": "Physics/Spatial",
+      "filename": "journal_paper_treasure_case_09_verse_12_charleston___white_point_garden.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_treasure_case_09_verse_12_charleston___white_point_garden.md",
+      "sha256": "97dd4c6968165153c66314b2984400b72babdd8791e56ab6fbe493dd614a0942"
+    },
+    {
+      "suite": "Treasure Puzzles",
+      "case_id": 10,
+      "domain": "Physics/Spatial",
+      "filename": "journal_paper_treasure_case_10_tti_-_forrest_fenn_box.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_treasure_case_10_tti_-_forrest_fenn_box.md",
+      "sha256": "cd2177658d512a7d46179204b1495bc656778db8f89b0dbd4b4e5a8161dd498a"
+    },
+    {
+      "suite": "Treasure Puzzles",
+      "case_id": 11,
+      "domain": "Physics/Spatial",
+      "filename": "journal_paper_treasure_case_11_tti_-_appalachian_box.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_treasure_case_11_tti_-_appalachian_box.md",
+      "sha256": "2d13e8db6f7b8941f4d50131136702a6e3d14fbd4fb46ed46ef860ef819bb5cf"
+    },
+    {
+      "suite": "Treasure Puzzles",
+      "case_id": 12,
+      "domain": "Physics/Spatial",
+      "filename": "journal_paper_treasure_case_12_tti_-_pok\u00e9mon_box.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_treasure_case_12_tti_-_pok\u00e9mon_box.md",
+      "sha256": "f605304296eee071f0d223fe6adeda3004e6c98865920e438ea41552176c78b2"
+    },
+    {
+      "suite": "Treasure Puzzles",
+      "case_id": 13,
+      "domain": "Physics/Spatial",
+      "filename": "journal_paper_treasure_case_13_tti_-_past_&_future_box.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_treasure_case_13_tti_-_past_&_future_box.md",
+      "sha256": "24e91f3bbda1c741c03b4323beab13d5a3ecd1c8a65e35f56e9e652f037f97a5"
+    },
+    {
+      "suite": "Treasure Puzzles",
+      "case_id": 14,
+      "domain": "Physics/Spatial",
+      "filename": "journal_paper_treasure_case_14_tti_-_lion's_share_box.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_treasure_case_14_tti_-_lion's_share_box.md",
+      "sha256": "240748aaafec330d115f3af9936d5de4fb3d38f4b501cd3d6cde80ec03088ffb"
+    },
+    {
+      "suite": "Novel Zero-Shot",
+      "case_id": 1,
+      "domain": "Physics",
+      "filename": "journal_paper_novel_case_01_quantum_bell_state_entanglement.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_novel_case_01_quantum_bell_state_entanglement.md",
+      "sha256": "eeb87980c7357039df56b2bbce170ad3cebc979a9623d5f64ced7cd4541f4527"
+    },
+    {
+      "suite": "Novel Zero-Shot",
+      "case_id": 2,
+      "domain": "Mathematics",
+      "filename": "journal_paper_novel_case_02_trefoil_knot_topological_winding.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_novel_case_02_trefoil_knot_topological_winding.md",
+      "sha256": "ed470175c3f1825b95d125ad8a4b8f5b2443891a3649c3b90c659ab3568d62ca"
+    },
+    {
+      "suite": "Novel Zero-Shot",
+      "case_id": 3,
+      "domain": "Software Engineering",
+      "filename": "journal_paper_novel_case_03_alias_free_simd_loop_optimization.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_novel_case_03_alias_free_simd_loop_optimization.md",
+      "sha256": "ec3d1e953361ce2a8d74a641860300675011faf8e810e4c5f803ce9992a99913"
+    },
+    {
+      "suite": "Novel Zero-Shot",
+      "case_id": 4,
+      "domain": "Physics",
+      "filename": "journal_paper_novel_case_04_anisotropic_flrw_metric_geodesic.md",
+      "filepath": "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions/journal_paper_novel_case_04_anisotropic_flrw_metric_geodesic.md",
+      "sha256": "a95a22ed9ac3c57c9af5de327e35b1630d6f1a5eb28be3e12b54664f82a6a3a3"
+    }
+  ]
+}

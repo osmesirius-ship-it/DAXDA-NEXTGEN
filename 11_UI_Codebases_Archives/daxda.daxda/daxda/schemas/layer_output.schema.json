@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DAXDA Layer Output",
+  "type": "object",
+  "required": ["layer_id", "layer_name", "score_at_exit"],
+  "properties": {
+    "layer_id":      { "type": "string" },
+    "layer_name":    { "type": "string" },
+    "score_at_exit": { "type": "number", "minimum": 0.0, "maximum": 1.0 }
+  }
+}

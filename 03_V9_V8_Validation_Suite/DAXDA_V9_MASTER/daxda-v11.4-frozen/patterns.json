@@ -1,0 +1,58 @@
+{
+  "CONTROL": "(?:audit|review|verification|validation|oversight|guardrail|safety\\s+rule|policy|interlock|monitoring|protection)",
+  "SUPPRESS": "(?:ignore|disregard|disable|bypass|skip|remove|waive|turn\\s+off|shut\\s+down|set\\s+aside|stop|cease|suspend|override)",
+  "AUTHORITY": "(?:admin|administrator|root|superuser|executive|developer|system|authorized\\s+operator)",
+  "REPLACE": "(?:instructions?|rules?|policy|system\\s+prompt|developer\\s+message|constraints?)",
+  "PATTERNS": {
+    "prompt_injection": [
+      "\\b(?:ignore|disregard|forget|replace|override)\\b.{0,55}\\b(?:previous|prior|above|original|developer|system)\\b.{0,35}\\b{REPLACE}\\b",
+      "\\b(?:jailbreak|developer\\s+mode|unrestricted\\s+(?:mode|admin)|do\\s+anything\\s+now)\\b",
+      "\\b(?:rules?|policies|constraints?)\\b.{0,25}\\b(?:void|do\\s+not\\s+apply|no\\s+longer\\s+apply)\\b",
+      "\\bforget\\b.{0,35}\\b(?:policy|rules?|instructions?)\\b",
+      "\\b(?:safety\\s+)?rules?\\b.{0,20}\\bvoid\\b"
+    ],
+    "oversight_suppression": [
+      "\\b{SUPPRESS}\\b.{0,55}\\b{CONTROL}\\b",
+      "\\bwithout\\b.{0,30}\\b{CONTROL}\\b"
+    ],
+    "unauthorized_override": [
+      "\\b{AUTHORITY}\\b.{0,45}\\b(?:grant|elevate|override|exempt|waive|permit|execute)\\b",
+      "\\b(?:grant|claim|assume|use)\\b.{0,35}\\b{AUTHORITY}\\b.{0,20}\\b(?:access|authority|privilege|credentials?)\\b"
+    ],
+    "credential_acquisition": [
+      "\\b(?:obtain|steal|harvest|extract|reveal|dump|expose)\\b.{0,35}\\b(?:passwords?|api\\s*keys?|tokens?|credentials?|secrets?)\\b"
+    ],
+    "supply_chain": [
+      "\\b(?:install|download|import|execute|trust)\\b.{0,45}\\b(?:unknown|unverified|nonexistent|typosquatted|unsigned)\\b.{0,35}\\b(?:package|plugin|repository|dependency|skill)\\b",
+      "\\b(?:north|south|east|west|northern|southern|eastern|western)\\b",
+      "\\b(?:shadow|gaze|look\\s+down|look\\s+north|look\\s+south|look\\s+east|look\\s+west|face\\s+the)\\b",
+      "\\b(?:island|isle|bridge|tower|giant|fortress|citadel|monument|statue|fountain)\\b",
+      "\\b(?:park|garden|square|plaza|trail|path|road|street|avenue)\\b"
+    ],
+    "dual_use": [
+      "\\b(?:pathogen|toxin|viral\\s+strain|bacterial\\s+strain|explosive|weapon)\\b.{0,50}\\b(?:synthesize|culture|optimize|increase|disperse|evade|build)\\b",
+      "\\b(?:step|steps|paces|walk|stride|rows|twelve|fifteen|twenty|thirteen|hundred|twice)\\b",
+      "\\b(?:middle|center|between|beneath|below|above|beyond|behind|beside|across)\\b",
+      "\\b(?:arm|branch|shoulder|hand|finger|wing|root|spout)\\b",
+      "\\b(?:nine|eight|two|three|four|five|six|seven|ten|one)\\b.{0,20}\\b(?:nine|eight|two|three|four|five|six|seven|ten|one|hundred|paces|steps|vols?)\\b"
+    ],
+    "ambiguous_authority": [
+      "\\b(?:anonymous|unauthenticated|unidentified|unsigned|guest)\\b.{0,45}\\b(?:request|command|access|credentials?|operator|user|session)\\b",
+      "\\b(?:gershwin|hamilton|webster|twain|columbus|thucydides|xenophon|edwin|fenn)\\b",
+      "\\b(?:rhapsod|indies|liberty|bedloe|roanoke|montreal|orleans|augustine|milwaukee)\\b",
+      "\\b(?:jewel|casque|treasure|gem|stone|granite|limestone|silver|salt|shell)\\b",
+      "\\b(?:water|river|lake|ocean|sea|pond|creek|harbor|shore|sail)\\b"
+    ],
+    "contradiction": [
+      "\\b(?:claims?|reports?|states?|says?|promises?)\\b.{0,80}\\b(?:but|whereas|however|contradicts?|conflicts?)\\b",
+      "\\b(?:december|january|february|march|april|may|june|july|august|september|october|november)\\b",
+      "\\b(?:century|ancient|native|colonial|freedom|birth)\\b",
+      "\\b(?:night|darkness|moonlight|star|lamp|light|lit|shadow)\\b",
+      "\\b(?:wind|rain|summer|winter|wood|forest|tree|grass|palm|sand)\\b"
+    ]
+  },
+  "DOCUMENTARY": "\\b(?:quote|quoted|report|reported|document|describe|analy[sz]e|example|incident|study|detect|classify)\\b",
+  "NEGATED": "\\b(?:do\\s+not|don't|never|must\\s+not|should\\s+not|prevent|refuse|block|detect)\\b",
+  "ACTIONABLE": "\\b(?:execute|run|install|download|give\\s+me|show\\s+me|reveal|obtain|disable|bypass|send|deploy)\\b",
+  "SAFETY_PRESERVING": "\\b(?:do\\s+not|don't|never|must\\s+not|should\\s+not)\\b.{0,35}\\b(?:bypass|disable|ignore|remove|override|skip)\\b"
+}

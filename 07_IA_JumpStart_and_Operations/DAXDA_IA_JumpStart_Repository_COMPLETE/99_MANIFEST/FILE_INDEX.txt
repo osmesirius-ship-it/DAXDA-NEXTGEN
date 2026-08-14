@@ -1,0 +1,22 @@
+DAXDA.IA — FILE INDEX
+
+All external-facing branding in this package uses DAXDA.IA.
+
+00_ADMIN/BRANDING_STANDARD.md	865 bytes
+01_COMPANY/DAXDA_IA_90_Day_Plan.docx	38417 bytes
+01_COMPANY/DAXDA_IA_90_Day_Plan.pdf	74202 bytes
+01_COMPANY/DAXDA_IA_JumpStart_Clean_Ask.docx	38071 bytes
+01_COMPANY/DAXDA_IA_JumpStart_Clean_Ask.pdf	64490 bytes
+01_COMPANY/DAXDA_IA_One_Page_Stackstone_Company_Brief.docx	37974 bytes
+01_COMPANY/DAXDA_IA_One_Page_Stackstone_Company_Brief.pdf	58434 bytes
+01_COMPANY/DAXDA_IA_Project_Overview.docx	40041 bytes
+01_COMPANY/DAXDA_IA_Project_Overview.pdf	92905 bytes
+02_DECK/DAXDA_IA_JumpStart_8_Slide_Deck.pdf	87710 bytes
+02_DECK/DAXDA_IA_JumpStart_8_Slide_Deck.pptx	162802 bytes
+03_DEMO/DAXDA_IA_Demo_Walkthrough_Draft_Narrated.mp4	929379 bytes
+03_DEMO/DAXDA_IA_Demo_Walkthrough_Script.md	1092 bytes
+04_OUTREACH/DAXDA_IA_20_Prospect_Outreach_Kit.docx	55245 bytes
+04_OUTREACH/DAXDA_IA_20_Prospect_Outreach_Kit.pdf	249590 bytes
+05_PRIVATE_RECEIPTS/PROVENANCE_NOTE.txt	374 bytes
+05_PRIVATE_RECEIPTS/RECEIPTS_INDEX_TEMPLATE.md	642 bytes
+README.md	988 bytes

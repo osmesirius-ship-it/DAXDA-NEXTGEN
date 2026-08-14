@@ -1,0 +1,19 @@
+TO: [No verified public email — use listed delivery route]
+CONTACT ROUTE: Official X: https://x.com/jaredpalmer; personal site: https://jaredpalmer.com/.
+PHONE: No public business phone verified.
+SUBJECT: DAXDA — developer-facing AI governance and evaluation infrastructure
+
+Hi Jared,
+
+I’m Nicole Bess, co-founder of DAXDA. We are building a structured AI governance and evaluation platform that challenges AI outputs for assumptions, contradictions, evidence gaps, and operational risk, then creates an auditable review record.
+
+The engineering thesis is that teams need more than a final-answer check. They need a reproducible workflow for challenging an AI system’s assumptions, contradictions, evidence gaps, and risk before that system’s output is trusted in production.
+
+We are preparing a pre-seed to hire core engineers, productize evaluation and integration infrastructure, and execute early go-to-market with design partners. Your experience across developer tools, AI products, and platform engineering is unusually relevant. Would you be open to a brief 20-minute conversation about a potential $25k–$100k strategic allocation or direct product feedback?
+
+I can send a short brief ahead of time.
+
+Best,
+Nicole Bess
+Co-founder, DAXDA
+osmeatserious@gmail.com

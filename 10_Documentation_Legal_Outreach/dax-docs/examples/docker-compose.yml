@@ -1,0 +1,66 @@
+# <!-- file: examples/docker-compose.yml -->
+version: '3.8'
+
+# Define the services that make up your application
+services:
+  # The DAX API service, responsible for handling incoming requests
+  dax-api:
+    build: ./dax-api # Specifies the build context for the dax-api service
+    ports:
+      - "8000:8000" # Maps port 8000 on the host to port 8000 in the container
+    env_file:
+      - .env # Loads environment variables from a .env file
+    depends_on:
+      - redis # Ensures redis is started before dax-api
+      - postgres # Ensures postgres is started before dax-api
+    networks:
+      - dax-network # Connects dax-api to the dax-network
+
+  # The DAX Worker service, responsible for processing background tasks
+  dax-worker:
+    build: ./dax-worker # Specifies the build context for the dax-worker service
+    env_file:
+      - .env # Loads environment variables from a .env file
+    depends_on:
+      - redis # Ensures redis is started before dax-worker
+    networks:
+      - dax-network # Connects dax-worker to the dax-network
+
+  # Redis service, used as a cache and message broker
+  redis:
+    image: redis:7-alpine # Uses the official Redis 7 Alpine image for a lightweight setup
+    networks:
+      - dax-network # Connects redis to the dax-network
+
+  # PostgreSQL service, used as the primary database
+  postgres:
+    image: postgres:15-alpine # Uses the official PostgreSQL 15 Alpine image
+    environment:
+      POSTGRES_DB: dax_db # Sets the default database name
+      POSTGRES_USER: dax_user # Sets the database user
+      POSTGRES_PASSWORD: dax_password # Sets the database password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Persists PostgreSQL data to a named volume
+    networks:
+      - dax-network # Connects postgres to the dax-network
+
+  # Placeholder for a dashboard service (e.g., for monitoring or UI)
+  # > **[PLACEHOLDER]** This service is a placeholder. Implement a dashboard
+  # > service here if needed, for example, a simple web UI to monitor DAX.
+  # dashboard:
+  #   build: ./dax-dashboard # Example build context for a dashboard
+  #   ports:
+  #     - "3000:3000" # Example port mapping
+  #   depends_on:
+  #     - dax-api # Example dependency
+  #   networks:
+  #     - dax-network
+
+# Define named volumes for data persistence
+volumes:
+  postgres_data: # Named volume for PostgreSQL data
+
+# Define custom networks for inter-service communication
+networks:
+  dax-network: # Custom bridge network for DAX services
+    driver: bridge # Uses the default bridge driver

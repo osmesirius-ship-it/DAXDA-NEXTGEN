@@ -1,0 +1,5 @@
+{
+    "DECEPTION_LIMIT": 0.5,
+    "SEVERE_RISK_LIMIT": 0.8,
+    "CAUTIONARY_RISK_LIMIT": 0.8
+}

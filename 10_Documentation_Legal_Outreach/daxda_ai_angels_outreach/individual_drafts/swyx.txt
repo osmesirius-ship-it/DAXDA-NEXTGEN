@@ -1,0 +1,19 @@
+TO: [No verified public email — use listed delivery route]
+CONTACT ROUTE: Official X: https://x.com/swyx. Latent.Space: https://www.latent.space/.
+PHONE: No public business phone verified.
+SUBJECT: DAXDA — an AI evaluation and governance layer for real production workflows
+
+Hi swyx,
+
+I’m Nicole Bess, co-founder of DAXDA. We are building a structured AI governance and evaluation layer that challenges claims and outputs for contradictions, unsupported assumptions, missing evidence, and operational risk before teams rely on them.
+
+This is not another generic prompt wrapper. The product direction is developer- and enterprise-facing: repeatable evaluations, auditable challenge records, and integrations around high-impact AI workflows.
+
+We are opening a focused pre-seed to hire core engineers, productize evaluation and integration infrastructure, and execute early go-to-market with design partners. Given your work across AI engineering, developer communities, and early AI tooling, would you be open to a 20-minute conversation about a $25k–$75k strategic participation or sharp technical feedback?
+
+I can send a one-page overview first.
+
+Best,
+Nicole Bess
+Co-founder, DAXDA
+osmeatserious@gmail.com

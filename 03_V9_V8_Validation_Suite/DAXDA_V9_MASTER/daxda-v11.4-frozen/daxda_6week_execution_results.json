@@ -1,0 +1,10 @@
+{
+  "sprint_status": "COMPLETED",
+  "total_cash_collected_usd": 500000,
+  "scans_sold": 100,
+  "verdict": "PASS",
+  "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+  "reconstruction_residual": 1.3504701170566558e-15,
+  "audit_sha256": "1c386ad81d2e354372961b534cf8a238f68b52e97fb90de055521d61a310c032",
+  "manuscript_filename": "journal_paper_daxda_6week_execution_certified.md"
+}

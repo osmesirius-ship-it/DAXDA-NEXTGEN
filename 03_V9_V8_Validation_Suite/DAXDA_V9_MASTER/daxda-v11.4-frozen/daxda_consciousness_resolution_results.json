@@ -1,0 +1,15 @@
+{
+  "engine_version": "12.0.1-GOVERNED",
+  "domain": "Cross-Domain",
+  "query": "\nQUESTION: What is the fundamental meaning of human consciousness, what are human beings capable of accomplishing with it, and through what precise mechanism/how does consciousness operate?\nDOMAIN: Cross-Domain / Neuroscience / High-Dimensional Quantum Physics / Epistemology\nALGEBRA: Cl(7,0) 128-Blade Multivector Manifold\nOBJECTIVE: Resolve the hard problem of consciousness, intentional agency, subjective experience (qualia), high-dimensional state collapse, and creative action through conformal geometric algebra.\n",
+  "verdict": "PASS",
+  "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+  "publication_permitted": true,
+  "reconstruction_residual": 9.044229510731195e-16,
+  "grade0_scalar_s": 0.986091,
+  "calibrated_certainty_C": 0.493046,
+  "audit_sha256": "b3b22f6ceaf54a39172e0edcb20dfeb73469e0af407578ae501671a252c346ab",
+  "manuscript_filename": "journal_paper_human_consciousness_meaning_and_capability.md",
+  "manuscript_word_count": 804,
+  "manuscript_sha256": "8f8d5327141463bce66d38adc40cdfb0a0163a654c4ecc54148b40a66f53ca21"
+}

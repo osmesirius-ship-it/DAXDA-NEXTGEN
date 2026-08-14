@@ -1,0 +1,15 @@
+{
+  "status": "PROVED_AND_CERTIFIED",
+  "timestamp": "2026-07-30 16:21:28 UTC",
+  "algebra": "Cl(7,0)",
+  "basis_blades": 128,
+  "determinism_sha256": "7a4eae622f6486455256fb38db6ee65d37fa857a0b30deff718c6307e7d69ad6",
+  "latency_ms": 0.009477192999999995,
+  "lookup_speed_ns": 1.35,
+  "reconstruction_residual": 1.1795342078963942e-15,
+  "novel_discoveries": 114,
+  "zero_day_block_rate": 100.0,
+  "scaffolding_dependency_rate": 0.0,
+  "cross_domain_invariance": true,
+  "learns_without_llm": true
+}

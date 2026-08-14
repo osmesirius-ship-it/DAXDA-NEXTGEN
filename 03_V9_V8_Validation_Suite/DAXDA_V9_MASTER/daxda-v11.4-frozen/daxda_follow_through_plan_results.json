@@ -1,0 +1,14 @@
+{
+  "engine_version": "12.0.1-GOVERNED",
+  "domain": "Software Engineering",
+  "verdict": "PASS",
+  "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+  "publication_permitted": true,
+  "reconstruction_residual": 1.1369786707089154e-15,
+  "grade0_scalar_s": 0.984445,
+  "calibrated_certainty_C": 0.492223,
+  "audit_sha256": "7239fba7264ef7a16a9ab42d09302bd9fecd8b680f63e0dde8c45da609400212",
+  "manuscript_filename": "journal_paper_daxda_follow_through_plan.md",
+  "manuscript_word_count": 732,
+  "manuscript_sha256": "acdb918c63b4537ce129bc7cea064a1b4422e56d86c8ca53208c1afee2446b5f"
+}

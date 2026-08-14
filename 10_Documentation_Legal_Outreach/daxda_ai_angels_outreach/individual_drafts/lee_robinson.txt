@@ -1,0 +1,17 @@
+TO: [No verified public email — use listed delivery route]
+CONTACT ROUTE: Official X: https://x.com/leerob; personal site: https://leerob.com/.
+PHONE: No public business phone verified.
+SUBJECT: DAXDA — making AI governance legible to builders
+
+Hi Lee,
+
+I’m Nicole Bess, co-founder of DAXDA. We are building a structured AI governance and evaluation layer that exposes unsupported assumptions, contradictions, evidence gaps, and operational risk in AI outputs before teams put those outputs into consequential workflows.
+
+We are starting a focused pre-seed process to hire core engineers, productize evaluation and integration infrastructure, and execute early go-to-market with design partners. The product needs to be technically credible but also comprehensible to the builders who have to use it. Your work explaining AI and developer tools makes your feedback especially relevant.
+
+Would you be open to a 20-minute conversation about a $5k–$15k strategic participation or candid feedback on the developer-facing story? I can send a concise brief beforehand.
+
+Best,
+Nicole Bess
+Co-founder, DAXDA
+osmeatserious@gmail.com

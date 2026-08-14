@@ -1,0 +1,5 @@
+PRIVATE RECEIPTS / EVIDENCE FOLDER
+
+This folder is intentionally limited. It contains indexing templates only and does not invent emails, screenshots, account logs, contracts, customer commitments, validation results, or technical test data that were not supplied.
+
+Before external sharing, add only authentic, relevant artifacts and redact private details where necessary.

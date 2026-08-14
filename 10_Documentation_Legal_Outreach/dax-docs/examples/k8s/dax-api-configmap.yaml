@@ -1,0 +1,90 @@
+# ============================================================
+# examples/k8s/dax-api-configmap.yaml
+#
+# ConfigMap vs Secret — the key distinction:
+#
+#   ConfigMap: stores non-sensitive configuration (env vars,
+#   file contents, port numbers, log levels). Values are stored
+#   in plain text and are visible to anyone with cluster access.
+#
+#   Secret: stores sensitive data (passwords, API keys, tokens).
+#   Values are base64-encoded — this is NOT encryption. It is
+#   just encoding. Anyone with access to the Secret can decode it.
+#   For real encryption at rest, use a Secrets manager such as
+#   HashiCorp Vault, AWS Secrets Manager, or the External Secrets
+#   Operator.
+#
+# Apply both with:
+#   kubectl apply -f examples/k8s/dax-api-configmap.yaml
+#
+# Verify:
+#   kubectl get configmap dax-api-config -n dax-system
+#   kubectl get secret dax-api-secrets -n dax-system
+# ============================================================
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dax-api-config
+  # Must match the namespace used in the Deployment
+  namespace: dax-system
+  labels:
+    app: dax-api
+data:
+  # Runtime environment identifier
+  DAX_ENV: "development"
+  # Port the dax-api container listens on
+  DAX_API_PORT: "8000"
+  # Logging verbosity: debug | info | warning | error
+  LOG_LEVEL: "info"
+  # Comma-separated list of allowed hostnames.
+  # WARNING: "*" is acceptable for local dev only.
+  # In production, set this to your actual domain(s).
+  ALLOWED_HOSTS: "*"
+
+---
+
+# ============================================================
+# Secret for dax-api sensitive configuration
+#
+# base64 encoding requirement:
+#   All values in a Kubernetes Secret data block MUST be
+#   base64-encoded. To encode a value:
+#     echo -n "your-actual-value" | base64
+#
+#   To decode a value from a running cluster:
+#     kubectl get secret dax-api-secrets -n dax-system \
+#       -o jsonpath='{.data.SECRET_KEY}' | base64 --decode
+#
+# The placeholder values below decode to descriptive strings.
+# Replace them with your actual base64-encoded secrets before
+# applying to any environment.
+#
+# NEVER commit real secret values to version control.
+# ============================================================
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: dax-api-secrets
+  namespace: dax-system
+  labels:
+    app: dax-api
+type: Opaque
+data:
+  # Decodes to: "replace-with-your-database-url"
+  # Format: postgresql://user:password@host:5432/dbname
+  DATABASE_URL: "cmVwbGFjZS13aXRoLXlvdXItZGF0YWJhc2UtdXJs"
+
+  # Decodes to: "replace-with-your-redis-url"
+  # Format: redis://:password@host:6379/0
+  REDIS_URL: "cmVwbGFjZS13aXRoLXlvdXItcmVkaXMtdXJs"
+
+  # Decodes to: "replace-with-your-model-api-key"
+  # The API key for the model endpoint (LM Studio, OpenAI, etc.)
+  MODEL_API_KEY: "cmVwbGFjZS13aXRoLXlvdXItbW9kZWwtYXBpLWtleQ=="
+
+  # Decodes to: "replace-with-a-long-random-secret-key"
+  # Used for signing tokens or session data. Generate with:
+  #   python3 -c "import secrets; print(secrets.token_hex(32))"
+  SECRET_KEY: "cmVwbGFjZS13aXRoLWEtbG9uZy1yYW5kb20tc2VjcmV0LWtleQ=="

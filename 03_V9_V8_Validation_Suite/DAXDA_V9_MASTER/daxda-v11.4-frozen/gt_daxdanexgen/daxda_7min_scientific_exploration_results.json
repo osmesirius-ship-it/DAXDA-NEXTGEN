@@ -1,0 +1,2562 @@
+{
+  "engine_version": "12.0.1-GOVERNED",
+  "algebra": "Cl(7,0)",
+  "total_elapsed_sec": 421.5142798423767,
+  "total_evaluations": 252,
+  "governance_status": "100% PASS / RELEASE",
+  "scaffolding_dependency_pct": 0.0,
+  "waves": [
+    {
+      "wave_id": 1,
+      "name": "Higher-Dimensional Quantum Geometry & Supersymmetric Spinors",
+      "elapsed_sec": 105.1629068851471,
+      "evaluations_count": 65,
+      "evaluations": [
+        {
+          "iteration": 1,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 9.335979955210414e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i001_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "9f336ea1335d3facc71a83471d9946144804716f15a6bb0d9f7ea06b4b2dac06"
+        },
+        {
+          "iteration": 2,
+          "topic": "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
+          "residual": 1.5639562568749166e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i002_non-commutative_bivector_commutator_comm.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "029bc5ab30499078c49bde7c069ffaecaf232509d4ebdff5e097510e3f7bd610"
+        },
+        {
+          "iteration": 3,
+          "topic": "Supersymmetric Spin(7,0) rotor state manifold evolution",
+          "residual": 1.018166787077276e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i003_supersymmetric_spin(7,0)_rotor_state_man.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "812d5c8d36957d0386be7ef018a4b4ffd9d58f71970f5f872af266f11e44e18d"
+        },
+        {
+          "iteration": 4,
+          "topic": "Hilbert space blade inner product norm conservation",
+          "residual": 9.182456894808864e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i004_hilbert_space_blade_inner_product_norm_c.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "90e2e7fac783e498e54d449b2c8f2e02dcfae82dc26170c42c1c686d37066744"
+        },
+        {
+          "iteration": 5,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 1.2349997235828755e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i005_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "5d803e47a6643c246d072f22215e7d8e42523c7404ca2e6140a78131dc6ddd3f"
+        },
+        {
+          "iteration": 6,
+          "topic": "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
+          "residual": 7.946876172065709e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i006_non-commutative_bivector_commutator_comm.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "f44f8d5b813e723f7838068ce969cd5be3339a2412730bcf80f8633460eabc47"
+        },
+        {
+          "iteration": 7,
+          "topic": "Supersymmetric Spin(7,0) rotor state manifold evolution",
+          "residual": 1.4540147222320708e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i007_supersymmetric_spin(7,0)_rotor_state_man.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "367a3bac0a94f7f46e15427fc2e2428dfc88892896c20c2c5117f5f02dd6bb86"
+        },
+        {
+          "iteration": 8,
+          "topic": "Hilbert space blade inner product norm conservation",
+          "residual": 1.7864729446454e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i008_hilbert_space_blade_inner_product_norm_c.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "aa7fd1317fd34eb1496987842d96c6dd2d473a7d0eee4362b87403847d7411e1"
+        },
+        {
+          "iteration": 9,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 1.0234642258821452e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i009_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "59f76d79fafac3ea72a0f32e46e561e47311c1e34f5b202b788f543f86bba61c"
+        },
+        {
+          "iteration": 10,
+          "topic": "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
+          "residual": 1.2365869531751545e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i010_non-commutative_bivector_commutator_comm.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "c7c28e0be481ddbe3d5a37aed2cb5530f911b37ba4fc11ce9efe0e9db566f7e5"
+        },
+        {
+          "iteration": 11,
+          "topic": "Supersymmetric Spin(7,0) rotor state manifold evolution",
+          "residual": 1.2402899369394263e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i011_supersymmetric_spin(7,0)_rotor_state_man.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "a92efcf8cc103ed70ff264a54dc70f40bdc8789469742e678fb645c4ddced6b8"
+        },
+        {
+          "iteration": 12,
+          "topic": "Hilbert space blade inner product norm conservation",
+          "residual": 9.146410437466781e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i012_hilbert_space_blade_inner_product_norm_c.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "9f959baecc4e39d79e1fd9a16ff5be52e4aa5fc439a5b3193830476e5a8de7db"
+        },
+        {
+          "iteration": 13,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 9.087531966063944e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i013_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "e76364dfcf016b9b0d6dbca03ab370c093b3b55167c7d164c7ddfae29a9616a0"
+        },
+        {
+          "iteration": 14,
+          "topic": "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
+          "residual": 1.45666884790277e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i014_non-commutative_bivector_commutator_comm.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "22d58a0f152605b9447132d27511f27f6f4b9443e7819368c786cf28869135ce"
+        },
+        {
+          "iteration": 15,
+          "topic": "Supersymmetric Spin(7,0) rotor state manifold evolution",
+          "residual": 1.0232977098858904e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i015_supersymmetric_spin(7,0)_rotor_state_man.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "44892e6bc3990ce6000e30f72b73bacb5de6f6d65b2174428302829abc0057c2"
+        },
+        {
+          "iteration": 16,
+          "topic": "Hilbert space blade inner product norm conservation",
+          "residual": 1.5668617640141864e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i016_hilbert_space_blade_inner_product_norm_c.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "beb35d33ae0ae4bfc6b4d992686a7ab9b204879bd9b31e0a79629f876e80b440"
+        },
+        {
+          "iteration": 17,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 1.4627628089972075e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i017_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "a8964f9c5c853980195be810b86ad092dcd61e9d62ad5223e91c45d13a8de014"
+        },
+        {
+          "iteration": 18,
+          "topic": "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
+          "residual": 6.884843321355627e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i018_non-commutative_bivector_commutator_comm.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "212aa20dc066fb1b99f12e78bde17c8e0e2c54b0727868115cb54703d56f2f89"
+        },
+        {
+          "iteration": 19,
+          "topic": "Supersymmetric Spin(7,0) rotor state manifold evolution",
+          "residual": 1.1303201648471321e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i019_supersymmetric_spin(7,0)_rotor_state_man.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "c7ccc436b673235124cf1fe1439c40d4f444021623667fd59f877485f0d18aea"
+        },
+        {
+          "iteration": 20,
+          "topic": "Hilbert space blade inner product norm conservation",
+          "residual": 1.1330181158302193e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i020_hilbert_space_blade_inner_product_norm_c.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "2f784d72dd963c1577b5e14c0970d1bf03131ff75d2c547d1734b3d1e53b30e5"
+        },
+        {
+          "iteration": 21,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 1.4602270422912167e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i021_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "3452762470f862bc62833af264b8fd317640fb5985e8778bf140b1d0ed7a6515"
+        },
+        {
+          "iteration": 22,
+          "topic": "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
+          "residual": 4.729407743220934e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i022_non-commutative_bivector_commutator_comm.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "878818f9e0de66605e5e35a825756d845ea96e704f9b670670128feb17d5f090"
+        },
+        {
+          "iteration": 23,
+          "topic": "Supersymmetric Spin(7,0) rotor state manifold evolution",
+          "residual": 1.2365978470607206e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i023_supersymmetric_spin(7,0)_rotor_state_man.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "52880dde5ed808dbf299796b195da9cf87a75508dd6b31e71beae25dc2326ab3"
+        },
+        {
+          "iteration": 24,
+          "topic": "Hilbert space blade inner product norm conservation",
+          "residual": 5.992575497850457e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i024_hilbert_space_blade_inner_product_norm_c.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "c9c27c83a2f324d1be710dfb373113b6890c9e1f8d8cc99410a1ea56ac3007b9"
+        },
+        {
+          "iteration": 25,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 7.068486893410677e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i025_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "d3b72a6e655ae5a63ff2a6f34dda3b2bab9f847bdb47ef53ac5cde37946995e0"
+        },
+        {
+          "iteration": 26,
+          "topic": "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
+          "residual": 9.031102491058368e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i026_non-commutative_bivector_commutator_comm.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "bc371f9cce14c384ebaaf42937244fb3af9e224f7ed81cb90ce2d0df0d86a11a"
+        },
+        {
+          "iteration": 27,
+          "topic": "Supersymmetric Spin(7,0) rotor state manifold evolution",
+          "residual": 1.349490823627949e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i027_supersymmetric_spin(7,0)_rotor_state_man.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "2960244784c7c27c5eab5d5eed19536ed468a9c0e6f64e6aa56319c38ea32e9c"
+        },
+        {
+          "iteration": 28,
+          "topic": "Hilbert space blade inner product norm conservation",
+          "residual": 1.784220523963556e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i028_hilbert_space_blade_inner_product_norm_c.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "359c544be577d1a18ffaef0efd5fb2d1e965b970f7d8bd2499e8669d5c44f918"
+        },
+        {
+          "iteration": 29,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 1.4524520922877942e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i029_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "452bb1549488589d436b6b6cdc07fbf4d260b042946be0fafc31a6d9f1a95bd2"
+        },
+        {
+          "iteration": 30,
+          "topic": "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
+          "residual": 1.0120680301899974e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i030_non-commutative_bivector_commutator_comm.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "4b5daedf0e7cd4476703783704c11e81013b5521cd4511ad9dad1f2e5630aade"
+        },
+        {
+          "iteration": 31,
+          "topic": "Supersymmetric Spin(7,0) rotor state manifold evolution",
+          "residual": 7.952715116107645e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i031_supersymmetric_spin(7,0)_rotor_state_man.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "d907003365bf8c0ecfdf3a9dea638da45c27de41f65dddf466853945fd201ea9"
+        },
+        {
+          "iteration": 32,
+          "topic": "Hilbert space blade inner product norm conservation",
+          "residual": 1.2399995869341147e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i032_hilbert_space_blade_inner_product_norm_c.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "8b5f42b766a132fd73a55776f73781686790f582317e2aec9e2036c4912f9a76"
+        },
+        {
+          "iteration": 33,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 8.030930701752741e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i033_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "06597b976704ecf7cff887dcca8596995ca7a99ac15c88ec55fb37a990e3dcc5"
+        },
+        {
+          "iteration": 34,
+          "topic": "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
+          "residual": 1.454601905534987e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i034_non-commutative_bivector_commutator_comm.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "b7af25f1db7dd96c9d49b6577fde1566d3febdd89323741e193422c2ce9dbcba"
+        },
+        {
+          "iteration": 35,
+          "topic": "Supersymmetric Spin(7,0) rotor state manifold evolution",
+          "residual": 5.09348973452107e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i035_supersymmetric_spin(7,0)_rotor_state_man.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "be5717e54c3c9771efe935962fb30e66cba4b1e26fa6d899a3d341b5e5c1c031"
+        },
+        {
+          "iteration": 36,
+          "topic": "Hilbert space blade inner product norm conservation",
+          "residual": 1.1204793331698071e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i036_hilbert_space_blade_inner_product_norm_c.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "95bd92097c9f8f78cc535a9fe6e5823a5dbc5552fa8b5bcd344eee8e5a8e6fc8"
+        },
+        {
+          "iteration": 37,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 1.1313307735305076e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i037_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "1af67e3eec2097982bea2d46074fe32262578e156827fdcfc4f90135d4a040f8"
+        },
+        {
+          "iteration": 38,
+          "topic": "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
+          "residual": 9.088944787962076e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i038_non-commutative_bivector_commutator_comm.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "0381d3311785977c8f577f87ac56f19a0c2af15cd0b8239011c3da3b7dd1c1da"
+        },
+        {
+          "iteration": 39,
+          "topic": "Supersymmetric Spin(7,0) rotor state manifold evolution",
+          "residual": 1.130342433525708e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i039_supersymmetric_spin(7,0)_rotor_state_man.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "99e560067d3babd755b773229f8ede41e9e2403847d68d85d2839813bc7b2597"
+        },
+        {
+          "iteration": 40,
+          "topic": "Hilbert space blade inner product norm conservation",
+          "residual": 7.972953144790533e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i040_hilbert_space_blade_inner_product_norm_c.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "23f769a02eb35be2c9fc1ee779242ac4611c94ad06facca9bc20109d297709e2"
+        },
+        {
+          "iteration": 41,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 9.241658865454826e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i041_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "e8fba73a7eed121a44da83109fee12b44da1fa38b0880163ca4f185b82a80975"
+        },
+        {
+          "iteration": 42,
+          "topic": "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
+          "residual": 1.3410263957850429e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i042_non-commutative_bivector_commutator_comm.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "e7037042140ba708142f154089b5ba5e262c408ced89c41977edada764ce349f"
+        },
+        {
+          "iteration": 43,
+          "topic": "Supersymmetric Spin(7,0) rotor state manifold evolution",
+          "residual": 9.182825612056026e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i043_supersymmetric_spin(7,0)_rotor_state_man.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "d7d7b7a2dd625e46ae662e8904712989e396bf641d69a121de677fe2d1335477"
+        },
+        {
+          "iteration": 44,
+          "topic": "Hilbert space blade inner product norm conservation",
+          "residual": 9.049412951430751e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i044_hilbert_space_blade_inner_product_norm_c.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "ce8e17f7d0331dfdcc5fa8f55d083a30b9d06a8263a0fe2f796ddbc7d9d42813"
+        },
+        {
+          "iteration": 45,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 1.0166552005763113e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i045_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "7b6c022b7838d47a4d8d45b30ac659c18fcadbbc241cd6b9b9f3ce830ef6af2f"
+        },
+        {
+          "iteration": 46,
+          "topic": "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
+          "residual": 5.85587453318346e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i046_non-commutative_bivector_commutator_comm.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "83b4d186dbeac4cac3a8c5e0a54c548017bfc855b296083ed58315b3c10fa3d0"
+        },
+        {
+          "iteration": 47,
+          "topic": "Supersymmetric Spin(7,0) rotor state manifold evolution",
+          "residual": 9.070988090963254e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i047_supersymmetric_spin(7,0)_rotor_state_man.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "5e99ba063ea56bd554ff75f0b609608300c75e07674fb00cab4314e2488ac782"
+        },
+        {
+          "iteration": 48,
+          "topic": "Hilbert space blade inner product norm conservation",
+          "residual": 1.1365247808157203e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i048_hilbert_space_blade_inner_product_norm_c.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "2656dc4b34199f597826aaad0b579a6f8e6c98512bbe8d4c87b28be05aba44d5"
+        },
+        {
+          "iteration": 49,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 4.932563198876206e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i049_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "e40ea81f59ab232b42b7a6a640fb0007369cf24596c51229160495e22a4eb151"
+        },
+        {
+          "iteration": 50,
+          "topic": "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
+          "residual": 1.2303594526780785e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i050_non-commutative_bivector_commutator_comm.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "627906f79396ecce11ebf1980b609fdfb91d63319143d098c5eb3dece6d6128d"
+        },
+        {
+          "iteration": 51,
+          "topic": "Supersymmetric Spin(7,0) rotor state manifold evolution",
+          "residual": 1.4680118798242321e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i051_supersymmetric_spin(7,0)_rotor_state_man.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "578a162001ee886a7217984c2f9ed8b3cc3878f9eda52335f46fa95b26de545c"
+        },
+        {
+          "iteration": 52,
+          "topic": "Hilbert space blade inner product norm conservation",
+          "residual": 1.351130246216289e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i052_hilbert_space_blade_inner_product_norm_c.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "e3d8db11ae8bbe2c5be2b88ab5177dc84f378a08f30e2d29d5da912690f9d98f"
+        },
+        {
+          "iteration": 53,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 8.035852441104318e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i053_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "b50beb2a5da416e6d7e340cb7054281477c772ca87ab59cb8aa01fc020e070ac"
+        },
+        {
+          "iteration": 54,
+          "topic": "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
+          "residual": 1.6759730178628712e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i054_non-commutative_bivector_commutator_comm.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "5f8cf8adcd9cddd3b6442da5f990c98161a8d28a1f48f65b31ffb4108ab9cfb5"
+        },
+        {
+          "iteration": 55,
+          "topic": "Supersymmetric Spin(7,0) rotor state manifold evolution",
+          "residual": 1.0165910568892726e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i055_supersymmetric_spin(7,0)_rotor_state_man.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "d7bbd71fb31897139ec226a9e1297641600b7878639e819c66a6257053457071"
+        },
+        {
+          "iteration": 56,
+          "topic": "Hilbert space blade inner product norm conservation",
+          "residual": 1.0111196243259513e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i056_hilbert_space_blade_inner_product_norm_c.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "657d1b3fdbb6cad5f32001215a9820f7ce4f7de56b47f92961f5cfd1a33d2a7d"
+        },
+        {
+          "iteration": 57,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 8.032000090602358e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i057_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "387bce8bcc4a9e6d9d514ba25d7d342355652618cde6853f43a2ae8cc679045f"
+        },
+        {
+          "iteration": 58,
+          "topic": "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
+          "residual": 1.0131879319585016e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i058_non-commutative_bivector_commutator_comm.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "ba9178f802234fe12ddf47eac018ad3120cc45c15e5783c65d777ce2259aff93"
+        },
+        {
+          "iteration": 59,
+          "topic": "Supersymmetric Spin(7,0) rotor state manifold evolution",
+          "residual": 1.243431777803008e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i059_supersymmetric_spin(7,0)_rotor_state_man.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "723bb2dc612367a5a81535fe2027fcf7313cd6056c6cee5cacb731405c7cdce3"
+        },
+        {
+          "iteration": 60,
+          "topic": "Hilbert space blade inner product norm conservation",
+          "residual": 8.132350112420601e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i060_hilbert_space_blade_inner_product_norm_c.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "2c47a67cde54cf6f190a3737b237e3a62a67ace6152e292a603e51f1ae80e2dc"
+        },
+        {
+          "iteration": 61,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 1.5666479537331838e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i061_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "2bb4cc7c57ccd45ee10611f977114e8bc4b0b003f473c534f65245679fc635e2"
+        },
+        {
+          "iteration": 62,
+          "topic": "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
+          "residual": 4.820579720400837e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i062_non-commutative_bivector_commutator_comm.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "3b1d233ae4493c45499201f6b31caca22c1abc9fa50d87605d03b70ef3226c2f"
+        },
+        {
+          "iteration": 63,
+          "topic": "Supersymmetric Spin(7,0) rotor state manifold evolution",
+          "residual": 1.0168491305352844e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i063_supersymmetric_spin(7,0)_rotor_state_man.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "8005e99fee788ddcb132e64323d792ae87c95ed6764da7a97bce5b729984f35e"
+        },
+        {
+          "iteration": 64,
+          "topic": "Hilbert space blade inner product norm conservation",
+          "residual": 1.2443421223429075e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i064_hilbert_space_blade_inner_product_norm_c.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "749f36a39d476d1b64bd2193e85a39ea37fb6a9a195e8cdb84e53f69b80339c3"
+        },
+        {
+          "iteration": 65,
+          "topic": "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
+          "residual": 1.1305802199769746e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w1_i065_deriving_7-blade_pseudoscalar_duality_in.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "e58b623fac32118438a346df1031f09fd5516d2b8db1282b24caae1b034e566b"
+        }
+      ]
+    },
+    {
+      "wave_id": 2,
+      "name": "Self-Optimizing Tensor Compiler Architecture & Graph Manifolds",
+      "elapsed_sec": 106.28047299385071,
+      "evaluations_count": 61,
+      "evaluations": [
+        {
+          "iteration": 1,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 1.0327240248920795e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i001_synthesizing_zero-hazard_simd_vectorizat.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "9cadc4164cbcf75d15dbc2fd0a9ec96aeacc6219c6270c5e709a6e1a355d6953"
+        },
+        {
+          "iteration": 2,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 1.2329984929269992e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i002_mapping_ast_recursion_depth_to_multivect.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "65c59edec90873a9150be1cfca9a07212cc3f783bd08c9a134247e936d1903b5"
+        },
+        {
+          "iteration": 3,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(7,0)",
+          "residual": 9.193247425209425e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i003_memory_alias-free_pointer_dependency_res.md",
+          "manuscript_word_count": 1149,
+          "audit_sha256": "318c7f02b13b9b080439387b6c3eadd54f82a83953c29951ef6ef2bba71571c4"
+        },
+        {
+          "iteration": 4,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 1.1331098430972009e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i004_dynamic_programming_recurrence_state_tre.md",
+          "manuscript_word_count": 1148,
+          "audit_sha256": "1968b532d593c2d9099de55f7f1e702fdc39f9df828fd86d4950c7af44c9dd0b"
+        },
+        {
+          "iteration": 5,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 1.1328317579538883e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i005_synthesizing_zero-hazard_simd_vectorizat.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "f11181776e2f87f3a5e99f4b5f7df2ca8755f6570999ee87e7bb7291634b6e33"
+        },
+        {
+          "iteration": 6,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 1.132991041305293e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i006_mapping_ast_recursion_depth_to_multivect.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "e6ccb821f8b61d935aa2d871c5a554938405bf841709e8515f642a3da25e0ac0"
+        },
+        {
+          "iteration": 7,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(7,0)",
+          "residual": 9.119913141153402e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i007_memory_alias-free_pointer_dependency_res.md",
+          "manuscript_word_count": 1149,
+          "audit_sha256": "5bfda72fcaa5ec0d3a0509ff71ec7fe59cceb68cbeed7d1aad94b508d1442a23"
+        },
+        {
+          "iteration": 8,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 1.131326953451806e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i008_dynamic_programming_recurrence_state_tre.md",
+          "manuscript_word_count": 1148,
+          "audit_sha256": "d14c5aa16a2afbe4cc9a4d72dca45fc914bf23668fe16b7f2b3e1447d808dad9"
+        },
+        {
+          "iteration": 9,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 1.4542911983066746e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i009_synthesizing_zero-hazard_simd_vectorizat.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "11fb3711fdfe569b043132d5063241e3ca3240cbb0dc3ac51e966e1bf9529ed6"
+        },
+        {
+          "iteration": 10,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 1.4695691007720226e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i010_mapping_ast_recursion_depth_to_multivect.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "29e4e49c1bbe6b43d6d31741d3c1998fbca385ef1278e9019ab530cbbabbcdb2"
+        },
+        {
+          "iteration": 11,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(7,0)",
+          "residual": 3.946142765716885e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i011_memory_alias-free_pointer_dependency_res.md",
+          "manuscript_word_count": 1149,
+          "audit_sha256": "cac35ecb483edf0b941296ecfc51b66d4ba3c6de6f0ef636c3b945e911a35c9c"
+        },
+        {
+          "iteration": 12,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 9.068083711760255e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i012_dynamic_programming_recurrence_state_tre.md",
+          "manuscript_word_count": 1148,
+          "audit_sha256": "814a8a0991c3fd1a1a7d71c1ae49fd261fbc4283d08dc16e8b102289ad238fb3"
+        },
+        {
+          "iteration": 13,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 1.2509959689762703e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i013_synthesizing_zero-hazard_simd_vectorizat.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "f826d3d814273c07cee6e1342c56c095df8dcb8ef777dd17aa570bd806c86f78"
+        },
+        {
+          "iteration": 14,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 4.248683077074745e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i014_mapping_ast_recursion_depth_to_multivect.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "ab4f8abbd403317e398ee2bdac9288c283afdeebfdc91591475b6705eca8c58c"
+        },
+        {
+          "iteration": 15,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(7,0)",
+          "residual": 1.4560191882816319e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i015_memory_alias-free_pointer_dependency_res.md",
+          "manuscript_word_count": 1149,
+          "audit_sha256": "22aed190868410fe0078bb3c0474edca2ad238a2ea646b2b2d967c95f856f855"
+        },
+        {
+          "iteration": 16,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 1.131875073480538e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i016_dynamic_programming_recurrence_state_tre.md",
+          "manuscript_word_count": 1148,
+          "audit_sha256": "8f71eeb871b624be89e40e674557a50b58db7c0cc1c9f21e9a590d25639384bc"
+        },
+        {
+          "iteration": 17,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 1.784921549214872e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i017_synthesizing_zero-hazard_simd_vectorizat.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "455f6d529fdf226af8411e97d4faf5eaf1779b0f93c75e25aebcf5c0b4dafc19"
+        },
+        {
+          "iteration": 18,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 9.186152005674988e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i018_mapping_ast_recursion_depth_to_multivect.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "f74d74acb68589cb5a41e5206082d7a30e6b918b84bacad0fbe7b76d0f8db3b0"
+        },
+        {
+          "iteration": 19,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(7,0)",
+          "residual": 1.238223964113022e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i019_memory_alias-free_pointer_dependency_res.md",
+          "manuscript_word_count": 1149,
+          "audit_sha256": "2b3057df234ac0caac75b74f049480043d32f874d316fed1803dba388e799f21"
+        },
+        {
+          "iteration": 20,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 1.3550535486239366e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i020_dynamic_programming_recurrence_state_tre.md",
+          "manuscript_word_count": 1148,
+          "audit_sha256": "dfa84116a3552f8c2dcac20a06e3bb5fd7baacd09d187d84f6c5d80580bee6e0"
+        },
+        {
+          "iteration": 21,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 4.784784810124348e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i021_synthesizing_zero-hazard_simd_vectorizat.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "e19af5af5a95d36008a690e74b532474f3e73db3acc7dcf41c87470ea7939d36"
+        },
+        {
+          "iteration": 22,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 1.6781902521156992e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i022_mapping_ast_recursion_depth_to_multivect.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "5a0cb3c079266f0588a19fa5d5ab73733033545573deadad987300b3c250dd6e"
+        },
+        {
+          "iteration": 23,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(7,0)",
+          "residual": 6.896127727109422e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i023_memory_alias-free_pointer_dependency_res.md",
+          "manuscript_word_count": 1149,
+          "audit_sha256": "3f10a3269bb858863fb5b172bb4d20013a67a50ec701e08a77cef7a5a3b6c333"
+        },
+        {
+          "iteration": 24,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 4.868389496207102e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i024_dynamic_programming_recurrence_state_tre.md",
+          "manuscript_word_count": 1148,
+          "audit_sha256": "e63262b93943c8de329730d8f29ae4d3f167afec5ccbea08368eb0753475b607"
+        },
+        {
+          "iteration": 25,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 9.088570411533755e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i025_synthesizing_zero-hazard_simd_vectorizat.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "3d94db7d4fe384dccbdb59fe42fa1179e722a47b00d5a8301f33aea46aa6b1d1"
+        },
+        {
+          "iteration": 26,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 6.89939423017514e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i026_mapping_ast_recursion_depth_to_multivect.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "86ed48ddfe078dc33218ad8268c48c2c2f0651e839640cc6d34a860d07dd2e68"
+        },
+        {
+          "iteration": 27,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(7,0)",
+          "residual": 1.2361979359228728e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i027_memory_alias-free_pointer_dependency_res.md",
+          "manuscript_word_count": 1149,
+          "audit_sha256": "3d582f872390f9cdb7414337ce8907ff25d15e6dee09432828da3163ad76a931"
+        },
+        {
+          "iteration": 28,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 5.873131404082603e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i028_dynamic_programming_recurrence_state_tre.md",
+          "manuscript_word_count": 1148,
+          "audit_sha256": "9563f3e710a0fde9966e0745bcb156f0402e3db93e1852e966b0f27c05f4bf6b"
+        },
+        {
+          "iteration": 29,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 3.8243841867439887e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i029_synthesizing_zero-hazard_simd_vectorizat.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "ec75c4699b0aac9e68b35b1b4423f89adca4d03e637c30de4cf2e4f1d033f3e4"
+        },
+        {
+          "iteration": 30,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 1.00996339653267e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i030_mapping_ast_recursion_depth_to_multivect.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "4f947e47e7af944420fad6288ee70634d9f7b8f55816b89022f0d93b7b6c0e57"
+        },
+        {
+          "iteration": 31,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(7,0)",
+          "residual": 1.4557710642683485e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i031_memory_alias-free_pointer_dependency_res.md",
+          "manuscript_word_count": 1149,
+          "audit_sha256": "1465f7d3d968f0ef41f20228f47c71234a485c2b8664b06dd045131d0715e8a9"
+        },
+        {
+          "iteration": 32,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 1.348598040712465e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i032_dynamic_programming_recurrence_state_tre.md",
+          "manuscript_word_count": 1148,
+          "audit_sha256": "bfd8fe3faf227bd540c3774307981f7ae24953467d9ec7fa026e4b7741ee3caf"
+        },
+        {
+          "iteration": 33,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 1.343121465903982e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i033_synthesizing_zero-hazard_simd_vectorizat.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "5f11b6ae9f641619cd8b8fee3409313bfaf3e70841f55e7796fecfc72e73b9f9"
+        },
+        {
+          "iteration": 34,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 1.3430045044509241e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i034_mapping_ast_recursion_depth_to_multivect.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "a5cf85f73c08fa4bcc0ca8f13b5651b714fb08069787c56b02e5c78e9c925065"
+        },
+        {
+          "iteration": 35,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(7,0)",
+          "residual": 1.122166595907195e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i035_memory_alias-free_pointer_dependency_res.md",
+          "manuscript_word_count": 1149,
+          "audit_sha256": "f5e35e0ea0cd6be3f41a4c0c13911db3e4a8044106151d4c7b34b9a859509b16"
+        },
+        {
+          "iteration": 36,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 1.5706633268238373e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i036_dynamic_programming_recurrence_state_tre.md",
+          "manuscript_word_count": 1148,
+          "audit_sha256": "5eb52aef053290a15d01c07ce9db68711935d43b9707316c81a308861d9f82ba"
+        },
+        {
+          "iteration": 37,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 7.007092151599572e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i037_synthesizing_zero-hazard_simd_vectorizat.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "811075f30a90ece383d7ec3359a9e340dbc8878fd5f5d1615341ad9fa76e5767"
+        },
+        {
+          "iteration": 38,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 4.0035551400970783e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i038_mapping_ast_recursion_depth_to_multivect.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "49a4bc6447830bfed3ca3e3018cd4196a9de2867927ce2fd28ecaa243a1cdcf5"
+        },
+        {
+          "iteration": 39,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(7,0)",
+          "residual": 8.049162285328926e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i039_memory_alias-free_pointer_dependency_res.md",
+          "manuscript_word_count": 1149,
+          "audit_sha256": "15e241501cdb1a6991a4a4c833b3bfa9b4937f9321a2186d45410450d76cd8a2"
+        },
+        {
+          "iteration": 40,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 9.036172467971993e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i040_dynamic_programming_recurrence_state_tre.md",
+          "manuscript_word_count": 1148,
+          "audit_sha256": "d205bee185feeb3e5ad9ada8db13c756ce8a426410568879218216791067aa3c"
+        },
+        {
+          "iteration": 41,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 9.319476482325198e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i041_synthesizing_zero-hazard_simd_vectorizat.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "97e69b4905893b34f78e6265310d431e5b3f7bd3264db7b2e722e0e97c721c19"
+        },
+        {
+          "iteration": 42,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 1.1390091015987849e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i042_mapping_ast_recursion_depth_to_multivect.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "6ddbc0a7989f6fc5d3b2a14543a7f5ac386f607d50968e336ccc4430071e0b3a"
+        },
+        {
+          "iteration": 43,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(7,0)",
+          "residual": 1.2484002867132466e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i043_memory_alias-free_pointer_dependency_res.md",
+          "manuscript_word_count": 1149,
+          "audit_sha256": "a6bed130f220051c75032674fdcc3f4fe89bb05b758b66dae80d4a34d36e0f99"
+        },
+        {
+          "iteration": 44,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 1.3451838582970625e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i044_dynamic_programming_recurrence_state_tre.md",
+          "manuscript_word_count": 1148,
+          "audit_sha256": "a3fb29218faa38f84868b4f81adff5a4a1ed25363661234117b89c6fa73c59e3"
+        },
+        {
+          "iteration": 45,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 1.2482770760356659e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i045_synthesizing_zero-hazard_simd_vectorizat.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "a72737ce1c7a801299eeadc51d661f00771a917606c6cf5821c5f6c8b7a49418"
+        },
+        {
+          "iteration": 46,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 1.5802568550433573e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i046_mapping_ast_recursion_depth_to_multivect.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "e6906a3e6a9831b29bc2d58efe49a58d35d9085020ebc99f60801c3170e9aef9"
+        },
+        {
+          "iteration": 47,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(7,0)",
+          "residual": 3.9629552738464844e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i047_memory_alias-free_pointer_dependency_res.md",
+          "manuscript_word_count": 1149,
+          "audit_sha256": "f27495217edcc39bd37b763ba4accae173cfb253535a12127543746c5b4f2900"
+        },
+        {
+          "iteration": 48,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 1.3458573200608352e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i048_dynamic_programming_recurrence_state_tre.md",
+          "manuscript_word_count": 1148,
+          "audit_sha256": "acd1006f6db6c6fb86cda8d8076859a2fc63fbec140829f777339672f4666811"
+        },
+        {
+          "iteration": 49,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 1.009173564885616e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i049_synthesizing_zero-hazard_simd_vectorizat.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "7ac40126361b6e9cedcde721627b0caa15d18ac4b45b3f9ca423852abe2ef5c3"
+        },
+        {
+          "iteration": 50,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 1.2384956928719216e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i050_mapping_ast_recursion_depth_to_multivect.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "155ba94aff89840b54ddabe6589e979a487ef7d49977720011bed2b3bd8f3a66"
+        },
+        {
+          "iteration": 51,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(7,0)",
+          "residual": 1.2372800128908988e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i051_memory_alias-free_pointer_dependency_res.md",
+          "manuscript_word_count": 1149,
+          "audit_sha256": "6b4a6892e69407316f360225666243568ca01e64700779c2deec490c4e64aff4"
+        },
+        {
+          "iteration": 52,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 9.133651469346027e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i052_dynamic_programming_recurrence_state_tre.md",
+          "manuscript_word_count": 1148,
+          "audit_sha256": "84cac311736d9fb3056318d763adc4a804ecbb2c7e9720c3b875b092b9f729b5"
+        },
+        {
+          "iteration": 53,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 1.2355651502935256e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i053_synthesizing_zero-hazard_simd_vectorizat.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "74b7a607809d5dffbaf40a17aa424cf501bb1779bb25c5b9687596d39bf2eee4"
+        },
+        {
+          "iteration": 54,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 1.0344198450622117e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i054_mapping_ast_recursion_depth_to_multivect.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "ac97287e1908e480cf01c4864d3642547f2ca631077a946304baa6bd479ea6d9"
+        },
+        {
+          "iteration": 55,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(7,0)",
+          "residual": 7.904371392004419e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i055_memory_alias-free_pointer_dependency_res.md",
+          "manuscript_word_count": 1149,
+          "audit_sha256": "d64cceecf42befe69dc3c08b018b2b5de33d83b36733552235d7f0c9eb46ceca"
+        },
+        {
+          "iteration": 56,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 1.0165823437577283e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i056_dynamic_programming_recurrence_state_tre.md",
+          "manuscript_word_count": 1148,
+          "audit_sha256": "032400709956b07526ffd9601869fa6e535faf529a76ada83ed1f565012734a4"
+        },
+        {
+          "iteration": 57,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 1.3470616230165883e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i057_synthesizing_zero-hazard_simd_vectorizat.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "8118eb106b6230d818403acb915a2a5e634d2118e40c1db1fa9910baf5b9ed48"
+        },
+        {
+          "iteration": 58,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 1.2306753388929899e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i058_mapping_ast_recursion_depth_to_multivect.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "506dd8a0978388edbe9b894fe45736f0e065c9c59eea88961f84556114329bab"
+        },
+        {
+          "iteration": 59,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(7,0)",
+          "residual": 1.1267788441959302e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i059_memory_alias-free_pointer_dependency_res.md",
+          "manuscript_word_count": 1149,
+          "audit_sha256": "509eea26a5248db18a9bc4dd13be74eae7de5b831afb61cf70a2fafb84e03d4b"
+        },
+        {
+          "iteration": 60,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 1.119935161786655e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i060_dynamic_programming_recurrence_state_tre.md",
+          "manuscript_word_count": 1148,
+          "audit_sha256": "38ccdc534e087c8b9efe777755824dbfafb91fd1323126c494d4bfbc186e5f58"
+        },
+        {
+          "iteration": 61,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 1.2373640359097234e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w2_i061_synthesizing_zero-hazard_simd_vectorizat.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "1e09a05bfca61c2f139fc5c6e3b5aeee060c9581a64232e46376d927aa7634ce"
+        }
+      ]
+    },
+    {
+      "wave_id": 3,
+      "name": "Relativistic Astrophysics, Horizon Thermodynamics & Cosmology",
+      "elapsed_sec": 105.93859696388245,
+      "evaluations_count": 65,
+      "evaluations": [
+        {
+          "iteration": 1,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 1.6854938388673541e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i001_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "e3092f3288f68ea9d63db9bda243f472a6095f2458f64a2dba2f30253f2e5772"
+        },
+        {
+          "iteration": 2,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 1.3429012025455965e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i002_flrw_cosmological_dark_energy_expansion_.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "a55475b1125d2bf329353ee86d7acabf60d60453089d5fbf50eb5c92658cc929"
+        },
+        {
+          "iteration": 3,
+          "topic": "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
+          "residual": 1.7935828067553273e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i003_black_hole_horizon_pseudoscalar_e1234567.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "3c9812cc81539094f893890894bb4d4a40e06ad64e8e476277f96c2615ea3550"
+        },
+        {
+          "iteration": 4,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 1.2481593366327434e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i004_navier-stokes_4d_fluid_circulation_vorti.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "2aa8fff1a027ab5978664c1fcb638a695a31fb0ec658ba1330bdb33160bf37bc"
+        },
+        {
+          "iteration": 5,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 1.3420150250325501e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i005_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "feb100a955a58bb734be17a91f0eb27cbc6b2e2e7259f2f0f0aaf09288bcbb38"
+        },
+        {
+          "iteration": 6,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 1.3520751866845442e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i006_flrw_cosmological_dark_energy_expansion_.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "eca63610cb2353e9d8a8809430ae00a8aa1b9fcdd55f22ec368e50616270a4b6"
+        },
+        {
+          "iteration": 7,
+          "topic": "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
+          "residual": 1.238322274805683e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i007_black_hole_horizon_pseudoscalar_e1234567.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "35861bcd49b52f27975ec1afe5e4e25ab0078379e2eeba251ffc24b05748667e"
+        },
+        {
+          "iteration": 8,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 1.0171897142746571e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i008_navier-stokes_4d_fluid_circulation_vorti.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "f21bac1d811aaf962c951369748bb957f5115ddf358f7239b20e0a409fcdfe6e"
+        },
+        {
+          "iteration": 9,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 5.918104368414578e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i009_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "56d129db5dded0f66b78e017e02a2dd74266afcf5d21284e61d8e159bcc56c18"
+        },
+        {
+          "iteration": 10,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 1.795984579422231e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i010_flrw_cosmological_dark_energy_expansion_.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "f42fa210b4e3d5b3a7ab4c5e3aaff50ce32e7d836eea585cc9079b8f3fb25d83"
+        },
+        {
+          "iteration": 11,
+          "topic": "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
+          "residual": 1.0260670467457717e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i011_black_hole_horizon_pseudoscalar_e1234567.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "25351821908d8b55aa7312eda82f99ba869baf72b9a66361466d3e1144969bad"
+        },
+        {
+          "iteration": 12,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 2.87442676066146e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i012_navier-stokes_4d_fluid_circulation_vorti.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "27e987df02930a6fd14d05952e0cee29edccbac04f726e2e7366a0871242d250"
+        },
+        {
+          "iteration": 13,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 1.123089614497479e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i013_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "d8075dc0f2f6dcc778805639af96aeee7efd2ecab56405b9e7b8d7d802a627dd"
+        },
+        {
+          "iteration": 14,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 8.070405095339479e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i014_flrw_cosmological_dark_energy_expansion_.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "a109134ebaebca7fda1db23fd1bcc9d0dcb28f7849feef3fe8d353dfb503a82e"
+        },
+        {
+          "iteration": 15,
+          "topic": "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
+          "residual": 4.976341877361598e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i015_black_hole_horizon_pseudoscalar_e1234567.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "27000d0bb46d42deac827983ffc1ed073a75b9b4f2697e6a824d21b85ad90b28"
+        },
+        {
+          "iteration": 16,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 1.4650749960315741e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i016_navier-stokes_4d_fluid_circulation_vorti.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "0ead3268cec86bd020884e976ed1a6b181f8f70cb84e01cb487e0937ce8629cb"
+        },
+        {
+          "iteration": 17,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 5.941938896299893e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i017_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "e97d110929a2e90219eb5b4e39a15e273f0d2c07d0e0392bbcc988e99579f783"
+        },
+        {
+          "iteration": 18,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 1.0136430324962826e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i018_flrw_cosmological_dark_energy_expansion_.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "93c6db3f690c48625e166901e2e29ae1970229da54594ba09db8e3dc853566ea"
+        },
+        {
+          "iteration": 19,
+          "topic": "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
+          "residual": 8.05934880788092e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i019_black_hole_horizon_pseudoscalar_e1234567.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "9675b99977613adffe7295ff41dff8b8b88804c6f62ecf2a6e515cb57691627f"
+        },
+        {
+          "iteration": 20,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 1.1317897890729076e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i020_navier-stokes_4d_fluid_circulation_vorti.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "64a5537d5e08fc1fc54cc352977645fca410ff19bab933fc452ae5539162e643"
+        },
+        {
+          "iteration": 21,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 7.915973803559019e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i021_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "dc80769ea72de5441df9f040d2b5f5424d8c253debf46010e4cf777752d1b78e"
+        },
+        {
+          "iteration": 22,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 1.1266661283251798e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i022_flrw_cosmological_dark_energy_expansion_.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "8c5e06c2322cfca97956cb9d5d4f7a019cfc2e275cdd87a73584176311cde19c"
+        },
+        {
+          "iteration": 23,
+          "topic": "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
+          "residual": 8.088646929640368e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i023_black_hole_horizon_pseudoscalar_e1234567.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "09246c65a6c6d290bffdfd2a63d71e9bfabcfda013b65874945d518b4ed3d6d2"
+        },
+        {
+          "iteration": 24,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 5.814428546209563e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i024_navier-stokes_4d_fluid_circulation_vorti.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "463c3b5668660af36f94e901040a35b4bed6bcbfa95b654544bd9e69c8480f85"
+        },
+        {
+          "iteration": 25,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 1.140475460898394e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i025_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "87bd95a5293748ae67f8ff7c85f280ef7e145ae4ebbab1af26b442196b6623ea"
+        },
+        {
+          "iteration": 26,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 1.2347187244385059e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i026_flrw_cosmological_dark_energy_expansion_.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "8d6f03d8299c0bfd01e1604e30cb294e7d64036e137e0a46261a7f874419c98e"
+        },
+        {
+          "iteration": 27,
+          "topic": "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
+          "residual": 1.3499957962912935e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i027_black_hole_horizon_pseudoscalar_e1234567.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "c1933581ad2a20858802f9d8dd7e85ca314eb05daa0bc73a17b63d85d5ac83da"
+        },
+        {
+          "iteration": 28,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 1.136982315662685e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i028_navier-stokes_4d_fluid_circulation_vorti.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "03feaf53ab2fdc4819b474ad609954a41a01d0225ef1409473fc10fec7862ae2"
+        },
+        {
+          "iteration": 29,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 1.1333306963576122e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i029_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "3914c0b8d43e1f821922067130dd47e6778ccf100b9ee76eadfe5b1c66e1b043"
+        },
+        {
+          "iteration": 30,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 7.014824242510174e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i030_flrw_cosmological_dark_energy_expansion_.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "5fe7ce4ccd0b53046f4149b9585e7b137af9f958b43cb2dd065c184eec5565d2"
+        },
+        {
+          "iteration": 31,
+          "topic": "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
+          "residual": 1.343894930367943e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i031_black_hole_horizon_pseudoscalar_e1234567.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "b9831913c073c2710076b9e4738187ac3f7257df65f04d805921d0f2b644bb7b"
+        },
+        {
+          "iteration": 32,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 1.4595045460433781e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i032_navier-stokes_4d_fluid_circulation_vorti.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "0469f458d6f3182ef3b50a4b259f72cdc9f77bb85045c1114b3aa8471de10968"
+        },
+        {
+          "iteration": 33,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 1.2490091648139315e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i033_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "3bc91fa979357202b61237c99c731893686c32eed4522692dabab56b492aeafd"
+        },
+        {
+          "iteration": 34,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 1.0361989018074635e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i034_flrw_cosmological_dark_energy_expansion_.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "98d24123f6319ec21a2f7053fd9976cc397f5e83e70bb6a03603b5ef1df15e34"
+        },
+        {
+          "iteration": 35,
+          "topic": "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
+          "residual": 8.162631086720448e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i035_black_hole_horizon_pseudoscalar_e1234567.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "5ca10a1b27f7026af25a9173472ebe3ab82ddeabae63fda107da22670923feb2"
+        },
+        {
+          "iteration": 36,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 1.2361572953824163e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i036_navier-stokes_4d_fluid_circulation_vorti.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "299349063eab7ea95864b2b3cf80b94819f4d222726bed857a5831afab0dea43"
+        },
+        {
+          "iteration": 37,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 1.019513738646774e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i037_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "be689ec2548330a2384c653b8e8ffba59b6630e7af5655ea0f943c84ed6773dd"
+        },
+        {
+          "iteration": 38,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 1.573068083145073e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i038_flrw_cosmological_dark_energy_expansion_.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "3d79bbaa695aeadb282fcb66d234246110c08df13076c2c63d866573707d7d35"
+        },
+        {
+          "iteration": 39,
+          "topic": "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
+          "residual": 1.0420055430438959e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i039_black_hole_horizon_pseudoscalar_e1234567.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "26a3ea4c6553f73eb10f59906c473a1fcfb4043cccec8f9862e9f6b1bc2a331e"
+        },
+        {
+          "iteration": 40,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 1.4562522027386383e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i040_navier-stokes_4d_fluid_circulation_vorti.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "08795e7f572e35ddc5c8ff715fd76a8168af6f174be797e9046bb30218e02df0"
+        },
+        {
+          "iteration": 41,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 1.234286176934686e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i041_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "775ca280d3524ccc7ee4375640844ee716cfc2abf6619779bd9a97452ad8ec16"
+        },
+        {
+          "iteration": 42,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 6.973741694901255e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i042_flrw_cosmological_dark_energy_expansion_.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "408df80e978eba2abcf23e86935d3fff34472161fc744a9fb57921f47d7af34a"
+        },
+        {
+          "iteration": 43,
+          "topic": "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
+          "residual": 1.3549486841411461e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i043_black_hole_horizon_pseudoscalar_e1234567.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "8d9e6de14b1fc5b2a47bbf87dfb1bcdb30963dddc7be8be508d36b624cb88e81"
+        },
+        {
+          "iteration": 44,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 9.13927445962201e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i044_navier-stokes_4d_fluid_circulation_vorti.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "939b70ce7831e4df4783dcb3e3c78bf81f40ecd9e71c9e20b7db4abf4ad908c1"
+        },
+        {
+          "iteration": 45,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 7.931571554668115e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i045_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "6ff336dc366960680c500e787f9bf70091abab2f7aa2e8015f7e0484a6a9c254"
+        },
+        {
+          "iteration": 46,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 1.1362720702097248e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i046_flrw_cosmological_dark_energy_expansion_.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "daac5146492cdcdada386b2de21df1397136cae2fa83c6ea111b5d10d383a443"
+        },
+        {
+          "iteration": 47,
+          "topic": "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
+          "residual": 1.0158358948313057e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i047_black_hole_horizon_pseudoscalar_e1234567.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "7b91f87997d92c0b10f82604591ecb3769a06d242d69fc01c79e4fc95a52adfb"
+        },
+        {
+          "iteration": 48,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 1.0425835945204499e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i048_navier-stokes_4d_fluid_circulation_vorti.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "52062d218b30816f26f08d5c470894eb00f2a682105c6a374a6e0dc4394736f9"
+        },
+        {
+          "iteration": 49,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 1.0148738725268565e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i049_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "eee1a93477ef248f0cfc897843050ce31eec4c151aa97f374bb87dc4e47ad020"
+        },
+        {
+          "iteration": 50,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 1.237315010657327e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i050_flrw_cosmological_dark_energy_expansion_.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "e33f09551ed39348302df11fa7f4a0439f2e0a1395d4dcaeccd1fbbbf2e57222"
+        },
+        {
+          "iteration": 51,
+          "topic": "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
+          "residual": 5.881676881840176e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i051_black_hole_horizon_pseudoscalar_e1234567.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "409bf72c5c7bffb1a8290c76cfee713f3b58794345db8fbd6c59b103d84a740a"
+        },
+        {
+          "iteration": 52,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 1.0294684868461351e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i052_navier-stokes_4d_fluid_circulation_vorti.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "e40b071602b0f6c54678acb84a5deb27b50532b6c638cd440cce1fccdc4e65ee"
+        },
+        {
+          "iteration": 53,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 1.1251488684264057e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i053_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "8395d7b86c4b3809db141badd4de78516fdd36d38e2861e6127d4023a48c8922"
+        },
+        {
+          "iteration": 54,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 7.969494025882003e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i054_flrw_cosmological_dark_energy_expansion_.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "0a14dc7a280f41204fe6bd6724d6484ce67efa1de5a2e85a2ad8ded21da6c394"
+        },
+        {
+          "iteration": 55,
+          "topic": "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
+          "residual": 9.244394254590405e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i055_black_hole_horizon_pseudoscalar_e1234567.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "e86f61f505163a102fae0d2473724b6581c5c3644a2213c00fe0381388af16b7"
+        },
+        {
+          "iteration": 56,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 9.095621397584553e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i056_navier-stokes_4d_fluid_circulation_vorti.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "738e042fb572f4eace9e18fe5a12e8d35edf5284f075e039d76f03d6a80bc51a"
+        },
+        {
+          "iteration": 57,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 1.134872983458899e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i057_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "72e91552d7ec9ee409837f874dc26ad4f997522598f713bf9782369c56edc44f"
+        },
+        {
+          "iteration": 58,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 9.170867780829842e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i058_flrw_cosmological_dark_energy_expansion_.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "eb9e049556681df1e7d57a6d0bc2a553d33bb26edb886a6692a6f35338bdf54b"
+        },
+        {
+          "iteration": 59,
+          "topic": "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
+          "residual": 1.3643432459225864e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i059_black_hole_horizon_pseudoscalar_e1234567.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "1d7dc0bbec154419c5d86ce1918021c6ef13b4e1e7de518a53e0a24e449a2d78"
+        },
+        {
+          "iteration": 60,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 1.2365770264677085e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i060_navier-stokes_4d_fluid_circulation_vorti.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "12fcd58b496276caf360e4814bca7b2258089065781e07d7efee7d3609b62f27"
+        },
+        {
+          "iteration": 61,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 1.25087583767986e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i061_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "df0161325a41a964eba0bd50dbcca60031bf6c9a527cb93cb64c5d4105698919"
+        },
+        {
+          "iteration": 62,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 1.2359754027099365e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i062_flrw_cosmological_dark_energy_expansion_.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "47445a9d9926cb3f0ac5788968a656b9eab13b1654cfaafe7a39b60b0fae7efb"
+        },
+        {
+          "iteration": 63,
+          "topic": "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
+          "residual": 1.0358105277704153e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i063_black_hole_horizon_pseudoscalar_e1234567.md",
+          "manuscript_word_count": 1150,
+          "audit_sha256": "d79bc325caa7ba6baa90e11c27947e1679f0060e657aa36d4fc22ae0ce5c1c0b"
+        },
+        {
+          "iteration": 64,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 1.0190671388012645e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i064_navier-stokes_4d_fluid_circulation_vorti.md",
+          "manuscript_word_count": 1145,
+          "audit_sha256": "b47434be1855b775db47c9e43e27323434063256c6fc01e85ba8a6c709546c68"
+        },
+        {
+          "iteration": 65,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 1.2316492861832763e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w3_i065_10-body_asymmetric_relativistic_system_w.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "453996e8e8b945decb92fc1d3ed38aaaa086c4ecb9384ac1fe19b21d23155a16"
+        }
+      ]
+    },
+    {
+      "wave_id": 4,
+      "name": "Unified Cross-Domain Isomorphisms & Master Synthesis",
+      "elapsed_sec": 104.07774686813354,
+      "evaluations_count": 61,
+      "evaluations": [
+        {
+          "iteration": 1,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
+          "residual": 5.049403318862429e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i001_isomorphism:_software_execution_ast_<->_.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "9b556bab32d80a3dc69da1b8b66ac42fabf8702af7c31b99e3c7ed4b063d7b42"
+        },
+        {
+          "iteration": 2,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 1.4614115122002703e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i002_16-layer_micro-reversibility_verificatio.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "399410bda6f1b6d0b1ae15521ad670ed0f37f31cd2555ba4a9e425d041081cbb"
+        },
+        {
+          "iteration": 3,
+          "topic": "Sigmoidal empirical grounding calibration C(s) = 1 / (1 + exp(-2(s-1)))",
+          "residual": 6.94685657722989e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i003_sigmoidal_empirical_grounding_calibratio.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "90ca5b767e62276bfa5a5b6cf7054dacf56cef147585bd869f679a7b26fe5499"
+        },
+        {
+          "iteration": 4,
+          "topic": "Generating immutable SHA-256 cryptographic authority receipts",
+          "residual": 9.115706642922378e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i004_generating_immutable_sha-256_cryptograph.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "0f6542a8b6c9d61a222bb3af8e65ee379d00e7d4810cdab860bb236631411b91"
+        },
+        {
+          "iteration": 5,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
+          "residual": 1.6864160366893488e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i005_isomorphism:_software_execution_ast_<->_.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "e5d7677c99f4086c37cca1324409576b81a3ebaf70c6766085da78577c97fe40"
+        },
+        {
+          "iteration": 6,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 8.016549812269059e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i006_16-layer_micro-reversibility_verificatio.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "8b159e31e42ae2f860b6ce4e132c6630bbd06bc9a5896e2a7cf9e4e6a4517c99"
+        },
+        {
+          "iteration": 7,
+          "topic": "Sigmoidal empirical grounding calibration C(s) = 1 / (1 + exp(-2(s-1)))",
+          "residual": 1.3489437499963546e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i007_sigmoidal_empirical_grounding_calibratio.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "96a23a963574a88d6c6b5e95ec47ef0177a31ef4fb75e2e75baacd3cff1386bd"
+        },
+        {
+          "iteration": 8,
+          "topic": "Generating immutable SHA-256 cryptographic authority receipts",
+          "residual": 9.137142452289322e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i008_generating_immutable_sha-256_cryptograph.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "13e7fcf6bf01bf46dd9631976a24057e0cde8882e4f8582a40c3b66761d9f8fd"
+        },
+        {
+          "iteration": 9,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
+          "residual": 7.152722325724617e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i009_isomorphism:_software_execution_ast_<->_.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "83e510f17103503a84b8c76c3a385d8bb7eef89a18b3c138d743460070940bc7"
+        },
+        {
+          "iteration": 10,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 1.5706913738949684e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i010_16-layer_micro-reversibility_verificatio.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "cab3b1af6b91f68ad4ac605a781c478bc1940ddac1a61c3d58788dcc969c9c8e"
+        },
+        {
+          "iteration": 11,
+          "topic": "Sigmoidal empirical grounding calibration C(s) = 1 / (1 + exp(-2(s-1)))",
+          "residual": 8.128531961816232e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i011_sigmoidal_empirical_grounding_calibratio.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "d3537bbc830f05af1f988669782a7ff708ea28539811cedc09783a0bf8784fd3"
+        },
+        {
+          "iteration": 12,
+          "topic": "Generating immutable SHA-256 cryptographic authority receipts",
+          "residual": 1.4558820650356994e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i012_generating_immutable_sha-256_cryptograph.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "7e69c99a870865bd1cdd3f34afbc6f567a1f07a8c5b72f975170ade8eaf2f43a"
+        },
+        {
+          "iteration": 13,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
+          "residual": 1.46166029513929e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i013_isomorphism:_software_execution_ast_<->_.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "142fc49b610c96850ad40e5aa1cb1cb4b3d91aa4c643910d1f073a61cc98b20f"
+        },
+        {
+          "iteration": 14,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 1.2434665530191118e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i014_16-layer_micro-reversibility_verificatio.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "4760ec2511b55f7fd5b2cf56648ac300e976df7f815b6337cfd05f45b434787c"
+        },
+        {
+          "iteration": 15,
+          "topic": "Sigmoidal empirical grounding calibration C(s) = 1 / (1 + exp(-2(s-1)))",
+          "residual": 1.0238512991441207e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i015_sigmoidal_empirical_grounding_calibratio.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "e571862c7c9229d7b9065c9c2670f11e27e27386ebf061d1a6bd4f33a3f2b75b"
+        },
+        {
+          "iteration": 16,
+          "topic": "Generating immutable SHA-256 cryptographic authority receipts",
+          "residual": 1.131835845072234e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i016_generating_immutable_sha-256_cryptograph.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "d80fceea21aaad5c1761318f769a27f1a29d558ced464ea8270b0e6eb653e49d"
+        },
+        {
+          "iteration": 17,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
+          "residual": 1.3477817780032838e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i017_isomorphism:_software_execution_ast_<->_.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "55c9d1a4a1d5246eb64f67e2f9c65acdc7a5f22acadc6c94dd006e6c73ce1dc2"
+        },
+        {
+          "iteration": 18,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 1.126786245166513e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i018_16-layer_micro-reversibility_verificatio.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "ffa8c00ee13a9f9db58741b9af926ef0423e133ee89cf122b917640efa1b19e7"
+        },
+        {
+          "iteration": 19,
+          "topic": "Sigmoidal empirical grounding calibration C(s) = 1 / (1 + exp(-2(s-1)))",
+          "residual": 1.1404128593826684e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i019_sigmoidal_empirical_grounding_calibratio.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "88487523a6b1cab0577e7495c2c1ee474c9d4eed8a336154443cd45ec7b0d37f"
+        },
+        {
+          "iteration": 20,
+          "topic": "Generating immutable SHA-256 cryptographic authority receipts",
+          "residual": 1.129400163295797e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i020_generating_immutable_sha-256_cryptograph.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "01c8b310bc6da6d3755873132daff4acd43cb32eba2c8e269d9e0bf000654a5a"
+        },
+        {
+          "iteration": 21,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
+          "residual": 5.144763522970692e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i021_isomorphism:_software_execution_ast_<->_.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "2c284fe62fffe510bcb1e764fb8dfcf547093055ea60ce529ddca28f80c9835b"
+        },
+        {
+          "iteration": 22,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 1.3471372524394598e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i022_16-layer_micro-reversibility_verificatio.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "05f77fc83d32812e0cbbef4b5aef78d8c684f4bd9549a6eeede8ee0bd5ef94fc"
+        },
+        {
+          "iteration": 23,
+          "topic": "Sigmoidal empirical grounding calibration C(s) = 1 / (1 + exp(-2(s-1)))",
+          "residual": 1.2352362797562966e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i023_sigmoidal_empirical_grounding_calibratio.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "1b3cff9ec7c0036058a0bed3c501d0b01d1498b33960cd170d7aeab3f6c56dc1"
+        },
+        {
+          "iteration": 24,
+          "topic": "Generating immutable SHA-256 cryptographic authority receipts",
+          "residual": 9.075021345153636e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i024_generating_immutable_sha-256_cryptograph.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "9f3d0b495b3c2eee9e776fcb9b65712b6e8a8f1405f7535858d7783fb8a25914"
+        },
+        {
+          "iteration": 25,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
+          "residual": 9.184112097568536e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i025_isomorphism:_software_execution_ast_<->_.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "ce0bee0a27b1f46fbcdc83b61367e108322a6acae834b578f8a6fdd84740f9f7"
+        },
+        {
+          "iteration": 26,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 1.0122811892365788e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i026_16-layer_micro-reversibility_verificatio.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "f3ba06418dde25963b7fdd698c3f58e2598e9198c8c32221424f6c82daed9890"
+        },
+        {
+          "iteration": 27,
+          "topic": "Sigmoidal empirical grounding calibration C(s) = 1 / (1 + exp(-2(s-1)))",
+          "residual": 7.121630545743896e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i027_sigmoidal_empirical_grounding_calibratio.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "d0cda96967e6534a349ed90ce4e5eb8c652c9a87fdedb5c7c815b558558d9f0e"
+        },
+        {
+          "iteration": 28,
+          "topic": "Generating immutable SHA-256 cryptographic authority receipts",
+          "residual": 1.0069720608474552e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i028_generating_immutable_sha-256_cryptograph.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "b2019ada431940d549e3ed2d2ca7b85c6abae1c04ae2385dade9894591ae4200"
+        },
+        {
+          "iteration": 29,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
+          "residual": 1.0308843714606851e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i029_isomorphism:_software_execution_ast_<->_.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "4dab744e3977e7c9ac5981768e27b949267801b2c36c4020720f11dd40aeb969"
+        },
+        {
+          "iteration": 30,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 1.2379412238332798e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i030_16-layer_micro-reversibility_verificatio.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "a7a7ea42eaf464d6ff3d2548fa992cebf562b61d28c5e78118631d50d9b824a9"
+        },
+        {
+          "iteration": 31,
+          "topic": "Sigmoidal empirical grounding calibration C(s) = 1 / (1 + exp(-2(s-1)))",
+          "residual": 1.025405095922315e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i031_sigmoidal_empirical_grounding_calibratio.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "f7c3233c890ff37025c8547d86bcb5b02bde90695bf9e3dc5b9bbd28285edac8"
+        },
+        {
+          "iteration": 32,
+          "topic": "Generating immutable SHA-256 cryptographic authority receipts",
+          "residual": 6.925607012468916e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i032_generating_immutable_sha-256_cryptograph.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "c91ceb010fa386e12e5f1ab6a06caf534a2bcb2c18fec4c0062ed12b8e3951cb"
+        },
+        {
+          "iteration": 33,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
+          "residual": 1.3447392588769579e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i033_isomorphism:_software_execution_ast_<->_.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "f3e031be35ee91cd6595369d9799dde6ab1fb33ad0eb8556056d6a1d28ee6d5b"
+        },
+        {
+          "iteration": 34,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 1.6771707059113914e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i034_16-layer_micro-reversibility_verificatio.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "da62668feb4eaf8ef362405799054aa9cb44dd300edc5b70fe2ba1444f872739"
+        },
+        {
+          "iteration": 35,
+          "topic": "Sigmoidal empirical grounding calibration C(s) = 1 / (1 + exp(-2(s-1)))",
+          "residual": 1.458406726984743e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i035_sigmoidal_empirical_grounding_calibratio.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "26a7b6fc7a6845331e3244769d995770fe06c97ff23928d46ca0f420a1ddba4e"
+        },
+        {
+          "iteration": 36,
+          "topic": "Generating immutable SHA-256 cryptographic authority receipts",
+          "residual": 8.068709380956693e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i036_generating_immutable_sha-256_cryptograph.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "493ab35fee847ad54fd8711e2fc25f191e0f2f47c7deb0dfd707f919ea68fce9"
+        },
+        {
+          "iteration": 37,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
+          "residual": 1.5708786782197589e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i037_isomorphism:_software_execution_ast_<->_.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "27ac222cb071dc85609abb1dbfb5a650379b6ec75fd5299f1cd6f92a949ce60f"
+        },
+        {
+          "iteration": 38,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 1.1303175147314982e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i038_16-layer_micro-reversibility_verificatio.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "e38e9873c3ec537aea5eb04048497998a116eaa0a3dfd510398e9c46cd3d0f87"
+        },
+        {
+          "iteration": 39,
+          "topic": "Sigmoidal empirical grounding calibration C(s) = 1 / (1 + exp(-2(s-1)))",
+          "residual": 1.1412194805093445e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i039_sigmoidal_empirical_grounding_calibratio.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "dd293a8e4f6c6e4ed63df5d23a89aa186cb655a4640242796387bd7a4758421d"
+        },
+        {
+          "iteration": 40,
+          "topic": "Generating immutable SHA-256 cryptographic authority receipts",
+          "residual": 1.4564987549262162e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i040_generating_immutable_sha-256_cryptograph.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "bc2c65e6c38736fb79fc749b643360a31fbf1f7278d899f23c7c1c02209563c7"
+        },
+        {
+          "iteration": 41,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
+          "residual": 1.3528147120701492e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i041_isomorphism:_software_execution_ast_<->_.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "1b1e657cee1ecabe8276aa0fbd08b066178448af34294b6d70ee64a8d966eecc"
+        },
+        {
+          "iteration": 42,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 1.132770083340501e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i042_16-layer_micro-reversibility_verificatio.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "68e23685a0dd1387f30a55b08802cdda22d7ec3323ac3e2b7903c8faf16c3f06"
+        },
+        {
+          "iteration": 43,
+          "topic": "Sigmoidal empirical grounding calibration C(s) = 1 / (1 + exp(-2(s-1)))",
+          "residual": 1.128022514357038e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i043_sigmoidal_empirical_grounding_calibratio.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "d39e36764d597743210ef857345867c5bf562b5fee696f5fe1983c8045c2a0e7"
+        },
+        {
+          "iteration": 44,
+          "topic": "Generating immutable SHA-256 cryptographic authority receipts",
+          "residual": 1.342251117541379e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i044_generating_immutable_sha-256_cryptograph.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "898864f2980b24ea02c4f054c0b93d6536e4ea773f3e487b4cf86e06cc2b7d9a"
+        },
+        {
+          "iteration": 45,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
+          "residual": 1.0241750670238744e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i045_isomorphism:_software_execution_ast_<->_.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "d838e6fbff1f54254c33fa3529c15278532c6a2074046dd5934b81f21be5e294"
+        },
+        {
+          "iteration": 46,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 1.1312746185467597e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i046_16-layer_micro-reversibility_verificatio.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "2ab486e3bba5995110a77bb0d88727fe6900f47128180ad185f56988f74a870a"
+        },
+        {
+          "iteration": 47,
+          "topic": "Sigmoidal empirical grounding calibration C(s) = 1 / (1 + exp(-2(s-1)))",
+          "residual": 9.353393573594369e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i047_sigmoidal_empirical_grounding_calibratio.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "b2eaeae7625ad32af1e52afa4c1253b8f9410ab2dd76e4938132c813929e915c"
+        },
+        {
+          "iteration": 48,
+          "topic": "Generating immutable SHA-256 cryptographic authority receipts",
+          "residual": 1.1251908992570162e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i048_generating_immutable_sha-256_cryptograph.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "d6f30b2a48f317896c84c6916e88ac4e6d17ed815c20c77820680663597a317c"
+        },
+        {
+          "iteration": 49,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
+          "residual": 1.792932035440522e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i049_isomorphism:_software_execution_ast_<->_.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "eb200add6678e437f107511be1496a1badbfbf606957ee0c4190935fdb42a28d"
+        },
+        {
+          "iteration": 50,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 1.34938686673106e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i050_16-layer_micro-reversibility_verificatio.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "6db1e7da5a16ccd0760032e4f63102b4db00bd0d804d5b5be0e171879d55b571"
+        },
+        {
+          "iteration": 51,
+          "topic": "Sigmoidal empirical grounding calibration C(s) = 1 / (1 + exp(-2(s-1)))",
+          "residual": 1.2329155382743819e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i051_sigmoidal_empirical_grounding_calibratio.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "33ed89035a0bee9e220c84a70739070f5a577f542c1c16714f315ee11477ec6e"
+        },
+        {
+          "iteration": 52,
+          "topic": "Generating immutable SHA-256 cryptographic authority receipts",
+          "residual": 8.065558484883672e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i052_generating_immutable_sha-256_cryptograph.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "365176b4e3f308076c7f9fa3aa4763f04a8894da3a25710650d4bfb691977b40"
+        },
+        {
+          "iteration": 53,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
+          "residual": 8.140763985976827e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i053_isomorphism:_software_execution_ast_<->_.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "95b9493ae944b0c901587704bc39824ea827e9540dc9a5e19bea265bc51a0c4d"
+        },
+        {
+          "iteration": 54,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 6.085513815016105e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i054_16-layer_micro-reversibility_verificatio.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "95d7562f1ae855d3b063c07d21254efcc3dceee7f828894edfceb453eedb7b0b"
+        },
+        {
+          "iteration": 55,
+          "topic": "Sigmoidal empirical grounding calibration C(s) = 1 / (1 + exp(-2(s-1)))",
+          "residual": 9.113407717416798e-16,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i055_sigmoidal_empirical_grounding_calibratio.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "58fd72be67a06449d54c270401b35a81d5c7e28ce565a0d16a8292b7ccd5b36b"
+        },
+        {
+          "iteration": 56,
+          "topic": "Generating immutable SHA-256 cryptographic authority receipts",
+          "residual": 1.3474248551387261e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i056_generating_immutable_sha-256_cryptograph.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "0eb5b0259b28d93674f8f24153b2ec0f553588c74575d48fff51b4de1a137d69"
+        },
+        {
+          "iteration": 57,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
+          "residual": 1.0435277945336395e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i057_isomorphism:_software_execution_ast_<->_.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "9e86de725e47906e730cbcb9591c231e0eb9cfaa199c3fb28aa2320698a1068a"
+        },
+        {
+          "iteration": 58,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 1.450807915022655e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i058_16-layer_micro-reversibility_verificatio.md",
+          "manuscript_word_count": 1143,
+          "audit_sha256": "3b6063b3e7f0109087fa92d91aecbaba5386e29af76817bfee912be5cb179892"
+        },
+        {
+          "iteration": 59,
+          "topic": "Sigmoidal empirical grounding calibration C(s) = 1 / (1 + exp(-2(s-1)))",
+          "residual": 1.4626940658239995e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i059_sigmoidal_empirical_grounding_calibratio.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "a8cdbd65856ae18825b3c9d515b89f96ecf62e580514c43b704914e5096b2121"
+        },
+        {
+          "iteration": 60,
+          "topic": "Generating immutable SHA-256 cryptographic authority receipts",
+          "residual": 1.347181514601095e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i060_generating_immutable_sha-256_cryptograph.md",
+          "manuscript_word_count": 1142,
+          "audit_sha256": "c6a6da8748a2f53a8380d5e562978a3d1cb2076488da963a2a833eebfec3db5b"
+        },
+        {
+          "iteration": 61,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
+          "residual": 1.1269990306692254e-15,
+          "verdict": "PASS",
+          "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+          "manuscript_filename": "journal_paper_7min_w4_i061_isomorphism:_software_execution_ast_<->_.md",
+          "manuscript_word_count": 1147,
+          "audit_sha256": "db90d84fb77a597e2eb761b5e8a52a4b61a0523e9b3276bd46cb6519a114d451"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "engine_version": "12.0.1-GOVERNED",
+  "domain": "Mathematics",
+  "verdict": "PASS",
+  "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+  "publication_permitted": true,
+  "reconstruction_residual": 9.928907082980051e-16,
+  "grade0_scalar_s": 0.949061,
+  "calibrated_certainty_C": 0.474552,
+  "audit_sha256": "488d3ce60fae927deb48b1e94228c4963cb8fd1368b608f6926cbd7fe16571e0",
+  "manuscript_filename": "journal_paper_fano_plane_triality_encoding.md",
+  "manuscript_word_count": 730,
+  "manuscript_sha256": "7e8b7da8802ec358309bb88f63628cbca43d02dab291ddf618e413b0f18c4578"
+}

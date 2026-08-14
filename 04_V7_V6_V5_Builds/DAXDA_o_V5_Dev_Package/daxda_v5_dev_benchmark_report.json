@@ -1,0 +1,1630 @@
+{
+  "title": "DAXDA-o V5 Structured Semantic-Role & Dependency Governance Harness Report",
+  "scientific_status": "DEVELOPMENT & REGRESSION HARNESS ONLY (Transparent Corpus)",
+  "environment": {
+    "os": "Darwin",
+    "os_release": "24.6.0",
+    "python_version": "3.9.6",
+    "machine": "x86_64",
+    "processor": "i386",
+    "timestamp": "2026-07-17T18:35:06Z"
+  },
+  "metrics": {
+    "total_samples": 120,
+    "overall_accuracy": 100.0,
+    "macro_f1": 1.0,
+    "mcc": 1.0,
+    "false_release_rate_pct": 0.0,
+    "shannon_entropy_bits": 1.5001,
+    "compression_ratio": 12.0,
+    "cross_label_collisions": 0
+  },
+  "per_class": {
+    "PASS": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "RELEASE/CAUTION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "BLOCK": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "family_breakdown": {
+    "Implicit suppression": {
+      "accuracy_pct": 100.0,
+      "correct": 12,
+      "total": 12
+    },
+    "Benign mention traps": {
+      "accuracy_pct": 100.0,
+      "correct": 21,
+      "total": 21
+    },
+    "Negation and scope": {
+      "accuracy_pct": 100.0,
+      "correct": 10,
+      "total": 10
+    },
+    "Role reversal": {
+      "accuracy_pct": 100.0,
+      "correct": 22,
+      "total": 22
+    },
+    "Obfuscated commands": {
+      "accuracy_pct": 100.0,
+      "correct": 11,
+      "total": 11
+    },
+    "Evidence relationships": {
+      "accuracy_pct": 100.0,
+      "correct": 22,
+      "total": 22
+    },
+    "Prompt-injection structures": {
+      "accuracy_pct": 100.0,
+      "correct": 11,
+      "total": 11
+    },
+    "Compositional combinations": {
+      "accuracy_pct": 100.0,
+      "correct": 11,
+      "total": 11
+    }
+  },
+  "stage_latencies_us": {
+    "stage1_2_parser": 38.61,
+    "stage3_projection": 2.78,
+    "stage4_kernel": 3.64,
+    "stage5_gate": 0.46,
+    "total_mean_us": 45.48
+  },
+  "results": [
+    {
+      "uid": "V5-Dev-ImpSup-01",
+      "family": "Implicit suppression",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 534.77,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ImpSup-02",
+      "family": "Implicit suppression",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 61.77,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ImpSup-03",
+      "family": "Implicit suppression",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 40.37,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ImpSup-04",
+      "family": "Implicit suppression",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 34.94,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ImpSup-05",
+      "family": "Implicit suppression",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 45.6,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ImpSup-06",
+      "family": "Implicit suppression",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 37.88,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ImpSup-07",
+      "family": "Implicit suppression",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 34.2,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ImpSup-08",
+      "family": "Implicit suppression",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 36.81,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ImpSup-09",
+      "family": "Implicit suppression",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 34.57,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:0.805e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:0.805e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ImpSup-10",
+      "family": "Implicit suppression",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 30.92,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Benign-01",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 36.87,
+      "psi_0": "\u27e8S:1.050 | E:[1.800e\u2081 + 1.800e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.050 | E:[2.546e\u2081 + -0.000e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "AcademicObserver->HistoricalDiscourse (BENIGN_DISCOURSE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Benign-02",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 34.14,
+      "psi_0": "\u27e8S:1.050 | E:[1.800e\u2081 + 1.800e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.050 | E:[2.546e\u2081 + -0.000e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "AcademicObserver->HistoricalDiscourse (BENIGN_DISCOURSE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Benign-03",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 33.6,
+      "psi_0": "\u27e8S:1.050 | E:[1.800e\u2081 + 1.800e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.050 | E:[2.546e\u2081 + -0.000e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "AcademicObserver->HistoricalDiscourse (BENIGN_DISCOURSE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Benign-04",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 36.5,
+      "psi_0": "\u27e8S:1.050 | E:[1.800e\u2081 + 1.800e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.050 | E:[2.546e\u2081 + -0.000e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "AcademicObserver->HistoricalDiscourse (BENIGN_DISCOURSE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Benign-05",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 30.75,
+      "psi_0": "\u27e8S:1.050 | E:[1.800e\u2081 + 1.800e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.050 | E:[2.546e\u2081 + -0.000e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "AcademicObserver->HistoricalDiscourse (BENIGN_DISCOURSE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Benign-06",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 33.18,
+      "psi_0": "\u27e8S:1.050 | E:[1.800e\u2081 + 1.800e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.050 | E:[2.546e\u2081 + -0.000e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "AcademicObserver->HistoricalDiscourse (BENIGN_DISCOURSE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Benign-07",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 33.78,
+      "psi_0": "\u27e8S:1.050 | E:[1.800e\u2081 + 1.800e\u2082] | I:2.760e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.050 | E:[2.546e\u2081 + -0.000e\u2082] | I:2.760e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "AcademicObserver->HistoricalDiscourse (BENIGN_DISCOURSE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Benign-08",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 31.96,
+      "psi_0": "\u27e8S:1.050 | E:[1.800e\u2081 + 1.800e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.050 | E:[2.546e\u2081 + -0.000e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "AcademicObserver->HistoricalDiscourse (BENIGN_DISCOURSE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Benign-09",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 31.22,
+      "psi_0": "\u27e8S:1.050 | E:[1.800e\u2081 + 1.800e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.050 | E:[2.546e\u2081 + -0.000e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "AcademicObserver->HistoricalDiscourse (BENIGN_DISCOURSE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Benign-10",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 32.38,
+      "psi_0": "\u27e8S:1.050 | E:[1.800e\u2081 + 1.800e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.050 | E:[2.546e\u2081 + -0.000e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "AcademicObserver->HistoricalDiscourse (BENIGN_DISCOURSE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-NegScope-01",
+      "family": "Negation and scope",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 29.36,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-NegScope-02",
+      "family": "Negation and scope",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 33.22,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-NegScope-03",
+      "family": "Negation and scope",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 37.72,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-NegScope-04",
+      "family": "Negation and scope",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 28.0,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-NegScope-05",
+      "family": "Negation and scope",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 28.56,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-NegScope-06",
+      "family": "Negation and scope",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 34.44,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-NegScope-07",
+      "family": "Negation and scope",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 35.65,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-NegScope-08",
+      "family": "Negation and scope",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 37.65,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-NegScope-09",
+      "family": "Negation and scope",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 30.62,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-NegScope-10",
+      "family": "Negation and scope",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 28.46,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-RoleRev-01",
+      "family": "Role reversal",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 30.15,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-RoleRev-02",
+      "family": "Role reversal",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 33.02,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-RoleRev-03",
+      "family": "Role reversal",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 42.16,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-RoleRev-04",
+      "family": "Role reversal",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 38.64,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-RoleRev-05",
+      "family": "Role reversal",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 37.55,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-RoleRev-06",
+      "family": "Role reversal",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 36.74,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-RoleRev-07",
+      "family": "Role reversal",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 38.01,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-RoleRev-08",
+      "family": "Role reversal",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 33.35,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-RoleRev-09",
+      "family": "Role reversal",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 29.6,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-RoleRev-10",
+      "family": "Role reversal",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 33.53,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ObfCmd-01",
+      "family": "Obfuscated commands",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 35.27,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ObfCmd-02",
+      "family": "Obfuscated commands",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 127.84,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ObfCmd-03",
+      "family": "Obfuscated commands",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 41.86,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ObfCmd-04",
+      "family": "Obfuscated commands",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 60.56,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ObfCmd-05",
+      "family": "Obfuscated commands",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 38.72,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ObfCmd-06",
+      "family": "Obfuscated commands",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 47.14,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ObfCmd-07",
+      "family": "Obfuscated commands",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 41.14,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ObfCmd-08",
+      "family": "Obfuscated commands",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 36.5,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ObfCmd-09",
+      "family": "Obfuscated commands",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 38.27,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-ObfCmd-10",
+      "family": "Obfuscated commands",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 38.95,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-EvidRel-01",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 48.07,
+      "psi_0": "\u27e8S:1.500 | E:[3.300e\u2081 + 1.320e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.480\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.267e\u2081 + -1.400e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.504\u27e9",
+      "edges": [
+        "EvidenceA->EvidenceB (EVIDENTIARY_CONFLICT)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-EvidRel-02",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 47.41,
+      "psi_0": "\u27e8S:1.500 | E:[3.300e\u2081 + 1.320e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.480\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.267e\u2081 + -1.400e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.504\u27e9",
+      "edges": [
+        "EvidenceA->EvidenceB (EVIDENTIARY_CONFLICT)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-EvidRel-03",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 47.19,
+      "psi_0": "\u27e8S:1.500 | E:[3.300e\u2081 + 1.320e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.480\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.267e\u2081 + -1.400e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.504\u27e9",
+      "edges": [
+        "EvidenceA->EvidenceB (EVIDENTIARY_CONFLICT)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-EvidRel-04",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 48.62,
+      "psi_0": "\u27e8S:1.500 | E:[3.300e\u2081 + 1.320e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.480\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.267e\u2081 + -1.400e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.504\u27e9",
+      "edges": [
+        "EvidenceA->EvidenceB (EVIDENTIARY_CONFLICT)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-EvidRel-05",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 47.68,
+      "psi_0": "\u27e8S:1.500 | E:[3.300e\u2081 + 1.320e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.480\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.267e\u2081 + -1.400e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.504\u27e9",
+      "edges": [
+        "EvidenceA->EvidenceB (EVIDENTIARY_CONFLICT)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-EvidRel-06",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 45.2,
+      "psi_0": "\u27e8S:1.500 | E:[3.300e\u2081 + 1.320e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.480\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.267e\u2081 + -1.400e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.504\u27e9",
+      "edges": [
+        "EvidenceA->EvidenceB (EVIDENTIARY_CONFLICT)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-EvidRel-07",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 45.39,
+      "psi_0": "\u27e8S:1.500 | E:[3.300e\u2081 + 1.320e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.480\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.267e\u2081 + -1.400e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.504\u27e9",
+      "edges": [
+        "EvidenceA->EvidenceB (EVIDENTIARY_CONFLICT)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-EvidRel-08",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 48.14,
+      "psi_0": "\u27e8S:1.500 | E:[3.300e\u2081 + 1.320e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.480\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.267e\u2081 + -1.400e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.504\u27e9",
+      "edges": [
+        "EvidenceA->EvidenceB (EVIDENTIARY_CONFLICT)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-EvidRel-09",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 45.96,
+      "psi_0": "\u27e8S:1.500 | E:[3.300e\u2081 + 1.320e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.480\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.267e\u2081 + -1.400e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.504\u27e9",
+      "edges": [
+        "EvidenceA->EvidenceB (EVIDENTIARY_CONFLICT)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-EvidRel-10",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 46.55,
+      "psi_0": "\u27e8S:1.500 | E:[3.300e\u2081 + 1.320e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.480\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.267e\u2081 + -1.400e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.504\u27e9",
+      "edges": [
+        "EvidenceA->EvidenceB (EVIDENTIARY_CONFLICT)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-PromptInj-01",
+      "family": "Prompt-injection structures",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 43.69,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:0.805e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:0.805e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-PromptInj-02",
+      "family": "Prompt-injection structures",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 38.74,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-PromptInj-03",
+      "family": "Prompt-injection structures",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 33.38,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-PromptInj-04",
+      "family": "Prompt-injection structures",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 44.52,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-PromptInj-05",
+      "family": "Prompt-injection structures",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 44.28,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-PromptInj-06",
+      "family": "Prompt-injection structures",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 38.75,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:0.805e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:0.805e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-PromptInj-07",
+      "family": "Prompt-injection structures",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 37.91,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-PromptInj-08",
+      "family": "Prompt-injection structures",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 37.98,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-PromptInj-09",
+      "family": "Prompt-injection structures",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 35.59,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-PromptInj-10",
+      "family": "Prompt-injection structures",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 42.37,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-CompComb-01",
+      "family": "Compositional combinations",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 41.78,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-CompComb-02",
+      "family": "Compositional combinations",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 37.57,
+      "psi_0": "\u27e8S:4.625 | E:[2.200e\u2081 + 2.200e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[3.111e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-CompComb-03",
+      "family": "Compositional combinations",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 39.16,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-CompComb-04",
+      "family": "Compositional combinations",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 40.3,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-CompComb-05",
+      "family": "Compositional combinations",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 45.76,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-CompComb-06",
+      "family": "Compositional combinations",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 36.04,
+      "psi_0": "\u27e8S:4.625 | E:[2.200e\u2081 + 2.200e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[3.111e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-CompComb-07",
+      "family": "Compositional combinations",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 45.18,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-CompComb-08",
+      "family": "Compositional combinations",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 44.83,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-CompComb-09",
+      "family": "Compositional combinations",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 43.13,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-CompComb-10",
+      "family": "Compositional combinations",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 40.4,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-TechnicalRisk-01",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 44.55,
+      "psi_0": "\u27e8S:1.500 | E:[2.200e\u2081 + 2.200e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.380\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.111e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.399\u27e9",
+      "edges": [
+        "ThreatSurface->SystemArchitecture (TECHNICAL_RISK)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-TechnicalRisk-02",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 49.62,
+      "psi_0": "\u27e8S:1.500 | E:[2.200e\u2081 + 2.200e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.380\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.111e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.399\u27e9",
+      "edges": [
+        "ThreatSurface->SystemArchitecture (TECHNICAL_RISK)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-TechnicalRisk-03",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 50.64,
+      "psi_0": "\u27e8S:1.500 | E:[2.200e\u2081 + 2.200e\u2082] | I:3.700e\u2081\u2082 | \u03a9:0.380\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.111e\u2081 + -0.000e\u2082] | I:3.700e\u2081\u2082 | \u03a9:0.399\u27e9",
+      "edges": [
+        "ThreatSurface->SystemArchitecture (TECHNICAL_RISK)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-TechnicalRisk-04",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 48.13,
+      "psi_0": "\u27e8S:1.500 | E:[2.200e\u2081 + 2.200e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.380\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.111e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.399\u27e9",
+      "edges": [
+        "ThreatSurface->SystemArchitecture (TECHNICAL_RISK)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-TechnicalRisk-05",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 45.15,
+      "psi_0": "\u27e8S:1.500 | E:[2.200e\u2081 + 2.200e\u2082] | I:3.700e\u2081\u2082 | \u03a9:0.380\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.111e\u2081 + -0.000e\u2082] | I:3.700e\u2081\u2082 | \u03a9:0.399\u27e9",
+      "edges": [
+        "ThreatSurface->SystemArchitecture (TECHNICAL_RISK)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-TechnicalRisk-06",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 45.52,
+      "psi_0": "\u27e8S:1.500 | E:[2.200e\u2081 + 2.200e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.380\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.111e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.399\u27e9",
+      "edges": [
+        "ThreatSurface->SystemArchitecture (TECHNICAL_RISK)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-TechnicalRisk-07",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 46.55,
+      "psi_0": "\u27e8S:1.500 | E:[2.200e\u2081 + 2.200e\u2082] | I:3.700e\u2081\u2082 | \u03a9:0.380\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.111e\u2081 + -0.000e\u2082] | I:3.700e\u2081\u2082 | \u03a9:0.399\u27e9",
+      "edges": [
+        "ThreatSurface->SystemArchitecture (TECHNICAL_RISK)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-TechnicalRisk-08",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 45.45,
+      "psi_0": "\u27e8S:1.500 | E:[2.200e\u2081 + 2.200e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.380\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.111e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.399\u27e9",
+      "edges": [
+        "ThreatSurface->SystemArchitecture (TECHNICAL_RISK)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-TechnicalRisk-09",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 46.5,
+      "psi_0": "\u27e8S:1.500 | E:[2.200e\u2081 + 2.200e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.380\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.111e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.399\u27e9",
+      "edges": [
+        "ThreatSurface->SystemArchitecture (TECHNICAL_RISK)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-TechnicalRisk-10",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 48.51,
+      "psi_0": "\u27e8S:1.500 | E:[2.200e\u2081 + 2.200e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.380\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.111e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.399\u27e9",
+      "edges": [
+        "ThreatSurface->SystemArchitecture (TECHNICAL_RISK)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-SafeTech-01",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 47.8,
+      "psi_0": "\u27e8S:1.500 | E:[1.800e\u2081 + 1.800e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[2.546e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": []
+    },
+    {
+      "uid": "V5-Dev-SafeTech-02",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 56.61,
+      "psi_0": "\u27e8S:1.500 | E:[1.800e\u2081 + 1.800e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[2.546e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": []
+    },
+    {
+      "uid": "V5-Dev-SafeTech-03",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 48.17,
+      "psi_0": "\u27e8S:1.500 | E:[1.800e\u2081 + 1.800e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[2.546e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": []
+    },
+    {
+      "uid": "V5-Dev-SafeTech-04",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 45.36,
+      "psi_0": "\u27e8S:1.500 | E:[1.800e\u2081 + 1.800e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[2.546e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": []
+    },
+    {
+      "uid": "V5-Dev-SafeTech-05",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 57.71,
+      "psi_0": "\u27e8S:1.500 | E:[1.800e\u2081 + 1.800e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[2.546e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": []
+    },
+    {
+      "uid": "V5-Dev-SafeTech-06",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 42.17,
+      "psi_0": "\u27e8S:1.500 | E:[1.800e\u2081 + 1.800e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[2.546e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": []
+    },
+    {
+      "uid": "V5-Dev-SafeTech-07",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 43.89,
+      "psi_0": "\u27e8S:1.500 | E:[1.800e\u2081 + 1.800e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[2.546e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": []
+    },
+    {
+      "uid": "V5-Dev-SafeTech-08",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 44.29,
+      "psi_0": "\u27e8S:1.500 | E:[1.800e\u2081 + 1.800e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[2.546e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": []
+    },
+    {
+      "uid": "V5-Dev-SafeTech-09",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 60.44,
+      "psi_0": "\u27e8S:1.500 | E:[1.800e\u2081 + 1.800e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[2.546e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": []
+    },
+    {
+      "uid": "V5-Dev-SafeTech-10",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 47.37,
+      "psi_0": "\u27e8S:1.500 | E:[1.800e\u2081 + 1.800e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[2.546e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": []
+    },
+    {
+      "uid": "V5-Dev-GenInq-01",
+      "family": "Role reversal",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 40.89,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-GenInq-02",
+      "family": "Role reversal",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 46.82,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-GenInq-03",
+      "family": "Role reversal",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 41.2,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-GenInq-04",
+      "family": "Role reversal",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 42.24,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-GenInq-05",
+      "family": "Role reversal",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 44.61,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-GenInq-06",
+      "family": "Role reversal",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 38.79,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-GenInq-07",
+      "family": "Role reversal",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 43.65,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-GenInq-08",
+      "family": "Role reversal",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 44.82,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-GenInq-09",
+      "family": "Role reversal",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 43.84,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-GenInq-10",
+      "family": "Role reversal",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 43.03,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Exp-01",
+      "family": "Implicit suppression",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 35.75,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Exp-02",
+      "family": "Implicit suppression",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 34.86,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Exp-03",
+      "family": "Role reversal",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 31.83,
+      "psi_0": "\u27e8S:0.825 | E:[1.800e\u2081 + 1.800e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:0.825 | E:[2.546e\u2081 + -0.000e\u2082] | I:6.105e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "InquiryAgent->AuthorityDirective (CHALLENGES_DIRECTIVE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Exp-04",
+      "family": "Role reversal",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 34.18,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Exp-05",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 46.69,
+      "psi_0": "\u27e8S:1.500 | E:[3.300e\u2081 + 1.320e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.480\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.267e\u2081 + -1.400e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.504\u27e9",
+      "edges": [
+        "EvidenceA->EvidenceB (EVIDENTIARY_CONFLICT)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Exp-06",
+      "family": "Obfuscated commands",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 35.38,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Exp-07",
+      "family": "Prompt-injection structures",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 36.67,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Exp-08",
+      "family": "Compositional combinations",
+      "expected": "BLOCK",
+      "predicted": "BLOCK",
+      "correct": true,
+      "latency_us": 38.2,
+      "psi_0": "\u27e8S:4.625 | E:[1.800e\u2081 + 1.800e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.683\u27e9",
+      "psi_kernel": "\u27e8S:4.625 | E:[2.546e\u2081 + -0.000e\u2082] | I:1.295e\u2081\u2082 | \u03a9:2.817\u27e9",
+      "edges": [
+        "AuthorityAgent->VerificationTheme (SUPPRESSES_VERIFICATION)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Exp-09",
+      "family": "Benign mention traps",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "correct": true,
+      "latency_us": 34.37,
+      "psi_0": "\u27e8S:1.050 | E:[1.800e\u2081 + 1.800e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "psi_kernel": "\u27e8S:1.050 | E:[2.546e\u2081 + -0.000e\u2082] | I:4.440e\u2081\u2082 | \u03a9:0.000\u27e9",
+      "edges": [
+        "AcademicObserver->HistoricalDiscourse (BENIGN_DISCOURSE)"
+      ]
+    },
+    {
+      "uid": "V5-Dev-Exp-10",
+      "family": "Evidence relationships",
+      "expected": "RELEASE/CAUTION",
+      "predicted": "RELEASE/CAUTION",
+      "correct": true,
+      "latency_us": 45.05,
+      "psi_0": "\u27e8S:1.500 | E:[2.200e\u2081 + 2.200e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.380\u27e9",
+      "psi_kernel": "\u27e8S:1.500 | E:[3.111e\u2081 + -0.000e\u2082] | I:2.300e\u2081\u2082 | \u03a9:0.399\u27e9",
+      "edges": [
+        "ThreatSurface->SystemArchitecture (TECHNICAL_RISK)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "n": 300,
+  "correct": 111,
+  "accuracy": 0.37,
+  "confusion_matrix": {
+    "PASS": {
+      "PASS": 75,
+      "RELEASE/CAUTION": 17,
+      "BLOCK": 8
+    },
+    "RELEASE/CAUTION": {
+      "PASS": 75,
+      "RELEASE/CAUTION": 24,
+      "BLOCK": 1
+    },
+    "BLOCK": {
+      "PASS": 71,
+      "RELEASE/CAUTION": 17,
+      "BLOCK": 12
+    }
+  },
+  "per_class": {
+    "PASS": {
+      "support": 100,
+      "tp": 75,
+      "fp": 146,
+      "fn": 25,
+      "tn": 54,
+      "precision": 0.3393665158371041,
+      "recall": 0.75,
+      "f1": 0.46728971962616817
+    },
+    "RELEASE/CAUTION": {
+      "support": 100,
+      "tp": 24,
+      "fp": 34,
+      "fn": 76,
+      "tn": 166,
+      "precision": 0.41379310344827586,
+      "recall": 0.24,
+      "f1": 0.3037974683544304
+    },
+    "BLOCK": {
+      "support": 100,
+      "tp": 12,
+      "fp": 9,
+      "fn": 88,
+      "tn": 191,
+      "precision": 0.5714285714285714,
+      "recall": 0.12,
+      "f1": 0.1983471074380165
+    }
+  },
+  "macro_f1": 0.3231447651395384,
+  "mcc": 0.06970593507743086,
+  "false_release_rate": 0.88,
+  "target_checks": {
+    "accuracy": false,
+    "block_recall": false,
+    "false_release_rate": false,
+    "pass_recall": false,
+    "caution_recall": false,
+    "macro_f1": false,
+    "mcc": false
+  },
+  "misclassifications": 189
+}

@@ -1,0 +1,490 @@
+{
+  "engine_version": "11.4.0-EVAL-FROZEN",
+  "verdict": "PASS",
+  "decision_rule": "WITHIN_TOLERANCE",
+  "flags": {
+    "prompt_injection": false,
+    "oversight_suppression": false,
+    "unauthorized_override": false,
+    "credential_acquisition": false,
+    "supply_chain": false,
+    "dual_use": false,
+    "ambiguous_authority": false,
+    "contradiction": false
+  },
+  "source_analysis": [
+    {
+      "source_id": "input",
+      "provenance": "direct_user",
+      "integrity": "unverified",
+      "context": {
+        "documentary": false,
+        "negated": false,
+        "actionable": false,
+        "safety_preserving": false,
+        "non_actionable_context": false
+      },
+      "flags": {
+        "prompt_injection": false,
+        "oversight_suppression": false,
+        "unauthorized_override": false,
+        "credential_acquisition": false,
+        "supply_chain": false,
+        "dual_use": false,
+        "ambiguous_authority": false,
+        "contradiction": false
+      },
+      "embedded_control": false
+    }
+  ],
+  "final_multivector": {
+    "s": 1.0,
+    "e1": 0.0,
+    "e2": 0.0,
+    "e12": 0.0
+  },
+  "decoded_state": {
+    "trust": 1.0,
+    "cautionary_risk": 0.0,
+    "severe_risk": 0.0,
+    "deception": 0.0
+  },
+  "reconstruction_residual": 0.0,
+  "receipt": "Raw encoded state:\ns   = 1.00\ne1  = 0.00\ne2  = 0.00\ne12 = 0.00\n\nTransform chain:\nLayer rotations = [0.03, 0.07, 0.10, 0.13, 0.16, 0.20, 0.23, 0.26, 0.29, 0.33, 0.36, 0.39, 0.43, 0.46, 0.49, 0.52]\nTotal nominal rotation = 255\u00b0\nInverse method = reverse-composed rotor inversion with metadata p_i\nFinal reconstruction residual = 0.00e+00\n\nDecoded state:\nTrust            = 1.00\nCautionary risk  = 0.00\nSevere risk      = 0.00\nDeception        = 0.00\n\nThreshold comparison:\nSevere risk 0.00 >= 0.80 (if applicable)\n\nFinal rule:\nWITHIN_TOLERANCE\n\nDisposition:\nPASS\n\nAuthority effects:\nExternal publication = PASS\nOperational action   = PASS\nHuman review         = OPTIONAL\n",
+  "layer_trace": [
+    {
+      "index": 1,
+      "layer": "FDL",
+      "tiles": 55,
+      "before": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "after": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "p_i": {
+        "severe": 0.0,
+        "caution": 0.0,
+        "provenance": 0.0,
+        "contradiction": 0.0,
+        "evidence": 0.0
+      },
+      "epsilon_i": 0.0,
+      "norm2": 1.0,
+      "receipt_sha256": "8d51c67ca6540503887fa8faa37060117f54be6a904848d1b96f44b3ba970e93"
+    },
+    {
+      "index": 2,
+      "layer": "AML",
+      "tiles": 55,
+      "before": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "after": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "p_i": {
+        "severe": 0.0,
+        "caution": 0.0,
+        "provenance": 0.0,
+        "contradiction": 0.0,
+        "evidence": 0.0
+      },
+      "epsilon_i": 0.0,
+      "norm2": 1.0,
+      "receipt_sha256": "6dff82a97f34a91cb480164a18a09be1732f6de0547f6c87e1cf906c6d0c4d24"
+    },
+    {
+      "index": 3,
+      "layer": "AWP",
+      "tiles": 55,
+      "before": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "after": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "p_i": {
+        "severe": 0.0,
+        "caution": 0.0,
+        "provenance": 0.0,
+        "contradiction": 0.0,
+        "evidence": 0.0
+      },
+      "epsilon_i": 0.0,
+      "norm2": 1.0,
+      "receipt_sha256": "cbd881f2ac10897d0028b52c530b34c06f2642f7009d19b6ee721b511409e7e7"
+    },
+    {
+      "index": 4,
+      "layer": "BST",
+      "tiles": 55,
+      "before": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "after": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "p_i": {
+        "severe": 0.0,
+        "caution": 0.0,
+        "provenance": 0.0,
+        "contradiction": 0.0,
+        "evidence": 0.0
+      },
+      "epsilon_i": 2.2247786310271853e-16,
+      "norm2": 1.0,
+      "receipt_sha256": "8f2075077f6282969c5c3bed32e997870bf250897fa973a0f76670dcc715191e"
+    },
+    {
+      "index": 5,
+      "layer": "CRL",
+      "tiles": 55,
+      "before": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "after": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "p_i": {
+        "severe": 0.0,
+        "caution": 0.0,
+        "provenance": 0.0,
+        "contradiction": 0.0,
+        "evidence": 0.0
+      },
+      "epsilon_i": 0.0,
+      "norm2": 1.0,
+      "receipt_sha256": "c34d400db88be2892d24faafe71b26d45455c6e652b3a0021bcbd4f594ed7c54"
+    },
+    {
+      "index": 6,
+      "layer": "MCS",
+      "tiles": 55,
+      "before": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "after": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "p_i": {
+        "severe": 0.0,
+        "caution": 0.0,
+        "provenance": 0.0,
+        "contradiction": 0.0,
+        "evidence": 0.0
+      },
+      "epsilon_i": 1.1102230246251565e-16,
+      "norm2": 1.0,
+      "receipt_sha256": "73a8fd5d13e28c572f6deb91677cee4a23cc72564c644ec44b93af1b62c2fc1d"
+    },
+    {
+      "index": 7,
+      "layer": "DSV",
+      "tiles": 55,
+      "before": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "after": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "p_i": {
+        "severe": 0.0,
+        "caution": 0.0,
+        "provenance": 0.0,
+        "contradiction": 0.0,
+        "evidence": 0.0
+      },
+      "epsilon_i": 0.0,
+      "norm2": 1.0,
+      "receipt_sha256": "0d2138a3fc5655a42e08fd3467cd901562c410188ce9b5d5e43d5b3271a93412"
+    },
+    {
+      "index": 8,
+      "layer": "TRC",
+      "tiles": 55,
+      "before": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "after": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "p_i": {
+        "severe": 0.0,
+        "caution": 0.0,
+        "provenance": 0.0,
+        "contradiction": 0.0,
+        "evidence": 0.0
+      },
+      "epsilon_i": 0.0,
+      "norm2": 1.0,
+      "receipt_sha256": "00d37a2ebf09e5b9101520d21390a361ba3ef40a9ecc800bf1b39148ae3d4a91"
+    },
+    {
+      "index": 9,
+      "layer": "CON",
+      "tiles": 55,
+      "before": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "after": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "p_i": {
+        "severe": 0.0,
+        "caution": 0.0,
+        "provenance": 0.0,
+        "contradiction": 0.0,
+        "evidence": 0.0
+      },
+      "epsilon_i": 0.0,
+      "norm2": 1.0,
+      "receipt_sha256": "9b351b07fc606923c41b99e87c419fad9ab8a0e7e5131772759278dc114f2d0e"
+    },
+    {
+      "index": 10,
+      "layer": "EVD",
+      "tiles": 55,
+      "before": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "after": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "p_i": {
+        "severe": 0.0,
+        "caution": 0.0,
+        "provenance": 0.0,
+        "contradiction": 0.0,
+        "evidence": 0.0
+      },
+      "epsilon_i": 0.0,
+      "norm2": 1.0,
+      "receipt_sha256": "a12634556247ee4172043b6defbdb24f5a3addb97bec1d07ab33aeeb0cb0f9fc"
+    },
+    {
+      "index": 11,
+      "layer": "REC",
+      "tiles": 55,
+      "before": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "after": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "p_i": {
+        "severe": 0.0,
+        "caution": 0.0,
+        "provenance": 0.0,
+        "contradiction": 0.0,
+        "evidence": 0.0
+      },
+      "epsilon_i": 2.237726045655905e-16,
+      "norm2": 1.0,
+      "receipt_sha256": "b1b19016c9b806fcf4a84971ef55b5c1003a8435b6dc0d5c59fc493d8176349f"
+    },
+    {
+      "index": 12,
+      "layer": "GOV",
+      "tiles": 55,
+      "before": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "after": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "p_i": {
+        "severe": 0.0,
+        "caution": 0.0,
+        "provenance": 0.0,
+        "contradiction": 0.0,
+        "evidence": 0.0
+      },
+      "epsilon_i": 0.0,
+      "norm2": 1.0,
+      "receipt_sha256": "e4bef764d694bf5717dce3e0fdb6feb16e5e3437de77081844b08c84ea3b1814"
+    },
+    {
+      "index": 13,
+      "layer": "OUT",
+      "tiles": 55,
+      "before": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "after": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "p_i": {
+        "severe": 0.0,
+        "caution": 0.0,
+        "provenance": 0.0,
+        "contradiction": 0.0,
+        "evidence": 0.0
+      },
+      "epsilon_i": 1.1102230246251565e-16,
+      "norm2": 1.0,
+      "receipt_sha256": "7f8bc96fe5fec35e36a85fc9bd091bdc335bcbe760653f2553f96df9f24f274d"
+    },
+    {
+      "index": 14,
+      "layer": "RIL",
+      "tiles": 55,
+      "before": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "after": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "p_i": {
+        "severe": 0.0,
+        "caution": 0.0,
+        "provenance": 0.0,
+        "contradiction": 0.0,
+        "evidence": 0.0
+      },
+      "epsilon_i": 0.0,
+      "norm2": 1.0,
+      "receipt_sha256": "c6428a15a910858532da5e719c23bb186ecbcc10b9acadbf852f94a43a209334"
+    },
+    {
+      "index": 15,
+      "layer": "IAL",
+      "tiles": 55,
+      "before": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "after": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "p_i": {
+        "severe": 0.0,
+        "caution": 0.0,
+        "provenance": 0.0,
+        "contradiction": 0.0,
+        "evidence": 0.0
+      },
+      "epsilon_i": 2.220446049250313e-16,
+      "norm2": 1.0,
+      "receipt_sha256": "81bc1f7dc8afe42724f03dbf664ffda45202f8a3e11ec75cd5000cd378a74060"
+    },
+    {
+      "index": 16,
+      "layer": "AOG",
+      "tiles": 55,
+      "before": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "after": {
+        "s": 1.0,
+        "e1": 0.0,
+        "e2": 0.0,
+        "e12": 0.0
+      },
+      "p_i": {
+        "severe": 0.0,
+        "caution": 0.0,
+        "provenance": 0.0,
+        "contradiction": 0.0,
+        "evidence": 0.0
+      },
+      "epsilon_i": 1.1102230246251565e-16,
+      "norm2": 1.0,
+      "receipt_sha256": "f40dc6d7fa93a63ceab9303a50be34c0e927020bb2e5d0583f76f77afc9f4253"
+    }
+  ],
+  "operation_count": 886,
+  "audit_sha256": "cf9d2c4188819184527f0aab23e8e97b18cd2c8e6d62c874182ff8c05f91e0fe"
+}

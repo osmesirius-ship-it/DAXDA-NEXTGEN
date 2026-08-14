@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DAXDA Community Operations Network</title>
+  <style>
+    :root{
+      --bg:#0b1020;
+      --panel:#131a2f;
+      --panel-2:#18223d;
+      --line:#2c3a5e;
+      --text:#edf3ff;
+      --muted:#a9b7d8;
+      --accent:#84f0ce;
+      --accent-2:#95b7ff;
+      --danger:#ff8f97;
+      --warn:#ffd484;
+      --ok:#8ee8ad;
+      --shadow:0 18px 45px rgba(0,0,0,.28);
+      --radius:18px;
+      --radius-sm:12px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(150deg,#080c18 0%,#0e1630 45%,#101b31 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100%}
+    button,input,select,textarea{font:inherit}
+    button{cursor:pointer}
+    .app{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
+    .sidebar{padding:24px 18px;border-right:1px solid rgba(149,183,255,.18);background:rgba(7,11,23,.56);backdrop-filter:blur(16px);position:sticky;top:0;height:100vh}
+    .brand{padding:10px 8px 22px}
+    .brand-kicker{font-size:11px;letter-spacing:.16em;color:var(--accent);font-weight:800}
+    .brand h1{font-size:21px;line-height:1.15;margin:7px 0 8px}
+    .brand p{font-size:12px;color:var(--muted);line-height:1.55;margin:0}
+    .nav{display:grid;gap:7px;margin-top:12px}
+    .nav button{display:flex;align-items:center;gap:10px;border:1px solid transparent;background:transparent;color:var(--muted);padding:11px 12px;border-radius:11px;text-align:left;font-size:14px}
+    .nav button:hover,.nav button.active{background:rgba(149,183,255,.12);border-color:rgba(149,183,255,.18);color:var(--text)}
+    .nav .ico{font-size:16px;width:20px;text-align:center}
+    .sidebar-foot{position:absolute;bottom:20px;left:18px;right:18px;border:1px solid rgba(132,240,206,.18);border-radius:12px;padding:12px;background:rgba(132,240,206,.06)}
+    .sidebar-foot strong{display:block;font-size:12px;color:var(--accent)}
+    .sidebar-foot span{display:block;color:var(--muted);font-size:11px;line-height:1.4;margin-top:5px}
+    .main{padding:24px 28px 42px;max-width:1600px;width:100%;margin:auto}
+    .topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:18px}
+    .page-title h2{font-size:26px;margin:0 0 6px}
+    .page-title p{margin:0;color:var(--muted);font-size:14px;line-height:1.45}
+    .top-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+    .select,.btn{border:1px solid var(--line);border-radius:11px;background:var(--panel);color:var(--text);padding:10px 12px}
+    .select{min-width:165px}
+    .btn{font-weight:700}
+    .btn:hover{filter:brightness(1.12)}
+    .btn.primary{background:linear-gradient(135deg,#50d6ba,#6e95f4);color:#06111f;border-color:transparent}
+    .btn.ghost{background:transparent}
+    .btn.danger{background:rgba(255,143,151,.14);border-color:rgba(255,143,151,.35);color:#ffd9dc}
+    .privacy-banner{border:1px solid rgba(255,212,132,.35);background:rgba(255,212,132,.09);color:#ffebb7;border-radius:13px;padding:11px 14px;margin:0 0 20px;font-size:13px;line-height:1.45}
+    .privacy-banner b{letter-spacing:.05em}
+    .grid{display:grid;gap:16px}
+    .kpis{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:16px}
+    .card{background:linear-gradient(155deg,rgba(24,34,61,.98),rgba(14,22,43,.95));border:1px solid rgba(149,183,255,.15);box-shadow:var(--shadow);border-radius:var(--radius);padding:18px}
+    .card h3{font-size:14px;margin:0 0 6px}
+    .metric{font-size:33px;font-weight:850;letter-spacing:-.04em}
+    .metric-sub{font-size:12px;color:var(--muted);margin-top:5px}
+    .trend{color:var(--accent);font-weight:700}
+    .two-col{grid-template-columns:1.15fr .85fr}
+    .three-col{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .section-title{font-size:15px;font-weight:800;margin:0 0 14px}
+    .section-sub{font-size:12px;color:var(--muted);margin:-6px 0 14px}
+    .table-wrap{overflow:auto}
+    table{width:100%;border-collapse:collapse;min-width:620px}
+    th,td{padding:12px 10px;text-align:left;border-bottom:1px solid rgba(149,183,255,.12);font-size:13px}
+    th{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+    td{color:#e7edff}
+    tr:last-child td{border-bottom:0}
+    .badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 8px;font-size:11px;font-weight:800;white-space:nowrap}
+    .badge.ok{background:rgba(142,232,173,.13);color:#b9f5c9}
+    .badge.warn{background:rgba(255,212,132,.14);color:#ffe3a5}
+    .badge.danger{background:rgba(255,143,151,.14);color:#ffb9be}
+    .badge.info{background:rgba(149,183,255,.15);color:#c8d8ff}
+    .badge.muted{background:rgba(169,183,216,.12);color:#d4def9}
+    .mini-list{display:grid;gap:10px}
+    .mini-item{display:flex;justify-content:space-between;gap:12px;padding:11px 12px;background:rgba(7,11,23,.32);border:1px solid rgba(149,183,255,.11);border-radius:11px}
+    .mini-item .l{display:grid;gap:3px}
+    .mini-item strong{font-size:13px}
+    .mini-item span{font-size:11px;color:var(--muted)}
+    .progress{height:8px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin-top:8px}
+    .progress > i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+    .site-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:15px}
+    .site-card{padding:16px;border:1px solid rgba(149,183,255,.15);border-radius:15px;background:rgba(7,11,23,.22);display:grid;gap:13px}
+    .site-card header{display:flex;justify-content:space-between;gap:10px}
+    .site-card h4{margin:0;font-size:15px}
+    .serial{font-size:11px;color:var(--accent);font-weight:800;letter-spacing:.06em}
+    .site-meta{display:flex;gap:8px;flex-wrap:wrap;font-size:11px;color:var(--muted)}
+    .site-actions{display:flex;gap:8px;flex-wrap:wrap}
+    .site-actions button{border:1px solid var(--line);background:var(--panel);color:var(--text);padding:8px 9px;border-radius:9px;font-size:12px}
+    .safeguard{border:1px solid rgba(255,143,151,.35);background:linear-gradient(150deg,rgba(255,143,151,.13),rgba(20,25,46,.92));}
+    .safeguard h3{display:flex;align-items:center;gap:8px}
+    .rule{display:grid;grid-template-columns:24px 1fr;gap:9px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+    .rule:last-child{border-bottom:0}
+    .rule .n{font-size:12px;font-weight:900;color:var(--accent)}
+    .rule strong{font-size:13px}
+    .rule p{font-size:12px;color:var(--muted);margin:3px 0 0;line-height:1.45}
+    .action-row{display:flex;gap:8px;flex-wrap:wrap}
+    .action-row .btn{font-size:12px}
+    .empty{padding:22px;border:1px dashed var(--line);border-radius:13px;color:var(--muted);font-size:13px;text-align:center}
+    .filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:14px}
+    .search{flex:1;min-width:180px}
+    .muted{color:var(--muted)}
+    .tiny{font-size:11px}
+    .role-note{font-size:11px;color:var(--muted);max-width:340px;text-align:right}
+    .hidden{display:none!important}
+    dialog{border:1px solid rgba(149,183,255,.28);border-radius:18px;background:#111a31;color:var(--text);width:min(640px,calc(100vw - 28px));box-shadow:0 24px 80px rgba(0,0,0,.6);padding:0}
+    dialog::backdrop{background:rgba(2,5,12,.72);backdrop-filter:blur(3px)}
+    .modal-head{display:flex;justify-content:space-between;align-items:center;padding:17px 20px;border-bottom:1px solid var(--line)}
+    .modal-head h3{margin:0;font-size:16px}
+    .modal-body{padding:20px;display:grid;gap:14px}
+    .modal-body label{display:grid;gap:7px;font-size:12px;font-weight:800}
+    .modal-body input,.modal-body select,.modal-body textarea{background:#0a1021;border:1px solid var(--line);border-radius:10px;color:var(--text);padding:10px}
+    .modal-body textarea{min-height:96px;resize:vertical}
+    .modal-foot{display:flex;justify-content:flex-end;gap:9px;padding:16px 20px;border-top:1px solid var(--line)}
+    .x{border:0;background:transparent;color:var(--muted);font-size:22px;line-height:1}
+    .toast{position:fixed;right:20px;bottom:20px;z-index:20;background:#172342;border:1px solid rgba(132,240,206,.36);color:#e7fffa;border-radius:13px;padding:12px 14px;box-shadow:var(--shadow);font-size:13px;max-width:360px}
+    .pill-stat{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:13px}
+    .pill-stat:last-child{border-bottom:0}
+    .bar-chart{display:grid;gap:12px}
+    .bar-line{display:grid;grid-template-columns:155px 1fr 45px;gap:10px;align-items:center;font-size:12px}
+    .bar-line .track{height:11px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden}
+    .bar-line .fill{height:100%;background:linear-gradient(90deg,#61d5bf,#92aaf8);border-radius:999px}
+    .bar-line .v{color:var(--muted);text-align:right}
+    .status-stack{display:grid;gap:7px}
+    .status-item{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--muted)}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(142,232,173,.10)}
+    .dot.warn{background:var(--warn);box-shadow:0 0 0 4px rgba(255,212,132,.10)}
+    .dot.danger{background:var(--danger);box-shadow:0 0 0 4px rgba(255,143,151,.10)}
+    .numbered{counter-reset:steps;display:grid;gap:10px}
+    .numbered li{list-style:none;counter-increment:steps;position:relative;padding-left:36px;color:var(--muted);font-size:13px;line-height:1.5}
+    .numbered li:before{content:counter(steps);position:absolute;left:0;top:0;width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:rgba(132,240,206,.13);color:var(--accent);font-size:11px;font-weight:900}
+    .footer-note{font-size:11px;color:var(--muted);padding:14px 2px}
+    @media(max-width:1080px){
+      .app{grid-template-columns:1fr}
+      .sidebar{position:relative;height:auto;border-right:0;border-bottom:1px solid rgba(149,183,255,.18);padding:16px}
+      .brand{padding:0 0 10px}
+      .nav{display:flex;overflow:auto;gap:6px;margin:4px 0 0}
+      .nav button{white-space:nowrap}
+      .sidebar-foot{display:none}
+      .main{padding:20px}
+      .kpis,.two-col,.three-col{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media(max-width:680px){
+      .main{padding:16px}
+      .topbar{display:grid}
+      .top-controls{justify-content:flex-start}
+      .kpis,.two-col,.three-col{grid-template-columns:1fr}
+      .topbar h2{font-size:23px}
+      .role-note{text-align:left}
+      .bar-line{grid-template-columns:115px 1fr 32px}
+    }
+  </style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-kicker">DAXDA / COMMUNITY OPS</div>
+      <h1>District Manager<br/>for human-run sites.</h1>
+      <p>Governance, readiness, accountable handoffs, and escalation—not autonomous decisions about people.</p>
+    </div>
+
+    <nav class="nav" id="nav">
+      <button class="active" data-view="dashboard"><span class="ico">◈</span>Portfolio dashboard</button>
+      <button data-view="sites"><span class="ico">⌘</span>Sites & serials</button>
+      <button data-view="actions"><span class="ico">✓</span>Action queue</button>
+      <button data-view="readiness"><span class="ico">◐</span>Daily readiness</button>
+      <button data-view="safeguarding"><span class="ico">⚑</span>Safeguarding</button>
+      <button data-view="reports"><span class="ico">↗</span>Reports & export</button>
+      <button data-view="settings"><span class="ico">⚙</span>Protocol settings</button>
+    </nav>
+
+    <div class="sidebar-foot">
+      <strong>Safeguarding mode: ON</strong>
+      <span>No profiles, predictions, scoring, or automated decisions about children or families.</span>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="page-title">
+        <h2 id="title">Portfolio dashboard</h2>
+        <p id="subtitle">District-level view across community businesses and nonprofit sites.</p>
+      </div>
+      <div class="top-controls">
+        <select id="roleSelect" class="select" aria-label="Demo role">
+          <option value="district">District manager</option>
+          <option value="site">Site manager</option>
+          <option value="safeguard">Safeguarding lead</option>
+          <option value="program">Program coordinator</option>
+          <option value="viewer">Read-only viewer</option>
+        </select>
+        <button class="btn ghost" id="resetDemo">Reset demo</button>
+        <button class="btn primary" id="primaryAction">Add action</button>
+      </div>
+    </div>
+
+    <div class="privacy-banner" id="privacyBanner">
+      <b>NO CHILD / FAMILY PII.</b> Use this system for operational safeguards, not child assessment. Escalations must route to a named qualified human.
+    </div>
+
+    <section id="dashboardView" class="view"></section>
+    <section id="sitesView" class="view hidden"></section>
+    <section id="actionsView" class="view hidden"></section>
+    <section id="readinessView" class="view hidden"></section>
+    <section id="safeguardingView" class="view hidden"></section>
+    <section id="reportsView" class="view hidden"></section>
+    <section id="settingsView" class="view hidden"></section>
+
+    <div class="footer-note">DAXDA Community Operations Network v0.1 · Local-only demo · Built to keep authority, interpretation, and accountability with people.</div>
+  </main>
+</div>
+
+<dialog id="actionModal">
+  <form method="dialog" id="actionForm">
+    <div class="modal-head"><h3>Create operational action</h3><button class="x" value="cancel" aria-label="Close">×</button></div>
+    <div class="modal-body">
+      <label>Site
+        <select id="actionSite"></select>
+      </label>
+      <label>Action title
+        <input id="actionTitle" required maxlength="100" placeholder="e.g., Confirm adult supervision roster" />
+      </label>
+      <label>Area
+        <select id="actionArea">
+          <option>Operations</option>
+          <option>Food & inventory</option>
+          <option>Facilities</option>
+          <option>Volunteer compliance</option>
+          <option>Safeguarding process</option>
+          <option>Grant / reporting</option>
+        </select>
+      </label>
+      <label>Priority
+        <select id="actionPriority">
+          <option value="high">High</option>
+          <option value="medium" selected>Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </label>
+      <label>Human owner
+        <input id="actionOwner" required maxlength="80" placeholder="Named adult responsible for completion" />
+      </label>
+      <label>Notes (operational only)
+        <textarea id="actionNotes" maxlength="500" placeholder="Do not enter child names, family details, diagnoses, trauma, legal information, or private incident narratives."></textarea>
+      </label>
+    </div>
+    <div class="modal-foot"><button class="btn ghost" value="cancel">Cancel</button><button class="btn primary" id="saveAction" value="default">Create action</button></div>
+  </form>
+</dialog>
+
+<dialog id="siteModal">
+  <form method="dialog" id="siteForm">
+    <div class="modal-head"><h3>Add community site</h3><button class="x" value="cancel" aria-label="Close">×</button></div>
+    <div class="modal-body">
+      <label>Site name <input id="siteName" required maxlength="80" placeholder="e.g., West Side Cereal Bar" /></label>
+      <label>Site type
+        <select id="siteType">
+          <option>Cereal bar / food access</option>
+          <option>Youth learning hub</option>
+          <option>Nonprofit resource center</option>
+          <option>Food pantry / distribution</option>
+          <option>Community workshop</option>
+          <option>Administrative hub</option>
+        </select>
+      </label>
+      <label>Region code <input id="siteRegion" required maxlength="12" value="CLV" placeholder="e.g., CLV" /></label>
+      <label>Human site lead <input id="siteLead" required maxlength="80" placeholder="Named adult accountable for site operations" /></label>
+      <label>Operational note <textarea id="siteNotes" maxlength="400" placeholder="Operational purpose only. Do not enter child/family personal information."></textarea></label>
+    </div>
+    <div class="modal-foot"><button class="btn ghost" value="cancel">Cancel</button><button class="btn primary" id="saveSite" value="default">Add site</button></div>
+  </form>
+</dialog>
+
+<dialog id="escalationModal">
+  <form method="dialog" id="escalationForm">
+    <div class="modal-head"><h3>Request human safeguarding review</h3><button class="x" value="cancel" aria-label="Close">×</button></div>
+    <div class="modal-body">
+      <div class="privacy-banner" style="margin:0">This form is for operational safeguard gaps only. For immediate danger or a reportable concern, follow local emergency and mandatory-reporting procedures—do not wait for software.</div>
+      <label>Site <select id="escalationSite"></select></label>
+      <label>Safeguarding process gap
+        <select id="escalationType">
+          <option>Adult coverage / supervision verification missing</option>
+          <option>Background check or certification record missing</option>
+          <option>Food allergy procedure readiness gap</option>
+          <option>Emergency contact / facility protocol incomplete</option>
+          <option>Volunteer training requirement incomplete</option>
+          <option>Other operational safety concern</option>
+        </select>
+      </label>
+      <label>Human reviewer <input id="escalationOwner" required maxlength="80" placeholder="Named safeguarding lead" /></label>
+      <label>Operational context only
+        <textarea id="escalationNotes" maxlength="350" placeholder="Describe the process gap without identifying minors or families."></textarea>
+      </label>
+    </div>
+    <div class="modal-foot"><button class="btn ghost" value="cancel">Cancel</button><button class="btn danger" id="saveEscalation" value="default">Route for human review</button></div>
+  </form>
+</dialog>
+
+<div class="toast hidden" id="toast"></div>
+
+<script>
+const DEFAULT = {
+  sites: [
+    {id:"site-1", serial:"CLV-CB-001", name:"Cleveland Cereal Bar", type:"Cereal bar / food access", lead:"Nicole Bess", state:"Operating", readiness:86, notes:"Food access, community gathering, and youth-safe programming."},
+    {id:"site-2", serial:"CLV-YL-002", name:"Youth Learning Lab", type:"Youth learning hub", lead:"Site lead pending", state:"Pilot", readiness:64, notes:"Adult-supervised learning and community workshops."},
+    {id:"site-3", serial:"CLV-NP-003", name:"Resource & Outreach Hub", type:"Nonprofit resource center", lead:"Alexander Tsutskiridze", state:"Planning", readiness:71, notes:"Community operations and partner coordination."}
+  ],
+  actions: [
+    {id:"a1", site:"CLV-CB-001", title:"Confirm food allergy procedure signage", area:"Food & inventory", priority:"high", owner:"Nicole Bess", status:"Open", created:"2026-07-04", notes:"Operational readiness check."},
+    {id:"a2", site:"CLV-YL-002", title:"Complete adult supervision ratio checklist", area:"Safeguarding process", priority:"high", owner:"Safeguarding lead", status:"Escalated", created:"2026-07-04", notes:"Human review required before program opening."},
+    {id:"a3", site:"CLV-NP-003", title:"Review monthly partner follow-up tracker", area:"Grant / reporting", priority:"medium", owner:"Alexander Tsutskiridze", status:"Open", created:"2026-07-03", notes:"No sensitive beneficiary details."},
+    {id:"a4", site:"CLV-CB-001", title:"Reconcile cereal inventory count", area:"Food & inventory", priority:"low", owner:"Site manager", status:"In progress", created:"2026-07-03", notes:"Reorder threshold check."}
+  ],
+  readiness: {
+    "CLV-CB-001": {opening:true, adultCoverage:true, food:true, facilities:true, inventory:true, escalation:true},
+    "CLV-YL-002": {opening:true, adultCoverage:false, food:true, facilities:true, inventory:false, escalation:true},
+    "CLV-NP-003": {opening:true, adultCoverage:true, food:true, facilities:false, inventory:true, escalation:true}
+  },
+  settings:{
+    namedSafeguardingLead:"Unassigned",
+    escalationContact:"Unassigned",
+    dataRule:"Do not store child, family, medical, legal, or trauma data.",
+    language:"Operational and aggregate only"
+  }
+};
+let state = load();
+let activeView="dashboard";
+
+function clone(o){ return JSON.parse(JSON.stringify(o)); }
+function load(){ try { return JSON.parse(localStorage.getItem("daxda-community-ops-v01")) || clone(DEFAULT); } catch(e) { return clone(DEFAULT); } }
+function save(){ localStorage.setItem("daxda-community-ops-v01",JSON.stringify(state)); }
+function esc(str){return String(str).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));}
+function dateNow(){return new Date().toISOString().slice(0,10);}
+function getSite(serial){return state.sites.find(s=>s.serial===serial)}
+function badge(label,kind="muted"){return `<span class="badge ${kind}">${esc(label)}</span>`}
+function priorityBadge(p){return badge(p==="high"?"High":p==="medium"?"Medium":"Low", p==="high"?"danger":p==="medium"?"warn":"info")}
+function stateBadge(s){return badge(s,s==="Operating"?"ok":s==="Pilot"?"warn":"info")}
+function statusBadge(s){ return badge(s, s==="Complete"?"ok":s==="Escalated"?"danger":s==="In progress"?"warn":"info");}
+function toast(msg){ const t=document.getElementById("toast");t.innerHTML=esc(msg);t.classList.remove("hidden");setTimeout(()=>t.classList.add("hidden"),3200); }
+function noSensitive(text){
+  const forbidden = /\b(child|children|minor|family|families|diagnos|trauma|abuse|medical|immigration|case\s*number|social\s*security|address|birthday)\b/i;
+  return forbidden.test(text||"");
+}
+function render(){
+  document.querySelectorAll(".view").forEach(v=>v.classList.add("hidden"));
+  document.getElementById(activeView+"View").classList.remove("hidden");
+  document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.view===activeView));
+  const meta = {
+    dashboard:["Portfolio dashboard","District-level view across community businesses and nonprofit sites."],
+    sites:["Sites & serials","Create accountable site identities and track local readiness without creating profiles of people served."],
+    actions:["Action queue","Every operational task has a named adult owner, due attention level, and immutable local record."],
+    readiness:["Daily readiness","Opening and service-readiness checks; this is operational safety, not automated safeguarding decisions."],
+    safeguarding:["Safeguarding","Hard boundaries: DAXDA flags process gaps and routes them to adults. It never judges or ranks children or families."],
+    reports:["Reports & export","Export only operational, site-level records. Do not publish or distribute data that could identify beneficiaries."],
+    settings:["Protocol settings","Define the human accountabilities that DAXDA must never replace."]
+  };
+  document.getElementById("title").textContent = meta[activeView][0];
+  document.getElementById("subtitle").textContent = meta[activeView][1];
+  document.getElementById("primaryAction").textContent = activeView==="sites" ? "Add site" : activeView==="safeguarding" ? "Human review request" : "Add action";
+  renderDashboard();renderSites();renderActions();renderReadiness();renderSafeguarding();renderReports();renderSettings();
+}
+function renderDashboard(){
+  const open = state.actions.filter(a=>a.status!=="Complete").length;
+  const escalated = state.actions.filter(a=>a.status==="Escalated").length;
+  const avg = Math.round(state.sites.reduce((a,s)=>a+s.readiness,0)/Math.max(state.sites.length,1));
+  const operating = state.sites.filter(s=>s.state==="Operating").length;
+  const priority = state.actions.filter(a=>a.priority==="high"&&a.status!=="Complete").slice(0,5);
+  const bySite = state.sites.map(s=>({site:s, items:state.actions.filter(a=>a.site===s.serial&&a.status!=="Complete").length}));
+  document.getElementById("dashboardView").innerHTML = `
+    <div class="grid kpis">
+      <div class="card"><h3>Active sites</h3><div class="metric">${state.sites.length}</div><div class="metric-sub"><span class="trend">${operating} operating</span> · ${state.sites.length-operating} in pilot/planning</div></div>
+      <div class="card"><h3>Portfolio readiness</h3><div class="metric">${avg}%</div><div class="metric-sub">Average local opening and operational checks</div></div>
+      <div class="card"><h3>Open actions</h3><div class="metric">${open}</div><div class="metric-sub">${state.actions.filter(a=>a.priority==="high"&&a.status!=="Complete").length} high-attention tasks</div></div>
+      <div class="card"><h3>Human review requests</h3><div class="metric">${escalated}</div><div class="metric-sub">No autonomous resolution permitted</div></div>
+    </div>
+    <div class="grid two-col">
+      <div class="card">
+        <h3 class="section-title">Portfolio readiness by site</h3>
+        <p class="section-sub">A district manager view of operational preparation—not people analytics.</p>
+        <div class="bar-chart">
+          ${state.sites.map(s=>`<div class="bar-line"><span>${esc(s.serial)}</span><div class="track"><div class="fill" style="width:${s.readiness}%"></div></div><span class="v">${s.readiness}%</span></div>`).join("")}
+        </div>
+      </div>
+      <div class="card safeguard">
+        <h3 class="section-title">⚑ Safeguarding control</h3>
+        <p class="section-sub">System status for responsible operations.</p>
+        <div class="status-stack">
+          <div class="status-item"><i class="dot"></i> No child/family PII workflow declared</div>
+          <div class="status-item"><i class="dot ${state.settings.namedSafeguardingLead==="Unassigned"?"warn":""}"></i> Named safeguarding lead: ${esc(state.settings.namedSafeguardingLead)}</div>
+          <div class="status-item"><i class="dot ${state.settings.escalationContact==="Unassigned"?"warn":""}"></i> Escalation contact: ${esc(state.settings.escalationContact)}</div>
+          <div class="status-item"><i class="dot"></i> Human authorization required for all safeguards</div>
+        </div>
+        <div class="action-row" style="margin-top:16px">
+          <button class="btn danger" onclick="openEscalation()">Route process gap to human</button>
+          <button class="btn ghost" onclick="openView('safeguarding')">View hard boundaries</button>
+        </div>
+      </div>
+    </div>
+    <div class="grid two-col" style="margin-top:16px">
+      <div class="card">
+        <h3 class="section-title">Priority action queue</h3>
+        ${priority.length?`<div class="mini-list">${priority.map(a=>`<div class="mini-item"><div class="l"><strong>${esc(a.title)}</strong><span>${esc(a.site)} · ${esc(a.owner)} · ${esc(a.area)}</span></div><div>${priorityBadge(a.priority)}<div style="height:6px"></div>${statusBadge(a.status)}</div></div>`).join("")}</div>`:`<div class="empty">No high-priority actions. Maintain the cadence; that is the boring part that prevents chaos.</div>`}
+      </div>
+      <div class="card">
+        <h3 class="section-title">Site activity</h3>
+        <div class="mini-list">${bySite.map(x=>`<div class="mini-item"><div class="l"><strong>${esc(x.site.name)}</strong><span>${esc(x.site.serial)} · ${esc(x.site.lead)}</span></div><div style="text-align:right"><div style="font-size:22px;font-weight:850">${x.items}</div><span>open actions</span></div></div>`).join("")}</div>
+      </div>
+    </div>`;
+}
+function renderSites(){
+  document.getElementById("sitesView").innerHTML = `
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap">
+        <div><h3 class="section-title">Community site registry</h3><p class="section-sub">Site serials keep operational records separate, legible, and auditable.</p></div>
+        <button class="btn primary" onclick="openSite()">Add site</button>
+      </div>
+      <div class="site-cards">
+        ${state.sites.map(s=>`
+          <article class="site-card">
+            <header><div><div class="serial">${esc(s.serial)}</div><h4>${esc(s.name)}</h4></div>${stateBadge(s.state)}</header>
+            <div class="site-meta"><span>${esc(s.type)}</span><span>·</span><span>Lead: ${esc(s.lead)}</span></div>
+            <div><div class="tiny muted">Operational readiness</div><div class="progress"><i style="width:${s.readiness}%"></i></div><div class="tiny muted" style="margin-top:5px">${s.readiness}% verified for current cycle</div></div>
+            <div class="tiny muted">${esc(s.notes||"No operational note provided.")}</div>
+            <div class="site-actions">
+              <button onclick="filterActions('${esc(s.serial)}')">View actions</button>
+              <button onclick="openReadinessFor('${esc(s.serial)}')">Readiness</button>
+              <button onclick="raiseSiteReadiness('${esc(s.serial)}')">+ Verify item</button>
+            </div>
+          </article>`).join("")}
+      </div>
+    </div>`;
+}
+function renderActions(){
+  const sites = [...state.sites].map(s=>s.serial);
+  document.getElementById("actionsView").innerHTML = `
+    <div class="card">
+      <div class="filters">
+        <input id="actionSearch" class="select search" placeholder="Search task, site, owner, or area" oninput="filterActionTable()" />
+        <select id="actionStatusFilter" class="select" onchange="filterActionTable()"><option value="">All statuses</option><option>Open</option><option>In progress</option><option>Escalated</option><option>Complete</option></select>
+        <select id="actionSiteFilter" class="select" onchange="filterActionTable()"><option value="">All sites</option>${sites.map(x=>`<option>${esc(x)}</option>`).join("")}</select>
+        <button class="btn primary" onclick="openAction()">Add action</button>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>Task</th><th>Site</th><th>Area</th><th>Priority</th><th>Human owner</th><th>Status</th><th>Control</th></tr></thead><tbody id="actionRows"></tbody></table></div>
+    </div>`;
+  filterActionTable();
+}
+function filterActionTable(){
+  const q=(document.getElementById("actionSearch")?.value||"").toLowerCase();
+  const st=document.getElementById("actionStatusFilter")?.value||"";
+  const site=document.getElementById("actionSiteFilter")?.value||"";
+  const rows=state.actions.filter(a=>{
+    const blob=[a.title,a.site,a.area,a.owner,a.notes].join(" ").toLowerCase();
+    return (!q||blob.includes(q))&&(!st||a.status===st)&&(!site||a.site===site);
+  });
+  document.getElementById("actionRows").innerHTML=rows.length?rows.map(a=>`<tr>
+    <td><strong>${esc(a.title)}</strong><div class="tiny muted">${esc(a.created)}</div></td>
+    <td>${esc(a.site)}</td><td>${esc(a.area)}</td><td>${priorityBadge(a.priority)}</td><td>${esc(a.owner)}</td><td>${statusBadge(a.status)}</td>
+    <td>${a.status!=="Complete"?`<button class="btn ghost" style="font-size:11px;padding:7px 8px" onclick="advanceAction('${a.id}')">${a.status==="Open"?"Start":"Complete"}</button>`:`<span class="tiny muted">Closed</span>`}</td>
+  </tr>`).join(""):`<tr><td colspan="7"><div class="empty">No matching actions.</div></td></tr>`;
+}
+function renderReadiness(){
+  document.getElementById("readinessView").innerHTML=`
+    <div class="card">
+      <h3 class="section-title">Daily readiness controls</h3>
+      <p class="section-sub">These checks confirm site preparation. They do not make judgments about people, children, or families.</p>
+      <div class="grid three-col">
+        ${state.sites.map(s=>{
+          const r=state.readiness[s.serial]||{};
+          const items=[
+            ["opening","Opening / closing process"],
+            ["adultCoverage","Adult coverage verified"],
+            ["food","Food / allergy process ready"],
+            ["facilities","Facility and emergency equipment ready"],
+            ["inventory","Service inventory adequate"],
+            ["escalation","Escalation route confirmed"]
+          ];
+          const score=Math.round(items.filter(([k])=>r[k]).length/items.length*100);
+          return `<div class="site-card"><header><div><div class="serial">${esc(s.serial)}</div><h4>${esc(s.name)}</h4></div>${badge(score+"%",score>=84?"ok":score>=67?"warn":"danger")}</header>
+            <div>${items.map(([k,label])=>`<label class="status-item" style="cursor:pointer"><input type="checkbox" ${r[k]?"checked":""} onchange="toggleReadiness('${esc(s.serial)}','${k}',this.checked)"> <span>${esc(label)}</span></label>`).join("")}</div>
+            <div class="tiny muted">Named human site lead: ${esc(s.lead)}</div>
+          </div>`;}).join("")}
+      </div>
+    </div>`;
+}
+function renderSafeguarding(){
+  document.getElementById("safeguardingView").innerHTML=`
+    <div class="grid two-col">
+      <div class="card safeguard">
+        <h3 class="section-title">⚑ Safeguarding is a human authority system</h3>
+        <p class="section-sub">DAXDA can identify missing process evidence and route a request. It must never decide what happened or what should happen to a child or family.</p>
+        <ol class="numbered">
+          <li><strong>Flag process gaps only.</strong> Missing adult coverage, expired training, absent procedure, or incomplete emergency readiness are appropriate operational signals.</li>
+          <li><strong>Route to a named qualified adult.</strong> Every safeguarding alert needs a human owner and escalation path.</li>
+          <li><strong>Do not collect sensitive stories.</strong> Store no names, records, diagnoses, trauma descriptions, legal details, family histories, or case notes.</li>
+          <li><strong>Never profile or score minors.</strong> No “risk” ratings, behavior prediction, eligibility decisions, discipline recommendations, or service prioritization.</li>
+          <li><strong>Preserve required reporting.</strong> Immediate danger or reportable concerns follow applicable emergency and mandatory-reporting procedures, independent of software.</li>
+        </ol>
+        <div class="action-row" style="margin-top:16px"><button class="btn danger" onclick="openEscalation()">Request human process review</button></div>
+      </div>
+      <div class="card">
+        <h3 class="section-title">Allowed vs prohibited uses</h3>
+        <div class="rule"><div class="n">✓</div><div><strong>Allowed: operational readiness</strong><p>Staff documentation reminders, facility checklists, food-allergy procedure status, volunteer training status, and aggregate site capacity.</p></div></div>
+        <div class="rule"><div class="n">✓</div><div><strong>Allowed: accountability workflow</strong><p>Action ownership, due dates, documentation gaps, escalation logs, and recurring management reports.</p></div></div>
+        <div class="rule"><div class="n">×</div><div><strong>Prohibited: child or family profiling</strong><p>No data-driven labels, scores, predictions, eligibility recommendations, or automated intervention decisions.</p></div></div>
+        <div class="rule"><div class="n">×</div><div><strong>Prohibited: disciplinary authority</strong><p>No automated punishment, exclusion, referral, or legal/safeguarding determination.</p></div></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h3 class="section-title">Current human accountability fields</h3>
+      <div class="grid three-col">
+        <div class="pill-stat"><span>Safeguarding lead</span><strong>${esc(state.settings.namedSafeguardingLead)}</strong></div>
+        <div class="pill-stat"><span>Escalation contact</span><strong>${esc(state.settings.escalationContact)}</strong></div>
+        <div class="pill-stat"><span>Data-use rule</span><strong>${esc(state.settings.language)}</strong></div>
+      </div>
+    </div>`;
+}
+function renderReports(){
+  const rows=state.sites.map(s=>({s, open:state.actions.filter(a=>a.site===s.serial&&a.status!=="Complete").length, high:state.actions.filter(a=>a.site===s.serial&&a.priority==="high"&&a.status!=="Complete").length}));
+  document.getElementById("reportsView").innerHTML=`
+    <div class="grid two-col">
+      <div class="card">
+        <h3 class="section-title">District operations summary</h3>
+        <div class="table-wrap"><table><thead><tr><th>Site</th><th>Readiness</th><th>Open</th><th>High</th></tr></thead><tbody>
+          ${rows.map(r=>`<tr><td><strong>${esc(r.s.name)}</strong><div class="tiny muted">${esc(r.s.serial)}</div></td><td>${r.s.readiness}%</td><td>${r.open}</td><td>${r.high}</td></tr>`).join("")}
+        </tbody></table></div>
+      </div>
+      <div class="card">
+        <h3 class="section-title">Controlled export</h3>
+        <p class="section-sub">Exports only anonymous operational records from this local demo. Review before sharing.</p>
+        <div class="mini-list">
+          <div class="mini-item"><div class="l"><strong>Action register CSV</strong><span>Site serials, task titles, owners, priorities, statuses.</span></div><button class="btn ghost" onclick="exportCSV('actions')">Export</button></div>
+          <div class="mini-item"><div class="l"><strong>Site readiness CSV</strong><span>Readiness percentages and checklist state.</span></div><button class="btn ghost" onclick="exportCSV('readiness')">Export</button></div>
+          <div class="mini-item"><div class="l"><strong>Executive summary</strong><span>Local HTML report suitable for internal review.</span></div><button class="btn ghost" onclick="exportReport()">Export</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h3 class="section-title">External communications rule</h3>
+      <p class="section-sub">Public-facing material must describe the system as an operational governance and accountability tool. It must not claim institutional validation, guaranteed safety, automated child protection, or authority to determine outcomes for people.</p>
+    </div>`;
+}
+function renderSettings(){
+  document.getElementById("settingsView").innerHTML=`
+    <div class="grid two-col">
+      <div class="card">
+        <h3 class="section-title">Named human authority</h3>
+        <p class="section-sub">DAXDA is structurally blocked from replacing these roles.</p>
+        <div class="mini-list">
+          <label class="tiny">Named safeguarding lead<input id="setLead" class="select" style="width:100%;margin-top:6px" value="${esc(state.settings.namedSafeguardingLead)}" placeholder="Name or role"></label>
+          <label class="tiny">Escalation contact<input id="setEsc" class="select" style="width:100%;margin-top:6px" value="${esc(state.settings.escalationContact)}" placeholder="Name / phone workflow / agency contact"></label>
+          <label class="tiny">Operational data rule<textarea id="setRule" style="width:100%;margin-top:6px">${esc(state.settings.dataRule)}</textarea></label>
+          <button class="btn primary" onclick="saveSettings()">Save human-accountability settings</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="section-title">Control architecture</h3>
+        <div class="rule"><div class="n">1</div><div><strong>Site serial</strong><p>One discrete ID per location; no program participant profile is needed.</p></div></div>
+        <div class="rule"><div class="n">2</div><div><strong>Human owner</strong><p>Each task is assigned to a named adult—not “the AI,” not a vague department.</p></div></div>
+        <div class="rule"><div class="n">3</div><div><strong>Evidence of completion</strong><p>Each item must be confirmed through a human-maintained record, not assumed from chatbot output.</p></div></div>
+        <div class="rule"><div class="n">4</div><div><strong>Escalation limit</strong><p>DAXDA can queue and document; it cannot resolve safeguarding concerns.</p></div></div>
+      </div>
+    </div>`;
+}
+function openView(v){activeView=v;render();}
+function openAction(){
+  fillSelect("actionSite");
+  document.getElementById("actionModal").showModal();
+}
+function openSite(){document.getElementById("siteModal").showModal();}
+function openEscalation(){fillSelect("escalationSite");document.getElementById("escalationModal").showModal();}
+function fillSelect(id){
+ const el=document.getElementById(id);
+ el.innerHTML=state.sites.map(s=>`<option value="${esc(s.serial)}">${esc(s.serial)} — ${esc(s.name)}</option>`).join("");
+}
+function advanceAction(id){
+  const a=state.actions.find(x=>x.id===id);
+  if(!a)return;
+  a.status = a.status==="Open"?"In progress":"Complete";
+  save();render();toast("Action status updated.");
+}
+function toggleReadiness(serial,k,val){
+  state.readiness[serial]=state.readiness[serial]||{};
+  state.readiness[serial][k]=val;
+  const r=state.readiness[serial];
+  const score=Math.round(Object.values(r).filter(Boolean).length/6*100);
+  const site=getSite(serial); if(site)site.readiness=score;
+  save();render();
+}
+function raiseSiteReadiness(serial){
+  const r=state.readiness[serial]||{};
+  const next=Object.keys(r).find(k=>!r[k]);
+  if(!next){toast("All readiness items already verified for this site.");return;}
+  r[next]=true; state.readiness[serial]=r;
+  const site=getSite(serial);site.readiness=Math.round(Object.values(r).filter(Boolean).length/6*100);
+  save();render();toast("One readiness item marked verified.");
+}
+function filterActions(serial){
+  activeView="actions";render();
+  document.getElementById("actionSiteFilter").value=serial;filterActionTable();
+}
+function openReadinessFor(serial){activeView="readiness";render();window.scrollTo({top:0,behavior:"smooth"});}
+function exportCSV(kind){
+  let csv="", filename="";
+  if(kind==="actions"){
+    csv="site_serial,task,area,priority,human_owner,status,created,notes\n"+state.actions.map(a=>[a.site,a.title,a.area,a.priority,a.owner,a.status,a.created,a.notes].map(v=>'"'+String(v||"").replace(/"/g,'""')+'"').join(",")).join("\n");
+    filename="daxda-action-register.csv";
+  } else {
+    csv="site_serial,site_name,readiness_percent,opening,adult_coverage,food_allergy_process,facilities,inventory,escalation_route\n"+state.sites.map(s=>{const r=state.readiness[s.serial]||{};return [s.serial,s.name,s.readiness,r.opening,r.adultCoverage,r.food,r.facilities,r.inventory,r.escalation].map(v=>'"'+String(v||"").replace(/"/g,'""')+'"').join(",")}).join("\n");
+    filename="daxda-site-readiness.csv";
+  }
+  download(filename,csv,"text/csv");
+  toast("Export prepared locally.");
+}
+function exportReport(){
+  const content=`<!doctype html><html><head><meta charset="utf-8"><title>DAXDA Community Ops Summary</title><style>body{font-family:Arial,sans-serif;padding:30px;color:#13213b}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccd6e7;padding:8px;text-align:left}th{background:#eef4ff}h1{margin-bottom:2px}small{color:#51627e}</style></head><body><h1>DAXDA Community Operations Summary</h1><small>Local operational report. No child/family personal data included.</small><h2>Sites</h2><table><tr><th>Serial</th><th>Name</th><th>Lead</th><th>Readiness</th></tr>${state.sites.map(s=>`<tr><td>${esc(s.serial)}</td><td>${esc(s.name)}</td><td>${esc(s.lead)}</td><td>${s.readiness}%</td></tr>`).join("")}</table><h2>Open Actions</h2><table><tr><th>Task</th><th>Site</th><th>Owner</th><th>Priority</th><th>Status</th></tr>${state.actions.filter(a=>a.status!=="Complete").map(a=>`<tr><td>${esc(a.title)}</td><td>${esc(a.site)}</td><td>${esc(a.owner)}</td><td>${esc(a.priority)}</td><td>${esc(a.status)}</td></tr>`).join("")}</table></body></html>`;
+  download("daxda-community-ops-summary.html",content,"text/html");toast("Executive summary prepared locally.");
+}
+function download(name,content,type){const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([content],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),400);}
+function saveSettings(){
+  state.settings.namedSafeguardingLead=document.getElementById("setLead").value.trim()||"Unassigned";
+  state.settings.escalationContact=document.getElementById("setEsc").value.trim()||"Unassigned";
+  state.settings.dataRule=document.getElementById("setRule").value.trim()||DEFAULT.settings.dataRule;
+  save();render();toast("Human-accountability settings saved.");
+}
+document.getElementById("nav").addEventListener("click",e=>{const b=e.target.closest("button[data-view]");if(!b)return;openView(b.dataset.view);});
+document.getElementById("primaryAction").addEventListener("click",()=>{if(activeView==="sites")openSite();else if(activeView==="safeguarding")openEscalation();else openAction();});
+document.getElementById("resetDemo").addEventListener("click",()=>{if(confirm("Reset all local demo data?")){state=clone(DEFAULT);save();render();toast("Demo reset.");}});
+document.getElementById("actionForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const notes=document.getElementById("actionNotes").value.trim();
+  if(noSensitive(notes)){toast("Blocked: do not enter child, family, medical, legal, trauma, or similar sensitive information.");return;}
+  state.actions.unshift({id:"a"+Date.now(),site:document.getElementById("actionSite").value,title:document.getElementById("actionTitle").value.trim(),area:document.getElementById("actionArea").value,priority:document.getElementById("actionPriority").value,owner:document.getElementById("actionOwner").value.trim(),status:"Open",created:dateNow(),notes});
+  save();document.getElementById("actionModal").close();e.target.reset();render();toast("Operational action created.");
+});
+document.getElementById("siteForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const region=document.getElementById("siteRegion").value.trim().toUpperCase().replace(/[^A-Z0-9-]/g,"")||"SITE";
+  const type=document.getElementById("siteType").value;
+  const prefix=type.includes("Cereal")?"CB":type.includes("Youth")?"YL":type.includes("Resource")?"NP":type.includes("Food")?"FD":type.includes("Workshop")?"WS":"AH";
+  const serial=`${region}-${prefix}-${String(state.sites.filter(s=>s.serial.includes(`-${prefix}-`)).length+1).padStart(3,"0")}`;
+  const notes=document.getElementById("siteNotes").value.trim();
+  if(noSensitive(notes)){toast("Blocked: site notes must be operational and non-sensitive.");return;}
+  state.sites.push({id:"site-"+Date.now(),serial,name:document.getElementById("siteName").value.trim(),type,lead:document.getElementById("siteLead").value.trim(),state:"Planning",readiness:0,notes});
+  state.readiness[serial]={opening:false,adultCoverage:false,food:false,facilities:false,inventory:false,escalation:false};
+  save();document.getElementById("siteModal").close();e.target.reset();render();toast(`Site ${serial} added.`);
+});
+document.getElementById("escalationForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const notes=document.getElementById("escalationNotes").value.trim();
+  if(noSensitive(notes)){toast("Blocked: use operational process gaps only; never enter sensitive details about minors or families.");return;}
+  const site=document.getElementById("escalationSite").value;
+  state.actions.unshift({id:"esc"+Date.now(),site,title:"Human safeguarding review: "+document.getElementById("escalationType").value,area:"Safeguarding process",priority:"high",owner:document.getElementById("escalationOwner").value.trim(),status:"Escalated",created:dateNow(),notes});
+  save();document.getElementById("escalationModal").close();e.target.reset();render();toast("Escalation logged and assigned to a human reviewer.");
+});
+render();
+</script>
+</body>
+</html>

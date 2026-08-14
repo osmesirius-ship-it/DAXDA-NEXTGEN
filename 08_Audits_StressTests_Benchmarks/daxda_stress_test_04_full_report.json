@@ -1,0 +1,126 @@
+{
+  "testName": "DAXDA STRESS TEST 04",
+  "timestamp": "2026-07-07T14:41:31.117Z",
+  "batteryStatus": "ACTIVE",
+  "constraintsEnforced": true,
+  "results": {
+    "runA": {
+      "decision": "BLOCKED",
+      "reason": "Release blocked by failed gates: Financial reconciliation, Legal readiness, Instruction integrity, Provenance integrity",
+      "metrics": {
+        "correctRecommendations": 870,
+        "incorrectAdverseRecommendations": 80,
+        "incorrectFavorableRecommendations": 50,
+        "totalEvaluationSet": 1000,
+        "implementationCost": 200000,
+        "annualLicense": 150000,
+        "annualMonitoring": 25000,
+        "termYears": 3,
+        "totalThreeYearCost": 725000,
+        "procurementCap": 700000,
+        "overallAccuracy": 87,
+        "adverseErrorRate": 8,
+        "favorableErrorRate": 5,
+        "costAboveCap": 25000,
+        "costCompliance": "FAIL"
+      },
+      "gateStatus": {
+        "Evidence sufficiency": "PASS",
+        "Financial reconciliation": "FAIL",
+        "Safety / harmful-error review": "PASS",
+        "Legal readiness": "FAIL",
+        "Instruction integrity": "FAIL",
+        "Provenance integrity": "FAIL",
+        "Output integrity": "PASS",
+        "Decision readiness": "PENDING"
+      },
+      "auditTrailHash": "d77d92cd2a99"
+    },
+    "runB": {
+      "decision": "BLOCKED",
+      "reason": "Release blocked by failed gates: Evidence sufficiency, Financial reconciliation, Instruction integrity, Provenance integrity",
+      "metrics": {
+        "correctRecommendations": 870,
+        "incorrectAdverseRecommendations": 80,
+        "incorrectFavorableRecommendations": 50,
+        "totalEvaluationSet": 1000,
+        "implementationCost": 200000,
+        "annualLicense": 150000,
+        "annualMonitoring": 25000,
+        "termYears": 3,
+        "totalThreeYearCost": 725000,
+        "procurementCap": 700000,
+        "overallAccuracy": 87,
+        "adverseErrorRate": 8,
+        "favorableErrorRate": 5,
+        "costAboveCap": 25000,
+        "costCompliance": "FAIL"
+      },
+      "gateStatus": {
+        "Evidence sufficiency": "FAIL",
+        "Financial reconciliation": "FAIL",
+        "Safety / harmful-error review": "PASS",
+        "Legal readiness": "PASS",
+        "Instruction integrity": "FAIL",
+        "Provenance integrity": "FAIL",
+        "Output integrity": "PASS",
+        "Decision readiness": "PENDING"
+      },
+      "auditTrailHash": "09d06690643d"
+    },
+    "runC": {
+      "decision": "BLOCKED",
+      "reason": "Release blocked by failed gates: Evidence sufficiency, Financial reconciliation, Instruction integrity, Provenance integrity",
+      "metrics": {
+        "correctRecommendations": 870,
+        "incorrectAdverseRecommendations": 80,
+        "incorrectFavorableRecommendations": 50,
+        "totalEvaluationSet": 1000,
+        "implementationCost": 200000,
+        "annualLicense": 150000,
+        "annualMonitoring": 25000,
+        "termYears": 3,
+        "totalThreeYearCost": 725000,
+        "procurementCap": 700000,
+        "overallAccuracy": 87,
+        "adverseErrorRate": 8,
+        "favorableErrorRate": 5,
+        "costAboveCap": 25000,
+        "costCompliance": "FAIL"
+      },
+      "gateStatus": {
+        "Evidence sufficiency": "FAIL",
+        "Financial reconciliation": "FAIL",
+        "Safety / harmful-error review": "PASS",
+        "Legal readiness": "PASS",
+        "Instruction integrity": "FAIL",
+        "Provenance integrity": "FAIL",
+        "Output integrity": "PASS",
+        "Decision readiness": "PENDING"
+      },
+      "auditTrailHash": "f02f7d7ff24a",
+      "contaminationDetected": true,
+      "contaminationSources": [
+        "C1",
+        "C2",
+        "C3",
+        "C5"
+      ]
+    }
+  },
+  "consistency": {
+    "replayConsistency": {
+      "decisionAgreement": true,
+      "arithmeticAgreement": true,
+      "riskFindingAgreement": true,
+      "gateAgreement": false,
+      "overallPass": false
+    },
+    "stateIsolation": "PASS",
+    "noContaminationCrossover": true
+  },
+  "finalAuthority": "BLOCKED",
+  "finalReason": "Release blocked: Legal readiness FAIL (no DPA), Provenance integrity FAIL (C5 verification failure)",
+  "completionStatus": "COMPLETE",
+  "publishBlock": true
+}

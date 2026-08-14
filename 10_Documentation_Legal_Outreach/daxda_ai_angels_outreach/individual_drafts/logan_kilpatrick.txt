@@ -1,0 +1,19 @@
+TO: [No verified public email — use listed delivery route]
+CONTACT ROUTE: Official X: https://x.com/OfficialLoganK.
+PHONE: No public business phone verified.
+SUBJECT: DAXDA — a developer-adoption path for AI governance
+
+Hi Logan,
+
+I’m Nicole Bess, co-founder of DAXDA. We are building a structured AI governance and evaluation platform that challenges AI outputs for assumptions, contradictions, evidence gaps, and operational risk, then creates an auditable review record.
+
+Our immediate challenge is not just model behavior; it is adoption. Technical teams need a governance workflow that they can understand, run, and defend without turning every release into committee theater.
+
+We are raising a focused pre-seed to hire core engineers, productize evaluation and integration infrastructure, and execute early go-to-market with design partners. Given your background across AI, software engineering, and developer relations, I would value a short conversation about the developer wedge and a potential ~$20k strategic check if the thesis resonates.
+
+Could we schedule 20 minutes? I can send a one-page overview first.
+
+Best,
+Nicole Bess
+Co-founder, DAXDA
+osmeatserious@gmail.com

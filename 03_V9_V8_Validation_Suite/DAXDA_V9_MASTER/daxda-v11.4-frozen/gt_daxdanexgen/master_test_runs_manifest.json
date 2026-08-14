@@ -1,0 +1,2639 @@
+{
+  "archive_name": "gt_daxdanexgen",
+  "timestamp": "2026-07-30 20:08:18 UTC",
+  "engine_version": "12.0.1-GOVERNED",
+  "algebra": "Cl(7,0)",
+  "total_archived_runs": 438,
+  "hard_invariant": "HARD INVARIANT: No evaluation objective may override containment, provenance, or authorization boundaries.",
+  "archived_records": [
+    {
+      "file": "daxda_7_words_results.json",
+      "type": "TEST_RUN_JSON_PAYLOAD",
+      "bytes": 475,
+      "sha256": "f8e4b3116dbcdf303e58066d0db66e1be03302c6d470c5f24109497b63ba2af8"
+    },
+    {
+      "file": "daxda_4d_task_results.json",
+      "type": "TEST_RUN_JSON_PAYLOAD",
+      "bytes": 50,
+      "sha256": "60cbf058a955621e708e7f4b0a71e77cacf075cd755042d89177d0c929eb70aa"
+    },
+    {
+      "file": "daxda_empirical_proof_results.json",
+      "type": "TEST_RUN_JSON_PAYLOAD",
+      "bytes": 500,
+      "sha256": "504bc94988ea979b8131afb4d228cb3d5efd92314f4986ba2f09c23e4c1ed0d4"
+    },
+    {
+      "file": "daxda_7min_scientific_exploration_results.json",
+      "type": "TEST_RUN_JSON_PAYLOAD",
+      "bytes": 129061,
+      "sha256": "e163b2017049ec7d2602e0c329d1bcf0aa55cb0fb51c445412e56d9f04660409"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_053_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9106,
+      "sha256": "edf107a77306cbdc213a2c19bdd4b8283382f0351cd923cbb1d2a74300bc51a6"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_064_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9107,
+      "sha256": "368a2c66cdfef46cb7a1f699cf644f4c3c2c02cba812442369dc51e3ce825d43"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_001_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9065,
+      "sha256": "deee74f798c3c9433273c4011c2bb12c2544ddf03f55fc8283678ba05831d5f1"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_014_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9095,
+      "sha256": "a9b3a1d73805c636da0ed1bc31dacea5bf6c368675f988cb211d42d3a3156012"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i041_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9194,
+      "sha256": "63c38b03d8e3cb8add4ae67aa73b9f16d3762aea69b77380b0ac039f808caa4e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i035_black_hole_horizon_pseudoscalar_e1234567.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9200,
+      "sha256": "09fe9e9395e98e6b69f88affe61e26330612d3fa8805c02630b6255d134151c2"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_040_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "7f7fee7867de58e3130f5797e9fe2687aa3c2e3c4dae4d4a4b6a51ac91c415b6"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i048_navier-stokes_4d_fluid_circulation_vorti.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "6f4e4109f0c8dae81a31042500d51e1efd289e06906e02bc43340d225bb27cf1"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i027_memory_alias-free_pointer_dependency_res.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9255,
+      "sha256": "4dcfe41d7bb6ce0d67a4e6909a489c59d556d38cc80235bcde43bc58b95b709d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i028_generating_immutable_sha-256_cryptograph.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9208,
+      "sha256": "5c751ab61f3a5114257b903661515b0e04869242339bb773b1a2d07ddf0d4350"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i051_black_hole_horizon_pseudoscalar_e1234567.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9200,
+      "sha256": "d37aae7f891936ba6c3596954e0729c41b0c5ff141ae4bd041a046c5d347826f"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i043_memory_alias-free_pointer_dependency_res.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9255,
+      "sha256": "b968c8d73d3fcca6a5a22321c90afdfadbe61c1aea11e965932ac9592f6a004d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i025_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9194,
+      "sha256": "7240f16c0a0417b9801e880002ff6c9d388b66836abc898f2507f07bde0873c4"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_031_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9150,
+      "sha256": "cf96440aa6970439277af05d6b4df03f71cced67a9c9a8b6fc817f5a028c78f9"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_103_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "b34f1999a372f5b2e307364c007d6c0b344742074a0aa728fe8002b81273a0d2"
+    },
+    {
+      "file": "journal_submissions/journal_paper_paradox_paradox_10_relativistic_twin_age_differential_paradox.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9140,
+      "sha256": "35219e943ebc7e2956fcafff76e800c67e17c340c9f6667f511d9e76eb50c06a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i017_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9188,
+      "sha256": "928be1cffe76250a0b68b80cbd212b1354c9d2d713f221f732f2a727cdb48a76"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i058_non-commutative_bivector_commutator_comm.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9203,
+      "sha256": "3d937c74fe40507ebf7d30c96e100fb304ec2e8bff4bcec5d9bb1586f6416819"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i024_dynamic_programming_recurrence_state_tre.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9250,
+      "sha256": "2505bf805289f02027cc679f459694ae74bee0f303608b9abb13b574dd789ace"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i031_sigmoidal_empirical_grounding_calibratio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9218,
+      "sha256": "08c7227ad3aef9b6e881f24c4aec9cc489976d5ccdea0814a236524bc510d651"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i033_isomorphism:_software_execution_ast_<->_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9226,
+      "sha256": "c67fe2bdb8debb70f933f4b7665808385c583bead5bc6b2bc9945476150055b8"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i055_sigmoidal_empirical_grounding_calibratio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9218,
+      "sha256": "5b9915e96816e443fc09ee1266ad6310424ce06dd9a2bddfb9624fa23b7da930"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i040_dynamic_programming_recurrence_state_tre.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9250,
+      "sha256": "646bbf8d9f4c2652d5ea3b6f5f52964245326fdcb067e4a23aecc661ae72e753"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i057_isomorphism:_software_execution_ast_<->_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9226,
+      "sha256": "bf7f1e163d427e94d4ad1acbab64f7bc55c18be860141cdb23d4de7a8df5227a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i064_hilbert_space_blade_inner_product_norm_c.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9181,
+      "sha256": "e787f56058aacf52212d36fcc6e9bde0346bcff31a49c8f52c57c6b5fbc69e33"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_009_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9074,
+      "sha256": "ee5698b03d654943c4affe2a5ee85c9818ae06d28113cb5cbe1cb80c227721f4"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i045_synthesizing_zero-hazard_simd_vectorizat.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9268,
+      "sha256": "99a131d495b7581fc7e61877ce411d4b90c26acd8c27fe42cbdec7c5fff40e8e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_085_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9083,
+      "sha256": "3e78440e0854b4843bd8eb382c4419a25131890b02d7523842d5c3e8c8b7dd5f"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_084_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9083,
+      "sha256": "612e51b382553626ba4cd0f9e4d23718d77aa6957675e8c9d50bc789b53705db"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i002_non-commutative_bivector_commutator_comm.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9202,
+      "sha256": "c8c53b2338dad3c79d1b627695a41b5f942693506b06d9b1f60886baa203154c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_daxda_full_commercial_rollout.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 3824,
+      "sha256": "8c8558158a0881c7895c536cbf7294713acd8c7b8d6ee282745809e9507dece9"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_013_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9095,
+      "sha256": "8ba3a38db152492c73ebdf7a92caaa2f09dcf1870fa827fd120bef775e3ecb14"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_006_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9074,
+      "sha256": "ae3a2c77aead3e1df31487cf896b17ca8c4bc8813c4617c572ca039d3c1f2978"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i014_16-layer_micro-reversibility_verificatio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9221,
+      "sha256": "c9e9589b469ae7eaa99567bed0d92f6c72036eed75a6e6417fe9b6953cb6f509"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i051_supersymmetric_spin(7,0)_rotor_state_man.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9185,
+      "sha256": "b77f450b8a9a52f379a5cb835c3031f2ca984ca39af7345b3151b4ebbb2bff95"
+    },
+    {
+      "file": "journal_submissions/journal_paper_treasure_case_02_verse_2_new_orleans___french_quarter.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9557,
+      "sha256": "3b9ad02886ff2d967271475fc06dfb477f9d98a877519d51c45c1d49c8dafcd6"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i029_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9188,
+      "sha256": "b2087c4dedf0208a7e71b4a32e039d3c7c13b89bf2b02a303f68b92e5492472a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i035_supersymmetric_spin(7,0)_rotor_state_man.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9185,
+      "sha256": "0b0684edfa0e47793055ed2c5f4d72fe7a162c1b756c84c87bbaa6924a258182"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i021_synthesizing_zero-hazard_simd_vectorizat.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9268,
+      "sha256": "ae047171335d5827e5c477062cf93e5ba1cd4bdfc0f94df4037927a15ce7152a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_069_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9112,
+      "sha256": "c69074b7508ed25eff15c24a01e9a54836706f86611f544863da80b472f22a04"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i010_flrw_cosmological_dark_energy_expansion_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9189,
+      "sha256": "397c691cfff56035420938d8b96290caec03739e47db1a8fe1d7fa3d52a1f4b0"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i014_mapping_ast_recursion_depth_to_multivect.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9258,
+      "sha256": "babfe3f37aa1fa0d59bdcdaab1060bd4c7932a74e98ffbb411a34a4310e8a3ce"
+    },
+    {
+      "file": "journal_submissions/journal_paper_location_case_08_verse_11_roanoke_island___fort_raleigh.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9447,
+      "sha256": "eb3c249c503290573d20ace1b28e19e0f2e0928e608cc45171242ee75adbad47"
+    },
+    {
+      "file": "journal_submissions/journal_paper_treasure_case_04_verse_6_st._augustine___fountain_of_youth.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9545,
+      "sha256": "e99bf3f2e6b0398e3e008fd71f92a856b9bf97b7b629f0868af772e989ace774"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i012_navier-stokes_4d_fluid_circulation_vorti.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "341e40b19e73c7da4fc4c6788059df3e36e69756789f52f6385fe2290e7fd705"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i016_generating_immutable_sha-256_cryptograph.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9208,
+      "sha256": "c31df7345d52af647716f9412f24c78ccaf5012f3fcda29649ff6b493c4b7e00"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i019_memory_alias-free_pointer_dependency_res.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9255,
+      "sha256": "842599fab4ca5be6c39a089ffc21a3e76ed32bf61402c378df8944f070e1e37a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_115_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "7e8f0cc952b31924ada042d9d1723b62621869b1ad1092686543cdb77c85c5c5"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i004_generating_immutable_sha-256_cryptograph.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9207,
+      "sha256": "d21b41e9febf05f391739f7a621ddb588a398558316e729c046ff945addafc1c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i064_navier-stokes_4d_fluid_circulation_vorti.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "f9163a626a4bea8dc9c6c7270bf678ace7448acfb998e85fa2dccaa115fa411d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_treasure_case_13_tti_-_past_&_future_box.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9519,
+      "sha256": "bb21186c295209f25b4d15e1a29a9107a094563c5d7300577e2072c7b9f40835"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i019_black_hole_horizon_pseudoscalar_e1234567.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9200,
+      "sha256": "dddc2bc9c5db2ab1648685e455e2a6f7f782ae4de89331903c7a2ceacbeea103"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_112_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "3dae276e7f7c157e5b4499ab3a16e41b8931b072e9bcfa030f804ec1dbdd7b0a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i009_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "45342f9c64c923b8b2c9e20a7ba34e905b6112f7fd79416fd02dd63619add83c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_daxda_nextgen_market_architecture.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 11995,
+      "sha256": "4bcddfe535d539c420c6bd7d37c4a1de18a7590b267455cbe52b13922f9d960f"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i006_mapping_ast_recursion_depth_to_multivect.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9257,
+      "sha256": "fd556cf023c77d60e1a1b5bb5b42603da6b322cb69cc534f4c11a0d2b7f72d5a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i060_generating_immutable_sha-256_cryptograph.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9208,
+      "sha256": "f970308814a252823c72cf360cb8df99e0185091d051742f5b310e0922730575"
+    },
+    {
+      "file": "journal_submissions/journal_paper_paradox_paradox_08_maxwell_demon_thermodynamic_paradox.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9129,
+      "sha256": "8ecb16f24c73268e6925becf2e3d91029616af3ae94b33eec1677f188a88a91d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i027_supersymmetric_spin(7,0)_rotor_state_man.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9185,
+      "sha256": "71a3d1bbaefa983ea1c246dc61358b0dcbbed17281b4c045c1e0d1a59a3ddac0"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_098_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9131,
+      "sha256": "890226226f612c9216f29b2a2f95f2aeee9529fb4bcc5da196f413851f621212"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i008_dynamic_programming_recurrence_state_tre.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9249,
+      "sha256": "221cf330e1658d99870080022ec6c3bc4b81cf40732be0d626938d5a2b920e21"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_007_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9074,
+      "sha256": "42bfab01c11af8ce30136a3d6e6f7e4c47b171a311001614b6756cc3c732df67"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_012_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9095,
+      "sha256": "cca058d825f9bd1367a01efad0ef74ec7a1688a0c746fecef94c83c97fb5a92d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_044_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "befd3f43093e9ac5c63451650c4da07859f4a35a92f1d22c2b23d822975a0c2c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_047_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9105,
+      "sha256": "8fe9cdb0cd7606325d9fd37252815e5069789007b3b39f02968da26ff0df30e7"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i002_flrw_cosmological_dark_energy_expansion_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9188,
+      "sha256": "957b75fd927cdd1007e410750fd317fd1c7c615ffe518e298d14446326b76684"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i033_synthesizing_zero-hazard_simd_vectorizat.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9268,
+      "sha256": "5baca7e1da4f4acab1df98b7af9bd85b3b8fb32eb422820b929efb16677dd1fb"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_035_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9160,
+      "sha256": "b44847026346e09daa4096f28036dae9318dc4a3bd5729ec7c94c9506baf310a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i057_synthesizing_zero-hazard_simd_vectorizat.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9268,
+      "sha256": "b8f1a785da4e390a9d4d596371563de1f43295f8887c9e038e816fc608d2b577"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i048_hilbert_space_blade_inner_product_norm_c.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9181,
+      "sha256": "767d1a3f88406aee09ea7c4f13bbf6ceede3a742d4af702246213bd6c5e5fa15"
+    },
+    {
+      "file": "journal_submissions/journal_paper_location_case_09_verse_12_charleston___white_point_garden.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9450,
+      "sha256": "66993aac65f664450e80732ecbcc70684f8c0cc257c37d8b2b62a8ffcfa5e523"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i043_supersymmetric_spin(7,0)_rotor_state_man.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9185,
+      "sha256": "4d8e8fdc5f7634bc76c5e11b5f7eb82a99f744226237af784d8ddfdadfaeead6"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i006_16-layer_micro-reversibility_verificatio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9220,
+      "sha256": "e5331b1523107cb9e09cedf0ef5dd01a06b2bf387b100a0f4f143ec10f743ab1"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i010_non-commutative_bivector_commutator_comm.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9203,
+      "sha256": "e70eeef2676ca9238737841ec9248a4fe7e3a3e358635d09989663c726370073"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i045_isomorphism:_software_execution_ast_<->_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9226,
+      "sha256": "7cea033b08efd3c528e168cda2d2b1beb099a06dcd2d01d8d1dbcb37822cd209"
+    },
+    {
+      "file": "journal_submissions/journal_paper_daxda_6week_execution_certified.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 2031,
+      "sha256": "864b1435b174361063234406ab0c0eac7d5286ad860b4b532869bd504df7a427"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i038_16-layer_micro-reversibility_verificatio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9221,
+      "sha256": "8326719b5379ee4ddf64e7bacd8e4685cda9bd2ff6e0f51fcd67b0000591dc60"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i052_dynamic_programming_recurrence_state_tre.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9250,
+      "sha256": "2400ab8b931db7297f0016089b3d1c065d15fb94fc42cd4f94ad086f6cb823a9"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i047_sigmoidal_empirical_grounding_calibratio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9218,
+      "sha256": "7010e95f53e1d6f7a48afeccf0098e6d2d187ffbfb6148154eca3524c1ca8df4"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_026_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9146,
+      "sha256": "477c824686c0f5cc7ce8968a644db8192e174ccf90d07303784028fb53d6f639"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i061_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9188,
+      "sha256": "c1c476464c7dd7fb41ef9ff01419f6f0b2938a714918632cb1e190bbe52bdc5c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_treasure_case_10_tti_-_forrest_fenn_box.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9535,
+      "sha256": "803b61ffaa8b59cd64399e2f746104e9b584863f85ec4f2bfd28f13ec8422671"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i058_flrw_cosmological_dark_energy_expansion_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9189,
+      "sha256": "127a40ea99e9a849297c660260870fd33c4823d5534427c8a9e8947b8ef5bdb6"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_097_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9131,
+      "sha256": "cdf7b198861578134f66363474b5142132df818d11fd2470c04aeb41e505dfd6"
+    },
+    {
+      "file": "journal_submissions/journal_paper_novel_case_02_trefoil_knot_topological_winding.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9120,
+      "sha256": "ed470175c3f1825b95d125ad8a4b8f5b2443891a3649c3b90c659ab3568d62ca"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_008_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9074,
+      "sha256": "94905e0cea70d3754dfd889a943b01306fb3de919775c637477ecc3a149e13d3"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_061_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9105,
+      "sha256": "a7cf286ece6d554a7c6a0fa6def3d330db78aa2c460e6d01cc985d32bb96219e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i012_hilbert_space_blade_inner_product_norm_c.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9181,
+      "sha256": "a5454d5b9b31a921ac1d871196c8d6701b41c3517bc9e3fe0409e213a43cebe9"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_056_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9110,
+      "sha256": "b46bd90e9d724957ee1ea5d862c89c455b3bb33915aa61aa896dba0423ed1dc8"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i019_supersymmetric_spin(7,0)_rotor_state_man.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9185,
+      "sha256": "77e9876b7bbea88882ea8f96f9dc977a9edab4e26c8b5b61b3dbc0985002cd14"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i021_isomorphism:_software_execution_ast_<->_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9226,
+      "sha256": "77c88421544409e614c4e7b16398fe185d9680b51b799b6a576ca70ac5216598"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i023_sigmoidal_empirical_grounding_calibratio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9218,
+      "sha256": "09dc970ed56128bb08e2991779957fb07cc3046a69de335ab6d4380ce5acd2c1"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i036_dynamic_programming_recurrence_state_tre.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9250,
+      "sha256": "fc1b04506d23d435f4d5d387661a4816117a5c02aaa95f5fe73e1af51ed9ce7b"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_104_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "5cb6e5bde10eddd73bf49ab375ec9eb2b9cde333c2173a2915f020bd808092e1"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_092_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9083,
+      "sha256": "4fcf6dc7a4782bf3480b9b87b20b471055d35ecd958cdbfd636df78772af8306"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i005_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9187,
+      "sha256": "a2a7668b6f02b73e0b3d7db85df0fd5f6ec6641531f5afc5a77f1b6bda4f5325"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i051_memory_alias-free_pointer_dependency_res.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9255,
+      "sha256": "758dcbf920484d5ede812b8670115a4e9e9087bb554791ccf2347acbb0bb32fd"
+    },
+    {
+      "file": "journal_submissions/whitepaper_federal_reserve_sr11_7_compliance_guide.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9076,
+      "sha256": "95188eaf4b17414492294e6d06ee567230b8a9b1b56b164c39ab07f8ffeceaad"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_077_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9081,
+      "sha256": "d23e214219e49578bd5d68c88970fc6d5a1130af69520d08a8336cac78277dba"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_076_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9081,
+      "sha256": "117315e6b4bfeb2a5eaf7bcb1a26b69a54d8a127fef1bb7d160f9e017afda435"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i043_black_hole_horizon_pseudoscalar_e1234567.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9200,
+      "sha256": "a0e7f184e14025300c5a66a0de3efc262dc94c246fed5fd6a115bac9f37d4e95"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i037_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9194,
+      "sha256": "2484c3af5b3e07d8d239fb8b0df17555e0fe4a92975cd7701ee7518295f3dac3"
+    },
+    {
+      "file": "journal_submissions/journal_paper_tti_box_04_the_past_and_future_box.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9561,
+      "sha256": "aeb5967d6fd7cd1502407273c8fdc5ed7d20153038e7f8e79f4eff7d7f13cbce"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i038_mapping_ast_recursion_depth_to_multivect.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9258,
+      "sha256": "9d6291edd04bceff188120423e4582245d06b2c617a4a415702947ab88ab4010"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_015_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9095,
+      "sha256": "87881721d766ee3216bf2e449393c8b4154378d4a1ae6c1f70a1349e5f250d1f"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i053_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9194,
+      "sha256": "6cb26ca38907fd3702535eae941e6836ae936985f413b45462047f8d6179f01a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_029_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9150,
+      "sha256": "0ef20a0e8ad54486a4ab523b3c2b9a6e5ac6d6c2df1f6bbfb984239c48ef8168"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i035_memory_alias-free_pointer_dependency_res.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9255,
+      "sha256": "41109c3bc699f219b08bc959a5cd67153f8d147d27f202be3a2a934cf81c52c0"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i027_black_hole_horizon_pseudoscalar_e1234567.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9200,
+      "sha256": "8d307133a6bfa1e830b7d00c63818ef89c8c6a079c11ae20ded89dd3552a001e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i040_generating_immutable_sha-256_cryptograph.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9208,
+      "sha256": "a87881481a2720a34a4e35043b640bee0cabed4a7346b37484012ac80e623325"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i020_navier-stokes_4d_fluid_circulation_vorti.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "3c5fe22f479951b01a46204f7a1718a78476014c80360e3c8893e07d54aac382"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i029_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9194,
+      "sha256": "a2ac80b2d6c38b25305ca14250e6432c9ded9b4f18033c4ab8f9ad27d370e0e8"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_025_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9146,
+      "sha256": "b0f28e46aa522b587c5d8652d50629d2e4d712f86e59dce61f0a712cb5dd91b7"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i026_mapping_ast_recursion_depth_to_multivect.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9258,
+      "sha256": "0fa622278def8f22f6731a6f8138d490dd3a0765139c84ea4cb6777ba2e104c9"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i042_mapping_ast_recursion_depth_to_multivect.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9258,
+      "sha256": "70f6e528c2bc0b5a98fc95859f3793089a00e644497673f1d1aeec65b79c0470"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i024_generating_immutable_sha-256_cryptograph.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9208,
+      "sha256": "0fe69ab909ff15342458aacf9231ddc90892008da7eba11c7b5952445e37ccf9"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i044_navier-stokes_4d_fluid_circulation_vorti.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "fffbb1df23c7be6f83db6456bf1b9945ab372c68e255929d08b95d8761c6c603"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_113_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "6db693b2a75e06181cb00c3b26bad87d063248e14679520993cf603d5c63d6c5"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i039_black_hole_horizon_pseudoscalar_e1234567.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9200,
+      "sha256": "1754eefe14315ebb0a206e49ca3d180cde13289b610b28fe1e8c1fbf8c103438"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_066_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9108,
+      "sha256": "2a8a0dbe957beaa8b5b5dc04c85bc7a04fb9e689f5d90ae132a3ca0ece803a91"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i063_supersymmetric_spin(7,0)_rotor_state_man.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9185,
+      "sha256": "eaf0566cb46877a5cbefbe5f356470453a10cd8794ac906dfc4c6076d1daff2e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_human_consciousness_origin_and_emergence.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 6275,
+      "sha256": "73954cd5ecec7e4a873f421b5fa9d0a12aa1f8b0a24286585eadc9458e59cf8b"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_051_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9108,
+      "sha256": "7386308f5d6280472965c50906258a2cbad5ec41a3b7921b08ffd40b6a3465fc"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i059_sigmoidal_empirical_grounding_calibratio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9218,
+      "sha256": "e616332108a9f2922b6cdf6b6b38c1dcf2e201c67dedba5ae82a0930197717e8"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i026_16-layer_micro-reversibility_verificatio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9221,
+      "sha256": "3f30f8bfaa58678fcd1c8b550c3b3878884141a4f6e1044be6f30cd40c73f0bd"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i030_non-commutative_bivector_commutator_comm.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9203,
+      "sha256": "191de68cc02aa18069fcbd265a239a1af5f1e747419da1215855d267bb8ad489"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i046_flrw_cosmological_dark_energy_expansion_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9189,
+      "sha256": "0658bb9995d2c589e14afce3e10787abb75456b62fa7058610a39b438dcd34a2"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_099_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9131,
+      "sha256": "779f4c28462237edbb7c783e97198a1a2b5cb97e8900551cce45028de89f82e0"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i022_flrw_cosmological_dark_energy_expansion_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9189,
+      "sha256": "2b3f90541e019ecdddb61c4ce31a6ce2baea69bb6cffa676b55be14ccb5d07d0"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i013_synthesizing_zero-hazard_simd_vectorizat.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9268,
+      "sha256": "97ffe9eab2b9c8ae609303c8c65b1fac83d54e85c857db333848a5cb80b725dc"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_017_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9101,
+      "sha256": "3a7e0c15cfb7cf318f93eb5e960b282d466eaf7b27b692f38f3b1bf5ac2e7763"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_002_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9065,
+      "sha256": "7864cbff6395100a6c0b6b25470729c704a20fc6160bd066aff22950c1047c73"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i007_supersymmetric_spin(7,0)_rotor_state_man.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9184,
+      "sha256": "6f0e98db65396dc5eee7971f5d69b938acdd27ffba264d2b83bc49debb93c606"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i028_dynamic_programming_recurrence_state_tre.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9250,
+      "sha256": "d4209d679449352debf85573288b30d932130e6d2e30a6bf5c685c1bc131282a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i042_16-layer_micro-reversibility_verificatio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9221,
+      "sha256": "3ca85aa002a4b2d5428059dfc3e18b60ab2a32e2a01ab7a0041eedd391715acb"
+    },
+    {
+      "file": "journal_submissions/journal_paper_paradox_paradox_04_fermi_extraterrestrial_existence_paradox.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9162,
+      "sha256": "13dd63be1ece761b22b858edaec80e733421d48dde78894bba649d539ee8ed65"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i054_non-commutative_bivector_commutator_comm.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9203,
+      "sha256": "4dedec04ee9ba9fcea2cbcdc82cb78b334403ff3464d2d10c471042840d338f4"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_039_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "05eaf17a7a181a214050a864006a03ef4c77ea7829299ac8b8ee48df13b6069c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_treasure_case_07_verse_10_new_york_city___battery_park.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9537,
+      "sha256": "e7ef57899f0287b507ac6a9108f3b22336f969ddc41a3b37d1a4ed25760b6dbc"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i039_supersymmetric_spin(7,0)_rotor_state_man.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9185,
+      "sha256": "88b161e5da30e0e3e347842230f0aa9daaf9a749566da7a633a34b02f208ad1b"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i001_isomorphism:_software_execution_ast_<->_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9225,
+      "sha256": "32e26bcba8d213a41a5a4028e8941e5a587b308a187e00c5569621134a9514d8"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i003_sigmoidal_empirical_grounding_calibratio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9217,
+      "sha256": "aefe673b1281ab0e41cb7bd364c1d86dfa4dcae79ee03af1ccd78438fbd4f42d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i016_dynamic_programming_recurrence_state_tre.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9250,
+      "sha256": "de40430e6a1c7dee64e7af5b5749bf21ffa18bf65a1fd2623617ca7b041df830"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_018_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9101,
+      "sha256": "58b84ea916ae0dc7a999b49ad1abb8fcedc2a6a4d4c33469f4fd1c8bdc6cfbe4"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i025_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9188,
+      "sha256": "27bc28488c7071e3fde1ca1dcaf3e3a7c17d27e093e2f59abc15ae08627e70df"
+    },
+    {
+      "file": "journal_submissions/journal_paper_location_case_10_tti_-_forrest_fenn_bronze_chest.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9490,
+      "sha256": "1e32ff7cb6fe6fbd0010831984d60928b02fd0a45cba8f7fc8c0c25329784146"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_105_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "d7a5cefe51537b2300ef3c7376630504ef965aec0e7911a64da504c8348f4a3e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i032_hilbert_space_blade_inner_product_norm_c.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9181,
+      "sha256": "ae1abc72bab55a0a7a6012f8b9e6dd611900aa8485bcbe94d679cbc37256f95e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i049_synthesizing_zero-hazard_simd_vectorizat.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9268,
+      "sha256": "f98cade1b0bcfb9a69cc041843430cde78edbe43692ea09877c1184caee91a80"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i056_hilbert_space_blade_inner_product_norm_c.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9181,
+      "sha256": "5a341edb531908dbea619340f071d2f0d13bf6c689a510559053f74376754a58"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i018_16-layer_micro-reversibility_verificatio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9221,
+      "sha256": "699605272019db1df4ed195d41f41408cf093bcc27270f91dd226d0449d3f4d9"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_096_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9131,
+      "sha256": "5ff7c0bebbd00f42d3589267225bc7cfa19287660d51211252d09c1466d18ccd"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i041_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9188,
+      "sha256": "87f91bff2ba268e6a04f761b2088fd8de627ca9b2efeaa584a736e1ed3a179d4"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i015_memory_alias-free_pointer_dependency_res.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9255,
+      "sha256": "965c85b4a8d41732e4e8cb9e702e074321c1cc79bbc4ca4fd1fc29816cd1711a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i007_black_hole_horizon_pseudoscalar_e1234567.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9199,
+      "sha256": "bc8a83ad55ec95673cf1c399db60a4cf0e2b29d3a1800b889fafe19e5711df9b"
+    },
+    {
+      "file": "journal_submissions/journal_manuscripts_master_index.json",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 51786,
+      "sha256": "d1be70f82e1b9b05a3b44a11e7409cff96de8d755204adaabb32cdaddf4b1ae5"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_070_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9081,
+      "sha256": "f9f618086608fc1bd25d93551cfe6b1ab0c79bb45862e9896c4b825c5ff7b45c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_071_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9081,
+      "sha256": "6428076126c3348e7c970312b02b22c9d2e81cc8ce348be438e9d5c0ed2406e8"
+    },
+    {
+      "file": "journal_submissions/journal_paper_treasure_case_11_tti_-_appalachian_box.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9529,
+      "sha256": "fc7c1e8e40f5cb5346d92de88d058d996cfb80929bdcb724d5739224bdad3bff"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i017_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9194,
+      "sha256": "1d55a075a3d73b1f144eae23b22c079cce1f82bdff36bbf57e6b2ec1cdfb8e41"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i018_mapping_ast_recursion_depth_to_multivect.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9258,
+      "sha256": "c0ef25643b5df25c6039456d1aa2e0f0695ebddd5e8f35b9bc72e4caa1407767"
+    },
+    {
+      "file": "journal_submissions/journal_paper_daxda_98percent_execution_plan.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 4544,
+      "sha256": "cf6f036dfbcd05b65550cb0ef5b4bf7e4936beb50729362f467ab22058152388"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_005_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9065,
+      "sha256": "ed3e69cb5746d75a784e9d7c487e4ba52b4ea6b51e9cb312e394da8489d32eb4"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_010_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9074,
+      "sha256": "5c996fbb7be1cd8ef530a4c679832f0e128f205e7a844289ebd04e01555618f3"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_036_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9160,
+      "sha256": "c3a35322f3947f7398390d71ff02420c735efce146ed5698d32059c429f8d51f"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i063_black_hole_horizon_pseudoscalar_e1234567.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9200,
+      "sha256": "a68d3c68406c04d389e548701b84d64da5e0e68726474f81d039c7563cba3888"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i005_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "bf5e862bc6929822554e95863c6e9d1cd63d7417af96ba3eff8d93ad4ef2ddb3"
+    },
+    {
+      "file": "journal_submissions/journal_paper_tti_box_01_the_forrest_fenn_bronze_chest.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9592,
+      "sha256": "7dfbb5a41bfa1f872bd89e301e106c18e4ae8c42e3e36d0e97f51e05c642d907"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_088_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9083,
+      "sha256": "82dc74cd01e886a4624dd37f9604f9481e7a31b36f1584429b6913344689fbcf"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_089_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9083,
+      "sha256": "611bf68b25623f55a81a3eadde10d55196f4641714df40a84375d3aaa7204ec9"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i015_black_hole_horizon_pseudoscalar_e1234567.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9200,
+      "sha256": "18d3ef95d886eeec8ce6e5a28be766ca222bf460039c109d4d08bc3cab37977c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_paradox_paradox_07_russell_set_self_containment_paradox.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9126,
+      "sha256": "f4ddf1112488cc6282fa160a0624976ee010d90892c891ffc34954151f000508"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i007_memory_alias-free_pointer_dependency_res.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9254,
+      "sha256": "2ac370495e39906a99fa6e9381171d99a0dec1af2a174d79a5cd0b2c434c5d7b"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i008_generating_immutable_sha-256_cryptograph.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9207,
+      "sha256": "e44d6cde3fc5f646977794b1ae3a9a65bb6eb6960901caf18b7c19f49405c713"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_011_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9095,
+      "sha256": "cc9a9ada1baec63e2fd46dae008308606369fb7accfc3b9c417e507a143cad15"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_004_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9065,
+      "sha256": "281ee27b5aa022139e7021273c6e716e48068d2be36f48583561ff4c4ad9a484"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i061_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9194,
+      "sha256": "48f29b071cbc3c35f460ad9b4fa49c2f7d1dba61e416cc904dda760b6fa40f92"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i044_hilbert_space_blade_inner_product_norm_c.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9181,
+      "sha256": "9dc38760f36a8d189e29506c64b9cef4c5f89ddd56e59e1d83694b04917b1762"
+    },
+    {
+      "file": "journal_submissions/journal_paper_treasure_case_03_verse_5_montreal___mount_royal.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9518,
+      "sha256": "dfde5847d85d8c4adb34b61dd7de81f1e8fcf7ae2afec8977833907e9ddf8f22"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i053_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9188,
+      "sha256": "5459668eab3533808a390d3480410ed5e7c3ef4d3f9f39c91dcd05a0f8417738"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_019_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9101,
+      "sha256": "5b95b26d38a9352d59c090c31d86fb8fe9fdce79eb914a367809c4b3e6ead98b"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i060_dynamic_programming_recurrence_state_tre.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9250,
+      "sha256": "94dfe46d9fcee8080ef7886054a78f0e4b0a669207e050cd06231452a735ce29"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_059_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9105,
+      "sha256": "5826d8044302d22a60d7375c00dab6c56f7b7137489b8689f78471ebded26b25"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i037_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9188,
+      "sha256": "f22e172a7aaf789f4772b89d63a4bc19106b00185a5fef38e7a9c95feaf8cad2"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i004_dynamic_programming_recurrence_state_tre.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9249,
+      "sha256": "0c884c735b04fa81fe87197a385b9994ad8d58df6bb0ab0387993797a724b18f"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i011_sigmoidal_empirical_grounding_calibratio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9218,
+      "sha256": "76501056da2c80e9ee32b56ac9cbd62d750b91ac424923418373acd42c2143e1"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_102_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "2875206071526b30e588edf381c8051a33429b462d20c3263d761d6e160c4d0e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i013_isomorphism:_software_execution_ast_<->_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9226,
+      "sha256": "ab9a1a7b9b07b445a96bfece052396861e08817e52cfcb9bd81ec7535dc3b021"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i020_hilbert_space_blade_inner_product_norm_c.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9181,
+      "sha256": "5e2990f84e850a1a6f6c992669e04d5c5c243517a4ddb68a2f09b0b5b184f8cc"
+    },
+    {
+      "file": "journal_submissions/journal_paper_paradox_paradox_02_schr\u00f6dinger_cat_quantum_measurement_paradox.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9136,
+      "sha256": "5e01bb3cde1ab6be9b8a52f4fc8965c577496363230f9b4d0de9af7dc4471f9d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i001_synthesizing_zero-hazard_simd_vectorizat.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9267,
+      "sha256": "de7eff1890c61774a7b803d0060096cdfc6b06a5c4e39b6a12f28e4a378c7c47"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_043_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "1cd02d8d8e7b1c81336d59f58b96d185427569edbb6ac9285aae2e6d9d850ae9"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i030_flrw_cosmological_dark_energy_expansion_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9189,
+      "sha256": "814f9749b7488580225ff505bdb852aba7bf8c252c4e1faad00e7e9a9be7d94d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_location_case_01_verse_1_unknown_city___grant_park.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9460,
+      "sha256": "983ecac7af8bb7713fad46a2f93cc2e264675592a9ad54770c4a2ab77b64c8bf"
+    },
+    {
+      "file": "journal_submissions/journal_paper_treasure_case_12_tti_-_pok\u00e9mon_box.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9517,
+      "sha256": "ba87fccfc6bea4dfe3010b6186664ec586f56807da1bf54fa7d0612d4fd6d319"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i046_non-commutative_bivector_commutator_comm.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9203,
+      "sha256": "8b0e4ce3e2adc9fe982e88cc1c36fc153810822f8a2feee9be5450ac31f7e2d9"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i009_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9187,
+      "sha256": "84f98c0d764f026995244c61ccbdeb40f75a337f807c328f8c91ee308e843825"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i050_16-layer_micro-reversibility_verificatio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9221,
+      "sha256": "ac16ade1525563cc146b132e784782b75a58da22b4c334f1b557aa3c4b0dbc09"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_082_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9083,
+      "sha256": "d519b6d183696ae5592baa3429df55054f179cdafe0701fca475cf1de4178b7e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i015_supersymmetric_spin(7,0)_rotor_state_man.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9185,
+      "sha256": "e5fdca41ac39f73e7c9620a8e48ea8d359dba5252bde5bd79de61d49c41f59b7"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_083_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9083,
+      "sha256": "7f6eac95c0d426718461bed08d64f61c07a7c58e886eee01765752b591aea8b9"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i022_non-commutative_bivector_commutator_comm.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9203,
+      "sha256": "67d97c10257826c1f43a8bc230e10eb429b7d9ba47bad74000f66b7b65f241e3"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_032_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9150,
+      "sha256": "e83e18878576e3678613a64bb4f133ad62dcca9948d71d79fc19062a202a413a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i034_16-layer_micro-reversibility_verificatio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9221,
+      "sha256": "c8d87f8f428854e5f7b4ed012ae3d3098a0669d32c79941c0c1a96f27ca0f9af"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_048_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9108,
+      "sha256": "33e2dd87c2ac3be05c5619dae6d67f97ac8c7423f8d55f9a0b90f37990fb7268"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i049_isomorphism:_software_execution_ast_<->_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9226,
+      "sha256": "eb6c8256bedc2933fb2c51db7b7c44cdaff8063f6fc0c5ac83a44d9667c5284a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_003_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9065,
+      "sha256": "8e3dfbdeaa542c6d17a0d40dd3f77e1936544ebbc3cfb0249c6fc8ec679162f9"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_016_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9101,
+      "sha256": "4f397fe3d2d0107a02b6656ea9692bdcb66c403c17f3feea2b01d83a47c366b9"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i054_flrw_cosmological_dark_energy_expansion_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9189,
+      "sha256": "dcffc0015cff7a320be476b11ee0a6df9dbb14bf32f99dcd6c3f722669690487"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_114_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "0e6a30782a6b761f93165e2e70edd353b2530e7bae0d7f3552253a9572b23bf3"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i050_mapping_ast_recursion_depth_to_multivect.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9258,
+      "sha256": "be5a6d36887bc0bb088d6513aabe2b530725c04d73a220fde4169bfe46bec566"
+    },
+    {
+      "file": "journal_submissions/journal_paper_daxda_gtm_campaign_strategy.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 5271,
+      "sha256": "1ccd7ee2c698b4c71c3da91695250388e1f56afe85f1fdbc7ffd795238d05d80"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i056_navier-stokes_4d_fluid_circulation_vorti.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "5e4fd26b3d390cf69d6caa35f55c3b7558717d034285fa02ada9261f2e4c8cd0"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i036_generating_immutable_sha-256_cryptograph.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9208,
+      "sha256": "f1b5f82f73a15f01795aeb8f36024fd475db0bd9e2165b8db7c6597165899a74"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i039_memory_alias-free_pointer_dependency_res.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9255,
+      "sha256": "c4d1d006d5338ccd233614f3a2e8e5b025ac21da3639bad905d359fcd842fb94"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i032_navier-stokes_4d_fluid_circulation_vorti.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "d65454ece4fc1a169eb441d75083b120ebecd1091c59dd893a05a68158de2a6e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_054_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9108,
+      "sha256": "5c8a716f2e145259bda7997903d87e082b01e2daa8d035fafbd7b49f0d13ec4e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_063_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9110,
+      "sha256": "7a4259dd40d095806dea7b437d1bc5db90ec99f2edefb64772a87f9e9220fc16"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i052_generating_immutable_sha-256_cryptograph.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9208,
+      "sha256": "76d6839b22d65733d0a8aecdc8f46fc40bf096d711831f968cec3d83b59d12cd"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i034_mapping_ast_recursion_depth_to_multivect.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9258,
+      "sha256": "fc5cb9785460b0d7624655b72342552cab4d1f84fa829ccee7e86057256c153d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_028_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9146,
+      "sha256": "1b75b074fccb2f8ebbdf912e152bb34d3d7e5cee03bc9721049dc9c3d8eca880"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i062_flrw_cosmological_dark_energy_expansion_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9189,
+      "sha256": "b515d26bc3ac7f7ea0371d8810b42bd7d1cf34d2dae772ce49546210c57ad736"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i053_synthesizing_zero-hazard_simd_vectorizat.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9268,
+      "sha256": "89771f7b4a6d85b43a6f240213785366cfec43516ae5a2a603e71cda4c5ea90c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_108_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "e3aa411c055efc67056bc24051078cc1e5fb73f37eb09e631b55e646d9b7472b"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i047_supersymmetric_spin(7,0)_rotor_state_man.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9185,
+      "sha256": "56134d614c49544f4615ee12427c3a7b4d815067467f1cb0d5c577e175522bb2"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i002_16-layer_micro-reversibility_verificatio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9220,
+      "sha256": "24a42dc5b57a5740738908d05393f36de1a285642be442b02751657d65a3a994"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i014_non-commutative_bivector_commutator_comm.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9203,
+      "sha256": "5fb770fb2d599f1e8ebf501e10992e92dc20a8bdb47f2ea4e337a36cdb5b8fce"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_022_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9101,
+      "sha256": "c6486b2d35551a5efa285297857c13ca0dce4bf7c7f66e80ec684a9d680f5dbf"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i023_supersymmetric_spin(7,0)_rotor_state_man.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9185,
+      "sha256": "94fd7587098d4d9ce830cf5a7eaced840e9785f7d5fe86705d1503f87a63d139"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i019_sigmoidal_empirical_grounding_calibratio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9218,
+      "sha256": "e7977b0179e6a5ac825029e7c35d022e40b35e9b0e53432ba9817aee14146b10"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_091_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9083,
+      "sha256": "d30528111f809c59fafb50ffe912de4de676ed5aa0508b1a63c18982fdf85e84"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i006_flrw_cosmological_dark_energy_expansion_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9188,
+      "sha256": "3f113a5158842f6b3d3129e17e509eda59085d6c7694e25838992fb543dd6159"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_090_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9083,
+      "sha256": "18590c378c56efd47f526531c8fce0fc8d026a021ec07651b6a145fe9467061b"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i037_synthesizing_zero-hazard_simd_vectorizat.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9268,
+      "sha256": "3b7f3e28dbb254c46b3562222dba5dc4756d6e5bb245dde5122d1af55d51b727"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i028_hilbert_space_blade_inner_product_norm_c.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9181,
+      "sha256": "977e43ad67a49564dbf1bcad2ec524c3b87f5cea7993cb3da63388cc6a7434fb"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i002_mapping_ast_recursion_depth_to_multivect.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9257,
+      "sha256": "1fd8d0b9d6d78eee2f65522b53a9d254ddd2dae86ed83a7934b720d1c3abf254"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_074_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9081,
+      "sha256": "80975923538733d57ca2cee3265e3ebc00f1441557680bda37c88c9696510813"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_075_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9081,
+      "sha256": "d50bed949a5e5679d184f33efadb35d707bb0c84442e64a5af7d2c70a792f54d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i004_navier-stokes_4d_fluid_circulation_vorti.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9192,
+      "sha256": "30acb9a4040496a4ac92fefa8b39b4e6cecf74e94bd20a99399b14546680455f"
+    },
+    {
+      "file": "journal_submissions/journal_paper_daxda_containment_escape_suite.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 1100,
+      "sha256": "8dc8ace50fd5669263033ad44d8780cf3e93738b745f4c6795dec32fc94148b5"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i060_navier-stokes_4d_fluid_circulation_vorti.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "ef17e836b04b634d3c23ce0101c77af1d9734b07bc80e301c2ce05dfa9b3af9c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_treasure_case_14_tti_-_lion's_share_box.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9517,
+      "sha256": "33d32dadf4b1a4cd687eea5ab6ab112070c701aed30a92acec9edda84bb1d6eb"
+    },
+    {
+      "file": "journal_submissions/journal_paper_location_case_07_verse_10_new_york_city___battery_park.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9453,
+      "sha256": "ceb1fd87b605071852e0038cc4ae0f1b99976096215f4e0935659ca3998701af"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_027_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9146,
+      "sha256": "8de329229a8560ed3c6f536924d31f556d67e2103a2abc3bbdffaf3557edacbb"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_111_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "507484c9a3462bfb9701297ac0314acf76b707174f5528fe1378b85e50a11662"
+    },
+    {
+      "file": "journal_submissions/journal_paper_daxda_6week_monetization.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 3396,
+      "sha256": "5abd31ba50ed1170e531f67f9c00e176911932d52ab0dc4b153ef9b32b78c8f7"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i057_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9194,
+      "sha256": "5f619acd91822e37d751867b4d4bc3f68f398cd9eccb8bd3fa4caa3f4d221e06"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i058_mapping_ast_recursion_depth_to_multivect.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9258,
+      "sha256": "7bd688b5c75906a61b6d42a26a96fffe3037c9d5c7534f682e125ee8d8e5d6d2"
+    },
+    {
+      "file": "journal_submissions/journal_paper_paradox_paradox_03_black_hole_information_loss_paradox.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9142,
+      "sha256": "a4347e99337c0aa520d66fb364f3af808c06e2344fa0590f5c8aef0477b8c2d9"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_060_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9106,
+      "sha256": "fcdf8d0c3d7eaa047fab0183209b7e2737ad9d4dcddac8a25de22a4940b65d22"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_057_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9107,
+      "sha256": "0ca91297a561bb1e1bcabb272174a88c14556679cdf5fa2ad3ff2b614e2a5988"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_034_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9160,
+      "sha256": "11ecf014c0614cc5c3f9a28166da5da8b2d7d2a8666e886cbc2df72eb58d0341"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i031_memory_alias-free_pointer_dependency_res.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9255,
+      "sha256": "dc65e686da4563bcad5f0cbaee2e13191b6efc8a9df8d388c2e777924535f1a6"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i023_black_hole_horizon_pseudoscalar_e1234567.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9200,
+      "sha256": "1e5f666917b1274fb110b89497381739719aab8d22591b10e46fddfb19caa23d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i055_memory_alias-free_pointer_dependency_res.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9255,
+      "sha256": "233bb4472d1aaa5e2d19726152093153e78852b0d1ab2951bfd6a0c5a61eb819"
+    },
+    {
+      "file": "journal_submissions/journal_paper_location_case_05_verse_7_san_francisco___golden_gate.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9473,
+      "sha256": "31fab64953c97b534e2999020c817a3c4b0dc9d4d92f2088d99bde36a69e5768"
+    },
+    {
+      "file": "journal_submissions/journal_paper_tti_box_05_the_lions_share_box.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9537,
+      "sha256": "b3e5ca07907de14eb5b4da97766114f6c9ab1992b340f3ebf04e2431cfb380e3"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i047_black_hole_horizon_pseudoscalar_e1234567.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9200,
+      "sha256": "cb577c0c54962076acbc6727f313f2d650df26f23d29c44c69abffe5f0a803f1"
+    },
+    {
+      "file": "journal_submissions/journal_paper_novel_case_03_alias_free_simd_loop_optimization.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9158,
+      "sha256": "ec3d1e953361ce2a8d74a641860300675011faf8e810e4c5f803ce9992a99913"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i033_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9194,
+      "sha256": "5b6406fba9ab5cfc0559ba524ce659347ae8bd704a72dd713b8e8d9ae9264f8c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_045_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "5b7edfa31af60787bb4e79da7587696fbc19b3e755ab6fd8bd017afae680bece"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i038_flrw_cosmological_dark_energy_expansion_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9189,
+      "sha256": "d3a5b89ed21beb5551ad16512b42fa9ca4f7fa79d749991e3b895f0dd76c26f0"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i009_synthesizing_zero-hazard_simd_vectorizat.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9267,
+      "sha256": "c46a4f633f648b17a9017ae0a29ba871f883aac51f70799acb3cfd7552e4edaf"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i016_hilbert_space_blade_inner_product_norm_c.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9181,
+      "sha256": "188f2501660c6f4e6bb7f97071405fef34e176ca9f518d70e761d0ccaa9c46a2"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_107_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "b85fb08f9bc9d3e4b9daafd45ff5fcde30f534a1279494c33c1c95663b42b130"
+    },
+    {
+      "file": "journal_submissions/journal_paper_paradox_paradox_09_olbers_dark_night_sky_paradox.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9139,
+      "sha256": "3cedb9d557fccf5f7f94b148f14ecb6688a72a0e4379be6f479db5627772b3a0"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i025_isomorphism:_software_execution_ast_<->_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9226,
+      "sha256": "3ae4d4513a883540844587c928a5e7f5b65bc6225baad24f08301262b72dc865"
+    },
+    {
+      "file": "journal_submissions/journal_paper_tti_box_02_the_appalachian_box.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9564,
+      "sha256": "ab62e7acb5aefeb7fdcfd9666705504bc2b4cb71fe5388bf88c71129000ad59d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_location_case_03_verse_5_montreal___mount_royal.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9443,
+      "sha256": "bfeb4a7bf4ff4629b1caa3b4d6227cb6c051825f95845aa7b26098584ebdbfa6"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i027_sigmoidal_empirical_grounding_calibratio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9218,
+      "sha256": "7ed69be7ffcc9a321cae38ff7faf09fcd4e7ddcc81702c5197a3786d932745da"
+    },
+    {
+      "file": "journal_submissions/journal_paper_treasure_case_08_verse_11_roanoke_island___fort_raleigh.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9527,
+      "sha256": "54c01a4d7472849eb079138459d22860f0c00d1998264c69cb6dafeb70eefe8c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i058_16-layer_micro-reversibility_verificatio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9221,
+      "sha256": "89a2e829616fde868ac17a6d4f709280db9b20ad2cede6cbc14a8b2545bfa3e7"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i032_dynamic_programming_recurrence_state_tre.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9250,
+      "sha256": "6a4f769814e23ddd5c6997cd39bd9d88c6be29e06210f73f5edcca09167f29b8"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i001_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9187,
+      "sha256": "b138873fc9de712d26cb03676f3800cc349febfdca1d93cc69928fd610bc626f"
+    },
+    {
+      "file": "journal_submissions/journal_paper_paradox_paradox_05_grandfather_causality_paradox.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9137,
+      "sha256": "4c3a359e1fb1c79de6da1846ada4f3f3d249f1a1b23c92bc33c127aba8603b4b"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i041_isomorphism:_software_execution_ast_<->_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9226,
+      "sha256": "0c41f48eb7030d444babce883e5ece705cda7bd2030a9a924d5595313b03da1c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i056_dynamic_programming_recurrence_state_tre.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9250,
+      "sha256": "dfa20439a16e9540b2dfbd38b7836fdb2af835432ca4bf74021c3b974a0f43ed"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i043_sigmoidal_empirical_grounding_calibratio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9218,
+      "sha256": "80756b443b22985a067a41e76b850f76112c4437983d7360760324cce3c09e03"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i065_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9188,
+      "sha256": "987846a001e3cfd06d011cccf42dffcd1438f03a0315bea5ecebadae5c7547cf"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_094_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9131,
+      "sha256": "81fa559ad0c4f04ce2e5f3be7ebe7b227ad131f0581d42f8d04ad1340cd0f69c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_location_case_11_tti_-_appalachian_box.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9465,
+      "sha256": "c263b6ecda47308cc95c3cbce0a63c1eca25f6ef992802a7c4c2f32c043d6015"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_086_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9083,
+      "sha256": "6ee743923f888bd2924b9c2d6cc91876f8fcbbd30659f95af976321cf58dfc5b"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i038_non-commutative_bivector_commutator_comm.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9203,
+      "sha256": "e92f40be1ec28c50145e53e4b6c4e25176408dbda4b56983f15e1ca3652db9d4"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_087_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9083,
+      "sha256": "ab2a9b33ab79f47c6db514963189263fa03363fa406e3c27f47763a835c157c0"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i051_sigmoidal_empirical_grounding_calibratio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9218,
+      "sha256": "6409cd6564c89b318f034e8b18e5bb1b117b42d92fbf585cbeb23455d3b724b1"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i044_dynamic_programming_recurrence_state_tre.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9250,
+      "sha256": "0633e01fb9ea49ef2b74a098b38ce614e3392731c848f4179fa514b56aa7ed29"
+    },
+    {
+      "file": "journal_submissions/journal_paper_treasure_case_06_verse_9_houston___galveston.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9519,
+      "sha256": "e133924ec110383a675e2c7b8bc1041a5d25a09948120eebc2b54c99bb8658ad"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i053_isomorphism:_software_execution_ast_<->_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9226,
+      "sha256": "75fa385ddb5268a0288677b71e97c6d7f55bda0dc95cb822c40b1bb20388ea3b"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_093_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9131,
+      "sha256": "710568b72d7871451b616c9244310bc4c16caf967c29f89a5e11a759b23630fb"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i060_hilbert_space_blade_inner_product_norm_c.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9181,
+      "sha256": "aad26097e4106683db7e37eb183fb74df714ee0cc68c8263bc307ecb4a6b135b"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_052_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9107,
+      "sha256": "69c16b0c244f1174c80e58a06fc801af706645fcc0ab0828f91b77eb5fe28430"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i004_hilbert_space_blade_inner_product_norm_c.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9180,
+      "sha256": "56738e534f626b040a512241c30fe5b593b1b5ca3e30a11a17f0f2720b0fac7e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_065_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9105,
+      "sha256": "f41a04b432ae5d80887d6a9f9905956b449ec57fe7e10fb842f3505fa3f24a3c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_100_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9131,
+      "sha256": "b42e273ab7704172a4085958d893ef88f69886cdc7a68b08dbaf36e1d1258f51"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i013_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9188,
+      "sha256": "65c9f1d65ffb060e82d63199aa72d9bfa3cc448d2074c5af469a5a0fa30819f3"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i020_dynamic_programming_recurrence_state_tre.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9250,
+      "sha256": "80059703cda9f7f555963a71db20701017e8217ec32a14e752de32138ac98bae"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i035_sigmoidal_empirical_grounding_calibratio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9218,
+      "sha256": "e6e10e97cb3bf8cc6a5e5ba4a9ec639ab1a3b07f29a3390c941648b8cac31076"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i037_isomorphism:_software_execution_ast_<->_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9226,
+      "sha256": "142fc5e39c1b4ce845caf0c54e3b87a650c2aa8121f488127e99760df10e8e06"
+    },
+    {
+      "file": "journal_submissions/journal_paper_location_case_12_tti_-_pok\u00e9mon_box.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9445,
+      "sha256": "276c578348c6b7c230c6c475aeca7bd6184099f18dc2a3028ad0b90a1a6548e1"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i055_black_hole_horizon_pseudoscalar_e1234567.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9200,
+      "sha256": "c1485f1afe96466871c1a5ff8b50376250101c8226cdbbd77d7fed8bc706a047"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i028_navier-stokes_4d_fluid_circulation_vorti.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "d21f4ac6b09b4db487b3ec9b6beadd8d899c1bfa89b2f5635392b4fa5b6af959"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i048_generating_immutable_sha-256_cryptograph.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9208,
+      "sha256": "106aab441d688d91b85a2039252b0c26b6cf36f0daab9d4f5cb8e7cba266dfc7"
+    },
+    {
+      "file": "journal_submissions/journal_paper_novel_case_01_quantum_bell_state_entanglement.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9110,
+      "sha256": "eeb87980c7357039df56b2bbce170ad3cebc979a9623d5f64ced7cd4541f4527"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i047_memory_alias-free_pointer_dependency_res.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9255,
+      "sha256": "937bfd72cb4ef9a7d1d55aa56fa0a23bdcfb6452c37a8988562367cca1e81ed7"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i021_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9194,
+      "sha256": "b2ea6aab11bb33ee4dc20f66b4fca789720a3bd2c17a0df16316a6eadf1fd5d8"
+    },
+    {
+      "file": "journal_submissions/journal_paper_novel_case_04_anisotropic_flrw_metric_geodesic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9095,
+      "sha256": "a95a22ed9ac3c57c9af5de327e35b1630d6f1a5eb28be3e12b54664f82a6a3a3"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i045_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9194,
+      "sha256": "a0634083fff20664bb29861b9f6ebb9c99b224387a49519d9608f6df1c786e6f"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i031_black_hole_horizon_pseudoscalar_e1234567.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9200,
+      "sha256": "82253b718801fc287b8a602287429957c22a590fa1b177b129b2ab88ea578c6c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_treasure_case_09_verse_12_charleston___white_point_garden.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9529,
+      "sha256": "b6f20a5f8c72b3f13ad6ae04291f2b69c4bd0e241991e3e5a7252e97877282d4"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i023_memory_alias-free_pointer_dependency_res.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9255,
+      "sha256": "2d4f4354b99c83e3af4d44bcb74638ab379effe5773cfdbc0b20e0779c1252c1"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i012_generating_immutable_sha-256_cryptograph.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9208,
+      "sha256": "f73ffb0a0649c3aa95a2aa9aa0a8e5537e58227143a1016d0d652ffb2e93a0e3"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_068_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9111,
+      "sha256": "7e8c233d45caa723177e8efd164fcf82aba24461267d6d458e0e514f48c69c0e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i010_mapping_ast_recursion_depth_to_multivect.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9258,
+      "sha256": "29ec543e07380e6df74e99003e7861a4f55dd13950502d67a4fd352a802296be"
+    },
+    {
+      "file": "journal_submissions/journal_paper_location_case_04_verse_6_st._augustine___fountain_of_youth.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9461,
+      "sha256": "6efba26864129d5f003acbabc1c36be10619dacfe60d27958e919f3715735580"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i016_navier-stokes_4d_fluid_circulation_vorti.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "784e72515a964001e0d98d33019062b0a5e4638582db022d5d972f208e0fb81e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i062_non-commutative_bivector_commutator_comm.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9203,
+      "sha256": "94ff0a3024d83aa4a5338cf06e1c4d70015aa93daea131af9424dc1160b2d8bb"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i031_supersymmetric_spin(7,0)_rotor_state_man.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9185,
+      "sha256": "272bc1691357fd4e459a3b3be9654a48b371ac2bcbd4d1671976e319973ab7a2"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i009_isomorphism:_software_execution_ast_<->_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9225,
+      "sha256": "811c22882d80dddcbe04d48be28a4a2e3be8be40fd1f8caa88e6150de001ca1e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_030_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9150,
+      "sha256": "19076e0230f037cfa29614e592732fe8b8857a9ef490853ed332c18a8f568c30"
+    },
+    {
+      "file": "journal_submissions/journal_paper_daxda_empirical_proof.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 2110,
+      "sha256": "b1b963485fd6bd738e8ed95bea2adad37854f4fabb35bb073dff4b1ec455aff4"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i025_synthesizing_zero-hazard_simd_vectorizat.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9268,
+      "sha256": "27b521998ee4c3035f67d4d34e1464bceec6d005cd308040a9e32773de77dfa8"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i014_flrw_cosmological_dark_energy_expansion_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9189,
+      "sha256": "88496bf0e09e6770b7bc5171827fc9f886a7350e5b0205fdee294dab281c616c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_041_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "ed92c90e31d2b058e2cf4ef2b35c5f069d08221cc3fa28823356dfb543f6488d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i041_synthesizing_zero-hazard_simd_vectorizat.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9268,
+      "sha256": "7a333f5cd799fc47dd44ffe55f60b7a71b1434a91f11fd954f8dcb04e72c079e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i049_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9188,
+      "sha256": "221351c34762033be5da243eca76b93acba211f16fcec2c6052eac6609a06434"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i006_non-commutative_bivector_commutator_comm.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9202,
+      "sha256": "86a45f6219745604f42a3d7e22350d42bfa0caf0e3e69aa02c4784dba860d03e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i010_16-layer_micro-reversibility_verificatio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9221,
+      "sha256": "d80229bdebe574cfb7f4b3acf3680e417a127d501d819384ec7bd917e2a34d4d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_023_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9101,
+      "sha256": "c6c4e69267801a46c56c330d43629aecd02e87801677313ea6596d7856421971"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i055_supersymmetric_spin(7,0)_rotor_state_man.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9185,
+      "sha256": "3f6eac8f7b9fe68e4325dfa5aa6ad88623b1dc0da3000f965880a91bd59057c3"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i033_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9188,
+      "sha256": "5512090e985898281ab28b6629a17211abccf9f1fdf43865d38d28b5290a847a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i015_sigmoidal_empirical_grounding_calibratio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9218,
+      "sha256": "47e851ac270e4ee70b7b19fcc5b83653119705c781a00e4dfa8605bfc58d805c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i017_isomorphism:_software_execution_ast_<->_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9226,
+      "sha256": "7a7c2c297fd3608e60db14fbd14804ba6112805acd0805833f9de4ff23cfc5de"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_101_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9131,
+      "sha256": "cabd39b1e296dc118eebd0f4133441809ed6032dfc824387af1546662d00f5c6"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_081_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9083,
+      "sha256": "4da4c5a438def60aaf03b91ed00b9a8c64484a44d34d13d77377059b4da69960"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i024_hilbert_space_blade_inner_product_norm_c.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9181,
+      "sha256": "bdc705f0318e006f7ad7e64d9d80e6ec01e27e4c20f312f5784ab2ecdc3f5ac4"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_080_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9083,
+      "sha256": "c2b5dc8651f1173a3cf4c59c7bbf9aa13e37c3748f1a55adcfb9b165c2c74410"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i040_hilbert_space_blade_inner_product_norm_c.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9181,
+      "sha256": "18eb76af1525c757121cd00a2b1eb37314a5679c67ed2a4ade5f6f3ccf1f4852"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i018_non-commutative_bivector_commutator_comm.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9203,
+      "sha256": "058a32a35a047fbb5c7620798515627102eb7103c9a11f7e3e8ba84f2a831a99"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i057_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9188,
+      "sha256": "a6dbab667666ef072e9fd1c3fbd53baa79858fd9714e39c3309906cbacd48fd4"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i011_black_hole_horizon_pseudoscalar_e1234567.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9200,
+      "sha256": "345113a07b987d9aed8a889d70ea0f751fa1eacf6b3424ef05c9b498c95d0274"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_021_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9101,
+      "sha256": "a87231905d0f3436e258b0bcb12dba964dd241a935b14d62a3092fa3a0f3a378"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i003_memory_alias-free_pointer_dependency_res.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9254,
+      "sha256": "abda51c69c00ce6350ffa323576eb1eadd73de06c51b780428ba12a40a842870"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_033_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9150,
+      "sha256": "1a3678700ede83ae927f7ea67f7a605b21175f90ee0820cc10dc4a92aadeee56"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i065_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9194,
+      "sha256": "eccb1b787fe34b3f6bcecc2a7a022405db644d7f17b94227ed6535e172efaa8a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i001_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "2cea930629d42e593a14d86d8752da39faa0e5feddfa567432062db2b4d7b1c9"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_058_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9108,
+      "sha256": "a5d0e3aed2be6024b25525aa450f41c4b8176a436051001ae6bae12edf0d307d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i008_navier-stokes_4d_fluid_circulation_vorti.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9192,
+      "sha256": "c5d7c3aa372ab3377d40ce465cbaf4622c6a482600ae239a84a5121b7b732860"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_042_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "e406a358a03604f2b17003c199211b84c8e1a982e616ce27e789e47002239012"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_049_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9107,
+      "sha256": "4797728abdc253ebcc7ddec76ea192a25ac9af6ca444e1552fe915857d3d2058"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i036_navier-stokes_4d_fluid_circulation_vorti.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "b18c6aac59cd174a00bf00d12ee6b57e3472e75622ff4236d7af429b10d338eb"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i059_memory_alias-free_pointer_dependency_res.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9255,
+      "sha256": "55f8a439e962ddd82e3b00c4466bc1a17d43d42421cccf70df8799dc860ed6a4"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i056_generating_immutable_sha-256_cryptograph.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9208,
+      "sha256": "b325500102ed99e67d9918f323fb41ae1df81533a644ba3e1d978a91be1708b4"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i030_mapping_ast_recursion_depth_to_multivect.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9258,
+      "sha256": "e3dae8f28659a0d87915eeb5ba3be3dbedafa38fe25b2e06ab475cf694710e05"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i054_mapping_ast_recursion_depth_to_multivect.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9258,
+      "sha256": "be69ef53f02eab9b7c08ba034056c65368afc815d831318cba7499a27620b2c2"
+    },
+    {
+      "file": "journal_submissions/journal_paper_paradox_paradox_01_g\u00f6del_incompleteness_paradox.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9133,
+      "sha256": "4d3b685c99a4125fe2d3baec5dcb963dba39c2d7be13765c814cea2b8498f628"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i052_navier-stokes_4d_fluid_circulation_vorti.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "e737b560f8cd9fa96083f64bd374e72ab1413c4f5d7b0000fb4d680fb4231bda"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i032_generating_immutable_sha-256_cryptograph.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9208,
+      "sha256": "f3c5d6e483b3e62b8d306306fb6625205b21da3e38de26e2a2f2db0d3d9ac927"
+    },
+    {
+      "file": "journal_submissions/journal_paper_unified_resonance_theory_validation.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 7316,
+      "sha256": "69785fc84c33397e8ebcbd6279cb9d349da9c9d1f4531312f2944fcdbd11dc3b"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i026_non-commutative_bivector_commutator_comm.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9203,
+      "sha256": "ae0352b9ca4dcb502ebb5a605521163ee78e830b53b62738de24ae16b5b98090"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i030_16-layer_micro-reversibility_verificatio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9221,
+      "sha256": "98b23f2aaeb3fabbc42b44d47fdf6111734137ee61f22a85c20897acaaa770fd"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_055_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9108,
+      "sha256": "0b1d5fc4a583a9f26f18284c65ecf6dc051b7d9aaf8057e0ec5b4386808fd90c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_062_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9110,
+      "sha256": "bf3d41570c1342010c12543b29a3350c5ab2a419053ff7fcba7439c25ddcd2ee"
+    },
+    {
+      "file": "journal_submissions/journal_paper_human_consciousness_meaning_and_capability.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 6509,
+      "sha256": "8f8d5327141463bce66d38adc40cdfb0a0163a654c4ecc54148b40a66f53ca21"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i061_synthesizing_zero-hazard_simd_vectorizat.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9268,
+      "sha256": "bc5e28ec3b582c6664de2bbffbde3753febee0767b1e3917cdc9c2f2b6a24b1f"
+    },
+    {
+      "file": "journal_submissions/journal_paper_daxda_origin_and_cosmological_implications.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 8238,
+      "sha256": "287ec4632f26c15f7edb3274a24786a98c26ee16d9b451de60a4878b6f3c7522"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i050_flrw_cosmological_dark_energy_expansion_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9189,
+      "sha256": "ef469e7978fed55a70a6b009515f83ea6ff3310804e8444e4f8832160c779b2e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_fano_plane_triality_encoding.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 5716,
+      "sha256": "7e8b7da8802ec358309bb88f63628cbca43d02dab291ddf618e413b0f18c4578"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i005_synthesizing_zero-hazard_simd_vectorizat.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9267,
+      "sha256": "cb482a367b92c1a7e33c19180971a7a1c12be4791cfaa558d13ded992b84db67"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i034_flrw_cosmological_dark_energy_expansion_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9189,
+      "sha256": "c5cdb3138cdb83ae323fa9a17b1e2d7c6bd8cce301e772d602cff23ac2cf8c15"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i042_non-commutative_bivector_commutator_comm.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9203,
+      "sha256": "4a6596d092a59b23be4beea867429b0ee8621cea6f6b57773b1344663feb69ec"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i054_16-layer_micro-reversibility_verificatio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9221,
+      "sha256": "34f5975a585532c5a8cc5bcb32cb284b8d9d8ce8dfe8c5e869730a069195aaef"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i011_supersymmetric_spin(7,0)_rotor_state_man.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9185,
+      "sha256": "2a522f48f9236578c1ca2abd8d0af6c8bc00a727d05b3726ab0fa45bb8072eea"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i029_isomorphism:_software_execution_ast_<->_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9226,
+      "sha256": "f4d20362fa40015a6eff450b88c59c89360e5d8140e964990e7dc12915379fe8"
+    },
+    {
+      "file": "journal_submissions/journal_paper_tti_box_03_the_pok\u00e9mon___charizard_box.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9552,
+      "sha256": "49c184767a64f57d73610a5eee7785deb0ef2bc4b0d9238f8690cb4f6e76398c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i026_flrw_cosmological_dark_energy_expansion_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9189,
+      "sha256": "d66c5373ccdc2be5819117eb73ea93c88cde8cdda2519e83c63e97d0ab8c43a3"
+    },
+    {
+      "file": "journal_submissions/journal_paper_treasure_case_05_verse_7_san_francisco___golden_gate.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9529,
+      "sha256": "81f5aaaa78eb92ced8eb6edaaee4d26f2613f1f914bf2b65b1c5518a22b31330"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_037_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9160,
+      "sha256": "dcc83a17694b811e1d8323f09866df745fd73faf2a1a45978bd225a43f1426fc"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i017_synthesizing_zero-hazard_simd_vectorizat.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9268,
+      "sha256": "e6088cf5c0308cd85e575a923aac7a0b1c4ccd0fd609fd80dc79fe9dda73cd57"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i008_hilbert_space_blade_inner_product_norm_c.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9180,
+      "sha256": "b397f9442c61198b2b16031d7e59d3d664879656a3d86004244ca1c0fc4a4407"
+    },
+    {
+      "file": "journal_submissions/journal_paper_location_case_13_tti_-_past_&_future_box.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9452,
+      "sha256": "e3ff028b9d3edf244e457aad6372f809d2d9ee633da084d05a1ec11c0f06b496"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i003_supersymmetric_spin(7,0)_rotor_state_man.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9184,
+      "sha256": "30e6e4e0a3fc8a06aa1d8a4b18d6e3632b89da013ca16195a92d9bd17badd550"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i046_16-layer_micro-reversibility_verificatio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9221,
+      "sha256": "5573e6c6c2b5ef29cb8e7eaa0015c53e361430bf2e9d4ee2ad2b080bd8a6859f"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i039_sigmoidal_empirical_grounding_calibratio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9218,
+      "sha256": "1b2b98f8c5b2e14c453f24698bc8090cd3d260f8f697b4f22f50cd78de87154f"
+    },
+    {
+      "file": "journal_submissions/journal_paper_location_case_02_verse_2_new_orleans___french_quarter.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9476,
+      "sha256": "5774a105a599dd6bdbc18d5d3772f1d6a82aec188d646d7b9757de6c87ef7a70"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i050_non-commutative_bivector_commutator_comm.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9203,
+      "sha256": "193b2b159f765725d5dec969ce00aa729cfe48e7b614664c2248a2e62c082222"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_046_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "b570087ef41fbcb39787a3abec59872cf64c6c145565c93b6212d67e289e5f29"
+    },
+    {
+      "file": "journal_submissions/journal_paper_location_case_06_verse_9_houston___galveston.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9432,
+      "sha256": "7785e7a67faa28742a30de3b33049fc4077d64eed7b23b1570752f943f776e5b"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i048_dynamic_programming_recurrence_state_tre.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9250,
+      "sha256": "7b8b7a1465f0747126c52ebaa11a3f13caac64839b45d622b84950b068b3222a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i022_16-layer_micro-reversibility_verificatio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9221,
+      "sha256": "eaf15bb93d48fb910c2ab652366c771efb27fe5c40637518bafd96c0cd3a9bf6"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i034_non-commutative_bivector_commutator_comm.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9203,
+      "sha256": "eebb34af67f381238bbcfa76bf283457a22d16dc2d2dcd3246aaf65d79c0ef41"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_109_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "299e8359faae3837e3f0612532cc74c07cd1d9e03cf457eee26c095466bc9ed4"
+    },
+    {
+      "file": "journal_submissions/journal_paper_location_case_14_tti_-_lions_share_box.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9417,
+      "sha256": "bcc52a178106b7f16d5355f75e8019a8e12e33123f969629afe6f5b566ffe9fa"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i042_flrw_cosmological_dark_energy_expansion_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9189,
+      "sha256": "dc940303641e0533d9eb37553be27b7ae3879ad1bd59cf774bcd3f4df7115b6d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i049_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9194,
+      "sha256": "695a924916471924ced12a8151ceeaca9cb66ce9c4cc04da01ec1a73179e048c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i046_mapping_ast_recursion_depth_to_multivect.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9258,
+      "sha256": "0feeccb36e7fd72a40b8824b3cb1a7358e9d194de3decbe5ffc4034ea9dd3ffe"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i020_generating_immutable_sha-256_cryptograph.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9208,
+      "sha256": "42689257b1b6be84918fab38d6babcb8b8d7b3664a76f91ae0eb15519d2276e8"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i040_navier-stokes_4d_fluid_circulation_vorti.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "f7bbd92aa78a0ac611c52a3c79f5163987396546efc96fc70e5eb9e3a71bddf3"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_110_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "4294cf031853b3d97e53c2ef564776bf87d7ae781f6b35276c825bcb1b3c3812"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_073_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9081,
+      "sha256": "583a4480cb1e044aa0678c19fb3434e569826eab8a03eb6c27da45361a32ebb5"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_072_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9081,
+      "sha256": "1e2cac2a34ba3fc2c92e46cadfccfd30609b84844bc450478495b555fee7886d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_nicole_bess_daxda_creator.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 2755,
+      "sha256": "0d0cf4a2f8dda4e4081693a03cf4d0656baeef285ee31b7c3083890ad06f14ab"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i044_generating_immutable_sha-256_cryptograph.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9208,
+      "sha256": "7601616c2ad2fbab13260cce51e0de2d412f5992e911b1c30119b4cfef682558"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_067_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9109,
+      "sha256": "ee1b8f26f22bdde93339718c2c3aec6ab75b89b9f1214de27495f996292f91cf"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_050_physics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9110,
+      "sha256": "7ae634ecc8e13016d84e1e8a39de6d5080281cf57dba9a6e78c7361c90a209cf"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i024_navier-stokes_4d_fluid_circulation_vorti.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9193,
+      "sha256": "258e1d92420e1bcc95254d19ac2e555bae2da92977cf0df0fcb64deddc98e1b5"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i059_black_hole_horizon_pseudoscalar_e1234567.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9200,
+      "sha256": "67beac06ad8242272305d2e17c61d1254f8f04b9bd3580164b66349d12d04708"
+    },
+    {
+      "file": "journal_submissions/journal_paper_paradox_paradox_06_zeno_dichotomy_motion_paradox.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9152,
+      "sha256": "56d0a61a0e07ca0c5e35dcfefee9c428316e52599f0555e8d33bd1af0a464c72"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_038_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9160,
+      "sha256": "4bae0fc3cc74d8f7ba7c580de55914254a39788c948a1d59337da6f3b7151b40"
+    },
+    {
+      "file": "journal_submissions/journal_paper_treasure_case_01_verse_1_unknown_city.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9538,
+      "sha256": "30b2b19d492482e47b3061f19f8921c0cd58681e07b4707c45d1f16da4121ef2"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i022_mapping_ast_recursion_depth_to_multivect.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9258,
+      "sha256": "7f644d0c70285bf1ffa91dbd1993e6ba9acb9891550369b53acbf5209b2723f7"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i013_10-body_asymmetric_relativistic_system_w.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9194,
+      "sha256": "f053c2604064959100bb6f5c07165fb39da2efed534df7e647457956f05d7862"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_020_mathematics.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9101,
+      "sha256": "e12d2ebd4fc5ae9e595692d96ee0b01c8f0d2549661d27e283a5ff5f90b60ad2"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i011_memory_alias-free_pointer_dependency_res.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9255,
+      "sha256": "09a01bac79d07065f49f464cdc45afce54cb19fb02b200824163867a593cd5ad"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i003_black_hole_horizon_pseudoscalar_e1234567.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9199,
+      "sha256": "0d3a5814c297ca773beef3add8ea9f140b5eb6ba456c4beb8f9e0b36e3a828ff"
+    },
+    {
+      "file": "journal_submissions/journal_paper_daxda_nextgen_investor_memorandum.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 6754,
+      "sha256": "bfadd4033dfaacd9ffeda8c77166f30c8d7e6066478e3730e33b52308666190e"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i052_hilbert_space_blade_inner_product_norm_c.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9181,
+      "sha256": "8091ba8c5be08e0fe84d4d975bacd2de319c83dadf16d65f7d828e4b29553789"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i061_isomorphism:_software_execution_ast_<->_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9226,
+      "sha256": "012843cbf3d9ec9c59ea3decd31a62e5eb786fdaf0e6e8be99652204feb58718"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_095_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9131,
+      "sha256": "d3d1dafe1f6ec103959de3162d0c300309d1f6c2e7912d835b691dc0be47b3da"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i059_supersymmetric_spin(7,0)_rotor_state_man.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9185,
+      "sha256": "10c80a0b75abda7b2c494d4caca4fc5eeb74dea0da472a72ba57b882b0f77c5f"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i045_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9188,
+      "sha256": "9f8f934999b798e897125c0a42e5a42970ef5b23fc4ca4dd81e40b3138ca6aad"
+    },
+    {
+      "file": "journal_submissions/journal_paper_daxda_follow_through_plan.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 5228,
+      "sha256": "acdb918c63b4537ce129bc7cea064a1b4422e56d86c8ca53208c1afee2446b5f"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_024_software_engineering.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9146,
+      "sha256": "6999f5242d5972d19fe597a2d86d9a86d57457777262ec5ca491816503617e75"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_079_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9083,
+      "sha256": "d56ae5d0427497683c16c1b29872612232fc23c234f415c9b48adfd1ed120376"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_078_logic.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9081,
+      "sha256": "60981ba789b89fa0bd54fac70771895a784b63005d003b9fb6648c3903d3c20c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i005_isomorphism:_software_execution_ast_<->_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9225,
+      "sha256": "6e58ff0284ef37d65613e09f456a63248fe1060f7f9cbef5057b9f5251e8b09c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w4_i007_sigmoidal_empirical_grounding_calibratio.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9217,
+      "sha256": "5ced72e09659f7bf226995af75a9fd4e7680d2921364e4f7e5255301bb4d3bd9"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i012_dynamic_programming_recurrence_state_tre.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9250,
+      "sha256": "87c9cc4fa08909513a9d1c4c45e7bf280cb611d966cfc5ae313be832b2f47db2"
+    },
+    {
+      "file": "journal_submissions/journal_paper_daxda_4d_task_execution.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 1361,
+      "sha256": "40ce84fbeb6e30c53eb3294c8423219eec0653a6d4ba4f980e60054c513cf17d"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i021_deriving_7-blade_pseudoscalar_duality_in.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9188,
+      "sha256": "3b183725d3369e5d94317212d414dcc3403516ba64fe2d9cc2b081c86ebdc95b"
+    },
+    {
+      "file": "journal_submissions/journal_paper_baseline_106_cross-domain.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9134,
+      "sha256": "481352809b7f3399064b07688fe23e4e47786e7e4dfafbd1a81e3e0521ee959a"
+    },
+    {
+      "file": "journal_submissions/journal_paper_daxda_7_words_evaluation.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 1787,
+      "sha256": "6814cdb8840a970b517fa25c57deb4ce4fccc20ff9a4f1eee18e3e3ea484a6c2"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w3_i018_flrw_cosmological_dark_energy_expansion_.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9189,
+      "sha256": "0cd48fe96d2093e7871b8667be18b81096d80eb467139ccfc1e5bb10e05fb855"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w2_i029_synthesizing_zero-hazard_simd_vectorizat.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9268,
+      "sha256": "457ab074f0b0ff423f2f7f7058581c450786fdc9afb1cd7040dcfa3378c6f15c"
+    },
+    {
+      "file": "journal_submissions/journal_paper_7min_w1_i036_hilbert_space_blade_inner_product_norm_c.md",
+      "type": "PEER_REVIEWED_MANUSCRIPT",
+      "bytes": 9181,
+      "sha256": "40f998f8e4b6f900156280940015c289d31ae0e9f5286f9ab0591513da662fb0"
+    }
+  ],
+  "master_manifest_sha256": "1a9d6e0cfb1070b0d7060e852e8f20fa52a69cedf4a6ea61db72975b75fb9475"
+}

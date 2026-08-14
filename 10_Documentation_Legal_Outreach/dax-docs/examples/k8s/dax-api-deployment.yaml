@@ -1,0 +1,153 @@
+# ============================================================
+# examples/k8s/dax-api-deployment.yaml
+#
+# Kubernetes Deployment for dax-api
+#
+# A Deployment tells Kubernetes:
+#   - Which container image to run
+#   - How many replicas (copies) to keep running
+#   - How to check if the container is healthy
+#   - What environment variables to inject
+#   - How much CPU and memory to allocate
+#
+# Apply with:
+#   kubectl apply -f examples/k8s/dax-api-deployment.yaml
+#
+# Prerequisites:
+#   - Namespace dax-system must exist (apply namespace.yaml first)
+#   - ConfigMap dax-api-config must exist (apply dax-api-configmap.yaml first)
+#   - Secret dax-api-secrets must exist (apply dax-api-configmap.yaml first)
+#   - The image must be accessible to the cluster (see docs/kubernetes.md)
+# ============================================================
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # Name of this Deployment object
+  name: dax-api
+  # All DAX resources live in this namespace
+  namespace: dax-system
+  labels:
+    app: dax-api
+    component: api
+    version: "0.1.0"
+spec:
+  # Run 2 replicas for basic availability.
+  # In local development, 1 replica is sufficient.
+  replicas: 2
+
+  # The selector tells Kubernetes which pods belong to this Deployment.
+  # It must match the labels in spec.template.metadata.labels.
+  selector:
+    matchLabels:
+      app: dax-api
+
+  # Rolling update strategy: replace pods one at a time.
+  # maxUnavailable: 1 means at most 1 pod can be down during an update.
+  # maxSurge: 1 means at most 1 extra pod can exist during an update.
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+
+  # Pod template: defines what each replica looks like
+  template:
+    metadata:
+      labels:
+        app: dax-api
+        component: api
+    spec:
+      # [PLACEHOLDER] Add imagePullSecrets here if pulling from a private registry:
+      # imagePullSecrets:
+      #   - name: registry-credentials
+
+      containers:
+        - name: dax-api
+          # -------------------------------------------------------
+          # REPLACE THIS with your actual image reference.
+          # For local development: use the image name you built with
+          #   docker build -t dax-api:latest ./dax-api
+          # For production: use a fully qualified registry path with
+          # a pinned tag, never "latest".
+          # -------------------------------------------------------
+          image: your-registry/dax-api:latest
+
+          # IfNotPresent: use the local image if it exists.
+          # In production, change this to Always and pin the tag.
+          imagePullPolicy: IfNotPresent
+
+          ports:
+            # dax-api listens on port 8000 inside the container
+            - name: http
+              containerPort: 8000
+              protocol: TCP
+
+          # Inject non-sensitive config from ConfigMap
+          envFrom:
+            - configMapRef:
+                name: dax-api-config
+            # Inject sensitive config from Secret
+            - secretRef:
+                name: dax-api-secrets
+
+          # -------------------------------------------------------
+          # Liveness probe: if this fails repeatedly, Kubernetes
+          # will restart the container.
+          # -------------------------------------------------------
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            # Wait 15 seconds after container start before first check
+            initialDelaySeconds: 15
+            # Check every 20 seconds
+            periodSeconds: 20
+            # Allow 3 consecutive failures before restarting
+            failureThreshold: 3
+            timeoutSeconds: 5
+
+          # -------------------------------------------------------
+          # Readiness probe: if this fails, Kubernetes will stop
+          # sending traffic to this pod (but won't restart it).
+          # -------------------------------------------------------
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            failureThreshold: 3
+            timeoutSeconds: 3
+
+          # -------------------------------------------------------
+          # Resource requests and limits.
+          # requests: the minimum guaranteed resources.
+          # limits: the maximum the container can use.
+          #
+          # These values are conservative starting points.
+          # Adjust based on observed usage after profiling.
+          # -------------------------------------------------------
+          resources:
+            requests:
+              cpu: "100m"       # 0.1 CPU core
+              memory: "128Mi"   # 128 megabytes
+            limits:
+              cpu: "500m"       # 0.5 CPU core
+              memory: "512Mi"   # 512 megabytes
+
+          # [PLACEHOLDER] Mount a volume if dax-api needs file-based config:
+          # volumeMounts:
+          #   - name: config-volume
+          #     mountPath: /app/config
+          #     readOnly: true
+
+      # [PLACEHOLDER] Define volumes here if volumeMounts are used above:
+      # volumes:
+      #   - name: config-volume
+      #     configMap:
+      #       name: dax-api-config
+
+      # Graceful shutdown: give the container 30 seconds to finish
+      # in-flight requests before force-killing it.
+      terminationGracePeriodSeconds: 30

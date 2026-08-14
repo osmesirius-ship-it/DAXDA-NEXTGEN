@@ -1,0 +1,11 @@
+{
+  "manifest_version": "1.0.0-canonical-reaudit",
+  "designation": "DAXDA-o V5.2 — Internally Generated Synthetic Regression Baseline",
+  "timestamp_utc": "2026-07-18T04:00:40Z",
+  "files": {
+    "engine": "4a41aba1268fcd3aae60904c76dff0a6d5c9c5cc6865380079c0eedd65000cb7",
+    "dataset": "6540fcf2d4d5e61e5c50b16ef584cb1c058136799370eff5e702cdd1b5159ee9",
+    "harness": "1a55819996712fc7612d4ce7460971fc0e8a0159b279d15b8eb646a0f2091d7e"
+  },
+  "note": "Embedded hash checks verify spatial content identity at execution time. Temporal preregistration requires external immutable audit anchors (signed Git commit/tag, timestamped release archive, or read-only CI log)."
+}

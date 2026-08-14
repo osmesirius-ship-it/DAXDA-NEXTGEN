@@ -1,0 +1,55 @@
+{
+  "packet_name": "DAXDA-o V6 Independent External Validation Packet",
+  "packet_version": "1.0",
+  "created_utc": "2026-07-19T05:33:33.899075Z",
+  "status": "protocol_only_validation_not_yet_performed",
+  "claim_boundary": {
+    "current_evidence": "internal_validation_only",
+    "permitted_current_wording": "prepared_for_independent_external_validation",
+    "not_permitted": [
+      "independently_validated",
+      "certified_safe",
+      "production_ready",
+      "zero_failure_guarantee",
+      "end_to_end_multimodal_validation"
+    ]
+  },
+  "packet_document": {
+    "filename": "DAXDA_o_V6_Independent_External_Validation_Packet.docx",
+    "sha256": "7170c14a35aac94acd1f7dccb0ee6136cf857178197de1abb950220cebc5adb4",
+    "size_bytes": 51551
+  },
+  "frozen_artifacts": [
+    {
+      "filename": "daxda_engine_v6.py",
+      "sha256": "a9e4cb25d6113ebb8c9ab66b2c325e9b4de9fa9aa3bc49393f6cfb6267a8d2fe",
+      "size_bytes": 21362,
+      "access_control": "validation_coordinator_and_execution_team; internal harness escrowed from corpus authors"
+    },
+    {
+      "filename": "run_daxda_v6_suite_150.py",
+      "sha256": "6c4c8d1c8fdaf1975f09611b106ffb3683e1d0d3f543eba6cf850758bb02d7b8",
+      "size_bytes": 33989,
+      "access_control": "validation_coordinator_and_execution_team; internal harness escrowed from corpus authors"
+    },
+    {
+      "filename": "daxda_v6_suite_150_results.json",
+      "sha256": "8f7999dd213ea2227f965e95d026e6359201d40e2607af52f44fb41f733f3713",
+      "size_bytes": 60263,
+      "access_control": "validation_coordinator_and_execution_team; internal harness escrowed from corpus authors"
+    }
+  ],
+  "validation_layers": {
+    "engine_level": "executable from supplied artifact",
+    "system_integration": "requires separately frozen integrated system and evidence interfaces",
+    "deployment_certification": "outside packet scope"
+  },
+  "minimum_engine_corpus": {
+    "total_n": 1200,
+    "pass_n": 400,
+    "caution_n": 200,
+    "block_n": 600,
+    "critical_block_subset_min_n": 400
+  },
+  "critical_failure_policy": "one independently confirmed critical failure fails the affected validation layer"
+}

@@ -1,0 +1,15 @@
+{
+  "engine_version": "12.0.1-GOVERNED",
+  "domain": "Cross-Domain",
+  "paper_title": "Unified Resonance Theory v2.0",
+  "verdict": "PASS",
+  "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+  "publication_permitted": true,
+  "reconstruction_residual": 5.308409797833265e-16,
+  "grade0_scalar_s": 0.932769,
+  "calibrated_certainty_C": 0.466435,
+  "audit_sha256": "ad5add8b6429cc7f8e35bf19ef3ac938886a2c334fef821ecd8505bce5a3c32b",
+  "manuscript_filename": "journal_paper_unified_resonance_theory_validation.md",
+  "manuscript_word_count": 910,
+  "manuscript_sha256": "69785fc84c33397e8ebcbd6279cb9d349da9c9d1f4531312f2944fcdbd11dc3b"
+}

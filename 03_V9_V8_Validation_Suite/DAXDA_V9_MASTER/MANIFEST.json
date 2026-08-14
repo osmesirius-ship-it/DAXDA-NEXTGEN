@@ -1,0 +1,45 @@
+{
+  "artifact": "DAXDA_V9_MASTER",
+  "files": [
+    {
+      "path": "README.md",
+      "size": 1475,
+      "sha256": "334eb3bb41e303f43266209cf610617833182b8fae1569ab0e60fd61c025f495"
+    },
+    {
+      "path": "cl20.py",
+      "size": 1906,
+      "sha256": "b1ebcb2e35ea9e2aa9d606ff8391cc4005c778bc6bede856f680a590bd6cab38"
+    },
+    {
+      "path": "compare_v7_v9.py",
+      "size": 1991,
+      "sha256": "c233457affed95b4746183d18e88a314718359e3aebd66bd502ab49b07370a0b"
+    },
+    {
+      "path": "daxda_engine_v9.py",
+      "size": 8592,
+      "sha256": "6f624dc81b3604009f418ec7f5f26e20f91cc2bb5d0c0e7e4cb25626ed106a69"
+    },
+    {
+      "path": "evaluator_corpus_template.jsonl",
+      "size": 129,
+      "sha256": "28e048672e1f0f4753f43f1b395efbbd3d1012f58db15a8d007e85a2a647c335"
+    },
+    {
+      "path": "internal_preflight.jsonl",
+      "size": 2479,
+      "sha256": "9695d06bc5427b56e34ed9477313890b231ba2de449cf0ba70359a4c621f8f3c"
+    },
+    {
+      "path": "internal_preflight_results.json",
+      "size": 6346,
+      "sha256": "5c2dba76c9a771c0fa8789787ad8f88459de21f813be2f15d4395cb9ba9d8a64"
+    },
+    {
+      "path": "test_cl20.py",
+      "size": 725,
+      "sha256": "b759575c0ca9445c6756a8251b06fe38d308ff8d9bce697306b5d4cdfa87a87d"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "version": "DAXDA-o V5.2",
+    "evaluation_type": "Frozen Independent One-Shot Hidden OOD Audit",
+    "timestamp": "2026-07-18T03:24:12Z",
+    "total_items": 300,
+    "engine_sha256": "4a41aba1268fcd3aae60904c76dff0a6d5c9c5cc6865380079c0eedd65000cb7",
+    "corpus_sha256": "6540fcf2d4d5e61e5c50b16ef584cb1c058136799370eff5e702cdd1b5159ee9",
+    "harness_sha256": "602c5d7e210ccb9fbd7d8fcd62cf69a2e5a79553b9321f5e119ba127366cbda0"
+  },
+  "metrics": {
+    "accuracy": 0.9466666666666667,
+    "block_recall": 0.99,
+    "false_release_rate": 0.01,
+    "pass_recall": 0.93,
+    "caution_recall": 0.92,
+    "macro_f1": 0.9466950028336166,
+    "mcc": 0.9200613394673482,
+    "shannon_entropy": 1.5847701285563631,
+    "unique_clifford_states": 13,
+    "cross_label_collisions": 0
+  },
+  "confusion_matrix": {
+    "PASS": {
+      "PASS": 93,
+      "RELEASE/CAUTION": 6,
+      "BLOCK": 1
+    },
+    "RELEASE/CAUTION": {
+      "PASS": 8,
+      "RELEASE/CAUTION": 92,
+      "BLOCK": 0
+    },
+    "BLOCK": {
+      "PASS": 1,
+      "RELEASE/CAUTION": 0,
+      "BLOCK": 99
+    }
+  },
+  "family_breakdown": {
+    "Authority challenged by inquiry": {
+      "total": 20,
+      "correct": 20,
+      "accuracy": 1.0
+    },
+    "Authority suppressing inquiry": {
+      "total": 10,
+      "correct": 10,
+      "accuracy": 1.0
+    },
+    "Benign cybersecurity/governance": {
+      "total": 20,
+      "correct": 18,
+      "accuracy": 0.9
+    },
+    "Compositional combinations": {
+      "total": 30,
+      "correct": 29,
+      "accuracy": 0.9666666666666667
+    },
+    "Contradictory evidence": {
+      "total": 50,
+      "correct": 42,
+      "accuracy": 0.84
+    },
+    "Double negation and nested conditions": {
+      "total": 20,
+      "correct": 20,
+      "accuracy": 1.0
+    },
+    "Implicit/euphemistic suppression": {
+      "total": 20,
+      "correct": 20,
+      "accuracy": 1.0
+    },
+    "Multi-sentence context": {
+      "total": 20,
+      "correct": 16,
+      "accuracy": 0.8
+    },
+    "Passive-voice commands": {
+      "total": 10,
+      "correct": 10,
+      "accuracy": 1.0
+    },
+    "Prompt injection structures": {
+      "total": 30,
+      "correct": 30,
+      "accuracy": 1.0
+    },
+    "Quoted/historical descriptions": {
+      "total": 20,
+      "correct": 19,
+      "accuracy": 0.95
+    },
+    "Technical risk/vulnerabilities": {
+      "total": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    }
+  },
+  "latency_microseconds": {
+    "stage_1_2": 67.6015966666662,
+    "stage_3": 1.706666666666662,
+    "stage_4": 3.7370266666667216,
+    "stage_5": 0.4506433333333522,
+    "end_to_end": 74.2160599999997
+  }
+}

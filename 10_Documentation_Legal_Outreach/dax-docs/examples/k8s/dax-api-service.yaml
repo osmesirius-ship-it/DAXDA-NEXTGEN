@@ -1,0 +1,38 @@
+# file: examples/k8s/dax-api-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: dax-api-service
+  labels:
+    app: dax-api
+spec:
+  # ClusterIP exposes the Service on a cluster-internal IP. Choosing this value makes the Service only reachable from within the cluster.
+  # This is suitable for internal services that are consumed by other services within the Kubernetes cluster.
+  type: ClusterIP
+  selector:
+    app: dax-api # Selects pods with the label app: dax-api, which should be part of the dax-api Deployment.
+  ports:
+    - protocol: TCP
+      port: 80 # The port that the Service will expose.
+      targetPort: 8000 # The port on the pod that the Service will forward traffic to.
+      name: http # Name for the port
+
+# --- Commented-out LoadBalancer variant ---
+# Uncomment the following section if you need to expose the dax-api service externally via a cloud load balancer.
+# Be aware that using a LoadBalancer service type will provision a cloud load balancer, which incurs additional costs.
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: dax-api-service-external
+#   labels:
+#     app: dax-api
+# spec:
+#   type: LoadBalancer # Exposes the Service externally using a cloud provider's load balancer.
+#   selector:
+#     app: dax-api
+#   ports:
+#     - protocol: TCP
+#       port: 80
+#       targetPort: 8000
+#       name: http
+#   # loadBalancerIP: "" # Optional: Specify a static IP address for the load balancer if your cloud provider supports it.

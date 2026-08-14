@@ -1,0 +1,1225 @@
+{
+  "engine_version": "12.0.0-NEXTGEN-COGNITIVE",
+  "algebra": "Cl(4,1)",
+  "total_elapsed_sec": 180.63276600837708,
+  "total_evaluations": 148,
+  "scaffolding_dependency_pct": 0.0,
+  "phases": [
+    {
+      "phase_id": 1,
+      "name": "Theoretical Mathematics & Non-Commutative Clifford Geometry",
+      "elapsed_sec": 45.13460898399353,
+      "evaluations_count": 37,
+      "evaluations": [
+        {
+          "iteration": 1,
+          "topic": "Deriving 5-blade pseudoscalar duality invariant in Cl(4,1)",
+          "residual": 5.868301347929501e-16,
+          "active_blades": 30,
+          "audit_sha256": "35cf62c790f8b5f8589bd25a0d6568c45254fff24f1e52d706b84bb5008f9d35",
+          "linguistic_sha256": "5e98bff2c2da6dd29b30710af04724efb28766b324e8a6c902c6d24d5969cb40"
+        },
+        {
+          "iteration": 2,
+          "topic": "Resolving non-commutative bivector commutators [e_i, e_j] = 2*e_ij",
+          "residual": 4.964922151833358e-16,
+          "active_blades": 25,
+          "audit_sha256": "9fc81e30abbc90ddd70e6624b4fd715bee214c03d6cb8b9aff4e2e4607140561",
+          "linguistic_sha256": "dd88b34b5ec284c353b0d10f59c8040888a0c2fa6eb560ab98841a04f2652394"
+        },
+        {
+          "iteration": 3,
+          "topic": "Non-Euclidean hyperbolic metric tensor curvature convergence",
+          "residual": 2.9934023001368364e-16,
+          "active_blades": 21,
+          "audit_sha256": "af009d122709d6895efc0415050ca5d806d4819444bdc41a3933387afadadf9c",
+          "linguistic_sha256": "39b0be27754d80f17a4ac4bf7cc6fea8f32c027b9119e98c464816727c9cb389"
+        },
+        {
+          "iteration": 4,
+          "topic": "Infinite-dimensional Hilbert blade space projection",
+          "residual": 1.5786758687502623e-16,
+          "active_blades": 25,
+          "audit_sha256": "85136a38dc0df704ae93d2ac54e6b135fa08c2946ed3e9626f55800d81b6b34f",
+          "linguistic_sha256": "8f08dd631c6f1d916544877447416d48dc04c8d2f8a749542c37e33d27426f83"
+        },
+        {
+          "iteration": 5,
+          "topic": "Deriving 5-blade pseudoscalar duality invariant in Cl(4,1)",
+          "residual": 6.812991255781605e-16,
+          "active_blades": 26,
+          "audit_sha256": "8e0b04dff3fb28f86e4719b514da7ade0b7e4575116287d9351e03fad2b90c3e",
+          "linguistic_sha256": "f4c597536a21935639318f394c59fdfc325679960bebae3c90af46ebe85699a9"
+        },
+        {
+          "iteration": 6,
+          "topic": "Resolving non-commutative bivector commutators [e_i, e_j] = 2*e_ij",
+          "residual": 7.91102259119847e-16,
+          "active_blades": 29,
+          "audit_sha256": "79a4417175b8074a1b45d684d1b4207c6f763bb3b8e6bb02c33988e8bf19f59b",
+          "linguistic_sha256": "8f54b8a235d159d73b799c46142a3d76c62327586528793e8244ee498b6fc189"
+        },
+        {
+          "iteration": 7,
+          "topic": "Non-Euclidean hyperbolic metric tensor curvature convergence",
+          "residual": 2.9133829411171124e-16,
+          "active_blades": 21,
+          "audit_sha256": "b068d7df21db206443cb34af620468fb295f709c4ed125560ee178b56f4fe729",
+          "linguistic_sha256": "eb81c630f19c0a11488b81e97ce9a384b7e9706ad3b9f679c4fbfcf9b3b173ed"
+        },
+        {
+          "iteration": 8,
+          "topic": "Infinite-dimensional Hilbert blade space projection",
+          "residual": 3.758698510623175e-16,
+          "active_blades": 25,
+          "audit_sha256": "3edbbd376eb54c5de5d9785cbe0fe75c74b731f477f3a54e63c4916519d88cd3",
+          "linguistic_sha256": "1e8a5628b0a326b9f2704ecc125e867936dcc941b0f641bf6b90d6bfd93f9d2a"
+        },
+        {
+          "iteration": 9,
+          "topic": "Deriving 5-blade pseudoscalar duality invariant in Cl(4,1)",
+          "residual": 6.883145699945924e-16,
+          "active_blades": 26,
+          "audit_sha256": "e52f0fb3fb105d8dc173e0d3124f49483f4d087309b03993e52197da9f86e0e5",
+          "linguistic_sha256": "6609ed28e20c00025c79febba916a4a9a84b37fa099db2207a6f9a9db01ceec2"
+        },
+        {
+          "iteration": 10,
+          "topic": "Resolving non-commutative bivector commutators [e_i, e_j] = 2*e_ij",
+          "residual": 3.629811473746995e-16,
+          "active_blades": 25,
+          "audit_sha256": "9fc28220381cc4902db60d6c0e022d61347f0526e09fa517dd7fddc8cee71c18",
+          "linguistic_sha256": "7d495a0bb3b7f6743523fa8539d9d56d47111aaa332fa700439ce5b48d6bedf3"
+        },
+        {
+          "iteration": 11,
+          "topic": "Non-Euclidean hyperbolic metric tensor curvature convergence",
+          "residual": 3.9478792026462865e-16,
+          "active_blades": 25,
+          "audit_sha256": "ebb8385633bf315220281a0aadd4b98e57e6b2c2e7223f8f545dedf273e642bc",
+          "linguistic_sha256": "28818849d3b086e216b6e1bd0750d957dc25b34292a77ac630b9df9e96a41717"
+        },
+        {
+          "iteration": 12,
+          "topic": "Infinite-dimensional Hilbert blade space projection",
+          "residual": 1.4524074371161912e-16,
+          "active_blades": 25,
+          "audit_sha256": "a7bf1f62ca982c3f08ed8a79fc5ad116318cd5c887a6b351a88f183937ee00ae",
+          "linguistic_sha256": "e08fd0640d6ef865dfb9af91584a78071a3870102aa9583d87c827d91645edae"
+        },
+        {
+          "iteration": 13,
+          "topic": "Deriving 5-blade pseudoscalar duality invariant in Cl(4,1)",
+          "residual": 1.1317128560625628e-15,
+          "active_blades": 26,
+          "audit_sha256": "49628bc19e70dda90bfbd303db623e0237023bee983dca5b34ffa24d5aa5017b",
+          "linguistic_sha256": "455557b8d2e7b9bebef6583fe1c9f46c275451e540dc3e33b78d2ca04c48753c"
+        },
+        {
+          "iteration": 14,
+          "topic": "Resolving non-commutative bivector commutators [e_i, e_j] = 2*e_ij",
+          "residual": 4.784480383982784e-16,
+          "active_blades": 25,
+          "audit_sha256": "89ab73c47d34dcd3bbc16911d3bcffaacf6cfad74623b135542fa0141718f9f7",
+          "linguistic_sha256": "bd9f88b67dcb5987c6f05983ce3001d41b63593884068f7b4b004f04204800cb"
+        },
+        {
+          "iteration": 15,
+          "topic": "Non-Euclidean hyperbolic metric tensor curvature convergence",
+          "residual": 2.546475014661705e-16,
+          "active_blades": 21,
+          "audit_sha256": "5c061f7fc778afc32d0fdd920f59fdd7c60889d731e81a1eea52be0186d013e4",
+          "linguistic_sha256": "1ed086f6aef932e2cab1181a5c8ea7e9ada7b511cca585a9cd2f0fe39f2cb163"
+        },
+        {
+          "iteration": 16,
+          "topic": "Infinite-dimensional Hilbert blade space projection",
+          "residual": 1.3511601582685103e-15,
+          "active_blades": 25,
+          "audit_sha256": "cf54dc86264412b6e31a164700da0038d4114b3ffb092fbd7dfc00d9a4c33f41",
+          "linguistic_sha256": "10915763c6999a84c3e878b27619e575ce354ee83cb0f352e9a9d97104088a15"
+        },
+        {
+          "iteration": 17,
+          "topic": "Deriving 5-blade pseudoscalar duality invariant in Cl(4,1)",
+          "residual": 2.92681152834784e-16,
+          "active_blades": 26,
+          "audit_sha256": "8cd8f4e7d6f3030fed30f2cc8794b61c7f9cffbdec36bca211b21b6bf5d0f61b",
+          "linguistic_sha256": "3128aae0fe43d966a5516cac15a351aacf49ec38d975536ee8226b16203720b0"
+        },
+        {
+          "iteration": 18,
+          "topic": "Resolving non-commutative bivector commutators [e_i, e_j] = 2*e_ij",
+          "residual": 4.785787001701745e-16,
+          "active_blades": 25,
+          "audit_sha256": "2bd66db99dd9901b008b7739d06a4059a426b18bb2f245e28074503afeb77aad",
+          "linguistic_sha256": "5c95e34c3f43cf54d0b71d5912f7d73d64c6375d2897ceace0db88c01b65ec5c"
+        },
+        {
+          "iteration": 19,
+          "topic": "Non-Euclidean hyperbolic metric tensor curvature convergence",
+          "residual": 1.8255756245447594e-16,
+          "active_blades": 25,
+          "audit_sha256": "9e479095cea52b28d2f6098f04de7d7fb434bb996c64a7802827f8993c299a8f",
+          "linguistic_sha256": "4fae80b3ad1e7f298342d31f385b45f9c62f13969749e2650d12b515347249fa"
+        },
+        {
+          "iteration": 20,
+          "topic": "Infinite-dimensional Hilbert blade space projection",
+          "residual": 4.648516049725913e-16,
+          "active_blades": 25,
+          "audit_sha256": "2030f42478232e2f49ffb2e6bf207958c8f0cf7e3a6be69e9c0674c82d822213",
+          "linguistic_sha256": "91cc246ad5dd4689dbc312e82757106020cde59a1b9189d0ef08ae0575dc625a"
+        },
+        {
+          "iteration": 21,
+          "topic": "Deriving 5-blade pseudoscalar duality invariant in Cl(4,1)",
+          "residual": 3.655273089560087e-16,
+          "active_blades": 26,
+          "audit_sha256": "636076dd78cebbe9955ba01260a91326a9f8f268d087e352a043a6765692897f",
+          "linguistic_sha256": "421aaff3cc85d028d18b451fbfe4874ad588290b9c682387399295bf491061f9"
+        },
+        {
+          "iteration": 22,
+          "topic": "Resolving non-commutative bivector commutators [e_i, e_j] = 2*e_ij",
+          "residual": 5.671684011916712e-16,
+          "active_blades": 25,
+          "audit_sha256": "01d030ccd5c66f0f20815b3f868ff21c51d73f1844ad7e9389ce94642d11397e",
+          "linguistic_sha256": "baf597cd433abff6bbf721b1470542c27c46260c9b1e15549f2b00910f7ddaee"
+        },
+        {
+          "iteration": 23,
+          "topic": "Non-Euclidean hyperbolic metric tensor curvature convergence",
+          "residual": 1.957594187670415e-16,
+          "active_blades": 21,
+          "audit_sha256": "6259679b13105e257c35452f5bf61b39e523c39c7b294ab12575533b9bf95bc9",
+          "linguistic_sha256": "0f4b1f762dd06a8de0653349a51a92cfe3fad20101c0e231331cb14e24f4d716"
+        },
+        {
+          "iteration": 24,
+          "topic": "Infinite-dimensional Hilbert blade space projection",
+          "residual": 7.800763879344107e-16,
+          "active_blades": 26,
+          "audit_sha256": "18dea28d382b88a61ddbb88676908a3340766641f925907f4e56d00058d16acb",
+          "linguistic_sha256": "c8fc3fed05817420d02eda849c59387f4bdb1b11a57b6944b0c882416033546f"
+        },
+        {
+          "iteration": 25,
+          "topic": "Deriving 5-blade pseudoscalar duality invariant in Cl(4,1)",
+          "residual": 1.9253527889385619e-16,
+          "active_blades": 26,
+          "audit_sha256": "8f022c530e026b7293a678e2cc427fe536f3a8117057edc89dc72d05771333af",
+          "linguistic_sha256": "10bb48d6b3c6e06400e828b2ded15dcd978c77c24a8c6e0d3791d589634c9e9d"
+        },
+        {
+          "iteration": 26,
+          "topic": "Resolving non-commutative bivector commutators [e_i, e_j] = 2*e_ij",
+          "residual": 3.7788094616708107e-16,
+          "active_blades": 26,
+          "audit_sha256": "b1e3594c44b5c71f8e2315d12d7c7a8e17a2b66f9cb60fe405a32bdff670c499",
+          "linguistic_sha256": "384aa701c47b673a66da04d83ae90f2d1db4ada701aae516f54ff573bb1b32c5"
+        },
+        {
+          "iteration": 27,
+          "topic": "Non-Euclidean hyperbolic metric tensor curvature convergence",
+          "residual": 3.3899791703592384e-16,
+          "active_blades": 21,
+          "audit_sha256": "6f36fbe380bd941b50a52543e246b0226f89c4dca92efcfb2899bc7be873beef",
+          "linguistic_sha256": "bfd8cdfd09d8ba5eea344cb9316f38339b61965cff0fd498eb00ca2c60cdc794"
+        },
+        {
+          "iteration": 28,
+          "topic": "Infinite-dimensional Hilbert blade space projection",
+          "residual": 2.8130426150665967e-16,
+          "active_blades": 25,
+          "audit_sha256": "7ccb70bb1cc89854a9a49bd8e1c2970430c732eab5e7ea56aaae1017bdac7fa7",
+          "linguistic_sha256": "579db8e2035fc1f5c18acc99d6e7cc9a0093a0d7c584c7500bc8b619569140c6"
+        },
+        {
+          "iteration": 29,
+          "topic": "Deriving 5-blade pseudoscalar duality invariant in Cl(4,1)",
+          "residual": 3.797862080394903e-16,
+          "active_blades": 26,
+          "audit_sha256": "ed07093ed0dde2864b58e374e41607c6c0149b0f1c0420a15d22d3f3601e9fd3",
+          "linguistic_sha256": "df5cb1da5ac5c02a33bc980198bd5e55dbe80caaab60c170856cb71597a499be"
+        },
+        {
+          "iteration": 30,
+          "topic": "Resolving non-commutative bivector commutators [e_i, e_j] = 2*e_ij",
+          "residual": 2.0339524325589074e-16,
+          "active_blades": 25,
+          "audit_sha256": "3c40806f8286b09ace0286d911bcf37053fb10d0eac84633960b03f71c288869",
+          "linguistic_sha256": "39c5fe9fc901e485570cafef22d2cb8eaf95927d50017768d058336247623c46"
+        },
+        {
+          "iteration": 31,
+          "topic": "Non-Euclidean hyperbolic metric tensor curvature convergence",
+          "residual": 1.1040625686660728e-16,
+          "active_blades": 21,
+          "audit_sha256": "2c6f6558c7c6b4d85e5bcf6a09b192889bf7165ab02a814d19e93fd2e581d8ee",
+          "linguistic_sha256": "0f9c3d58c28608520494d8ef682d5743ca06da1ebe89f8f530405bcc7fdcf8a0"
+        },
+        {
+          "iteration": 32,
+          "topic": "Infinite-dimensional Hilbert blade space projection",
+          "residual": 1.3610747224440383e-16,
+          "active_blades": 25,
+          "audit_sha256": "9a3bc53be00ad23cf1792bf563d1971c59b51fa3eb543a5516743a88b315882a",
+          "linguistic_sha256": "81720eddcf19586062bef8d95cafe7403e1de7be72506d0550f4ecba84d93a64"
+        },
+        {
+          "iteration": 33,
+          "topic": "Deriving 5-blade pseudoscalar duality invariant in Cl(4,1)",
+          "residual": 8.009044105010747e-16,
+          "active_blades": 26,
+          "audit_sha256": "b06b792cea88b45b54306a3e1dda36defc4af98de7d95d533064ac9559c29e07",
+          "linguistic_sha256": "7091029caac22ca6f89f2e63f2688936b9a4c28280a64d238fe85f437b5efd60"
+        },
+        {
+          "iteration": 34,
+          "topic": "Resolving non-commutative bivector commutators [e_i, e_j] = 2*e_ij",
+          "residual": 5.711075953376126e-16,
+          "active_blades": 26,
+          "audit_sha256": "767ebc10819b80009de469025f44cd8bf7a07ca64330e9ff7cd78082d89db2e0",
+          "linguistic_sha256": "6297633096b9326327e3bf5698cc85b4c34424ccc1655a5869c2b734bde036f7"
+        },
+        {
+          "iteration": 35,
+          "topic": "Non-Euclidean hyperbolic metric tensor curvature convergence",
+          "residual": 1.0092139168228658e-15,
+          "active_blades": 25,
+          "audit_sha256": "8c2d97a9261a99a2b2a7d8dbb728fc70f2151f9058fee14a666631fc4b1f7fa4",
+          "linguistic_sha256": "0e6262c6b6895f7a2faddcbfe8e4593b2eec22dbdc770559e97b560d13269b47"
+        },
+        {
+          "iteration": 36,
+          "topic": "Infinite-dimensional Hilbert blade space projection",
+          "residual": 9.133086630687558e-16,
+          "active_blades": 25,
+          "audit_sha256": "d9f5054cc189d5c0e0bd00f091b71dc7bfcbae3679d96031ab1f4a4bf7b46293",
+          "linguistic_sha256": "38e6c0463b401b6106ac54e6475b2848721ea778c421a84ae4fd6372517ed086"
+        },
+        {
+          "iteration": 37,
+          "topic": "Deriving 5-blade pseudoscalar duality invariant in Cl(4,1)",
+          "residual": 5.740960735888891e-16,
+          "active_blades": 26,
+          "audit_sha256": "05d2b9bd0db7c6b6b747d7f6fbf45bff0e3e3681e443588e8d8e747785de8e65",
+          "linguistic_sha256": "16835616e2552f6a17fd9b7288a83e0b42f4a641d75a5eb2c9f224e4e6354ac4"
+        }
+      ]
+    },
+    {
+      "phase_id": 2,
+      "name": "Self-Optimizing Algorithmic Tensor Compiler Pass Synthesis",
+      "elapsed_sec": 45.16669702529907,
+      "evaluations_count": 37,
+      "evaluations": [
+        {
+          "iteration": 1,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 5.919899328172817e-16,
+          "active_blades": 26,
+          "audit_sha256": "26ccd27a017d5e620b0fb74935649c158a5cc6848227bb84fe1b03188febafa6",
+          "linguistic_sha256": "e9f3ff50fe6368c66d2bf84af88c9e22a4e64b537b608adae6b79b77aeb0fbba"
+        },
+        {
+          "iteration": 2,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 2.4594718236014245e-16,
+          "active_blades": 31,
+          "audit_sha256": "de6e9ec4a09c45fd1235c45455ed956dd41a92df9d1f61385195a3047077c48c",
+          "linguistic_sha256": "ea13f90d651f6747ab95f56c7aabc83054c09ced5fc2d983ce62b06f93711ad4"
+        },
+        {
+          "iteration": 3,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(4,1)",
+          "residual": 9.104368614723071e-16,
+          "active_blades": 30,
+          "audit_sha256": "d370a3b69c707ca2f8fb6484c8de9176479f480943214f3590d07c831e12223d",
+          "linguistic_sha256": "22764b353cb9b80388b2d3698e44a815a945d7021a8d3388b11a09f6e49b8c3d"
+        },
+        {
+          "iteration": 4,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 2.653045499129375e-16,
+          "active_blades": 29,
+          "audit_sha256": "91ddbb3526aa0faed52533422475bd53d69fbcb3ceb1e7b91ed475119b3a6f0d",
+          "linguistic_sha256": "f8e93bce26df0ea04b8d3460ac092002439d5a6d1de94d6fd6c3db4f14ff2914"
+        },
+        {
+          "iteration": 5,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 1.7851847082737775e-16,
+          "active_blades": 30,
+          "audit_sha256": "4b67b1bc9df60f272cf5879df5a01681f20c7c96e80fa757d5f8065864f990f0",
+          "linguistic_sha256": "1ee4ce4b4c80ec06f047d06259a5f5c023a916144cb428f48f183cc828c74341"
+        },
+        {
+          "iteration": 6,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 9.040421052513076e-16,
+          "active_blades": 31,
+          "audit_sha256": "9a9996a616743d00600f23456223bcc2c8b1eefd4350bbc095ab1b0e2b3a78fd",
+          "linguistic_sha256": "3cbeaef4eb86ccae94e1a3b5a6ea1d115659077f2bd32e06127d1bd9d7452287"
+        },
+        {
+          "iteration": 7,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(4,1)",
+          "residual": 8.363284716261887e-16,
+          "active_blades": 30,
+          "audit_sha256": "68067e0af6167e23d4a9c57639d52a0c0fd3067fe5d8c7507f544c925d542417",
+          "linguistic_sha256": "9b3eadb9269a754cc679981274c355a898c43c7ac479a1094e1a7579e9062693"
+        },
+        {
+          "iteration": 8,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 5.672312322468778e-16,
+          "active_blades": 29,
+          "audit_sha256": "6deea2f712d1ed3e797f0fa8293b47039cf1a2ff13dcbfbd6ec9e1ecc27bff15",
+          "linguistic_sha256": "7ac562cb76b3729d79da87d0292bf4a56012a598202a9468d07be8a969459b21"
+        },
+        {
+          "iteration": 9,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 1.3112457195380433e-16,
+          "active_blades": 26,
+          "audit_sha256": "ed2b235d1f8b528b2d71e0535de1b2f27434a53deb59d5ed5b303bda63b29730",
+          "linguistic_sha256": "d8dd21267ca7f7ecf9f266822843bb8cea99204d979d0c2f80a6d58b5839ad76"
+        },
+        {
+          "iteration": 10,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 2.6578091772080343e-16,
+          "active_blades": 31,
+          "audit_sha256": "634f9a0613aa368402e8c24761b60ac667ddb83078b969ec3e972d66cea91cb3",
+          "linguistic_sha256": "522a9630b6c23dcffc0c0af5d147e577c2df4fe7ddc9617691752b7db440790e"
+        },
+        {
+          "iteration": 11,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(4,1)",
+          "residual": 6.999940002747156e-16,
+          "active_blades": 30,
+          "audit_sha256": "c1adf9d6a023310b0dc2dc9b92a94832f57ef9f6bebbd9d64de153aa46b317ac",
+          "linguistic_sha256": "47ef6e9403269b64b25876055cff61c5c269d9b9e2cfd0c20b36b0bec35b4f38"
+        },
+        {
+          "iteration": 12,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 7.878039233145892e-16,
+          "active_blades": 29,
+          "audit_sha256": "7d5c75de5ff099e75e85bc4b383eedb29c4a562a8ae80203c3241d5307e0138e",
+          "linguistic_sha256": "dd55402eba569878d20401752ea1d6e125134263a5f017f9210e545548fc5d6c"
+        },
+        {
+          "iteration": 13,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 6.8826942364264e-16,
+          "active_blades": 26,
+          "audit_sha256": "741798fe3bf999e1596af647c154f78e91edc5b7dfc9daf05dc202742cd0f0e7",
+          "linguistic_sha256": "3d66663d469f277ce6843da885ba915582d95fc9c4e8d576c4c9238dbbd66cb3"
+        },
+        {
+          "iteration": 14,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 1.6686055218774942e-16,
+          "active_blades": 31,
+          "audit_sha256": "d41de197679c4dccd447b110bb6fe48079f5801cbee643625c8e0c0e114e8a4a",
+          "linguistic_sha256": "abba95546f50935ee26a3b81d136b88962e0f6d5cec91b17bc22ccbfccf78455"
+        },
+        {
+          "iteration": 15,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(4,1)",
+          "residual": 5.744102374389961e-16,
+          "active_blades": 30,
+          "audit_sha256": "1aead98fb0819d7b6eed778b0cafb9bc1c6f6b92cdfb980fdd2ffbeab1b37f64",
+          "linguistic_sha256": "41c271e1377d3917e29f5c81eb4755791b31e56756e22c6535d46506983ab89e"
+        },
+        {
+          "iteration": 16,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 9.116678787223927e-16,
+          "active_blades": 29,
+          "audit_sha256": "801c578c328c6e1968bf38ef3bbaa4f14c5f229c568bc6083a43b8301bfe9698",
+          "linguistic_sha256": "f7493e33aba1e8563c16938a78f2f441d95be3f2ecfb53b8619db077cd8355f1"
+        },
+        {
+          "iteration": 17,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 6.80080074149094e-16,
+          "active_blades": 27,
+          "audit_sha256": "cce185be84b80c8412d008c38a9bdf3b7e604add37c54c23f833baf4cc250332",
+          "linguistic_sha256": "0578ada64932f5eab19b29aafaf4b7261ebad6300fde44123de5662c39eb7060"
+        },
+        {
+          "iteration": 18,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 2.361357093744045e-16,
+          "active_blades": 31,
+          "audit_sha256": "99eae00feb74f019da0d9858e8c1baa9144544e28e94ddf9bf8d81c58af1b9c3",
+          "linguistic_sha256": "4fffd28af37d735f6f4e55d150cc94547470f21da5ee6f0131fc0aefda59e581"
+        },
+        {
+          "iteration": 19,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(4,1)",
+          "residual": 4.673755048507599e-16,
+          "active_blades": 30,
+          "audit_sha256": "e76d62956030c603f42b37b8e78f3a31bc511e03305fe778f98249d00670aeaa",
+          "linguistic_sha256": "89882377e6ff2df766316382e5daeb7fcd824e78340459abdac83ebc8b3da1da"
+        },
+        {
+          "iteration": 20,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 2.658805890507899e-16,
+          "active_blades": 29,
+          "audit_sha256": "5740f027c8a703f2811e38979671906ed0e2d33a971c4a30511bcda29da54a59",
+          "linguistic_sha256": "1f1c3dc35579d7b1e93e4a21af1b326ea7bda7e4cfda76339117657475125b39"
+        },
+        {
+          "iteration": 21,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 1.469809351605021e-16,
+          "active_blades": 26,
+          "audit_sha256": "e92fb0c9653c5ab70f470583a7924781bec15a26ec111cfe67e61c7ac581edf8",
+          "linguistic_sha256": "a6b1760e6f445f477562d6face7d0901d01b8e9bffd249aa7331fe3c6d4bcd04"
+        },
+        {
+          "iteration": 22,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 5.756261801268426e-16,
+          "active_blades": 31,
+          "audit_sha256": "495847d104d3d784af85aa21f9477cb8293d666ad306749dbc41e94a114c7966",
+          "linguistic_sha256": "d5b324a52789644fdf35478238f0b8d21c8bbe443569db5156b2076cb24edb62"
+        },
+        {
+          "iteration": 23,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(4,1)",
+          "residual": 1.5910621340512557e-16,
+          "active_blades": 30,
+          "audit_sha256": "487cae713efe05132be3d4c4deaf5462ce7fd25ff31c3af014187198b64cd334",
+          "linguistic_sha256": "56a14fe0078618b20db9f0f667e996e61c6bde938e81a34024f8260c08eabbcb"
+        },
+        {
+          "iteration": 24,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 6.910537274994337e-16,
+          "active_blades": 30,
+          "audit_sha256": "b69c36f5f675f975150b341a69adb95a40ea8c994de733b82af615a14821f952",
+          "linguistic_sha256": "175fb24838964e319dfa90932876a1e03230c1b50208f1b76516d59802c90d42"
+        },
+        {
+          "iteration": 25,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 2.1848695964282854e-16,
+          "active_blades": 26,
+          "audit_sha256": "d45a1d26945cf8f18317cca89c06094781119067a4b203875bfac4a98bfb1f39",
+          "linguistic_sha256": "c622e3be55681838cbd012ee525ea66da81f6f9337c6ab0427bd2d4d9bbc339e"
+        },
+        {
+          "iteration": 26,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 1.0151168901918865e-15,
+          "active_blades": 32,
+          "audit_sha256": "271eed2570a4994fcaaf6b351162cb216df41dba451de58e4d3f02a8466f394a",
+          "linguistic_sha256": "15b3c1d0a1e65f614259da5802942efb0d3c07460243b3d884627723e4c59e0a"
+        },
+        {
+          "iteration": 27,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(4,1)",
+          "residual": 2.0994191121888463e-16,
+          "active_blades": 30,
+          "audit_sha256": "680aff0c1cb3c18039024979af50a6295aaa6300cab0e520fea417b0c9d9811f",
+          "linguistic_sha256": "1e8bf393d9c626bf23826919e704b29d77407e2ec893b74d3d7ee8d0ad9175f4"
+        },
+        {
+          "iteration": 28,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 2.849417622732005e-16,
+          "active_blades": 29,
+          "audit_sha256": "a278e215ef6d8479f668402d8383206fe7fbc92590dd3d98340cd23097054391",
+          "linguistic_sha256": "6da4106a3c87c4cffa2405efb34fcf0b98043a556ca484d6579b8fb2b4e1aabd"
+        },
+        {
+          "iteration": 29,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 2.526060939984873e-16,
+          "active_blades": 26,
+          "audit_sha256": "16dc2b337a44ab473de54c5dc738ef6bde6dc360450e4b84ab55b432a951d3ac",
+          "linguistic_sha256": "64c601e5047f4ba79be7d434339c51a4e34bdfac2ce171384d291b9b13a44f4e"
+        },
+        {
+          "iteration": 30,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 2.6500463035937547e-16,
+          "active_blades": 31,
+          "audit_sha256": "2031d7466f113a221726efa1044aa24dcae29154e63cb2af0413a6c9b1cfe941",
+          "linguistic_sha256": "f7b85a0e064d74048082700489d510bf2174fe919b899e16228cb255098f3d59"
+        },
+        {
+          "iteration": 31,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(4,1)",
+          "residual": 1.7215406530024007e-16,
+          "active_blades": 30,
+          "audit_sha256": "9a3932e87960064ff1921042976cfbbeec5b85e03b74255c4a07260570058b8e",
+          "linguistic_sha256": "85b5253a4a09966735c3f0976a1b2f307b3e0ac20867a6014d83f9b481c30a5b"
+        },
+        {
+          "iteration": 32,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 1.446383720911038e-16,
+          "active_blades": 29,
+          "audit_sha256": "cf5e43a2a1a4b7d1661157c3a1ec4396f319ef4571010a75d3349bb6a8129023",
+          "linguistic_sha256": "2aca5dae1062beb74892d295200ddd0768f5963f3b41a5e071854c42bf611938"
+        },
+        {
+          "iteration": 33,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 7.921111939160623e-16,
+          "active_blades": 30,
+          "audit_sha256": "f49915783f01601c061d05909032d3f7e961d0cffa60567bc480c3d5d1df4123",
+          "linguistic_sha256": "f6245a5a8ea973cd163e95df93232c3b70ce7ce19ed64b764f84eb06253d3492"
+        },
+        {
+          "iteration": 34,
+          "topic": "Mapping AST recursion depth to multivector grade distribution",
+          "residual": 4.967687733815612e-16,
+          "active_blades": 31,
+          "audit_sha256": "20c898bb6f3541b61c8211f125dc2b6ecefed2a85d76acd2bd57bbb970092f69",
+          "linguistic_sha256": "9b9379d11f94ef811f0940c6635e15606b4d67eae88034fc60ad1e774f578f1e"
+        },
+        {
+          "iteration": 35,
+          "topic": "Memory alias-free pointer dependency resolution in Cl(4,1)",
+          "residual": 1.1200031454597214e-15,
+          "active_blades": 30,
+          "audit_sha256": "681c31267a72bec21cd9b4708b5ad752b888375841b3ca32c406a23872848265",
+          "linguistic_sha256": "77548115d83ec71ae1d9fbd306d75c83835c92be70ffbb6e7dd9086c9472561a"
+        },
+        {
+          "iteration": 36,
+          "topic": "Dynamic programming recurrence state tree compression",
+          "residual": 1.9317234257002937e-16,
+          "active_blades": 29,
+          "audit_sha256": "2239d4c43158c4f44fa36f1aaa6d5cfe1a0b898863972b5a1d66dd4e0ffa08d2",
+          "linguistic_sha256": "596f49b12620bc47e616bc9c56dbeb1c918b1f39398938e1444dc54e14dc66eb"
+        },
+        {
+          "iteration": 37,
+          "topic": "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
+          "residual": 1.5707784804637793e-16,
+          "active_blades": 26,
+          "audit_sha256": "eded66e90eb9d9b7a469438a11ce861e54ee4c70f4e4e98e0e4f5ff9d0d6ec8c",
+          "linguistic_sha256": "8123764102c6d715db996b623ed6cff8313eb9800999a628fd2e9c435c7bd165"
+        }
+      ]
+    },
+    {
+      "phase_id": 3,
+      "name": "Relativistic Spacetime & N-Body Spin-Orbit Quantum Gravity",
+      "elapsed_sec": 45.18271994590759,
+      "evaluations_count": 37,
+      "evaluations": [
+        {
+          "iteration": 1,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 5.683543970447566e-16,
+          "active_blades": 30,
+          "audit_sha256": "7b5bbef6b9a76eff0c904dd0ff110686b07c2be78fd78bcd378af1a89aefffbd",
+          "linguistic_sha256": "690721c265722936140724821e9ba7476baa48791d1b71358a0a650a611c5fc6"
+        },
+        {
+          "iteration": 2,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 3.520673315250912e-16,
+          "active_blades": 31,
+          "audit_sha256": "fedc11b5d15c15df7c51c981907fbef6d01ad76b0883d3fc29e7761c2d688362",
+          "linguistic_sha256": "7986157de120149af24c67100b503cfc1cbdb62645b804ce4790ee448e09a767"
+        },
+        {
+          "iteration": 3,
+          "topic": "Quantum state density matrix Bell entanglement multivector projection",
+          "residual": 1.1252823884109787e-15,
+          "active_blades": 32,
+          "audit_sha256": "9e948680f54410edf1305b5db717a8724065febf0387fecd4d3af63932116db6",
+          "linguistic_sha256": "cf5521a98d49107d664433e5607fc2592a32316db766b32fd1eb92a077143f06"
+        },
+        {
+          "iteration": 4,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 5.749106331227823e-16,
+          "active_blades": 30,
+          "audit_sha256": "8fca4876d542aaecd584f7c44f6423d4ae6a80a327650c4ead50a9edee2b1ca3",
+          "linguistic_sha256": "eacd546eb57c3695fdac12a75ed2fab710b724ea88516322f7b15ebc38638045"
+        },
+        {
+          "iteration": 5,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 4.859303574391355e-16,
+          "active_blades": 30,
+          "audit_sha256": "4b5e45cbbe09fbada64f710bb70a98449757ebf52d2f5d99b0c7309365283bd0",
+          "linguistic_sha256": "fa789dfddfdbdd3c9665c7ffc0fca1e33f1644c7175704366428d772af5d7bd3"
+        },
+        {
+          "iteration": 6,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 2.0703725922946686e-16,
+          "active_blades": 31,
+          "audit_sha256": "30aa5b6cd648aa68c7ac5d230c561394f83d193a8f93d91a2bf3478afeee818a",
+          "linguistic_sha256": "f5226e7e984469b93d9d000da54c6507d0dbeb92057be155d78247e8cb974e09"
+        },
+        {
+          "iteration": 7,
+          "topic": "Quantum state density matrix Bell entanglement multivector projection",
+          "residual": 1.0179701167039652e-15,
+          "active_blades": 32,
+          "audit_sha256": "421e6534980e096cf27ebdaca142aa3bdaa76d64b9cb5a5d956238d5a1446a94",
+          "linguistic_sha256": "f6370b08f5e4f1a6949e6ebb224ed78f7ca2a8b627291f90beb6ab5702ad6a4f"
+        },
+        {
+          "iteration": 8,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 1.2294821315147187e-15,
+          "active_blades": 30,
+          "audit_sha256": "a5c8f9726676f42306d7299dda88b42e2ded13650bbfcf7f8778cbbe210dc913",
+          "linguistic_sha256": "d68bb0be4a34b952a15c33454c2a197f182c445b1ccf618020595bb4931d1893"
+        },
+        {
+          "iteration": 9,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 5.82686403046643e-16,
+          "active_blades": 30,
+          "audit_sha256": "d610ca1b9821aa7ca9a7a9536d47d8d8d51222f574b7272be4f6fce1dda72dfd",
+          "linguistic_sha256": "3c4599c874e414a8ff0ec36da1408d9fcc7f13bfc82d8f7d19bcb5bb8baef615"
+        },
+        {
+          "iteration": 10,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 1.3461351661700443e-15,
+          "active_blades": 31,
+          "audit_sha256": "8885c7270aa6ec962d100ab39552ff2ae1954ea6e95f294a058e33a68577a782",
+          "linguistic_sha256": "50a35083884e2fb8a8a0d1c2045849b9ed30500f068b6d48d727cc4b434ac339"
+        },
+        {
+          "iteration": 11,
+          "topic": "Quantum state density matrix Bell entanglement multivector projection",
+          "residual": 1.878837240576808e-16,
+          "active_blades": 32,
+          "audit_sha256": "cdf00eae55e25f555b9be0dd2607ca2debb4c0bbc2429870fc8e3fe6434066d9",
+          "linguistic_sha256": "f59c0a41bafda8488a43d287b43b0a64771bea39e21b737d6da7ab992eb932a8"
+        },
+        {
+          "iteration": 12,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 3.5428804078369253e-16,
+          "active_blades": 30,
+          "audit_sha256": "f2777751f196fb3368b0355a541d93ce0ac4738496dce70d568757bc93a0ab5a",
+          "linguistic_sha256": "4e354d3d64323578e7bf8722fb4adf32db08bf990a0c0ff698e5cde39c019ac9"
+        },
+        {
+          "iteration": 13,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 6.744102938102903e-16,
+          "active_blades": 30,
+          "audit_sha256": "ce5c3f88004470170c5af1ff0436e89bad259e6b51a8eb5cc892a1a24600aa51",
+          "linguistic_sha256": "5d90bd136242d7e92fd5572b3b7b4e24d966882af96f92782736ae3b3b3b2c0b"
+        },
+        {
+          "iteration": 14,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 2.9694817115067024e-16,
+          "active_blades": 31,
+          "audit_sha256": "10a9cc3f44e18d74f2befada40ed970c0b7503ec207194897d5f31d218cf3133",
+          "linguistic_sha256": "eb5bf14cfb7912e291b12117aff018d342fc66deaeca026047ff9d50ce67a433"
+        },
+        {
+          "iteration": 15,
+          "topic": "Quantum state density matrix Bell entanglement multivector projection",
+          "residual": 3.6208358180946573e-16,
+          "active_blades": 32,
+          "audit_sha256": "6cfa1aa4fa1ba99f5ee01fcb6d220c60ffde4395679dcd2741d0412a8db671b4",
+          "linguistic_sha256": "130e9f1da2a81b2c0780d23ef0f82fc5822095701d7d6304d93ff70be7c81f0a"
+        },
+        {
+          "iteration": 16,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 3.568259503734917e-16,
+          "active_blades": 30,
+          "audit_sha256": "d1f141aa435f317a950bf80375ddb34b17cd9b458497f598536140cd432fd813",
+          "linguistic_sha256": "9b068f59bbfd65cafbb4272b89a59202417a78d35f82ba4e8741e732af1f85b6"
+        },
+        {
+          "iteration": 17,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 2.2677148712511813e-16,
+          "active_blades": 31,
+          "audit_sha256": "9eb3dbb8f1d6d66ea2dad284b45088f781c5a5c6c2c59b80a3246258e128a342",
+          "linguistic_sha256": "2bfe59545a2e6fdd91ea808d01f71af8ee844f9e58e71350c4bf8ab4d57dcb51"
+        },
+        {
+          "iteration": 18,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 3.699042059494751e-16,
+          "active_blades": 31,
+          "audit_sha256": "5d98a0965782bc930f75e18e288c2a32df49dd4a5e9e1f3c516161b92f6fc676",
+          "linguistic_sha256": "5155dcec0bcfdb8cbc7a79c7b937e9362fccc1e39acfb1ccb083da54414eef20"
+        },
+        {
+          "iteration": 19,
+          "topic": "Quantum state density matrix Bell entanglement multivector projection",
+          "residual": 1.1261281991631215e-15,
+          "active_blades": 32,
+          "audit_sha256": "914fa9668b622c36e47ea720b4a657398a8ca0220b8e044ba49c69091e946749",
+          "linguistic_sha256": "f7a4a1135a23f376c8dd30c994660632dd49e35d8bcbdfd680ecc69a7a378e25"
+        },
+        {
+          "iteration": 20,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 3.732396567802262e-16,
+          "active_blades": 30,
+          "audit_sha256": "a2d18396b924295d89a39f076787b6a5a5f425e519866df64c7b935077a95865",
+          "linguistic_sha256": "c6f6b298c0ee4ae9d9aed5da489effae0a3f63af44665ed80383d9256b499f33"
+        },
+        {
+          "iteration": 21,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 1.0110348222619601e-15,
+          "active_blades": 30,
+          "audit_sha256": "a35f7a0afc040ce7241e577ef7ae0dc3651bfa49a8d6030df5198c82176d12e0",
+          "linguistic_sha256": "31493ddf06140b8eb945aedba086cdbecdf76dd0cd59f42eedd1fbd7da1b209f"
+        },
+        {
+          "iteration": 22,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 5.695633312949318e-16,
+          "active_blades": 31,
+          "audit_sha256": "e0efcc00e0036c51430f8ef497b85e82d87d3ce62054a6abbe1000143e35115a",
+          "linguistic_sha256": "6f9e433981e294c835868c71c5ce36966074cfdbab206ea272727233d580c3af"
+        },
+        {
+          "iteration": 23,
+          "topic": "Quantum state density matrix Bell entanglement multivector projection",
+          "residual": 9.109500062673811e-16,
+          "active_blades": 32,
+          "audit_sha256": "80e96a40f05f90117add60d81aa81fb7f875743983646e8ce1be18898cd0eea9",
+          "linguistic_sha256": "8dfddd3677ceb520c8b84a3c3e92daf4d7cdb220274345377c9b0f782462668c"
+        },
+        {
+          "iteration": 24,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 7.841080221014709e-16,
+          "active_blades": 30,
+          "audit_sha256": "682dc15bea1ffef72bd5397d0753c52dc677ba52f85ed1974353a4642eb6ab83",
+          "linguistic_sha256": "a9a5a8354fcd0d9f7b1893c29347e9583dc60e72dfa3177627c556d6c650d977"
+        },
+        {
+          "iteration": 25,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 3.62333058474278e-16,
+          "active_blades": 30,
+          "audit_sha256": "1cebe77ab6d9f9fee621fc9cdd01c2481796bf27c16f3743e712a044a2721569",
+          "linguistic_sha256": "35d963a9fad5d2bc93c4fcdabb3e080db23e3648041746941d07eacd39e2ed3a"
+        },
+        {
+          "iteration": 26,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 2.5190280082340858e-16,
+          "active_blades": 32,
+          "audit_sha256": "df1a8d33d9895fa20f57ce32443cbb360e8ea286b4b7d313951acd24c14adcb9",
+          "linguistic_sha256": "aa69cfb71d7290481e227d78952e7bb1a7ea370abed0973a85648c4fcddd413e"
+        },
+        {
+          "iteration": 27,
+          "topic": "Quantum state density matrix Bell entanglement multivector projection",
+          "residual": 2.4727442387292264e-16,
+          "active_blades": 32,
+          "audit_sha256": "7eec279e2c172a9efa9e89504712a5d75e732004fcb85399d8b044a657315d1b",
+          "linguistic_sha256": "7ceaaa35b19e70464e18bd2f008d9c9165a6f15e33f969abb917d8ab91d3d501"
+        },
+        {
+          "iteration": 28,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 1.0183304371641589e-15,
+          "active_blades": 30,
+          "audit_sha256": "45549c387cce4e40e4ce7130e8a1b56a16fc46b5e13f7b3de2a995f7974d013d",
+          "linguistic_sha256": "7507f7d00dee06de628dd5321f3b433f9004a467fbb92368e1d7e4550de690dd"
+        },
+        {
+          "iteration": 29,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 6.957442565212274e-16,
+          "active_blades": 30,
+          "audit_sha256": "c0dd750c48d955968f0269cbbc60d30bef84aec0d6482c82b5db3074bfe70b11",
+          "linguistic_sha256": "a088f1f98b27f71358cdef73eb4c11d061b56fd2f5dfb4468e570ca09963267e"
+        },
+        {
+          "iteration": 30,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 4.810923224372618e-16,
+          "active_blades": 31,
+          "audit_sha256": "bb4d77e670da270cc57cf009826c114a79ba135210003f498779baf254ba5b93",
+          "linguistic_sha256": "d219d1bf3ee089b73bfd8af822944a58fb945890404ca1b9d912c351b1e4a3de"
+        },
+        {
+          "iteration": 31,
+          "topic": "Quantum state density matrix Bell entanglement multivector projection",
+          "residual": 1.5749089554423143e-15,
+          "active_blades": 32,
+          "audit_sha256": "86890995bacae26740516c00cb73a9314854567273a63fdee492f5bf594737c3",
+          "linguistic_sha256": "6ea6323b0188e2826ac6db226d0e2ca5e2756b2f213223e9603195d3cf02c7de"
+        },
+        {
+          "iteration": 32,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 2.045085400811112e-16,
+          "active_blades": 30,
+          "audit_sha256": "2902bd80cd122c6d825ad2e066074081cc41a04d29151d50ec5d9e778b0e0421",
+          "linguistic_sha256": "107e325dfa53a86d9ef1d93fdf036550c2334fcd2817550a822d5b63fcd318ac"
+        },
+        {
+          "iteration": 33,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 4.835654485790034e-16,
+          "active_blades": 30,
+          "audit_sha256": "3bfdac30f2843977f88163f2a9266d6b946739337183ef32ba49948156d005e4",
+          "linguistic_sha256": "8405a9a0c1c81eeef9eef1f8cbd490121a327eef92760f01a0e9669ff106a8a1"
+        },
+        {
+          "iteration": 34,
+          "topic": "FLRW cosmological dark energy expansion geodesic invariant",
+          "residual": 1.8390799487763203e-16,
+          "active_blades": 31,
+          "audit_sha256": "8f87df4853abc547d59efeee1247b646694c57b116de2d2e1c691aec8b1304c5",
+          "linguistic_sha256": "35eba9d065ee285dd2ddf086c59c2080582ef56b80039cea78e1a94d31657f66"
+        },
+        {
+          "iteration": 35,
+          "topic": "Quantum state density matrix Bell entanglement multivector projection",
+          "residual": 3.764793200194538e-16,
+          "active_blades": 32,
+          "audit_sha256": "d389f09a48ae4e1da38694d9d05aa487150205afbd6b82599885086ec534059a",
+          "linguistic_sha256": "8fba7e641035bc9514f67f4a3a8a977fc2e094c57dbac6dfb5172014ff855168"
+        },
+        {
+          "iteration": 36,
+          "topic": "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)",
+          "residual": 3.43555697593903e-16,
+          "active_blades": 30,
+          "audit_sha256": "7c307003d86233218b6b9ed2eeb80ce9eb91a9a7f234d276cfe5ac9d7ca74bd2",
+          "linguistic_sha256": "232b1f4814f4e259b4fba679b8df8bdb1d711f84082be009c441740b3e264bbe"
+        },
+        {
+          "iteration": 37,
+          "topic": "10-body asymmetric relativistic system with spin-orbit coupling",
+          "residual": 4.877911770008163e-16,
+          "active_blades": 30,
+          "audit_sha256": "cf6e70f1b9ae46665e005569a3b31335730b7f97f1f259ef34c27625917b31dd",
+          "linguistic_sha256": "9b04e50eba816e859b998746948cdd52e2d604ef0bdf7c7db4c28ce01016e9e9"
+        }
+      ]
+    },
+    {
+      "phase_id": 4,
+      "name": "Unified Cross-Domain Isomorphism & Master Synthesis",
+      "elapsed_sec": 45.14594101905823,
+      "evaluations_count": 37,
+      "evaluations": [
+        {
+          "iteration": 1,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum entanglement",
+          "residual": 4.82984901942689e-16,
+          "active_blades": 31,
+          "audit_sha256": "028b3d86ffb9289f5eb16abf0b4c5a1c9a1bbc95a8e4fb966cfbea509cdd1790",
+          "linguistic_sha256": "ed86c6c277c03f5b193d51053f4084be45e3f748ae73fc7d94947b0126fb4ef9"
+        },
+        {
+          "iteration": 2,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 3.9421372553174557e-16,
+          "active_blades": 30,
+          "audit_sha256": "96e72136022b6396e92d48d0e3d6f8a840b34702354ca5280582e1ce5a6e147c",
+          "linguistic_sha256": "a5b1d2aca501a2d82028e9cd7a0c5c0835fb3816538b8634b9c48fe0c8bc03f1"
+        },
+        {
+          "iteration": 3,
+          "topic": "Generating immutable SHA-256 cryptographic audit receipts",
+          "residual": 4.594518160466635e-16,
+          "active_blades": 29,
+          "audit_sha256": "4f5c039040b9faa831fded80334d87f051495a1a7a791a09d280ce008843e129",
+          "linguistic_sha256": "9d680890586a7ce115a11d35ce104b60464e8fb5a8043e847a25ad8374abee6f"
+        },
+        {
+          "iteration": 4,
+          "topic": "Final synthesis & deterministic natural language report compilation",
+          "residual": 4.633263430086824e-16,
+          "active_blades": 25,
+          "audit_sha256": "db11358a79f68c3497e8cc1824ccfd76c6a542ff27046c10ebe3c5189151ef10",
+          "linguistic_sha256": "4fb575ecadcda7cb2b94223dff2a8291e3fc570ebc2a922bc4e0fc5a0b04d238"
+        },
+        {
+          "iteration": 5,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum entanglement",
+          "residual": 4.959412165247112e-16,
+          "active_blades": 31,
+          "audit_sha256": "be5146aa2364a8401e420482966c1c9929b1f368ed449c03c7f64a8aeca0b060",
+          "linguistic_sha256": "ec89eaa37890c663b88d82f7338cbea4e8f53c648b4fa42e063884abb6d16237"
+        },
+        {
+          "iteration": 6,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 1.7791631591371302e-16,
+          "active_blades": 30,
+          "audit_sha256": "d6db48cb82ce41643145c7f8a55524a6ce2437cd741bf4fe735154692019f6c0",
+          "linguistic_sha256": "1ba847dc2424ec8cfeb19b54d75c7bb1f54c6d3dd8d2427f94ca193da976ad01"
+        },
+        {
+          "iteration": 7,
+          "topic": "Generating immutable SHA-256 cryptographic audit receipts",
+          "residual": 5.731530733450217e-16,
+          "active_blades": 29,
+          "audit_sha256": "9f4629f04eca37f593ded4b5a1485b30fa53029f858ee04123a031666ba01d33",
+          "linguistic_sha256": "195fa8ca19d4592e5aee99063c1c9fd9e35bfcef3edcf8dca4e82f1a82e8a9ed"
+        },
+        {
+          "iteration": 8,
+          "topic": "Final synthesis & deterministic natural language report compilation",
+          "residual": 1.8844755386135088e-16,
+          "active_blades": 25,
+          "audit_sha256": "b18e936ec29f6f31ed4bf0a7fe5850c3b347aa4d49b75434af99cc43171295dc",
+          "linguistic_sha256": "8b42268df8bc2bd1eb8b3d4fdab9a94fe56eec39d1d89c1ea105a27e0c00c29a"
+        },
+        {
+          "iteration": 9,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum entanglement",
+          "residual": 2.0666055223254742e-16,
+          "active_blades": 31,
+          "audit_sha256": "e22915364094fdae5a1ce18208db3b6a5473a3cefc6189a6bb0d944c21cd8a19",
+          "linguistic_sha256": "4a5860075372fb14241cd70c6451af82d44bec5f711a137688ef25c2b8f2155f"
+        },
+        {
+          "iteration": 10,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 6.815036575874042e-16,
+          "active_blades": 30,
+          "audit_sha256": "511d97ceef2885e458f5c6d0e754c72d381983b265e4a1af3ca960c6c1ef9f70",
+          "linguistic_sha256": "b0f1a73f96918a1f97b0d26ce0e234397eefc52599c53518908f0d80f1cc3e10"
+        },
+        {
+          "iteration": 11,
+          "topic": "Generating immutable SHA-256 cryptographic audit receipts",
+          "residual": 2.7294523889229606e-16,
+          "active_blades": 29,
+          "audit_sha256": "2028a9330b39be55e3c614c56148408dd0f706d738b81f630ba56f223a3b74d6",
+          "linguistic_sha256": "8a85bef77848de3d921f5ed371da80b5febaebaf5a9fd13456d17af949e47ae8"
+        },
+        {
+          "iteration": 12,
+          "topic": "Final synthesis & deterministic natural language report compilation",
+          "residual": 3.4754791566798713e-16,
+          "active_blades": 25,
+          "audit_sha256": "8a4cc04b8452a508148da82c68267c3e24b92c049b8f1be04b659054fa691fbc",
+          "linguistic_sha256": "b56afcc713b81bd6d0d78821aa06ce3a985eb199b8407b31f95984601356aadf"
+        },
+        {
+          "iteration": 13,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum entanglement",
+          "residual": 5.834723870626587e-16,
+          "active_blades": 31,
+          "audit_sha256": "b83fd95b788b3a227bf250dea61d4723c546fcbd35e70371306c25dbea12ec10",
+          "linguistic_sha256": "ad98083e154b792e5ee352d9490a3e19b2633ba46cb058c5a2c39071f7d946fe"
+        },
+        {
+          "iteration": 14,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 4.957237154389179e-16,
+          "active_blades": 30,
+          "audit_sha256": "d92633e162784d08a9da7e42d7e20bb17a6d8d0e6327a8f7ef75ea94b92fd104",
+          "linguistic_sha256": "e52019f8f8be409ab0558ebc6c79d4216b5cbd2da59ae5afc36785738587fe92"
+        },
+        {
+          "iteration": 15,
+          "topic": "Generating immutable SHA-256 cryptographic audit receipts",
+          "residual": 1.9427475580524158e-16,
+          "active_blades": 29,
+          "audit_sha256": "21eadfb1fc3b8c3e87cb18bf0c1734472c44cdb006efd5582a3d15aed0bd3e5c",
+          "linguistic_sha256": "bd481f8742c4e51767121e72b6a272cbcd92880a281ab22a2564155291440312"
+        },
+        {
+          "iteration": 16,
+          "topic": "Final synthesis & deterministic natural language report compilation",
+          "residual": 3.520099425507464e-16,
+          "active_blades": 29,
+          "audit_sha256": "25d3e1377dee7d2ab2b7ce2450ac00099182c905517ea8d11ef4ce9f9c4fa25d",
+          "linguistic_sha256": "ceee19bf7f94fec8e9e356b04bab9e1f59e5e64dbc3b1dbe13c585f96b3e7b4f"
+        },
+        {
+          "iteration": 17,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum entanglement",
+          "residual": 4.634222540217183e-16,
+          "active_blades": 31,
+          "audit_sha256": "4caa4417a6151fc3caefedd9183edaea26f69fc6124de251458257242cdc426b",
+          "linguistic_sha256": "cc27b0fee060c7578249e578f7bc19c38946061e964d379575525d60f3a2b880"
+        },
+        {
+          "iteration": 18,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 4.830729730374251e-16,
+          "active_blades": 30,
+          "audit_sha256": "624480878b2def469dbb0adb9b2a6e57c0164345da9ae9d6655e9c87331d78a0",
+          "linguistic_sha256": "7cb2921e2f40c97fe3c58556100dfa182c908291ddab120b3732ea436075a42a"
+        },
+        {
+          "iteration": 19,
+          "topic": "Generating immutable SHA-256 cryptographic audit receipts",
+          "residual": 9.041418262006067e-16,
+          "active_blades": 29,
+          "audit_sha256": "fe76adce3abbe5dcb0c8d31284f66b21b96e9911a376065dd7607e98219c0346",
+          "linguistic_sha256": "3375435047330ce200342f08efca361cf426bdc985c7b3fade18589d02dc9a28"
+        },
+        {
+          "iteration": 20,
+          "topic": "Final synthesis & deterministic natural language report compilation",
+          "residual": 1.2502434624045196e-16,
+          "active_blades": 25,
+          "audit_sha256": "ecb779fc2b7dc3d81c7ee53a3c956a16ea05bd57dc21bca0a26ad45668836511",
+          "linguistic_sha256": "5efdce41f1a33aa40dfa1c7da3b770d3859e1f6a0e1d7ffc42f5d22e817fc89e"
+        },
+        {
+          "iteration": 21,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum entanglement",
+          "residual": 9.113303862020508e-16,
+          "active_blades": 31,
+          "audit_sha256": "0cbc79946ed94bcac00f9c8bdd1e5a282c4a93ea241531be986ebbbac044a524",
+          "linguistic_sha256": "c6f9cfbaf8e0cf046b35b422027678288f29d3c9f8f0dfcde30ffc91e95743f3"
+        },
+        {
+          "iteration": 22,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 1.1455332433440404e-16,
+          "active_blades": 30,
+          "audit_sha256": "e57a686425fe75233920adb8af87fb9bc02919150fdb061e84fd1df5e48a7c96",
+          "linguistic_sha256": "9bd0369d5419ecf1a91125681af817bca2114fe44464acf3169cb6515d3c031d"
+        },
+        {
+          "iteration": 23,
+          "topic": "Generating immutable SHA-256 cryptographic audit receipts",
+          "residual": 5.803264662972541e-16,
+          "active_blades": 29,
+          "audit_sha256": "1b903b84cc2435b9508220f32747b86de48d3858c5710cb74a074d502a277511",
+          "linguistic_sha256": "17b2c71c34a00fa729551e1913040fcd95ccd71e565759fc3d263dec5dcca591"
+        },
+        {
+          "iteration": 24,
+          "topic": "Final synthesis & deterministic natural language report compilation",
+          "residual": 3.4934478095936293e-16,
+          "active_blades": 26,
+          "audit_sha256": "a218a4d5662154c69ad725d1377786f552c944ebedc094d8ab4c584ce4a2052d",
+          "linguistic_sha256": "fde87468e0d4d6477814464ff200fa8c875dcafbc2c744a1fafa00ddc6a01fb1"
+        },
+        {
+          "iteration": 25,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum entanglement",
+          "residual": 2.7884297716150986e-16,
+          "active_blades": 31,
+          "audit_sha256": "3bcbc23e11d4a538bc5eadac13c366f9517450e632a3ef463be0bab0f8e311bf",
+          "linguistic_sha256": "2e182cc47821bfd3b19a1a7f694aa76b1d12328362b32c5a01550ea5caefa612"
+        },
+        {
+          "iteration": 26,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 6.970565093520262e-16,
+          "active_blades": 31,
+          "audit_sha256": "c5262c2c90a5dfb2e543ffe0cbe3ecc7ce101c795de8fbc29a2ef122450621c0",
+          "linguistic_sha256": "411e2acd1d713adcc79e99ccdcaa613afb89f1c7305a51dc40041e445061d5cb"
+        },
+        {
+          "iteration": 27,
+          "topic": "Generating immutable SHA-256 cryptographic audit receipts",
+          "residual": 6.826292251058786e-16,
+          "active_blades": 29,
+          "audit_sha256": "c0d9d0be28dcdd830baa6455254c4142984e8dda211883450b4db37f1784fd6f",
+          "linguistic_sha256": "8a1b3989c7c94b856741caf17ef26fd484c00aee27fc81fc12b009152007901a"
+        },
+        {
+          "iteration": 28,
+          "topic": "Final synthesis & deterministic natural language report compilation",
+          "residual": 1.687360110560266e-16,
+          "active_blades": 25,
+          "audit_sha256": "11aa49f0bdc4420a1c01c901201bde3d9f7f081690f4dcfaf1305d2b77b19342",
+          "linguistic_sha256": "665d8d08a03aa4467cb45fc1ad332826256b121eb378e3ec5ce9ecbce09a9221"
+        },
+        {
+          "iteration": 29,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum entanglement",
+          "residual": 3.340575798556103e-16,
+          "active_blades": 31,
+          "audit_sha256": "3ac3aee251d8c7fe69a1d36c533d7fff885c5c8e6b288a94ee3cf058543ad527",
+          "linguistic_sha256": "dac8ff3159bab0de395b3995b11bb19cc8f132dc0bfda877fedd08bb2d297ccb"
+        },
+        {
+          "iteration": 30,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 2.6525882759454297e-16,
+          "active_blades": 30,
+          "audit_sha256": "2e7f3a5d0e343d4f1a817d5692fe2427a7b1f8083ece3fa5ed41a37c058382d9",
+          "linguistic_sha256": "15dd1d302c45bdc725d2cb9f7cea599aa442a60deea1bbefeecdc6942b992cf7"
+        },
+        {
+          "iteration": 31,
+          "topic": "Generating immutable SHA-256 cryptographic audit receipts",
+          "residual": 5.037006013668334e-16,
+          "active_blades": 29,
+          "audit_sha256": "c7f92288e675859181177d73231f1dd4bfd0d015470ad0780308538a42187220",
+          "linguistic_sha256": "03ab8b9182b132dc6649ab84618d970ced8fe963b485b2f53b80ae415a0f4ec6"
+        },
+        {
+          "iteration": 32,
+          "topic": "Final synthesis & deterministic natural language report compilation",
+          "residual": 5.740037307964851e-16,
+          "active_blades": 25,
+          "audit_sha256": "5df446c4050c89524e24a4a69549fd35950b8ffa5b569882f93da9be7c7a5b23",
+          "linguistic_sha256": "a41073fd6559080da8cac1383c79599f3ca172260ada79b1c703a8fa6616c013"
+        },
+        {
+          "iteration": 33,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum entanglement",
+          "residual": 2.545133554474465e-16,
+          "active_blades": 31,
+          "audit_sha256": "65510c0ac384d4d3f62c775896345e9a519895ad02124890a614ed38df7763a3",
+          "linguistic_sha256": "61e897d469c7e691167a90d2de6fcfc29ac9c6409d2de6f9cc81149994720793"
+        },
+        {
+          "iteration": 34,
+          "topic": "16-layer micro-reversibility verification across unified multivector state",
+          "residual": 1.972657047448598e-16,
+          "active_blades": 30,
+          "audit_sha256": "d84132d56cfdfa0ca9d49d4d34b1784dd99d878fe22d88915670a5f1b0f1cdda",
+          "linguistic_sha256": "02256a3243ec421fb2251b0f11cfcba447bfec59665dd6bba62477162d14e415"
+        },
+        {
+          "iteration": 35,
+          "topic": "Generating immutable SHA-256 cryptographic audit receipts",
+          "residual": 3.8308370168036117e-16,
+          "active_blades": 29,
+          "audit_sha256": "9f81a3ff44b1518f237ce6f4979c2f3a6c7634481a7437a39744f5777eaea15c",
+          "linguistic_sha256": "297ad7d6ad7c74897c9ad867ac4d6a5794bc8fa1343c700bdfcda59c5dea528e"
+        },
+        {
+          "iteration": 36,
+          "topic": "Final synthesis & deterministic natural language report compilation",
+          "residual": 3.587286463117312e-16,
+          "active_blades": 25,
+          "audit_sha256": "4dd8ef0b8b4fcb23d90ab10f6ef7d78800a27cb80802ff90900b48273a2a64ce",
+          "linguistic_sha256": "72c81efe2b94be2ac5e0ee48e0e99eb0fa284e4dae69805be42c17cb84dc9bf6"
+        },
+        {
+          "iteration": 37,
+          "topic": "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum entanglement",
+          "residual": 7.189628572697093e-16,
+          "active_blades": 31,
+          "audit_sha256": "1ce9740ef8d1bbe184baf11d4821304bd19e8b38aa38501d55957549bd0db735",
+          "linguistic_sha256": "e9504195cabc669f162411f240edc479c11fd38c96831ba337b34eb1bb86fce2"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "engine_version": "12.0.1-GOVERNED",
+  "domain": "Software Engineering",
+  "calculated_probability_success": 0.984,
+  "verdict": "PASS",
+  "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+  "publication_permitted": true,
+  "reconstruction_residual": 7.234997211732061e-16,
+  "grade0_scalar_s": 0.986028,
+  "calibrated_certainty_C": 0.493014,
+  "audit_sha256": "0cefe12889dcc0f848b136afca027506eb1e186f9b37c1afa2b5b6abba1ec33d",
+  "manuscript_filename": "journal_paper_daxda_98percent_execution_plan.md",
+  "manuscript_word_count": 559,
+  "manuscript_sha256": "cf6f036dfbcd05b65550cb0ef5b4bf7e4936beb50729362f467ab22058152388"
+}

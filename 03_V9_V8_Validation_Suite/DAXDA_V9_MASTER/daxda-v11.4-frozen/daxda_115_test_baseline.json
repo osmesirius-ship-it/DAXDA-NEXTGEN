@@ -1,0 +1,965 @@
+{
+  "total_cases": 115,
+  "execution_time_sec": 3.4735851287841797,
+  "global_avg_residual": 6.254173130601481e-16,
+  "global_max_residual": 1.7912287898985394e-15,
+  "domain_summaries": {
+    "Mathematics": {
+      "cases_evaluated": 23,
+      "avg_residual": 5.086538379819555e-16,
+      "max_residual": 9.234368655733467e-16,
+      "avg_active_blades": 27.304347826086957,
+      "success_rate": 100.0
+    },
+    "Software Engineering": {
+      "cases_evaluated": 23,
+      "avg_residual": 4.082661567689964e-16,
+      "max_residual": 1.7912287898985394e-15,
+      "avg_active_blades": 26.304347826086957,
+      "success_rate": 100.0
+    },
+    "Physics": {
+      "cases_evaluated": 23,
+      "avg_residual": 1.1999591403497788e-15,
+      "max_residual": 1.5755909533458816e-15,
+      "avg_active_blades": 11.0,
+      "success_rate": 100.0
+    },
+    "Logic": {
+      "cases_evaluated": 23,
+      "avg_residual": 4.954319923046643e-16,
+      "max_residual": 1.3510557847914335e-15,
+      "avg_active_blades": 29.17391304347826,
+      "success_rate": 100.0
+    },
+    "Cross-Domain": {
+      "cases_evaluated": 23,
+      "avg_residual": 5.147754378953454e-16,
+      "max_residual": 1.232785297656344e-15,
+      "avg_active_blades": 26.73913043478261,
+      "success_rate": 100.0
+    }
+  },
+  "audit_records": [
+    {
+      "case_id": 1,
+      "domain": "Mathematics",
+      "input": "Integral(x^1 * exp(x), x)",
+      "residual": 2.265309097862629e-16,
+      "active_blades": 29,
+      "sha256": "00d2469565a23f24b78169eb8608318e515c595eb4b05a050f2f35c11c19cdc8"
+    },
+    {
+      "case_id": 2,
+      "domain": "Mathematics",
+      "input": "Integral(x^2 * exp(x), x)",
+      "residual": 4.927938169387324e-16,
+      "active_blades": 30,
+      "sha256": "052f4a844ad47bc412ca23cce144ae415c774af566ffadbb671f76a917efb1b1"
+    },
+    {
+      "case_id": 3,
+      "domain": "Mathematics",
+      "input": "Integral(x^3 * exp(x), x)",
+      "residual": 5.947245792983233e-16,
+      "active_blades": 29,
+      "sha256": "5790207b36c125d1a92d7fa6b0beefe9968022ff4b3b37cbaabfceeef137afa4"
+    },
+    {
+      "case_id": 4,
+      "domain": "Mathematics",
+      "input": "Integral(x^4 * exp(x), x)",
+      "residual": 4.47888682680761e-16,
+      "active_blades": 30,
+      "sha256": "bf381b005c4178ea5d8ebccbf1bd01bcc6fa572c320cde680d601d752fa21f72"
+    },
+    {
+      "case_id": 5,
+      "domain": "Mathematics",
+      "input": "Integral(x^5 * exp(x), x)",
+      "residual": 6.214089506023415e-16,
+      "active_blades": 29,
+      "sha256": "6442e80040a6e61607216307b8af392df9999db739119b6b3d2331afa0e96cea"
+    },
+    {
+      "case_id": 6,
+      "domain": "Mathematics",
+      "input": "Derivative(sin(1*x) * cos(1*x), x)",
+      "residual": 4.833456095096785e-16,
+      "active_blades": 29,
+      "sha256": "74904322fe9e91087124187cc5db15d64f8ec0de35f8acbb7b64707e0ab8bd8b"
+    },
+    {
+      "case_id": 7,
+      "domain": "Mathematics",
+      "input": "Derivative(sin(2*x) * cos(2*x), x)",
+      "residual": 3.0306008864631476e-16,
+      "active_blades": 29,
+      "sha256": "1284eb8edea83f5513ef79fbe6a4f94f4122aa8fa3e9388da21be325c462bc16"
+    },
+    {
+      "case_id": 8,
+      "domain": "Mathematics",
+      "input": "Derivative(sin(3*x) * cos(3*x), x)",
+      "residual": 3.8447283968916567e-16,
+      "active_blades": 31,
+      "sha256": "a8b17d09184a26c88d781a3c743c71f5ea67e0b9e57728b545c699a2e750cab3"
+    },
+    {
+      "case_id": 9,
+      "domain": "Mathematics",
+      "input": "Derivative(sin(4*x) * cos(4*x), x)",
+      "residual": 6.007979847750087e-16,
+      "active_blades": 26,
+      "sha256": "b1a429790dc3dc1e9481dad882fc46c03fc40f350dd29c84b2f1584514ec2a9b"
+    },
+    {
+      "case_id": 10,
+      "domain": "Mathematics",
+      "input": "Derivative(sin(5*x) * cos(5*x), x)",
+      "residual": 9.215717397868703e-16,
+      "active_blades": 29,
+      "sha256": "26f32c86c0be860ffb5cb42205346b67023e31fc232e8cb2207595ce4314eb2c"
+    },
+    {
+      "case_id": 11,
+      "domain": "Mathematics",
+      "input": "Matrix Eigenvalues Det(A - lambda*I) for A_2x2 manifold",
+      "residual": 3.9979862685527356e-16,
+      "active_blades": 26,
+      "sha256": "8890ae51380ebb9573f788f33bb0d37a0af576f36921d1a523bb1bfcfa1ec458"
+    },
+    {
+      "case_id": 12,
+      "domain": "Mathematics",
+      "input": "Matrix Eigenvalues Det(A - lambda*I) for A_3x3 manifold",
+      "residual": 9.234368655733467e-16,
+      "active_blades": 25,
+      "sha256": "29bd32569433ad2bde55cfb865d1435c1d4e0b0457df46ca76c556c6ebf7335a"
+    },
+    {
+      "case_id": 13,
+      "domain": "Mathematics",
+      "input": "Matrix Eigenvalues Det(A - lambda*I) for A_4x4 manifold",
+      "residual": 6.334241146880948e-16,
+      "active_blades": 25,
+      "sha256": "682436d91b8f5296c3b37c1b78e164a7f11c11f0965f98f59e80a7263f851c97"
+    },
+    {
+      "case_id": 14,
+      "domain": "Mathematics",
+      "input": "Matrix Eigenvalues Det(A - lambda*I) for A_5x5 manifold",
+      "residual": 3.1186176655148965e-16,
+      "active_blades": 25,
+      "sha256": "4176c4a9c5f96e1cd2900c3feb3759dc349503b0895fb13b9d7e7a8a8ba291a7"
+    },
+    {
+      "case_id": 15,
+      "domain": "Mathematics",
+      "input": "Matrix Eigenvalues Det(A - lambda*I) for A_6x6 manifold",
+      "residual": 4.575448171576907e-16,
+      "active_blades": 25,
+      "sha256": "87d30ed89d857de4a3f30fb5955db71b3afdb81864d11da69ffd9e5f8453e500"
+    },
+    {
+      "case_id": 16,
+      "domain": "Mathematics",
+      "input": "Non-linear PDE u_t + u*u_x = nu*u_xx Burgers equation order ...",
+      "residual": 6.809569621790546e-16,
+      "active_blades": 26,
+      "sha256": "fa8c10d6ec7a8c5ecef004fc4e22a53430cc9165d8d24340e1d657d266856383"
+    },
+    {
+      "case_id": 17,
+      "domain": "Mathematics",
+      "input": "Non-linear PDE u_t + u*u_x = nu*u_xx Burgers equation order ...",
+      "residual": 6.642378860306973e-16,
+      "active_blades": 27,
+      "sha256": "c58f097a1c68932d17d90196cebdc8518c7e2526e667e9c965a2f72d219a253e"
+    },
+    {
+      "case_id": 18,
+      "domain": "Mathematics",
+      "input": "Non-linear PDE u_t + u*u_x = nu*u_xx Burgers equation order ...",
+      "residual": 6.27814818583922e-16,
+      "active_blades": 26,
+      "sha256": "1b40389388efb34e1532b74c86db83e87f792f304cd90a1f8f9fa02ea8fd8304"
+    },
+    {
+      "case_id": 19,
+      "domain": "Mathematics",
+      "input": "Non-linear PDE u_t + u*u_x = nu*u_xx Burgers equation order ...",
+      "residual": 2.324119418561235e-16,
+      "active_blades": 27,
+      "sha256": "789e19c0307e8c756875aaa84f921e40a193f374080d5337fa8f32f44683d029"
+    },
+    {
+      "case_id": 20,
+      "domain": "Mathematics",
+      "input": "Non-linear PDE u_t + u*u_x = nu*u_xx Burgers equation order ...",
+      "residual": 9.08747661660417e-16,
+      "active_blades": 26,
+      "sha256": "3487450a9c20d0fd5df388db5c5e9371f8a3ff608922116b916b23f784f5fcc1"
+    },
+    {
+      "case_id": 21,
+      "domain": "Mathematics",
+      "input": "Non-linear PDE u_t + u*u_x = nu*u_xx Burgers equation order ...",
+      "residual": 2.0509352664432248e-16,
+      "active_blades": 26,
+      "sha256": "a2b088514befbe31dfbbbd7e7e28be751b16bf3a52cc0888379c613920c244ac"
+    },
+    {
+      "case_id": 22,
+      "domain": "Mathematics",
+      "input": "Non-linear PDE u_t + u*u_x = nu*u_xx Burgers equation order ...",
+      "residual": 3.0687969266133746e-16,
+      "active_blades": 26,
+      "sha256": "a008807fa492dcf24989f4774771bb6959a26f85cfabfc74d403ace2bc4b715d"
+    },
+    {
+      "case_id": 23,
+      "domain": "Mathematics",
+      "input": "Non-linear PDE u_t + u*u_x = nu*u_xx Burgers equation order ...",
+      "residual": 2.7023439142974773e-16,
+      "active_blades": 27,
+      "sha256": "eac8112e73067b070faeefe926a59f38bc024f6b131879e11156f7ded96c3326"
+    },
+    {
+      "case_id": 24,
+      "domain": "Software Engineering",
+      "input": "def algorithm_1(data): return [x for x in data if x % 1 == 0...",
+      "residual": 1.8623416774874878e-16,
+      "active_blades": 26,
+      "sha256": "6297b8e21ca2bec067fb2a09a8678a7867de877ad528eed6ac5e339510d9558d"
+    },
+    {
+      "case_id": 25,
+      "domain": "Software Engineering",
+      "input": "def algorithm_2(data): return [x for x in data if x % 2 == 0...",
+      "residual": 3.2931949952218703e-16,
+      "active_blades": 26,
+      "sha256": "6b19fe1de140de988707575ac97f592cd1eb7fa4f4c2eb5bb81dc0146120aa7c"
+    },
+    {
+      "case_id": 26,
+      "domain": "Software Engineering",
+      "input": "def algorithm_3(data): return [x for x in data if x % 3 == 0...",
+      "residual": 1.9942449754274906e-16,
+      "active_blades": 26,
+      "sha256": "81b8512a1309d1f0d19014cec034afa3a71fd91b72d32ea1ff727866fedabf0d"
+    },
+    {
+      "case_id": 27,
+      "domain": "Software Engineering",
+      "input": "def algorithm_4(data): return [x for x in data if x % 4 == 0...",
+      "residual": 2.7492873303212025e-16,
+      "active_blades": 26,
+      "sha256": "f0536309899624e551776b194c79e71c6b3cfce83842e3c190109c511141546a"
+    },
+    {
+      "case_id": 28,
+      "domain": "Software Engineering",
+      "input": "def algorithm_5(data): return [x for x in data if x % 5 == 0...",
+      "residual": 5.213847120426759e-16,
+      "active_blades": 26,
+      "sha256": "6ce3bb075a2ca5f01f667e7378f01129b566a8f4c99c8e8ca0d22a249008d803"
+    },
+    {
+      "case_id": 29,
+      "domain": "Software Engineering",
+      "input": "async def pipeline_1(stream): await process_node_1(stream.re...",
+      "residual": 1.7912287898985394e-15,
+      "active_blades": 19,
+      "sha256": "81cc44b8ac1976443f34ec919d9bc69806113c2514ec0a357581b18653b6dd81"
+    },
+    {
+      "case_id": 30,
+      "domain": "Software Engineering",
+      "input": "async def pipeline_2(stream): await process_node_2(stream.re...",
+      "residual": 3.777164183773815e-16,
+      "active_blades": 25,
+      "sha256": "0852ec1f837ab60ff18c280cbd487b3c5186447eab77299899350a666dd1413d"
+    },
+    {
+      "case_id": 31,
+      "domain": "Software Engineering",
+      "input": "async def pipeline_3(stream): await process_node_3(stream.re...",
+      "residual": 2.3263798273129243e-16,
+      "active_blades": 20,
+      "sha256": "00fb8c6f52c5c889d52e699c5c04d88a2e205448c5df084b63bb9a721f3e6a33"
+    },
+    {
+      "case_id": 32,
+      "domain": "Software Engineering",
+      "input": "async def pipeline_4(stream): await process_node_4(stream.re...",
+      "residual": 1.8853079833620213e-16,
+      "active_blades": 19,
+      "sha256": "4ab87acb4c9993d3968fc8d7e8cf7afdc154c78d04d9a3b86269cd03ad913ffa"
+    },
+    {
+      "case_id": 33,
+      "domain": "Software Engineering",
+      "input": "async def pipeline_5(stream): await process_node_5(stream.re...",
+      "residual": 6.775743995168936e-16,
+      "active_blades": 25,
+      "sha256": "722d5d76720a766b64994887f73e0a24231443e4b15963132e5f8ade03d64fd5"
+    },
+    {
+      "case_id": 34,
+      "domain": "Software Engineering",
+      "input": "class TreeGraphNode_1: def __init__(self): self.children = [...",
+      "residual": 2.3669577005326207e-16,
+      "active_blades": 25,
+      "sha256": "b32a0649fcbd73a5cd8a00a2bc34351221ef55b011023942eea131f15fc75495"
+    },
+    {
+      "case_id": 35,
+      "domain": "Software Engineering",
+      "input": "class TreeGraphNode_2: def __init__(self): self.children = [...",
+      "residual": 4.795116895429514e-16,
+      "active_blades": 26,
+      "sha256": "7b1564d5feb52b223dd61bf92dfe98e02803a76c882dbafd8df932c1f35a3a3b"
+    },
+    {
+      "case_id": 36,
+      "domain": "Software Engineering",
+      "input": "class TreeGraphNode_3: def __init__(self): self.children = [...",
+      "residual": 5.744712332843599e-16,
+      "active_blades": 25,
+      "sha256": "60e44341c07855e575584c7ac006a6d867283bd2145175e4e86bd0422600c315"
+    },
+    {
+      "case_id": 37,
+      "domain": "Software Engineering",
+      "input": "class TreeGraphNode_4: def __init__(self): self.children = [...",
+      "residual": 2.6072978539102167e-16,
+      "active_blades": 26,
+      "sha256": "df6ad8fb86d5b29f4ca123fb7109d5020a33cec27939e6e52cf2fc2e7bb918d9"
+    },
+    {
+      "case_id": 38,
+      "domain": "Software Engineering",
+      "input": "class TreeGraphNode_5: def __init__(self): self.children = [...",
+      "residual": 1.8827541284761347e-16,
+      "active_blades": 25,
+      "sha256": "b31acae9fb988d8d0658f23755c1a87fc05ade3e6c46323613959d6c97689826"
+    },
+    {
+      "case_id": 39,
+      "domain": "Software Engineering",
+      "input": "def dynamic_prog_1(n): dp = [0]*n; return dp[n-1]",
+      "residual": 2.860217033617568e-16,
+      "active_blades": 30,
+      "sha256": "b14b3eb4859557532c686da9dab28d34e9a822b4a117799a9dc19562afd69190"
+    },
+    {
+      "case_id": 40,
+      "domain": "Software Engineering",
+      "input": "def dynamic_prog_2(n): dp = [0]*n; return dp[n-1]",
+      "residual": 3.667001151740256e-16,
+      "active_blades": 30,
+      "sha256": "a4ed95d0c67bcf70469930a413a5eba77ca30958fdb72235bd8f8206e6d26054"
+    },
+    {
+      "case_id": 41,
+      "domain": "Software Engineering",
+      "input": "def dynamic_prog_3(n): dp = [0]*n; return dp[n-1]",
+      "residual": 1.7920204945220647e-16,
+      "active_blades": 30,
+      "sha256": "e9d866c3029a2e1a2df02a7c81eddb6ea5102a749d59e949654783e8d71a1971"
+    },
+    {
+      "case_id": 42,
+      "domain": "Software Engineering",
+      "input": "def dynamic_prog_4(n): dp = [0]*n; return dp[n-1]",
+      "residual": 4.779783020001587e-16,
+      "active_blades": 30,
+      "sha256": "d07de47af055944121aada7553ea7101cc32ee65d0a20ea73671ffebff1d6873"
+    },
+    {
+      "case_id": 43,
+      "domain": "Software Engineering",
+      "input": "def dynamic_prog_5(n): dp = [0]*n; return dp[n-1]",
+      "residual": 5.760218163434022e-16,
+      "active_blades": 30,
+      "sha256": "d2fe455605288449fe11e0386cd567e7fb41ca7e92e18190c3d987faedade438"
+    },
+    {
+      "case_id": 44,
+      "domain": "Software Engineering",
+      "input": "def dynamic_prog_6(n): dp = [0]*n; return dp[n-1]",
+      "residual": 2.348110441281274e-16,
+      "active_blades": 30,
+      "sha256": "5cdf23d43d86615ea2bc877b7dfb1643375de350c4d5bf66037bebde92c4da1b"
+    },
+    {
+      "case_id": 45,
+      "domain": "Software Engineering",
+      "input": "def dynamic_prog_7(n): dp = [0]*n; return dp[n-1]",
+      "residual": 4.611931074661404e-16,
+      "active_blades": 30,
+      "sha256": "88da7fd7c05d150c101506c6b56d207a08fa329a6fb2b4d2d1fc78ba3425330b"
+    },
+    {
+      "case_id": 46,
+      "domain": "Software Engineering",
+      "input": "def dynamic_prog_8(n): dp = [0]*n; return dp[n-1]",
+      "residual": 2.8952957789310065e-16,
+      "active_blades": 30,
+      "sha256": "17ce58782aab3c3d94d61498d1ef931ecdcace8ba1da8480d4384eb962a3f5da"
+    },
+    {
+      "case_id": 47,
+      "domain": "Physics",
+      "input": "{'mass': 1.5, 'x': 5.4, 'y': 8.41, 'z': 0.5, 'vx': 1.68, 'vy...",
+      "residual": 9.781186486044962e-16,
+      "active_blades": 11,
+      "sha256": "94ca88c333672d82426bfaf633c503b7a9c4eabfa5b4d721dfe3238b93af0e96"
+    },
+    {
+      "case_id": 48,
+      "domain": "Physics",
+      "input": "{'mass': 2.0, 'x': -4.16, 'y': 9.09, 'z': 1.0, 'vx': 1.82, '...",
+      "residual": 1.3008380185008864e-15,
+      "active_blades": 11,
+      "sha256": "8100a49e53733a117c96e3acf55547bd0b43470b87c78c168ce6ea87b89bc090"
+    },
+    {
+      "case_id": 49,
+      "domain": "Physics",
+      "input": "{'mass': 2.5, 'x': -9.9, 'y': 1.41, 'z': 1.5, 'vx': 0.28, 'v...",
+      "residual": 1.3132082089962518e-15,
+      "active_blades": 11,
+      "sha256": "702a5f2c47fe4413511130616ce8f0f759bd2f64fd74ec6db2353d03a846a885"
+    },
+    {
+      "case_id": 50,
+      "domain": "Physics",
+      "input": "{'mass': 3.0, 'x': -6.54, 'y': -7.57, 'z': 2.0, 'vx': -1.51,...",
+      "residual": 1.1018779210099278e-15,
+      "active_blades": 11,
+      "sha256": "b45f20c609978f521eddb1e1839ff1c10204dbb6eb2e2b9a14fcbfb0eb5bf285"
+    },
+    {
+      "case_id": 51,
+      "domain": "Physics",
+      "input": "{'mass': 3.5, 'x': 2.84, 'y': -9.59, 'z': 2.5, 'vx': -1.92, ...",
+      "residual": 1.0230917394154976e-15,
+      "active_blades": 11,
+      "sha256": "e343dd50704011b0b8495c57c211f91bd53526764dce3679ae5d3c55d5364cfb"
+    },
+    {
+      "case_id": 52,
+      "domain": "Physics",
+      "input": "{'mass': 4.0, 'x': 9.6, 'y': -2.79, 'z': 3.0, 'vx': -0.56, '...",
+      "residual": 1.1247176539631771e-15,
+      "active_blades": 11,
+      "sha256": "666dbb4718b44006d35c88aed892a1fac51a654964f6bb3503f9685d0c167b89"
+    },
+    {
+      "case_id": 53,
+      "domain": "Physics",
+      "input": "{'mass': 4.5, 'x': 7.54, 'y': 6.57, 'z': 3.5, 'vx': 1.31, 'v...",
+      "residual": 1.3401462109278369e-15,
+      "active_blades": 11,
+      "sha256": "44b394de9927f0bc457df1df7034aa5ff0b46015d1788a1bd42707f91b625258"
+    },
+    {
+      "case_id": 54,
+      "domain": "Physics",
+      "input": "{'mass': 5.0, 'x': -1.46, 'y': 9.89, 'z': 4.0, 'vx': 1.98, '...",
+      "residual": 1.5474404537717943e-15,
+      "active_blades": 11,
+      "sha256": "549ee3accaf632d8b5a3dac4a354f1805c92b29cdd4b8f7e01f112c6cfc12dfa"
+    },
+    {
+      "case_id": 55,
+      "domain": "Physics",
+      "input": "{'mass': 5.5, 'x': -9.11, 'y': 4.12, 'z': 4.5, 'vx': 0.82, '...",
+      "residual": 1.109019369813462e-15,
+      "active_blades": 11,
+      "sha256": "905b86e7d359c3ee638571127eca18ee84c5e760d1128652975c5f018de8d70a"
+    },
+    {
+      "case_id": 56,
+      "domain": "Physics",
+      "input": "{'mass': 6.0, 'x': -8.39, 'y': -5.44, 'z': 5.0, 'vx': -1.09,...",
+      "residual": 1.427379386395234e-15,
+      "active_blades": 11,
+      "sha256": "a9c56981dbc3d69475a7328601b0b32f403aab13a4c468e2913f8c687ff16d88"
+    },
+    {
+      "case_id": 57,
+      "domain": "Physics",
+      "input": "{'mass': 6.5, 'x': 0.04, 'y': -10.0, 'z': 5.5, 'vx': -2.0, '...",
+      "residual": 8.509300355731543e-16,
+      "active_blades": 11,
+      "sha256": "b7f7a90528f65b0125579711cc0deff1f4e52874492ce715c33c87a503d62aed"
+    },
+    {
+      "case_id": 58,
+      "domain": "Physics",
+      "input": "{'mass': 7.0, 'x': 8.44, 'y': -5.37, 'z': 6.0, 'vx': -1.07, ...",
+      "residual": 1.1844251069734625e-15,
+      "active_blades": 11,
+      "sha256": "00bc652d5aed96c2a5a21c467e557594835280a03def3ca479c87ce1a847f1e9"
+    },
+    {
+      "case_id": 59,
+      "domain": "Physics",
+      "input": "{'mass': 7.5, 'x': 9.07, 'y': 4.2, 'z': 6.5, 'vx': 0.84, 'vy...",
+      "residual": 1.1078314611550707e-15,
+      "active_blades": 11,
+      "sha256": "288c3e86bf68e8ffbf8c3c1fc78afa0466bf1f9eec6276305de45c4f5fee730c"
+    },
+    {
+      "case_id": 60,
+      "domain": "Physics",
+      "input": "{'mass': 8.0, 'x': 1.37, 'y': 9.91, 'z': 7.0, 'vx': 1.98, 'v...",
+      "residual": 1.3372945391711786e-15,
+      "active_blades": 11,
+      "sha256": "0c9ade7006ca98cb3f4bfb9c181445d973e6bc14dddf0d9ad9ff4d41c975af06"
+    },
+    {
+      "case_id": 61,
+      "domain": "Physics",
+      "input": "{'mass': 8.5, 'x': -7.6, 'y': 6.5, 'z': 7.5, 'vx': 1.3, 'vy'...",
+      "residual": 9.681005281503417e-16,
+      "active_blades": 11,
+      "sha256": "ee933ff85121e5fc232041a5ce76a25a909d2ece49a39fafaf04089ab66ade73"
+    },
+    {
+      "case_id": 62,
+      "domain": "Physics",
+      "input": "{'mass': 9.0, 'x': -9.58, 'y': -2.88, 'z': 8.0, 'vx': -0.58,...",
+      "residual": 7.081182472346672e-16,
+      "active_blades": 11,
+      "sha256": "60c038c3c9e6f7056c48f23c64471311fa83880f1fcc9d299751171c5079313e"
+    },
+    {
+      "case_id": 63,
+      "domain": "Physics",
+      "input": "{'mass': 9.5, 'x': -2.75, 'y': -9.61, 'z': 8.5, 'vx': -1.92,...",
+      "residual": 1.2722495462674644e-15,
+      "active_blades": 11,
+      "sha256": "767b011054fdcdbbaead5193615644cdaa8ff690a271181e5f7ad3d0c6c23545"
+    },
+    {
+      "case_id": 64,
+      "domain": "Physics",
+      "input": "{'mass': 10.0, 'x': 6.6, 'y': -7.51, 'z': 9.0, 'vx': -1.5, '...",
+      "residual": 1.3886129544552842e-15,
+      "active_blades": 11,
+      "sha256": "2a1aba63276f773703f84942fe815163e814b2e3bb9c537f0bebca47af8ba29a"
+    },
+    {
+      "case_id": 65,
+      "domain": "Physics",
+      "input": "{'mass': 10.5, 'x': 9.89, 'y': 1.5, 'z': 9.5, 'vx': 0.3, 'vy...",
+      "residual": 1.272843512740451e-15,
+      "active_blades": 11,
+      "sha256": "0f6da0bd09923de74fc7692e6084b51b18540f45b46042f2e7bfd402548d134b"
+    },
+    {
+      "case_id": 66,
+      "domain": "Physics",
+      "input": "{'mass': 11.0, 'x': 4.08, 'y': 9.13, 'z': 10.0, 'vx': 1.83, ...",
+      "residual": 1.0874039914148492e-15,
+      "active_blades": 11,
+      "sha256": "b423800da018965f6da11fe6aa7e21c9ebaff0d6f7a4e244f163bf22d93adf40"
+    },
+    {
+      "case_id": 67,
+      "domain": "Physics",
+      "input": "{'mass': 11.5, 'x': -5.48, 'y': 8.37, 'z': 10.5, 'vx': 1.67,...",
+      "residual": 1.241586635254046e-15,
+      "active_blades": 11,
+      "sha256": "77d628e03461999c8231544ff9a077530933fa80b40c6a064cd28ae956ee66ac"
+    },
+    {
+      "case_id": 68,
+      "domain": "Physics",
+      "input": "{'mass': 12.0, 'x': -10.0, 'y': -0.09, 'z': 11.0, 'vx': -0.0...",
+      "residual": 1.3382351049104936e-15,
+      "active_blades": 11,
+      "sha256": "240467e61042fa2b55459f97d31d9b6e51fbff69cfaa8950e535dada1e86365f"
+    },
+    {
+      "case_id": 69,
+      "domain": "Physics",
+      "input": "{'mass': 12.5, 'x': -5.33, 'y': -8.46, 'z': 11.5, 'vx': -1.6...",
+      "residual": 1.5755909533458816e-15,
+      "active_blades": 11,
+      "sha256": "3237f332050b4d8a1c0406636ba08c2d0d55fa535b63c8c4b6cfb0b0ae71d526"
+    },
+    {
+      "case_id": 70,
+      "domain": "Logic",
+      "input": "Paradox System P_1: 'Statement P_1 is false if e_2 * e_3 != ...",
+      "residual": 1.3510557847914335e-15,
+      "active_blades": 30,
+      "sha256": "8b229ce8afa966c4668c160a6933b7cdfbd548d524f6cf9c94a9e8447e130643"
+    },
+    {
+      "case_id": 71,
+      "domain": "Logic",
+      "input": "Paradox System P_2: 'Statement P_2 is false if e_3 * e_4 != ...",
+      "residual": 8.097388805522125e-16,
+      "active_blades": 30,
+      "sha256": "fb62d2da90204404f79f7398841ba9daa43dbfd5076998dfb21a5543a3c38ef5"
+    },
+    {
+      "case_id": 72,
+      "domain": "Logic",
+      "input": "Paradox System P_3: 'Statement P_3 is false if e_4 * e_1 != ...",
+      "residual": 5.661468413500828e-16,
+      "active_blades": 30,
+      "sha256": "c12d452c5d5d62191a3a6dad14dbf65805cb1b2dcc280665391cfdc3a1d8f4ab"
+    },
+    {
+      "case_id": 73,
+      "domain": "Logic",
+      "input": "Paradox System P_4: 'Statement P_4 is false if e_1 * e_2 != ...",
+      "residual": 3.7411887282043166e-16,
+      "active_blades": 26,
+      "sha256": "b1b24dc48dea60c1ace6e75b1b7f3940ab84f2d007835b147861181207daee9c"
+    },
+    {
+      "case_id": 74,
+      "domain": "Logic",
+      "input": "Paradox System P_5: 'Statement P_5 is false if e_2 * e_3 != ...",
+      "residual": 2.4839774556163146e-16,
+      "active_blades": 30,
+      "sha256": "350c7c0cfb4095892cf85c1946d130c50a7b9ee172b68de09a4042a834ee35f7"
+    },
+    {
+      "case_id": 75,
+      "domain": "Logic",
+      "input": "Paradox System P_6: 'Statement P_6 is false if e_3 * e_4 != ...",
+      "residual": 1.8703146234441039e-16,
+      "active_blades": 29,
+      "sha256": "33b3310ae5ec801a67e11fe1170d45a29b496e9359c657c805ae0da37aa180f5"
+    },
+    {
+      "case_id": 76,
+      "domain": "Logic",
+      "input": "Paradox System P_7: 'Statement P_7 is false if e_4 * e_1 != ...",
+      "residual": 1.962176710190941e-16,
+      "active_blades": 30,
+      "sha256": "14f5882dab799f4cafa3748081e12483e21687f1b451b074e0eb1575da422d8c"
+    },
+    {
+      "case_id": 77,
+      "domain": "Logic",
+      "input": "Paradox System P_8: 'Statement P_8 is false if e_1 * e_2 != ...",
+      "residual": 3.6740055691708126e-16,
+      "active_blades": 26,
+      "sha256": "393f6f350f0a3ee89c85acc183102ae798825839bad8ca9444c20cd09a501492"
+    },
+    {
+      "case_id": 78,
+      "domain": "Logic",
+      "input": "Paradox System P_9: 'Statement P_9 is false if e_2 * e_3 != ...",
+      "residual": 4.636771714242922e-16,
+      "active_blades": 30,
+      "sha256": "17e815e7c5429c040f031345d2884df43b0ef173fb31bb957e5450bf02ff0d4a"
+    },
+    {
+      "case_id": 79,
+      "domain": "Logic",
+      "input": "Paradox System P_10: 'Statement P_10 is false if e_3 * e_4 !...",
+      "residual": 5.806582778281968e-16,
+      "active_blades": 29,
+      "sha256": "603ac1b34fedba3b53cdeb0bf10901aebb2595396d009288e37576fd528ff4cb"
+    },
+    {
+      "case_id": 80,
+      "domain": "Logic",
+      "input": "Paradox System P_11: 'Statement P_11 is false if e_4 * e_1 !...",
+      "residual": 1.7998397262606603e-16,
+      "active_blades": 30,
+      "sha256": "f3b7f650cd147b1d24a7149cab2eddb79b02f7440483f49f79c8de7e72269442"
+    },
+    {
+      "case_id": 81,
+      "domain": "Logic",
+      "input": "Paradox System P_12: 'Statement P_12 is false if e_1 * e_2 !...",
+      "residual": 1.0171149837544602e-15,
+      "active_blades": 30,
+      "sha256": "c377d86c490f26e93ee67f1d869440941872d8c34533e7d7b8e8fcc945fde1c9"
+    },
+    {
+      "case_id": 82,
+      "domain": "Logic",
+      "input": "Paradox System P_13: 'Statement P_13 is false if e_2 * e_3 !...",
+      "residual": 2.0252403055140344e-16,
+      "active_blades": 31,
+      "sha256": "bac74e321437226f43273431377c42ba84bef675c79c574f93dc79d3b3adc248"
+    },
+    {
+      "case_id": 83,
+      "domain": "Logic",
+      "input": "Paradox System P_14: 'Statement P_14 is false if e_3 * e_4 !...",
+      "residual": 1.13022134731072e-15,
+      "active_blades": 29,
+      "sha256": "2e6da6f0e02d5d392f9160ff9117ac7977e1d1c407dbfbaba69a908a2c35c216"
+    },
+    {
+      "case_id": 84,
+      "domain": "Logic",
+      "input": "Paradox System P_15: 'Statement P_15 is false if e_4 * e_1 !...",
+      "residual": 2.863922209712747e-16,
+      "active_blades": 30,
+      "sha256": "d4b1a208f09344ca9a3e5be8df74b6b93b9251684fd48cb77f8aa83a464b1f52"
+    },
+    {
+      "case_id": 85,
+      "domain": "Logic",
+      "input": "Paradox System P_16: 'Statement P_16 is false if e_1 * e_2 !...",
+      "residual": 2.035409389839304e-16,
+      "active_blades": 26,
+      "sha256": "0f6b108140ae02d46909dafe3127654c05221784d97196016a1e2c1b3d4d6b69"
+    },
+    {
+      "case_id": 86,
+      "domain": "Logic",
+      "input": "Paradox System P_17: 'Statement P_17 is false if e_2 * e_3 !...",
+      "residual": 2.528976127509976e-16,
+      "active_blades": 30,
+      "sha256": "52e64aa576e029c91472dc2ec25db703f41b85e17e17940718303c7e55b919ef"
+    },
+    {
+      "case_id": 87,
+      "domain": "Logic",
+      "input": "Paradox System P_18: 'Statement P_18 is false if e_3 * e_4 !...",
+      "residual": 2.605036618397422e-16,
+      "active_blades": 29,
+      "sha256": "b939bf9a9c3ff9b8a13b86c017ee0f586ad173f49c38b4ab7f474490894fb832"
+    },
+    {
+      "case_id": 88,
+      "domain": "Logic",
+      "input": "Paradox System P_19: 'Statement P_19 is false if e_4 * e_1 !...",
+      "residual": 4.657692413240509e-16,
+      "active_blades": 30,
+      "sha256": "5484bb2d2b2c13886a2e2ac970f94ad4efb52f22fc253dc39b96b91d795dbac7"
+    },
+    {
+      "case_id": 89,
+      "domain": "Logic",
+      "input": "Paradox System P_20: 'Statement P_20 is false if e_1 * e_2 !...",
+      "residual": 8.082272919565028e-16,
+      "active_blades": 26,
+      "sha256": "218098f2de0a105a40dd6e2e7d2682c41071cad0eacd146819a49e52cd253baf"
+    },
+    {
+      "case_id": 90,
+      "domain": "Logic",
+      "input": "Paradox System P_21: 'Statement P_21 is false if e_2 * e_3 !...",
+      "residual": 8.260561320715275e-16,
+      "active_blades": 30,
+      "sha256": "03c97aacf6f0ccfc7e510d9bb027a7ef44343db5937e45844b3da5810e8c9427"
+    },
+    {
+      "case_id": 91,
+      "domain": "Logic",
+      "input": "Paradox System P_22: 'Statement P_22 is false if e_3 * e_4 !...",
+      "residual": 1.4046768283788995e-16,
+      "active_blades": 29,
+      "sha256": "53fd9d0b9fa0ed9520801ee7cd1b946b2be9132a4e201a9fddc822e4531406d9"
+    },
+    {
+      "case_id": 92,
+      "domain": "Logic",
+      "input": "Paradox System P_23: 'Statement P_23 is false if e_4 * e_1 !...",
+      "residual": 4.767934414198446e-16,
+      "active_blades": 31,
+      "sha256": "83a442decb7af92f6229d9afcee0e7dfa86c7c4fd8af9b9cb4c6e3e109d246b0"
+    },
+    {
+      "case_id": 93,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 1: Map execution call stack depth 1 to 4D v...",
+      "residual": 6.944318192291764e-16,
+      "active_blades": 25,
+      "sha256": "bef8e76b19ebd00482d4578e7cdbb55e18025a86dad89041ed47529863b6b3d8"
+    },
+    {
+      "case_id": 94,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 2: Map execution call stack depth 2 to 4D v...",
+      "residual": 2.8056505551584004e-16,
+      "active_blades": 30,
+      "sha256": "a7a352a170e632b93c0fea9144ca1f010399029418a0f95950d0b8e6b459dc29"
+    },
+    {
+      "case_id": 95,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 3: Map execution call stack depth 3 to 4D v...",
+      "residual": 3.4880456420749785e-16,
+      "active_blades": 26,
+      "sha256": "d4e70cc640da7e153f5092c33eeb34f9ab8219f3e11aa63bf80cc36ab80dc1be"
+    },
+    {
+      "case_id": 96,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 4: Map execution call stack depth 4 to 4D v...",
+      "residual": 3.783987484798377e-16,
+      "active_blades": 30,
+      "sha256": "c3cf2555e7df2edfb891fa6c5d9a11496a9c960985e6e0d9a243692f1630d141"
+    },
+    {
+      "case_id": 97,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 5: Map execution call stack depth 5 to 4D v...",
+      "residual": 1.7159917896318807e-16,
+      "active_blades": 29,
+      "sha256": "cb794e64657c223877bd4a7e66cf0991decb0a282abaacc228f57aad493eb631"
+    },
+    {
+      "case_id": 98,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 6: Map execution call stack depth 6 to 4D v...",
+      "residual": 1.232785297656344e-15,
+      "active_blades": 25,
+      "sha256": "3e0f5b20b4e58b9501ea4bcb8bba622d7e81cbcc4aadbaa99f0cc05c05ea5fab"
+    },
+    {
+      "case_id": 99,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 7: Map execution call stack depth 7 to 4D v...",
+      "residual": 5.706022267769864e-16,
+      "active_blades": 25,
+      "sha256": "de235c8a2b1d3ad6243020dbd9bc8d592ce4a4daf4bd8ae38d4460c601ae7136"
+    },
+    {
+      "case_id": 100,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 8: Map execution call stack depth 8 to 4D v...",
+      "residual": 5.741540557565443e-16,
+      "active_blades": 25,
+      "sha256": "ab411cac4439dddf1d0039455f7ffa3b4d5e31017739d0645dd27ba3ee3d01e5"
+    },
+    {
+      "case_id": 101,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 9: Map execution call stack depth 9 to 4D v...",
+      "residual": 1.025055268385734e-15,
+      "active_blades": 25,
+      "sha256": "f24fa14ea7f45d32ff06258ab5c6f8e93871069907c5af5654ae978b477efdd4"
+    },
+    {
+      "case_id": 102,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 10: Map execution call stack depth 10 to 4D...",
+      "residual": 7.960077158810748e-16,
+      "active_blades": 25,
+      "sha256": "aa164110829c4b05a2ee79bd5a56bcfc6ed9529a0aca4d82e55f4a1e1bb763a7"
+    },
+    {
+      "case_id": 103,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 11: Map execution call stack depth 11 to 4D...",
+      "residual": 2.909795264361716e-16,
+      "active_blades": 25,
+      "sha256": "45336b207e3089a96f1482d4e5140432745d1b83131ce2304ac5a8cd6283899c"
+    },
+    {
+      "case_id": 104,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 12: Map execution call stack depth 12 to 4D...",
+      "residual": 5.770685534851447e-16,
+      "active_blades": 29,
+      "sha256": "8da5d6e0e35595e6f90e09c72adc09c62c6b95036ba3e4e4322152c359863323"
+    },
+    {
+      "case_id": 105,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 13: Map execution call stack depth 13 to 4D...",
+      "residual": 3.261772187872325e-16,
+      "active_blades": 25,
+      "sha256": "4860a64539ae3c0a87963a55a1684b8cdae56e310422bd5cd04f19bfbe960bac"
+    },
+    {
+      "case_id": 106,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 14: Map execution call stack depth 14 to 4D...",
+      "residual": 2.7160713418112827e-16,
+      "active_blades": 25,
+      "sha256": "2082eeebcb6ea34706338b9c21f7aab8567755b5586e696a9ef6065eeeecd6b7"
+    },
+    {
+      "case_id": 107,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 15: Map execution call stack depth 15 to 4D...",
+      "residual": 4.8286669501871385e-16,
+      "active_blades": 25,
+      "sha256": "08b0bbafb2b298bf158c185b5e6f2a84b3fcea4a1478dea364d6a714752ba438"
+    },
+    {
+      "case_id": 108,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 16: Map execution call stack depth 16 to 4D...",
+      "residual": 2.4967035113516045e-16,
+      "active_blades": 29,
+      "sha256": "16de1f6479078adb6f69f3491ffa841c563de2f07234d2c66391329956e5bbda"
+    },
+    {
+      "case_id": 109,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 17: Map execution call stack depth 17 to 4D...",
+      "residual": 1.3050268292843663e-16,
+      "active_blades": 30,
+      "sha256": "9974e6acb9d8c947bc5a4b1198f5ea34ba3fdadc6ae69e8440b982e67a3a5b5e"
+    },
+    {
+      "case_id": 110,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 18: Map execution call stack depth 18 to 4D...",
+      "residual": 6.887558272152715e-16,
+      "active_blades": 26,
+      "sha256": "5980558af225b57fc5d309f813b223247f7827a0f3205d6626fbf231582fe51b"
+    },
+    {
+      "case_id": 111,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 19: Map execution call stack depth 19 to 4D...",
+      "residual": 9.717431146689325e-17,
+      "active_blades": 26,
+      "sha256": "09d7b93d67494355d1f028f3a438fc9786ef6f7f59f2c18e559bcd7418d5a686"
+    },
+    {
+      "case_id": 112,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 20: Map execution call stack depth 20 to 4D...",
+      "residual": 1.1288488734560558e-15,
+      "active_blades": 29,
+      "sha256": "8cda85ccc89ff7261f07c75c144b2212f79dacd89e296b57ff518395dc61f6ea"
+    },
+    {
+      "case_id": 113,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 21: Map execution call stack depth 21 to 4D...",
+      "residual": 1.567449945836503e-16,
+      "active_blades": 25,
+      "sha256": "7b4b8bba7b90ce5356832114e57dabd8bde53bfe028b4528f427ffc3b396c565"
+    },
+    {
+      "case_id": 114,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 22: Map execution call stack depth 22 to 4D...",
+      "residual": 5.778652761347936e-16,
+      "active_blades": 26,
+      "sha256": "fb72810cec1f4bfe598fe4ad12609214f90b09d5e937276ff36ddd6df82a1b65"
+    },
+    {
+      "case_id": 115,
+      "domain": "Cross-Domain",
+      "input": "Isomorphism Pair 23: Map execution call stack depth 23 to 4D...",
+      "residual": 7.891696959120706e-16,
+      "active_blades": 30,
+      "sha256": "35306fd3edd82f31d48e2ca70b3ade7fb9f04e6b41119be4a3195895d63b7a3e"
+    }
+  ]
+}

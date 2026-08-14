@@ -1,0 +1,13 @@
+{
+  "engine_version": "12.0.1-GOVERNED",
+  "algebra": "Cl(7,0)",
+  "words_count": 7,
+  "verdict": "PASS",
+  "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+  "reconstruction_residual": 8.303665868437348e-16,
+  "grade0_scalar_s": 0.963056,
+  "calibrated_certainty_C": 0.481536,
+  "scaffolding_dependency_rate": 0.0,
+  "authority_sha256": "add8281b52abb7beefa93a33eaa160941d72b7e7f57d6b40b4dc95867c4e8d5c",
+  "manuscript_filename": "journal_paper_daxda_7_words_evaluation.md"
+}

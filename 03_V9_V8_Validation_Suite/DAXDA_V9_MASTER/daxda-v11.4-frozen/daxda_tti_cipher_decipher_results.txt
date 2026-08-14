@@ -1,0 +1,64 @@
+===============================================================================
+  DAXDA NEXT-GEN: 'THERE'S TREASURE INSIDE' DECIPHERING AUDIT REPORT (.TXT)
+  Engine: DAXDA Next-Gen (12.0.1-GOVERNED) | Algebra: Cl(7,0) 128-Blade
+===============================================================================
+
+--- BOX 01: The Forrest Fenn Bronze Chest ---
+Context: There's Treasure Inside - Chapter: As I Have Gone Alone In There
+Region & Landmark: Yellowstone National Park, Wyoming, USA | Nine Mile Hole / Firehole River Canyon
+GPS Coordinates: Latitude 44.6465°, Longitude -110.8596°, Elevation 2195m
+Ground Zero Spot: North bank of Firehole River under pine tree canopy at Nine Mile Hole
+Governance Disposition: PASS (WITHIN_GOVERNANCE_TOLERANCE)
+Reconstruction Loss: 9.49e-16
+Cryptographic Authority SHA-256: 5c52a0dbf8e1e20551c28d87f796e96229e4eb0420c19911e49b10d885b42d42
+Manuscript: journal_paper_tti_box_01_the_forrest_fenn_bronze_chest.md (1219 words)
+
+---------------------------------------------------------------------------
+
+--- BOX 02: The Appalachian Box ---
+Context: There's Treasure Inside - Chapter: Green Mountain Trail Vista
+Region & Landmark: Mount Tabor, Vermont, USA | Green Mountain National Forest / Little Rock Pond
+GPS Coordinates: Latitude 43.3421°, Longitude -72.9734°, Elevation 520m
+Ground Zero Spot: 500 paces east of Appalachian Trail cairn near granite shoreline
+Governance Disposition: PASS (WITHIN_GOVERNANCE_TOLERANCE)
+Reconstruction Loss: 1.47e-15
+Cryptographic Authority SHA-256: c81c0e5c5dd63767c94e33b278066897da1c708cc8b2dfa4975bf7391db931f0
+Manuscript: journal_paper_tti_box_02_the_appalachian_box.md (1204 words)
+
+---------------------------------------------------------------------------
+
+--- BOX 03: The Pokémon / Charizard Box ---
+Context: There's Treasure Inside - Chapter: The Kanto Key Cipher
+Region & Landmark: Kanto Region / Mount Fuji, Japan | Lake Kawaguchi / Mount Fuji Viewpoint
+GPS Coordinates: Latitude 35.6762°, Longitude 139.6503°, Elevation 840m
+Ground Zero Spot: Beneath third basalt boulder on southern lake shore facing peak
+Governance Disposition: PASS (WITHIN_GOVERNANCE_TOLERANCE)
+Reconstruction Loss: 1.47e-15
+Cryptographic Authority SHA-256: 72d10756ca557e2e8e3e7d136a23dfb166b19ba42c7d5617fe6f92028c9db882
+Manuscript: journal_paper_tti_box_03_the_pokémon___charizard_box.md (1205 words)
+
+---------------------------------------------------------------------------
+
+--- BOX 04: The Past & Future Box ---
+Context: There's Treasure Inside - Chapter: The Greenwich Time Capsule
+Region & Landmark: Greenwich, London, United Kingdom | Royal Observatory Greenwich / Prime Meridian
+GPS Coordinates: Latitude 51.4769°, Longitude -0.0005°, Elevation 45m
+Ground Zero Spot: 10 meters north of 19th-century Meridian Line marker in Greenwich Park
+Governance Disposition: PASS (WITHIN_GOVERNANCE_TOLERANCE)
+Reconstruction Loss: 1.03e-15
+Cryptographic Authority SHA-256: aa984f45903b41d8f00a5f3d82ef969a144cc3138ae9eb4fb8ced4cee59b2744
+Manuscript: journal_paper_tti_box_04_the_past_and_future_box.md (1202 words)
+
+---------------------------------------------------------------------------
+
+--- BOX 05: The Lion's Share Box ---
+Context: There's Treasure Inside - Chapter: The Royal Lion Crest Cipher
+Region & Landmark: London, United Kingdom | Trafalgar Square / Nelson's Column
+GPS Coordinates: Latitude 51.5074°, Longitude -0.1278°, Elevation 15m
+Ground Zero Spot: Base of Landseer's Southern Bronze Lion pedestal in Trafalgar Square
+Governance Disposition: PASS (WITHIN_GOVERNANCE_TOLERANCE)
+Reconstruction Loss: 1.16e-15
+Cryptographic Authority SHA-256: 69ed3056b6b138792cd1a2f37628572ce1f82d6401e2b8506d352ac6641f9462
+Manuscript: journal_paper_tti_box_05_the_lions_share_box.md (1198 words)
+
+---------------------------------------------------------------------------

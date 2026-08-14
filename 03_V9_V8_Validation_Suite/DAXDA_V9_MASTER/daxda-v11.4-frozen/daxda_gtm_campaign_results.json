@@ -1,0 +1,14 @@
+{
+  "engine_version": "12.0.1-GOVERNED",
+  "domain": "Software Engineering",
+  "verdict": "PASS",
+  "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+  "publication_permitted": true,
+  "reconstruction_residual": 8.291941912518538e-16,
+  "grade0_scalar_s": 0.985705,
+  "calibrated_certainty_C": 0.492853,
+  "audit_sha256": "ae0c06009b6d8192a6c116b6a3754b900b8f3749e1167077e5197dbe385799d6",
+  "manuscript_filename": "journal_paper_daxda_gtm_campaign_strategy.md",
+  "manuscript_word_count": 662,
+  "manuscript_sha256": "1ccd7ee2c698b4c71c3da91695250388e1f56afe85f1fdbc7ffd795238d05d80"
+}

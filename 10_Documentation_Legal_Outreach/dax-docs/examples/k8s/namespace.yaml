@@ -1,0 +1,28 @@
+# This YAML file defines a Kubernetes Namespace.
+# A Namespace provides a mechanism for isolating groups of resources within a single Kubernetes cluster.
+# This isolation is logical, not physical, and helps in organizing resources, managing access control,
+# and preventing naming collisions between different teams or applications.
+#
+# In this project, we create a dedicated Namespace for the DAX system to:
+# - Isolate DAX-related resources (deployments, services, pods) from other applications in the cluster.
+# - Apply specific policies (e.g., resource quotas, network policies) to DAX components.
+# - Enhance security by limiting access to DAX resources only to authorized users or service accounts.
+# - Improve manageability and visibility of DAX components within the cluster.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dax-system
+  labels:
+    app.kubernetes.io/name: dax
+    app.kubernetes.io/instance: dax-system
+    app.kubernetes.io/part-of: dax-orchestration
+  annotations:
+    # A brief description of the purpose of this namespace.
+    # This can be useful for documentation and operational understanding.
+    description: "Dedicated namespace for the DAX reasoning and governance engine components."
+    # Annotation to indicate the team responsible for managing resources within this namespace.
+    # This helps in identifying ownership and contact points for operational issues.
+    owner: "DAX Engineering Team"
+    # Annotation to specify the environment this namespace is intended for (e.g., development, staging, production).
+    # This can be used by automated tools or policies.
+    environment: "production" # > **[PLACEHOLDER]** Adjust environment as needed (e.g., development, staging)

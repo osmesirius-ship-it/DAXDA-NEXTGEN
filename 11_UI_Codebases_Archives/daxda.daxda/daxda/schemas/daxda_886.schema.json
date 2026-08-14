@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DAXDA 886-Ops Run Output",
+  "type": "object",
+  "required": ["run_id", "runtime_mode", "final_gate", "final_stability_score", "tiles_executed", "audit_manifest"],
+  "properties": {
+    "run_id":                { "type": "string", "format": "uuid" },
+    "runtime_mode":          { "type": "string", "enum": ["quick","standard","full_886"] },
+    "final_gate":            { "type": "string", "enum": ["PASS","WARN","CAUTION","RECURSE","BLOCK","RELEASE"] },
+    "final_stability_score": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+    "warning_count":         { "type": "integer", "minimum": 0 },
+    "warnings":              { "type": "array", "items": { "type": "string" } },
+    "tiles_executed":        { "type": "integer", "minimum": 0, "maximum": 886 },
+    "layers_executed":       { "type": "integer", "minimum": 0, "maximum": 16 },
+    "recursion_depth":       { "type": "integer", "minimum": 0 },
+    "blocked_at":            { "type": ["string", "null"] },
+    "audit_manifest": {
+      "type": "object",
+      "required": ["run_id", "final_gate", "final_stability_score", "audit_hash"],
+      "properties": {
+        "run_id":                { "type": "string" },
+        "input_snapshot":        { "type": "string" },
+        "runtime_mode":          { "type": "string" },
+        "total_operations":      { "type": "integer" },
+        "layers_executed":       { "type": "integer" },
+        "tiles_executed":        { "type": "integer" },
+        "final_gate":            { "type": "string" },
+        "final_stability_score": { "type": "number" },
+        "warnings":              { "type": "array" },
+        "recursion_depth":       { "type": "integer" },
+        "blocked_at":            { "type": ["string","null"] },
+        "started_at":            { "type": "number" },
+        "completed_at":          { "type": "number" },
+        "duration_seconds":      { "type": "number" },
+        "audit_hash":            { "type": "string" },
+        "trace":                 { "type": "array" }
+      }
+    }
+  }
+}

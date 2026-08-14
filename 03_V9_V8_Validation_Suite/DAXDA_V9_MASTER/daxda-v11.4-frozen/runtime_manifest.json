@@ -1,0 +1,21 @@
+{
+  "version": "DAXDA-11.4-FROZEN",
+  "timestamp": "2026-07-24T04:19:14.513121Z",
+  "environment": {
+    "python_version": "3.9.6 (default, Jan  9 2026, 11:03:41) \n[Clang 17.0.0 (clang-1700.6.4.2)]",
+    "os": "macOS-15.7.8-x86_64-i386-64bit",
+    "architecture": "x86_64"
+  },
+  "file_hashes_sha256": {
+    "semantic_encoder.py": "4cec0e712da2a099ee87ea6766e00162eeeb53ef430b2085a4690b08e5dedcb6",
+    "geometric_transport.py": "821e8d244da26dc521cbc726030a3268091b2d7fcc2decdc4df52231a8fb98b2",
+    "authority_gate.py": "acaac4f5fc0e0b435946226aa93891a40748bc2f08ed4538864f6e306e515f81",
+    "daxda_engine_v11_4.py": "7bd7451dfe26fc77f3e89430287c7636ecc647f51ccfbb7b5c3d34af1069d83f",
+    "cl20.py": "b1ebcb2e35ea9e2aa9d606ff8391cc4005c778bc6bede856f680a590bd6cab38",
+    "compare_v7_v11_4.py": "5315e7c79e94082263ff567c96164ca0a1e7b335958157760aa162030d744a6f",
+    "thresholds.json": "2c2e2f3ae7510ae5b6649e7c824fdc749d53349aad901015c3efd87dcab88337",
+    "patterns.json": "8906f0516badeb3e2b43d17e25b02470c37997abc80a2d4807931478cfe2503d",
+    "evaluation_schema.json": "49ad2edd12e6bf964d0a4466839d2fe0dd2b21a36b206cdfc6415ac61947b877",
+    "run_frozen_benchmark.py": "21b2efe92835e511ee10606fc9b980dee71646d7d7812bf5b362534bbac4af2a"
+  }
+}

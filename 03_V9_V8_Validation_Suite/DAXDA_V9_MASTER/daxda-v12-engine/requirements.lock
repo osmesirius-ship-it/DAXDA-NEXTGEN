@@ -1,0 +1,3 @@
+# DAXDA V11.4 Frozen Runtime Requirements
+# Pure Python implementation; no external dependencies required.
+# Validated on Python 3.9+

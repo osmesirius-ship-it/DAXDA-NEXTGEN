@@ -1,0 +1,38 @@
+DAXDA.IA 886-Ops Architecture Manifest
+
+Generated: 2026-05-17 08:50:25
+
+Total operations: 886
+Layer operations: 880
+Post-layer operations: 6
+Layers: 16
+Ops per layer: 55
+
+Files:
+- DAXDA_IA_886_Ops_Architecture.md
+
+Layer Registry:
+01. FDL_1 — Frame Detection Layer
+02. AML_1 — Assumption Map Layer
+03. AWP_1 — Claim Weighting Layer
+04. BST_1 — Breaker Stress Test Layer
+05. CRL_1 — Claim Recovery Layer
+06. MCS_1 — Monte Carlo Simulator Layer
+07. DSV_1 — Decision Valve Layer
+08. TRC_1 — Trace Consistency Layer
+09. CON_1 — Contradiction Scan Layer
+10. EVD_1 — Evidence Demand Layer
+11. REC_1 — Recursion Plan Layer
+12. GOV_1 — Governance Gate Layer
+13. OUT_1 — Output Record Layer
+14. RIL_1 — Recursion Integrity Layer
+15. IAL_1 — Incentive Alignment Layer
+16. AOG_1 — Authority Output Gate Layer
+
+Post-layer Ops:
+SYS_881 — global_score_reconcile
+SYS_882 — authority_contract_write
+SYS_883 — audit_manifest_emit
+SYS_884 — release_gate_lock
+SYS_885 — reentry_hook_export
+SYS_886 — memory_boundary_stamp

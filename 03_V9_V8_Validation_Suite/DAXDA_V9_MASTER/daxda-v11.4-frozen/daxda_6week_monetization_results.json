@@ -1,0 +1,10 @@
+{
+  "target_revenue_usd": 500000,
+  "sprint_duration": "6 Weeks",
+  "mobile_guard_status": "LIVE",
+  "verdict": "PASS",
+  "decision_rule": "WITHIN_GOVERNANCE_TOLERANCE",
+  "reconstruction_residual": 1.3509108222698342e-15,
+  "audit_sha256": "11019a896c3480ae06b62ed8fe4aaf39bd07fe9ffa26667649ef4b36137fa0f5",
+  "manuscript_filename": "journal_paper_daxda_6week_monetization.md"
+}
