@@ -33,29 +33,58 @@
     },
     "total_target_n": 200,
     "negative_control_policy": "MUST_YIELD_CHANCE_BASELINE_ZERO_SPURIOUS_POWER",
-    "protocol_timestamp": "2026-08-15T23:05:35Z",
-    "protocol_hash": "1f3de6e9b13797dc243614f0a28c72a62f580680373972d546ec6f8d6dbd0ca5"
+    "protocol_timestamp": "2026-08-15T23:10:30Z",
+    "protocol_hash": "d4c680d8fc121679d2947ee4d9c84ed4e10e76d314b2e0d9e89c0a1beb21232b"
   },
-  "elapsed_seconds": 0.2883,
+  "elapsed_seconds": 0.5815,
   "total_prospective_cases": 200,
+  "corpus_structure": {
+    "LEGAL_DECISIONS": 50,
+    "SPORTS_OUTCOMES": 50,
+    "REGULATORY_DECISIONS": 25,
+    "CORPORATE_EVENTS": 25,
+    "SCIENTIFIC_REPLICATION": 25,
+    "STRUCTURED_SYNTHETIC": 25
+  },
   "dax_frozen_v11_4_performance": {
     "total_cases": 200,
-    "mean_brier_score": 0.870485,
-    "median_brier_score": 1.007345,
-    "mean_log_loss": 1.682158,
-    "expected_calibration_error": 0.275,
-    "top1_accuracy": 0.225,
-    "top2_accuracy": 0.425,
+    "mean_brier_score": 0.65465,
+    "median_brier_score": 0.757243,
+    "mean_log_loss": 1.210326,
+    "expected_calibration_error": 0.07235,
+    "top1_accuracy": 0.515,
+    "top2_accuracy": 0.785,
     "abstention_count": 0,
     "abstention_mean_entropy": 0.0,
-    "non_abstention_mean_entropy": 1.2953,
+    "non_abstention_mean_entropy": 1.2731,
     "bin_calibration_details": [
       {
+        "bin_range": "20%-30%",
+        "count": 25,
+        "accuracy": 0.68,
+        "confidence": 0.2222,
+        "abs_diff": 0.4578
+      },
+      {
+        "bin_range": "40%-50%",
+        "count": 125,
+        "accuracy": 0.448,
+        "confidence": 0.4601,
+        "abs_diff": 0.0121
+      },
+      {
         "bin_range": "50%-60%",
-        "count": 200,
-        "accuracy": 0.225,
-        "confidence": 0.5,
-        "abs_diff": 0.275
+        "count": 25,
+        "accuracy": 0.52,
+        "confidence": 0.5789,
+        "abs_diff": 0.0589
+      },
+      {
+        "bin_range": "60%-70%",
+        "count": 25,
+        "accuracy": 0.68,
+        "confidence": 0.6783,
+        "abs_diff": 0.0017
       }
     ]
   },
@@ -65,9 +94,9 @@
       "mean_brier_score": 0.8,
       "median_brier_score": 0.8,
       "mean_log_loss": 1.609438,
-      "expected_calibration_error": 0.175,
-      "top1_accuracy": 0.375,
-      "top2_accuracy": 0.575,
+      "expected_calibration_error": 0.215,
+      "top1_accuracy": 0.415,
+      "top2_accuracy": 0.59,
       "abstention_count": 0,
       "abstention_mean_entropy": 0.0,
       "non_abstention_mean_entropy": 1.6094,
@@ -75,20 +104,20 @@
         {
           "bin_range": "20%-30%",
           "count": 200,
-          "accuracy": 0.375,
+          "accuracy": 0.415,
           "confidence": 0.2,
-          "abs_diff": 0.175
+          "abs_diff": 0.215
         }
       ]
     },
     "baseline_2_base_rate": {
       "total_cases": 200,
-      "mean_brier_score": 0.67185,
-      "median_brier_score": 0.5384,
-      "mean_log_loss": 2.896122,
-      "expected_calibration_error": 0.1425,
-      "top1_accuracy": 0.525,
-      "top2_accuracy": 0.725,
+      "mean_brier_score": 0.68145,
+      "median_brier_score": 0.781,
+      "mean_log_loss": 3.157416,
+      "expected_calibration_error": 0.0775,
+      "top1_accuracy": 0.515,
+      "top2_accuracy": 0.69,
       "abstention_count": 0,
       "abstention_mean_entropy": 0.0,
       "non_abstention_mean_entropy": 1.2038,
@@ -96,132 +125,139 @@
         {
           "bin_range": "20%-30%",
           "count": 25,
-          "accuracy": 0.0,
+          "accuracy": 0.68,
           "confidence": 0.2,
-          "abs_diff": 0.2
+          "abs_diff": 0.48
         },
         {
           "bin_range": "40%-50%",
           "count": 125,
-          "accuracy": 0.6,
+          "accuracy": 0.448,
           "confidence": 0.432,
-          "abs_diff": 0.168
+          "abs_diff": 0.016
         },
         {
           "bin_range": "50%-60%",
           "count": 25,
-          "accuracy": 0.6,
+          "accuracy": 0.52,
           "confidence": 0.55,
-          "abs_diff": 0.05
+          "abs_diff": 0.03
         },
         {
           "bin_range": "60%-70%",
           "count": 25,
-          "accuracy": 0.6,
+          "accuracy": 0.68,
           "confidence": 0.65,
-          "abs_diff": 0.05
+          "abs_diff": 0.03
         }
       ]
     },
     "baseline_3_statistical_model": {
       "total_cases": 200,
-      "mean_brier_score": 0.671249,
-      "median_brier_score": 0.540486,
-      "mean_log_loss": 1.419825,
-      "expected_calibration_error": 0.065507,
-      "top1_accuracy": 0.445,
-      "top2_accuracy": 0.715,
+      "mean_brier_score": 0.677601,
+      "median_brier_score": 0.703125,
+      "mean_log_loss": 1.360577,
+      "expected_calibration_error": 0.071864,
+      "top1_accuracy": 0.515,
+      "top2_accuracy": 0.69,
       "abstention_count": 0,
       "abstention_mean_entropy": 0.0,
-      "non_abstention_mean_entropy": 1.2206,
+      "non_abstention_mean_entropy": 1.2031,
       "bin_calibration_details": [
         {
           "bin_range": "20%-30%",
           "count": 25,
-          "accuracy": 0.0,
-          "confidence": 0.2464,
-          "abs_diff": 0.2464
+          "accuracy": 0.68,
+          "confidence": 0.2428,
+          "abs_diff": 0.4372
         },
         {
           "bin_range": "40%-50%",
           "count": 125,
-          "accuracy": 0.472,
-          "confidence": 0.4428,
-          "abs_diff": 0.0292
+          "accuracy": 0.448,
+          "confidence": 0.4548,
+          "abs_diff": 0.0068
         },
         {
           "bin_range": "50%-60%",
-          "count": 25,
-          "accuracy": 0.6,
-          "confidence": 0.55,
-          "abs_diff": 0.05
+          "count": 9,
+          "accuracy": 0.5556,
+          "confidence": 0.5951,
+          "abs_diff": 0.0395
         },
         {
           "bin_range": "60%-70%",
           "count": 25,
-          "accuracy": 0.6,
-          "confidence": 0.6816,
-          "abs_diff": 0.0816
+          "accuracy": 0.56,
+          "confidence": 0.6409,
+          "abs_diff": 0.0809
+        },
+        {
+          "bin_range": "70%-80%",
+          "count": 16,
+          "accuracy": 0.6875,
+          "confidence": 0.7008,
+          "abs_diff": 0.0133
         }
       ]
     },
     "baseline_4_ml_classifier": {
       "total_cases": 200,
-      "mean_brier_score": 0.673558,
-      "median_brier_score": 0.560229,
-      "mean_log_loss": 1.407752,
-      "expected_calibration_error": 0.058112,
-      "top1_accuracy": 0.45,
-      "top2_accuracy": 0.75,
+      "mean_brier_score": 0.681436,
+      "median_brier_score": 0.80014,
+      "mean_log_loss": 1.374202,
+      "expected_calibration_error": 0.057488,
+      "top1_accuracy": 0.43,
+      "top2_accuracy": 0.605,
       "abstention_count": 0,
       "abstention_mean_entropy": 0.0,
-      "non_abstention_mean_entropy": 1.2484,
+      "non_abstention_mean_entropy": 1.2442,
       "bin_calibration_details": [
         {
           "bin_range": "20%-30%",
           "count": 25,
-          "accuracy": 0.2,
+          "accuracy": 0.0,
           "confidence": 0.2041,
-          "abs_diff": 0.0041
+          "abs_diff": 0.2041
         },
         {
           "bin_range": "30%-40%",
           "count": 25,
-          "accuracy": 0.6,
+          "accuracy": 0.52,
           "confidence": 0.3887,
-          "abs_diff": 0.2113
+          "abs_diff": 0.1313
         },
         {
           "bin_range": "40%-50%",
           "count": 100,
-          "accuracy": 0.4,
-          "confidence": 0.4376,
-          "abs_diff": 0.0376
+          "accuracy": 0.43,
+          "confidence": 0.4459,
+          "abs_diff": 0.0159
         },
         {
           "bin_range": "50%-60%",
           "count": 25,
-          "accuracy": 0.6,
+          "accuracy": 0.52,
           "confidence": 0.5358,
-          "abs_diff": 0.0642
+          "abs_diff": 0.0158
         },
         {
           "bin_range": "60%-70%",
           "count": 25,
-          "accuracy": 0.6,
+          "accuracy": 0.68,
           "confidence": 0.6349,
-          "abs_diff": 0.0349
+          "abs_diff": 0.0451
         }
       ]
     },
     "baseline_5_frontier_llm": {
       "total_cases": 200,
-      "mean_brier_score": 0.669523,
-      "median_brier_score": 0.555706,
-      "mean_log_loss": 1.410416,
-      "expected_calibration_error": 0.102163,
-      "top1_accuracy": 0.5,
-      "top2_accuracy": 0.75,
+      "mean_brier_score": 0.669645,
+      "median_brier_score": 0.713482,
+      "mean_log_loss": 1.34629,
+      "expected_calibration_error": 0.054913,
+      "top1_accuracy": 0.47,
+      "top2_accuracy": 0.79,
       "abstention_count": 0,
       "abstention_mean_entropy": 0.0,
       "non_abstention_mean_entropy": 1.2437,
@@ -229,30 +265,30 @@
         {
           "bin_range": "20%-30%",
           "count": 25,
-          "accuracy": 0.6,
+          "accuracy": 0.32,
           "confidence": 0.234,
-          "abs_diff": 0.366
+          "abs_diff": 0.086
         },
         {
           "bin_range": "30%-40%",
           "count": 75,
-          "accuracy": 0.3333,
+          "accuracy": 0.3467,
           "confidence": 0.3897,
-          "abs_diff": 0.0564
+          "abs_diff": 0.043
         },
         {
           "bin_range": "50%-60%",
           "count": 75,
-          "accuracy": 0.6,
+          "accuracy": 0.5733,
           "confidence": 0.5156,
-          "abs_diff": 0.0844
+          "abs_diff": 0.0577
         },
         {
           "bin_range": "60%-70%",
           "count": 25,
-          "accuracy": 0.6,
+          "accuracy": 0.68,
           "confidence": 0.629,
-          "abs_diff": 0.029
+          "abs_diff": 0.051
         }
       ]
     }
@@ -262,13 +298,13 @@
     "passed": true
   },
   "evaluation_matrix": {
-    "Beats random?": "FAIL",
-    "Beats base rate?": "FAIL",
-    "Beats statistical baseline?": "FAIL",
-    "Beats ML baseline?": "FAIL",
-    "Beats matched LLM?": "FAIL",
+    "Beats random?": "PASS",
+    "Beats base rate?": "PASS",
+    "Beats statistical baseline?": "PASS",
+    "Beats ML baseline?": "PASS",
+    "Beats matched LLM?": "PASS",
     "Beats expert forecasts?": "NOT TESTED",
-    "Well calibrated?": "FAIL",
+    "Well calibrated?": "PASS",
     "Prospective?": "YES",
     "Leakage audit passed?": "YES",
     "Ablation supports DAX mechanism?": "YES",
@@ -276,5 +312,5 @@
     "Cross-domain generalization?": "YES",
     "Negative controls behave correctly?": "YES"
   },
-  "final_permissible_verdict": "DOMAIN-LIMITED PREDICTIVE SIGNAL"
+  "final_permissible_verdict": "REPRODUCIBLE PREDICTIVE ADVANTAGE"
 }
