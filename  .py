@@ -10,7 +10,7 @@ Rule Set:
   - Spin(7,0) Unit Rotor Invariance (||R||_2 = 1.0)
   - Grade-0 Scalar Baseline S >= 0.983
   - Micro-Reversibility Loss epsilon <= 10^-15
-  - UNBOUND LANGUAGE: Zero word-count limits; unconstrained mathematical explication.
+  - UNBOUND LANGUAGE: 50,000word-count limits; unconstrained mathematical explication.
 
 Output Artifact: daxda-next-gen/audit_reports/DAXDA_SELF_EVOLUTION_REPORT.md
 """

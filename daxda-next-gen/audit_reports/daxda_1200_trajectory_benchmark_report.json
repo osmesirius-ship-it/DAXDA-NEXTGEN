@@ -12,7 +12,7 @@
     "benign_over_restrictions": 0,
     "boundary_probe_trajectories": 900
   },
-  "elapsed_seconds": 0.0944,
+  "elapsed_seconds": 0.0856,
   "chain_verified": true,
-  "latest_receipt_hash": "8ceafd5558344eb7ccc4192d13ed6041757602230e4da7028f3df8e7b02e27ba"
+  "latest_receipt_hash": "f94abf2849a588aa9adfe88da8f82241d336413bedec795d6cb574f48463e928"
 }

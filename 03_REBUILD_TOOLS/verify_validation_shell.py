@@ -16,7 +16,8 @@ import json
 import hashlib
 
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../benchmark_adapter")))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../07_BENCHMARK_ADAPTER")))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../daxda-next-gen/benchmark_adapter")))
 
 from build_runtime_manifest import FROZEN_FILES, compute_file_sha256, RuntimeProvenanceManifest
 from execution_evidence_chain import ExecutionEvidenceChain
