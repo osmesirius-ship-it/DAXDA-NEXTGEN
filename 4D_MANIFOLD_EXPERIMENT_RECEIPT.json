@@ -1,15 +1,15 @@
 {
   "experiment_id": "EXP-4D-MANIFOLD-DAXDA-001",
-  "timestamp": "2026-09-02T02:21:49Z",
+  "timestamp": "2026-09-02T02:38:03Z",
   "git_commit": "1733eddde43f618ba28c935c8c0519ad9af48c94",
   "branch": "experiment/4d-manifold",
-  "disposition": "SUPPORTED_ADVANTAGE",
-  "disposition_rationale": "The 4D manifold layer demonstrably provides: (1) explicit tangent velocity and Riemannian path length tracking, (2) exact 4x4 Jacobian rank collapse detection for failure localization, (3) formal separation of manifold reversibility from pipeline reversibility, (4) rigorous invariant classification (Topological vs Differential vs Geometric vs Numerical), with zero degradation of baseline numerical reversibility (residuals < 1e-12).",
+  "disposition": "MIXED_RESULT",
+  "disposition_rationale": "The 4D manifold layer provides a verified OBSERVABILITY AND AUDITABILITY ADVANTAGE (continuous metric trajectory tracking, layerwise 4x4 Jacobian rank collapse detection, and formal reversibility separation) with exact preservation of baseline numerical precision (residual ~ 2.86e-15), at the cost of a 2.55x computational latency overhead (45.60 ms vs 17.91 ms). No change in downstream reasoning performance or task success rate is claimed or demonstrated.",
   "samples_evaluated": 200,
   "control": {
     "engine": "Frozen DAXDA Cl(7,0) Adaptive Transport",
-    "total_time_s": 3.581955679,
-    "avg_latency_ms": 17.909778395,
+    "total_time_s": 3.6624197450000002,
+    "avg_latency_ms": 18.312098725,
     "mean_residual": 2.8721926719346586e-15,
     "max_residual": 9.07232117403244e-15,
     "trajectory_observability": "Clifford blade coefficients only (no continuous manifold metric/tangent tracking)",
@@ -17,9 +17,9 @@
   },
   "experiment": {
     "engine": "DAXDA M^4 Differentiable Manifold Adapter + Cl(7,0)",
-    "total_time_s": 9.120933974000001,
-    "avg_latency_ms": 45.60466987000001,
-    "latency_overhead_ratio": 2.546355899229428,
+    "total_time_s": 9.446342313999999,
+    "avg_latency_ms": 47.231711569999995,
+    "latency_overhead_ratio": 2.5792626109818,
     "mean_pipeline_residual": 2.858758688734536e-15,
     "max_pipeline_residual": 9.071276270507187e-15,
     "mean_manifold_residual": 0.0,
@@ -274,5 +274,5 @@
       }
     ]
   },
-  "receipt_sha256": "e49af13a27d6ff99bffa9a667675ef7b9fc5acb3298248d367c1d0f807f518fe"
+  "receipt_sha256": "eb121e91b789f11c952d3eac4ec45407d5023e7d4d2df60a1c03b0952ac834de"
 }

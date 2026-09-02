@@ -3,7 +3,7 @@
 **Experiment Branch:** `experiment/4d-manifold`  
 **Baseline Commit:** `1733eddde43f618ba28c935c8c0519ad9af48c94`  
 **Receipt File:** [4D_MANIFOLD_EXPERIMENT_RECEIPT.json](file:///Users/user/daxda%20next%20gen/DAXDA-NEXTGEN/4D_MANIFOLD_EXPERIMENT_RECEIPT.json)  
-**Final Experimental Disposition:** `SUPPORTED_ADVANTAGE`  
+**Final Experimental Disposition:** `MIXED_RESULT` *(Designation: Supported Observability Advantage with Latency Overhead)*  
 
 ---
 
@@ -11,11 +11,14 @@
 
 An experimental 4-dimensional differentiable manifold layer ($\mathcal{M}^4$) was constructed in `08_4D_MANIFOLD/` and benchmarked against the frozen DAXDA v11.4 baseline.
 
-- **Total Tests Executed:** 25 automated tests (10 Unit Tests + 15 Adversarial Matrix Tests) + 200 Ablation Trajectories + Frozen Core Verification Suite.
-- **Test Pass Rate:** 100% (All tests passed).
-- **Core Engine Modifications:** 0 files modified; 100% cryptographic hash match on all 20 protected core files.
-- **Reversibility Precision:** Mean pipeline reconstruction residual of $2.86 \times 10^{-15}$ (exact floating-point limit).
-- **Observability Advantage:** Provides full differential Riemannian state tracking $(x, v, g, J, \text{det}, \text{rank})$ and rank collapse detection without compromising baseline reversibility.
+- **Primary Result:** The manifold layer **did not materially alter or improve baseline numerical reversibility** (which was already at floating-point precision $\sim 2.87 \times 10^{-15}$); it **preserved** it while adding **rich state observability and local failure localization instrumentation**.
+- **Key Engineering Capabilities Added:**
+  1. **Continuous Trajectory Observability:** Position, tangent velocity $v_i$, metric $g_{\mu\nu}$, and Riemannian path length $L(\gamma)$ across all 16 layers.
+  2. **Local Degree-of-Freedom / Rank-Loss Detection (Case F):** Detects singular transformations via $\operatorname{rank}(J) = 3 < 4$, pinpointing the loss of recoverable degrees of freedom before aggregate residue checks.
+  3. **Discontinuity Boundary Localization (Case K):** Trajectory velocity thresholding separates mathematical invertibility from operational trajectory acceptance.
+  4. **Tri-Level Reversibility Disambiguation:** Formally isolates Manifold Reversibility ($\|x - T^{-1}(T(x))\|$), Pipeline Reversibility ($\|x_0 - x_0'\|$), and Clifford Multivector Reversibility ($\|M_0 - M_0'\|_{Cl}$).
+- **Trade-Off & Cost:** $2.55\times$ latency overhead ($45.60$ ms vs $17.91$ ms for 16 layers) due to layer-by-layer $4\times 4$ differential Jacobian computations.
+- **Scope Limit:** No claim of improved reasoning, higher task success, physical spacetime dynamics, or AGI is demonstrated or supported by this experiment.
 
 ---
 

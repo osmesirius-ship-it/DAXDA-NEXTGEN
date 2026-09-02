@@ -91,19 +91,23 @@ class AblationBenchmark:
         latency_overhead_ratio = (exp_avg_latency_ms / ctrl_avg_latency_ms) if ctrl_avg_latency_ms > 0 else 1.0
 
         # --- COMPARATIVE ANALYSIS ---
-        # Did M^4 add measurable value?
-        # 1. Trajectory observability: Control has 0 continuous metric trajectory observability; Experiment has 100%.
-        # 2. Failure localization: Experiment measures rank collapse and layer-by-layer Jacobians.
-        # 3. Reversibility precision: Both maintain numerical residuals < 1e-12.
-        # 4. Computational cost: M^4 adapter has higher overhead (~1.5x - 3.5x due to 4x4 Jacobians & metric evaluation).
-
-        disposition = "SUPPORTED_ADVANTAGE"
+        # Under the standard 5-tier taxonomy:
+        # SUPPORTED_ADVANTAGE | MIXED_RESULT | NO_MEASURABLE_ADVANTAGE | REGRESSION | INCONCLUSIVE
+        #
+        # Evaluated Outcome: MIXED_RESULT (Specifically: SUPPORTED_OBSERVABILITY_ADVANTAGE)
+        # Rationale:
+        # - Observability & Auditability: SUBSTANTIAL ADVANTAGE (continuous tangent velocity, 4x4 Jacobian rank tracking).
+        # - Failure Localization: SUBSTANTIAL ADVANTAGE (Case F degree-of-freedom loss detection, Case K velocity jump).
+        # - Numerical Reversibility: PRESERVED (residuals ~ 2.86e-15 vs control ~ 2.87e-15; no material improvement, zero precision loss).
+        # - Computational Latency: OVERHEAD REGRESSION (2.55x latency overhead, 45.60ms vs 17.91ms).
+        # - Task / Reasoning Performance: NOT DEMONSTRATED (additive diagnostic layer).
+        disposition = "MIXED_RESULT"
         disposition_rationale = (
-            "The 4D manifold layer demonstrably provides: (1) explicit tangent velocity and Riemannian path length tracking, "
-            "(2) exact 4x4 Jacobian rank collapse detection for failure localization, "
-            "(3) formal separation of manifold reversibility from pipeline reversibility, "
-            "(4) rigorous invariant classification (Topological vs Differential vs Geometric vs Numerical), "
-            "with zero degradation of baseline numerical reversibility (residuals < 1e-12)."
+            "The 4D manifold layer provides a verified OBSERVABILITY AND AUDITABILITY ADVANTAGE "
+            "(continuous metric trajectory tracking, layerwise 4x4 Jacobian rank collapse detection, "
+            "and formal reversibility separation) with exact preservation of baseline numerical precision "
+            "(residual ~ 2.86e-15), at the cost of a 2.55x computational latency overhead (45.60 ms vs 17.91 ms). "
+            "No change in downstream reasoning performance or task success rate is claimed or demonstrated."
         )
 
         receipt_payload = {
