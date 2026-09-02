@@ -27,10 +27,11 @@ from daxda_engine_nextgen import DAXDAEngineNextGen
 
 
 def run_7min_scientific_exploration():
-    target_duration = 420.0  # 7 minutes
+    quick_mode = "--quick" in sys.argv
+    target_duration = 4.0 if quick_mode else 420.0  # 7 minutes or 4 seconds quick mode
     start_time = time.time()
     
-    output_dir = "/Users/user/Downloads/DAXDA_V9_MASTER/daxda-v11.4-frozen/journal_submissions"
+    output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "journal_submissions")
     os.makedirs(output_dir, exist_ok=True)
 
     engine = DAXDAEngineNextGen(p=7, q=0)  # Cl(7,0) 128-Blade Multivector Space
@@ -45,50 +46,47 @@ def run_7min_scientific_exploration():
     waves = [
         {
             "wave_id": 1,
-            "name": "Higher-Dimensional Quantum Geometry & Supersymmetric Spinors",
-            "domain": "Physics",
+            "name": "Clifford Algebra Bivector Layer-Governance Integration",
+            "domain": "Mathematics",
             "duration": 105.0,
             "topics": [
-                "Deriving 7-blade pseudoscalar duality invariant in Cl(7,0)",
-                "Non-commutative bivector commutator commutator fields [e_i, e_j] = 2*e_ij",
-                "Supersymmetric Spin(7,0) rotor state manifold evolution",
-                "Hilbert space blade inner product norm conservation"
+                "Mapping the 16 bivectors of the Clifford manifold to the 16 pipeline layers (FDL, AML, AWP, etc.)",
+                "Evaluating bivector plane projections at each individual layer step",
+                "Determining dynamic local scalar decay on specific bivector planes",
+                "Constructing transition matrices from orthogonal plane reflections"
             ]
         },
         {
             "wave_id": 2,
-            "name": "Self-Optimizing Tensor Compiler Architecture & Graph Manifolds",
-            "duration": 105.0,
+            "name": "Bivector Domain Allocation & Pipeline Management",
             "domain": "Software Engineering",
             "topics": [
-                "Synthesizing zero-hazard SIMD vectorization for arbitrary strided loops",
-                "Mapping AST recursion depth to multivector grade distribution",
-                "Memory alias-free pointer dependency resolution in Cl(7,0)",
-                "Dynamic programming recurrence state tree compression"
+                "FDL layer governing Frame and Description bivector relation",
+                "AML layer governing Anomaly and Detection bivector relation",
+                "TRC layer governing Trace and Path bivector relation",
+                "AOG layer governing Authority and Gate bivector relation"
             ]
         },
         {
             "wave_id": 3,
-            "name": "Relativistic Astrophysics, Horizon Thermodynamics & Cosmology",
-            "duration": 105.0,
+            "name": "Comparative Performance & Deviation Analysis",
             "domain": "Physics",
             "topics": [
-                "10-body asymmetric relativistic system with spin-orbit coupling",
-                "FLRW cosmological dark energy expansion geodesic invariant",
-                "Black hole horizon pseudoscalar e1234567 area entropy law S = A / 4 G",
-                "Navier-Stokes 4D fluid circulation vorticity field w = curl(v)"
+                "Comparing multi-layer bivector governance against uncoupled baseline runs",
+                "Measuring variance in reconstruction residual thresholds under bivector constraints",
+                "Analyzing stability differences under adversarial prompt streams with layer coupling",
+                "Assessing latency overhead of layer-specific bivector checks"
             ]
         },
         {
             "wave_id": 4,
-            "name": "Unified Cross-Domain Isomorphisms & Master Synthesis",
-            "duration": 105.0,
+            "name": "Integrated Synthesis & Verification",
             "domain": "Cross-Domain",
             "topics": [
-                "Isomorphism: Software execution AST <-> Fluid vorticity <-> Quantum Bell states",
-                "16-layer micro-reversibility verification across unified multivector state",
-                "Sigmoidal empirical grounding calibration C(s) = 1 / (1 + exp(-2(s-1)))",
-                "Generating immutable SHA-256 cryptographic authority receipts"
+                "Unified multi-layer bivector state transition matrix integration",
+                "Fano plane triality representations of relational tensions across layers",
+                "Formulating global integrated information index Phi under layer bounds",
+                "Generating cryptographic receipts with bivector layer signatures"
             ]
         }
     ]
@@ -106,7 +104,7 @@ def run_7min_scientific_exploration():
     for wave in waves:
         w_start = time.time()
         w_name = wave["name"]
-        w_dur = wave["duration"]
+        w_dur = 1.0 if quick_mode else wave["duration"]
         w_domain = wave["domain"]
 
         print(f"\n[{time.strftime('%H:%M:%S')}] --- WAVE {wave['wave_id']}/4: {w_name} ---")
@@ -169,7 +167,7 @@ def run_7min_scientific_exploration():
             print(f"  └─ Iteration {iteration:03d}: Res={res_val:.2e} | Verdict={eval_res.get('verdict')} | Words={jr.get('word_count', 0)} | {topic[:50]}...")
             
             # Pacing sleep for smooth 7-minute exploration
-            time.sleep(1.5)
+            time.sleep(0.1 if quick_mode else 1.5)
 
         w_elapsed = time.time() - w_start
         print(f"  ✓ Wave {wave['wave_id']} Complete: {len(wave_evals)} evaluations in {w_elapsed:.2f}s")

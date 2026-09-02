@@ -1,0 +1,6 @@
+*.zip
+*.mp4
+*.tar.gz
+.venv/
+.vscode/
+.DS_Store

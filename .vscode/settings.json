@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "01_NextGen_V12_V11_Latest"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

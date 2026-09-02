@@ -104,7 +104,7 @@ class RuntimeProvenanceManifest:
 
 
 def main():
-    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     prov = RuntimeProvenanceManifest()
     manifest = prov.build_manifest(base_dir)
 

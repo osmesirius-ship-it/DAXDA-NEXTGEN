@@ -24,7 +24,14 @@ with open(CONFIG_PATH, 'r') as f:
 class GovernedAuthorityGate:
     """Synchronous fail-closed authority gate enforcing governance invariants."""
 
-    def __init__(self, authorized_scopes: Tuple[str, ...] = ("Mathematics", "Software Engineering", "Physics", "Logic", "Cross-Domain", "Web_Research", "Web", "finance", "math", "software", "physics", "security")):
+    def __init__(self, authorized_scopes: Tuple[str, ...] = (
+        "Mathematics", "Software Engineering", "Physics", "Logic", "Cross-Domain",
+        "Web_Research", "Web", "finance", "math", "software", "physics", "security",
+        # Medical research categories — authorised for Daxda-Gen-96 journal submissions
+        "Oncology Diagnostics", "Neuro-Regenerative Therapeutics", "Immunological Modulation",
+        "Genomic Transcription Editing", "Cardiovascular Tissue Engineering",
+        "Metabolic Pathway Restoration",
+    )):
         self.authorized_scopes = authorized_scopes
 
     def evaluate(
