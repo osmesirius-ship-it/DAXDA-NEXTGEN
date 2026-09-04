@@ -1,22 +1,22 @@
 # DAXDA Chronometric Anchor Protocol (DCAP-16)
 ## Standard Specification: Physical Spacetime Event Anchoring & Invariant Chronometric Receipts
 
-**Protocol Version:** 1.0.0  
-**Specification Identifier:** DAXDA-STD-DCAP-16  
-**Governance Authority:** DAXDA Frozen v11.4 Core (Release-Authority Referee)  
+**Protocol Version:** 0.1.0-draft  
+**Specification Identifier:** DAXDA-STD-DCAP-16-DRAFT  
+**Governance Authority:** Designed for evaluation through a future external adapter governed by frozen DAXDA v11.4  
 **Geometric / Algebra Engine:** Next-Gen 12.0.1 Multivector Algebra  
-**Status:** APPROVED FOR RESEARCH & FORMAL BENCHMARKING  
+**Status:** DRAFT — PROPOSED FOR BENCHMARKING  
 **Effective Date:** 2026-09-03  
 
 ---
 
 ### Executive Abstract
 
-Human governance systems, civil administrations, religions, and nations govern calendars, astronomical approximations, and administrative conventions. None of these govern physical elapsed time ($\Delta \tau$). 
+Human governance systems, civil administrations, religions, and nations govern calendars, astronomical approximations, and administrative conventions. None of these govern physical elapsed time ($\Delta \tau$).
 
-Civil dates (Gregorian, Hijri, Julian, Solar Hijri, Hebrew, etc.) and civil time zones represent conventional coordinate mappings vulnerable to political redefinition, legislative decree, calendar reform, and observational divergence. Consequently, attributing temporal identity solely to civil timestamps creates irreconcilable paradoxes (e.g., dual birth dates across time zones, leap-day ambiguities, lunar-vs-solar year drift).
+Civil dates (Gregorian, Hijri, Julian, Solar Hijri, Hebrew, etc.) and civil time zones represent conventional coordinate mappings vulnerable to political redefinition, legislative decree, calendar reform, observational divergence, and retroactive historical shifts. Consequently, attributing temporal identity solely to civil timestamps creates irreconcilable paradoxes (e.g., dual birth dates across time zones, leap-day ambiguities, lunar-vs-solar year drift).
 
-The **DAXDA Chronometric Anchor Protocol (DCAP-16)** establishes an immutable, 16-layer multidimensional receipt structure for locating events within physical spacetime. Rather than asserting any single calendar as absolute, DCAP-16 decomposes every recorded event into a deterministic, calendar-independent tuple of continuous atomic metrics, astronomical configurations, relativistic proper time trajectories, observational uncertainties, and cryptographic provenance receipts:
+The **DAXDA Chronometric Anchor Protocol (DCAP-16)** establishes a formal, tamper-evident, 16-layer multidimensional receipt structure for locating events within physical spacetime. Rather than asserting any single calendar as absolute, DCAP-16 decomposes every recorded event into a deterministic, calendar-independent tuple of continuous atomic metrics, astronomical configurations, relativistic proper time trajectories, observational uncertainties, and cryptographic provenance receipts:
 
 $$\text{Event} = \Big(\tau_{\text{physical}}, \mathbf{x}_{\text{spatial}}, \mathcal{D}_{\text{event}}, \boldsymbol{\Omega}_{\text{astronomy}}, \mathbf{U}_{\text{uncertainty}}, \Pi_{\text{provenance}}\Big)$$
 
@@ -26,145 +26,205 @@ $$\text{Event} = \Big(\tau_{\text{physical}}, \mathbf{x}_{\text{spatial}}, \math
 
 1. **Physical Elapsed Time vs. Calendar Labels:**
    Civil calendars are human metadata layers. Physical time is continuous, monotonic, and governed by quantum transitions and relativistic spacetime curvature ($ds^2 = g_{\mu\nu}dx^\mu dx^\nu$).
-2. **Proper Time ($\tau$) vs. Coordinate Time ($t$):**
-   In relativistic regimes, no single universal clock exists. DCAP-16 mandates the decoupled recording of the observer's accumulated proper time $\tau = \int \sqrt{-g_{\mu\nu} \frac{dx^\mu}{d\lambda}\frac{dx^\nu}{d\lambda}} d\lambda$ and standard coordinate time (Barycentric Dynamical Time / TAI).
-3. **Fail-Closed Claim Gating:**
-   Under the frozen DAXDA v11.4 governance referee, any event receipt missing physical uncertainty bounds ($\mathbf{U}$), instrument calibration metadata, or provenance hashes fails validation immediately (`VERDICT: INVALID_CHRONOMETRIC_PROOF`).
-4. **Architectural Separation:**
-   - **Frozen v11.4:** Immutable release authority referee, cryptographic verifier, and claim-boundary gatekeeper.
-   - **Next-Gen 12.0.1:** Multivector geometric computation engine ($Cl(4,0)$, $Cl(7,0)$) executing dimensional transformations and coordinate projections.
+2. **Tamper-Evident Receipts vs. Physical Immutability:**
+   Cryptographic signatures, Merkle paths, and zero-knowledge computation receipts provide verifiable tamper-evidence and auditability. They do not render physical hardware or history physically immutable, nor do they guarantee truthfulness if sensor telemetry is fabricated at ingress.
+3. **Proper Time ($\tau$) Decoupled from Coordinate Time Scales ($t_{\text{TT}}, t_{\text{TDB}}, t_{\text{TCB}}$):**
+   In relativistic regimes, no universal clock exists. DCAP-16 mandates the explicit recording of an observer's accumulated proper time $\tau$ alongside the coordinate times $TT$ (Terrestrial Time), $TDB$ (Barycentric Dynamical Time), and $TCB$ (Barycentric Coordinate Time) parameterized under standardized relativistic transformation equations.
+4. **Exact Representation (Arbitrary Precision Integers):**
+   Continuous physical and atomic seconds must not be stored in standard 64-bit IEEE 754 floating-point numbers due to loss of precision over historical and astronomical horizons. Continuous atomic time is stored as signed 64-bit integer seconds coupled with signed 64-bit integer attoseconds ($10^{-18}$ s).
+5. **Decoupled Receipt and Referee Verdict:**
+   The evidence receipt generated by observing agents/sensors and the referee verdict produced by the governance engine are separate cryptographic objects. An evidence producer must never issue or mutate its own verdict.
+6. **Separation of Architectural Roles:**
+   - **Frozen v11.4 Core:** Retains immutable referee status; does not execute experimental DCAP arithmetic directly, but evaluates conformance verdicts through a strict fail-closed boundary adapter.
+   - **Next-Gen 12.0.1:** Multivector geometric computation engine providing $Cl(4,0)$ spacetime and $Cl(7,0)$ biological trajectory representations.
 
 ---
 
-## 2. The 16-Layer DCAP-16 Architecture
+## 2. Certification Profiles
 
-Every certified event receipt conforming to DCAP-16 is evaluated across 16 formal verification layers.
+Recognizing that millisecond pulsar timing and planetary ephemeris state tracking are unavailable for edge devices and clinical sensors, DCAP-16 establishes four tiered certification profiles:
+
+| Profile Identifier | Targeted Application | Mandatory Verification Layers | Uncertainty Target |
+|---|---|---|---|
+| **`DCAP-CIVIL`** | Administrative recordkeeping, multi-calendar conversion, legal contracts, birth registries | Layers 01–06, 14, 15 | $\pm 10^{-3}$ s |
+| **`DCAP-METROLOGICAL`** | High-precision scientific laboratory experiments, biomedical transitions, clinical EEG/NIRS synchrony | Layers 01–07, 09, 10, 14, 15 | $\pm 10^{-9}$ s |
+| **`DCAP-ASTRONOMICAL`** | Deep-time historical archives, planetary observations, orbital dynamics | Layers 01–12, 14, 15, 16 | $\pm 10^{-6}$ s coordinate |
+| **`DCAP-RELATIVISTIC`** | High-speed spaceflight, gravitational redshift regimes, deep-space astrophysical navigation | Layers 01–16 (All layers mandatory) | $\pm 10^{-12}$ s proper |
+
+---
+
+## 3. The 16-Layer DCAP-16 Architecture
+
+Every certified event receipt conforming to DCAP-16 evaluates evidence across 16 formal verification layers.
 
 ```
 +-------------------------------------------------------------------------------+
 |                      DAXDA DCAP-16 MULTIDIMENSIONAL RECEIPT                   |
 +-------------------------------------------------------------------------------+
-| [16] Independent Reconstruction Verdict & Cross-Era Parity Check             |
-| [15] Cryptographic Provenance, Multi-Party Signatures, & Zero-Knowledge Proof |
-| [14] Instrument Calibration, Resolution, & Measurement Uncertainty (U)        |
-| [13] Independent Pulsar Timings & Relativistic Astrophysical Anchors          |
-| [12] Earth Orientation Parameters (EOP: UT1-UTC, Pole Wander) & Local Sidereal|
-| [11] Ephemeris Vector: Planetary, Lunar, & Solar Positions (DE440/441)        |
-| [10] Spatial Reference Frame (ITRF2020 / GCRS / Barycentric Celestial ICRS)    |
-| [09] Spatial Coordinates: Geodetic Lat, Lon, Height Above WGS84/GRS80 El.     |
-| [08] Astronomical Julian Day / Ephemeris Time (JD, TDB, TT)                   |
-| [07] Continuous Atomic Seconds Count (TAI - Temps Atomique International)     |
-| [06] Coordinated Universal Time (UTC) with Explicit Leap Second Epoch         |
-| [05] Historical Time-Zone Rules & IANA TZ Database Snapshot Version           |
-| [04] Civil Calendar Identity, System Name, & Algorithm Version                |
-| [03] Civil Date, Local Time Representation, & Daylight Offset                 |
-| [02] Observing Apparatus, Hardware Telemetry, Sensor Firmware Hash            |
-| [01] Rigorous Event Boundary Definition & Physical Transition Criteria        |
+| [16] Independent Cross-Scale Parity Check & Future Proofing Bounds            |
+| [15] Cryptographic Provenance, Multi-Party Threshold Signatures, & Audit Trail|
+| [14] Full 16-Dimensional Uncertainty Covariance Matrix (U)                    |
+| [13] Independent Pulsar Timings, Dispersion Models, & TOA Residuals           |
+| [12] Earth Orientation Parameters (EOP: UT1-UTC, Polar Wander, dX, dY)        |
+| [11] Ephemeris Archive: State Vectors, Units, Epoch, Time Scale, Kernel Hashes|
+| [10] Spatial Reference Frame (ITRF2020 / GCRS / ICRS Tie Points)              |
+| [09] Geodetic Coordinate Vector & Local Gravitational Potential Phi           |
+| [08] Rigorous Coordinate Times: TT, TDB, TCB with Transformation Constants    |
+| [07] Continuous Atomic Time (TAI): Exact Integer Seconds + Attoseconds        |
+| [06] UTC Representation with Complete Historical Leap-Second Table Reference  |
+| [05] IANA TZDB Release Version, Zone Rules, Historical Caveats, & Provenance  |
+| [04] Civil Calendar Identity, Mathematical Rule Edition, & Conversion Method  |
+| [03] Civil Date & Local Time String with Time Zone Offset                     |
+| [02] Observing Apparatus Hardware ID, Calibration Telemetry, & Firmware Hash  |
+| [01] Rigorous Physical Event Boundary Definition & Ingress Threshold Marker   |
 +-------------------------------------------------------------------------------+
 ```
 
-### Layer Specification Table
+### Detailed Layer Specification
 
-| Layer | Dimension | Parameter Name | Canonical Type / Units | Description & Verification Standard |
-|---|---|---|---|---|
-| **L01** | Event Definition | `event_definition_id` | `URN / Ontological Hash` | Rigorous physical transition definition (e.g., umbilical severance, optical sensor threshold, mechanical shutter trigger). Must specify exact physical boundary conditions. |
-| **L02** | Observer Identity | `observer_telemetry` | `HardwareUID + SHA256` | Serial number, sensor architecture, firmware hash, and cryptographic identity of recording hardware. |
-| **L03** | Civil Time | `civil_timestamp` | `ISO-8601 (Local Ext)` | The civil string representation at point of capture (e.g., `2026-09-03T22:12:52`). |
-| **L04** | Calendar System | `calendar_system` | `Enum (Gregorian, Hijri, etc.)` | Canonical calendar identification including mathematical rule edition (e.g., Umm al-Qura lunar sighting vs. algorithmic calculation). |
-| **L05** | Time-Zone Rules | `tz_rule_context` | `IANA TZDB ID + Hash` | IANA Time Zone Database snapshot (e.g., `2026a`, `America/New_York`, UTC-4 EDT). Prevents retroactive political tampering with daylight-saving transitions. |
-| **L06** | UTC Standard | `utc_epoch_timestamp`| `UTC ISO-8601Z` | Standard UTC time with explicit leap-second sequence identification. |
-| **L07** | Atomic Seconds | `tai_seconds_count` | `Float128 (SI Seconds)` | Unbroken, monotonic continuous count of SI seconds elapsed since 1958-01-01T00:00:00 TAI ($9,192,631,770$ unperturbed ground-state hyperfine transitions of cesium-133). |
-| **L08** | Astronomical Time | `julian_epoch_tdb` | `Float128 (JD / TDB / TT)` | Barycentric Dynamical Time (TDB) and Terrestrial Time (TT) Julian Date, invariant to Earth rotation irregularities. |
-| **L09** | Geodesy | `geodetic_position` | `Tuple(Lat, Lon, Alt)` | Latitude ($\pm 90.0^\circ$), Longitude ($\pm 180.0^\circ$), and Orthometric/Ellipsoidal Height in meters relative to GRS80/WGS84. |
-| **L10** | Reference Frame | `reference_frame` | `Enum (ITRF2020 / ICRS)` | Coordinate system tie-point defining axes relative to the International Celestial Reference Frame (ICRF3). |
-| **L11** | Solar System State | `ephemeris_state_vector`| `DE440 State Vector` | 3D velocity and position vectors of Sun, Moon, and major planetary barycenters relative to Solar System Barycenter (SSB). |
-| **L12** | Earth Orientation | `eop_parameters` | `IERS Bulletin A/B` | Universal Time difference ($UT1 - UTC$), Celestial Pole Offsets ($dX, dY$), and Polar Motion ($x_p, y_p$) providing absolute Earth orientation in space. |
-| **L13** | Pulsar Anchors | `pulsar_timing_residuals`| `Array[PulsarAnchor]` | Pulse Time-of-Arrival (TOA) measurements for millisecond pulsars (e.g., PSR J0437-4715, PSR B1937+21) forming an independent astrophysical clock. |
-| **L14** | Uncertainty Metric | `uncertainty_budget` | `Covariance Matrix (16D)`| Formal 1-sigma and 3-sigma uncertainties across time ($\pm \delta t$), position ($\pm \delta \mathbf{x}$), and ephemeris accuracy ($\pm \delta \boldsymbol{\Omega}$). |
-| **L15** | Provenance Proof | `cryptographic_proof`| `ZK-STARK / Ed25519` | Multi-party threshold signatures from recording nodes, SHA-512 state tree roots, and hardware-attested enclave receipts. |
-| **L16** | Parity Verdict | `reconstruction_verdict`| `DAXDA Verdict Code` | Automated frozen v11.4 verdict evaluating cross-layer parity, relativistic consistency, and calendar translation integrity. |
+#### Layer 01: Physical Event Boundary Definition (`L01_EVENT_DEF`)
+- **Specification:** A machine-readable definition specifying the physical observable marking the event boundary.
+- **Requirements:** Must state operational criteria (e.g., physiological sensor threshold crossing, umbilical separation clamp signal, mechanical shutter closure). Must include the explicit boundary criterion $\Theta(x)$ and transducer cutoff frequency.
+
+#### Layer 02: Apparatus Identity & Calibration (`L02_OBSERVER`)
+- **Specification:** Hardware telemetry and calibration state of the recording apparatus.
+- **Fields:** `apparatus_id` (string), `model_urn` (string), `firmware_hash` (SHA-256), `calibration_certificate_hash` (SHA-256), `last_calibration_tai_seconds` (int64).
+
+#### Layer 03: Civil Date & Local Time (`L03_CIVIL_TIME`)
+- **Specification:** The nominal local date and time string formatted per ISO-8601 with fractional seconds and UTC offset (e.g., `2026-09-03T22:12:52.128456-04:00`).
+
+#### Layer 04: Civil Calendar System & Edition (`L04_CALENDAR`)
+- **Specification:** The calendar system definition, edition, and algorithmic variant.
+- **Fields:** `calendar_type` (e.g., `GREGORIAN_PROLEPTIC`, `HIJRI_UMM_AL_QURA`, `HIJRI_TABULAR`, `HEBREW`), `algorithm_version`, `observational_basis` (`ASTRONOMICAL_SIGHTING` vs `ALGORITHMIC_CALCULATION`).
+
+#### Layer 05: Time Zone Rules & IANA Context (`L05_TZDB_CONTEXT`)
+- **Specification:** Complete provenance of civil time zone rules.
+- **Fields:** `tzdb_version` (e.g., `2026a`), `tz_identifier` (e.g., `America/New_York`), `iana_zone_hash` (SHA-256), `pre_1970_caveat_acknowledged` (boolean; flags that IANA database is explicitly approximate for pre-1970 historical timestamps).
+
+#### Layer 06: Coordinated Universal Time (UTC) & Leap Seconds (`L06_UTC`)
+- **Specification:** Coordinated Universal Time derived from atomic time via the International Bureau of Weights and Measures (BIPM).
+- **Fields:** `utc_iso_string`, `current_tai_minus_utc_seconds` (integer), `leap_second_table_hash` (SHA-256), `post_2035_bipm_mode` (boolean; flags compliance with CGPM 2022 Resolution 4 transitioning the management of $UT1-UTC$).
+
+#### Layer 07: Continuous Atomic Time (TAI) (`L07_TAI`)
+- **Specification:** Monotonic, continuous SI seconds elapsed since standard epoch (1958-01-01T00:00:00 TAI).
+- **Exact Numeric Representation:** Represented strictly as a two-tuple of signed 64-bit integers:
+  $$\tau_{\text{atomic}} = \big(\text{tai\_seconds} \in \mathbb{Z},\, \text{tai\_attoseconds} \in [0, 10^{18}-1]\big)$$
+  This guarantees exact representation down to $10^{-18}$ seconds across arbitrary historical and astronomical spans without IEEE 754 mantissa exhaustion.
+
+#### Layer 08: Relativistic Coordinate Times (TT, TDB, TCB) (`L08_COORDINATE_TIMES`)
+- **Specification:** Rigorous astronomical coordinate time scales distinct from proper time.
+- **Fields:**
+  - `terrestrial_time_tt`: Exact offset from TAI: $TT = TAI + 32.184\text{ s}$.
+  - `barycentric_dynamical_time_tdb`: Julian Date in TDB scale.
+  - `barycentric_coordinate_time_tcb`: Julian Date in TCB scale.
+  - `transformation_model_id`: Explicit IERS convention reference (e.g., `IERS-TN-36-CONV2010`).
+
+#### Layer 09: Geodetic Spatial Coordinates & Gravitational Potential (`L09_GEODESY`)
+- **Specification:** Physical location of the observer relative to Earth's reference geoid.
+- **Fields:** `latitude_deg`, `longitude_deg`, `ellipsoidal_height_meters`, `gravity_potential_phi` ($m^2/s^2$ relative to geoid, accounting for gravitational time dilation $\frac{\Delta \tau}{\tau} \approx \frac{\Phi}{c^2}$).
+
+#### Layer 10: Spatial Reference Frame Tie-Points (`L10_FRAME`)
+- **Specification:** Terrestrial and celestial reference frames.
+- **Fields:** `terrestrial_frame` (e.g., `ITRF2020`), `celestial_frame` (e.g., `ICRF3`), `realization_epoch`.
+
+#### Layer 11: Ephemeris Archive & Planetary State Vectors (`L11_EPHEMERIS`)
+- **Specification:** Complete physical state archive rather than an unverifiable hash.
+- **Fields:**
+  - `ephemeris_kernel_id`: E.g., `JPL_DE440` (operational 1550–2650) or `JPL_DE441` (long-horizon archive $-13,200$ to $+17,191$).
+  - `kernel_sha256`: SHA-256 hash of the generic SPK kernel file.
+  - `target_barycenters`: 3D position ($km$) and velocity ($km/s$) vectors for Sun, Earth, Moon, and Jupiter relative to Solar System Barycenter at coordinate time $TDB$.
+
+#### Layer 12: Earth Orientation Parameters (EOP) (`L12_EOP`)
+- **Specification:** Instantaneous Earth orientation in space as reported by the International Earth Rotation and Reference Systems Service (IERS).
+- **Fields:** `ut1_minus_utc_sec` (float64), `polar_motion_x_arcsec`, `polar_motion_y_arcsec`, `celestial_pole_dx`, `celestial_pole_dy`, `bulletin_source_id`.
+
+#### Layer 13: Astrophysical Pulsar Timing Anchors (`L13_PULSAR_ANCHOR`)
+- **Specification:** Independent astrophysical clock signals invariant to Solar System dynamics.
+- **Fields:** Array of `PulsarTimingObservation`:
+  - `pulsar_name`: (e.g., `PSR_J0437-4715`, `PSR_B1937+21`).
+  - `topocentric_toa_tai_sec`: Raw Pulse Time-of-Arrival at observatory receiver.
+  - `observatory_code`: IAU/IERS observatory identifier.
+  - `receiver_frequency_mhz`: Observation center frequency.
+  - `dispersion_measure_pc_cm3`: Interstellar medium electron column density applied.
+  - `timing_model_hash`: SHA-256 of the ephemeris timing solution file (tempo2/PINT).
+  - `timing_residual_nanoseconds`: Post-fit residual.
+
+#### Layer 14: Relativistic Observer Proper Time & Trajectory (`L14_PROPER_TIME`)
+- **Specification:** Accumulated proper time ($\tau$) along the observer's physical worldline.
+- **Fields:**
+  - `clock_hardware_type`: (e.g., `CHIP_SCALE_ATOMIC_CLOCK`, `PASSIVE_HYDROGEN_MASER`).
+  - `proper_time_accumulated_seconds`: Exact (int64 seconds, int64 attoseconds).
+  - `worldline_velocity_vector_c`: $\mathbf{v}/c$ relative to geocentric/barycentric frame.
+  - `integrated_dilation_correction`: $\int (1 - \sqrt{1 - v^2/c^2 + 2\Phi/c^2}) dt$.
+
+#### Layer 15: 16-Dimensional Uncertainty Covariance Matrix (`L15_UNCERTAINTY`)
+- **Specification:** A complete, formal $16 \times 16$ uncertainty covariance matrix $\mathbf{\Sigma} \in \mathbb{R}^{16 \times 16}$ characterizing measurement errors, cross-channel correlations, and calibration limits across all dimensions.
+- **Fields:** `covariance_matrix_elements` (list of 136 upper-triangular float64 values), `confidence_interval_sigma` (float), `dominant_error_source` (string).
+
+#### Layer 16: Cryptographic Provenance & Canonical Signing (`L16_PROVENANCE`)
+- **Specification:** Verifiable tamper-evidence via deterministic serialization and asymmetric signatures.
+- **Signing Algorithm:** Ed25519 (RFC 8032).
+- **Canonical Serialization:** Deterministic JSON (RFC 8785) with strict alphabetical key sorting, UTF-8 normalization (NFC), and IEEE 754 float strictness.
 
 ---
 
-## 3. Mathematical Foundations: Relativistic Spacetime Receipt
+## 4. Canonical Signing Serialization Specification
 
-Let the worldline of an observer $\mathcal{O}$ be parameterized by proper time $\tau$. The invariant interval between neighboring events along $\mathcal{O}$ in a spacetime metric $g_{\mu\nu}$ is:
-
-$$c^2 d\tau^2 = -g_{\mu\nu} dx^\mu dx^\nu$$
-
-For an observer in Earth's gravitational potential $\Phi(\mathbf{x})$ moving at velocity $\mathbf{v}$ relative to the Barycentric Celestial Reference System (BCRS):
-
-$$\frac{d\tau}{dt_{\text{TCB}}} = 1 - \frac{\Phi_{\text{ext}} + \Phi_{\text{Earth}}(\mathbf{x})}{c^2} - \frac{v^2}{2c^2} + \mathcal{O}(c^{-4})$$
-
-Where $t_{\text{TCB}}$ is Barycentric Coordinate Time. DCAP-16 anchors events such that any future observer—regardless of civilization, calendar reform, or stellar movement—can reconstruct the coordinate instant $t_{\text{TCB}}$ and the observer's proper time $\tau$ without relying on human linguistic or cultural conventions.
+To prevent signature verification failures across architectures, the canonical signing payload is generated by:
+1. Omitting `provenance_signatures` and `referee_verdicts`.
+2. Normalizing all strings to Unicode NFC.
+3. Formatting integer timestamps as base-10 strings without leading zeros.
+4. Serializing dictionary keys in lexicographical Unicode order with no whitespace (` separators=(',', ':') `).
+5. Computing the SHA-512 digest of the canonical byte sequence.
+6. Signing the resulting 64-byte digest with Ed25519.
 
 ---
 
-## 4. Operational Verdicts (Frozen v11.4 Core)
+## 5. Decoupled Referee Verdict Architecture
 
-The v11.4 release authority referee issues one of four deterministic verdicts on any DCAP-16 event record:
+The receipt is strictly read-only and sealed by the submitting party. The governance verdict is an independent, separately signed cryptographic record:
+
+```
++--------------------------+          +------------------------------------+
+|   DCAP-16 Event Receipt   | -------> |    Frozen v11.4 Adapter Referee    |
+| (Submitted by Apparatus) |          +------------------------------------+
++--------------------------+                            |
+            |                                           v
+            |                        +------------------------------------+
+            +----------------------> |    DCAP-16 Referee Verdict Record  |
+                                     |  - references receipt_sha512       |
+                                     |  - profile evaluated: CIVIL/ASTRON |
+                                     |  - certified parity verdict        |
+                                     |  - signed by v11.4 referee key     |
+                                     +------------------------------------+
+```
+
+### Referee Verdict Codes
 
 1. `VERDICT: CERTIFIED_CHRONOMETRIC_ANCHOR`
-   - All 16 layers present, mathematically reconciled within stated uncertainty $\mathbf{U}$, cryptographic proof verified, and relativistic sanity tests passed ($\Delta \tau \le \Delta t_{\text{coord}}$ within gravitational corrections).
-2. `VERDICT: CALENDAR_TRANSLATION_ONLY`
-   - Civil date conversion verified, but astrophysical ephemeris or hardware sensor telemetry missing Layer 11–13 anchors. Valid for civil recordkeeping; invalid for high-precision physical spacetime custody.
-3. `VERDICT: UNRESOLVED_UNCERTAINTY_CONFLICT`
-   - Cross-layer discrepancy detected (e.g., astronomical planetary position diverges from atomic seconds count by $> 3\sigma$).
-4. `VERDICT: INVALID_CHRONOMETRIC_PROOF`
-   - Tampered signatures, contradictory IANA rule history, missing event definition boundary, or fail-closed gate violation.
+   - All layers mandated by the requested profile pass mathematical consistency checks within the stated uncertainty bounds $\mathbf{\Sigma}$.
+2. `VERDICT: PROFILE_CONFORMANCE_LIMITED`
+   - Meets lower-tier profile criteria (e.g., `DCAP-CIVIL`), but lacks astronomical/relativistic anchors for higher tiers.
+3. `VERDICT: UNRESOLVED_COORDINATE_DIVERGENCE`
+   - Cross-scale mathematical divergence (e.g., planetary position in Layer 11 conflicts with atomic time in Layer 07 by $> 3\sigma$).
+4. `VERDICT: FAILED_INTEGRITY_VERIFICATION`
+   - Canonical Ed25519 signature mismatch, corrupt leap-second table, or missing event boundary definition.
 
 ---
 
-## 5. Reference Implementation Interfaces
+## 6. Connection to Biological State & Consciousness Experiments
 
-```python
-"""
-DCAP-16 Reference Type System & Validator Stub
-Conforming to DAXDA v11.4 Core Governance and Next-Gen 12.0.1 Geometry.
-"""
+DCAP-16 answers **when** and **where** an observation occurs within physical spacetime. **It cannot and does not answer what the measurement means metaphysically.**
 
-from dataclasses import dataclass
-from typing import List, Dict, Optional, Tuple
+When utilized in clinical studies (such as the perinatal $Cl(7,0)$ transition protocol in `DAXDA_CONSCIOUSNESS_ENTRY_HYPOTHESIS_PREREGISTRATION.md`), DCAP-16 anchors:
+1. Exact sensor synchronization timestamps across EEG, NIRS, and fECG transducers.
+2. Obstetric event boundary markers (membrane rupture, crowning, umbilical cord clamp, first pulmonary breath).
+3. Raw data stream SHA-512 hashes and sensor calibration states.
+4. Stated temporal uncertainty $\pm \delta t$ across all physiological channels.
 
-@dataclass(frozen=True)
-class DCAP16Receipt:
-    # Layer 01: Physical Event Definition
-    event_definition_urn: str
-    physical_transition_marker: str
-    
-    # Layer 02: Apparatus Identity
-    sensor_hw_uid: str
-    firmware_sha512: str
-    
-    # Layer 03-05: Civil Calendar Metadata
-    civil_timestamp_iso: str
-    calendar_system_id: str
-    tzdb_release_id: str
-    
-    # Layer 06-08: Continuous Atomic & Astronomical Times
-    utc_iso_z: str
-    tai_seconds_exact: float  # SI seconds since 1958-01-01
-    julian_date_tdb: float    # Barycentric Dynamical Time JD
-    
-    # Layer 09-10: Spatiotemporal Geodesy
-    latitude_deg: float
-    longitude_deg: float
-    altitude_meters: float
-    spatial_frame: str        # e.g., 'ITRF2020'
-    
-    # Layer 11-13: Astrophysical Independent Anchors
-    ephemeris_state_hash: str # DE440/DE441 Solar System Barycenter state
-    eop_ut1_minus_utc_sec: float
-    pulsar_anchor_residuals: Dict[str, float] # PSR ID -> residual (ns)
-    
-    # Layer 14: Rigorous Uncertainty Matrix
-    temporal_uncertainty_seconds: float
-    spatial_uncertainty_meters: float
-    
-    # Layer 15: Cryptographic Integrity
-    signature_ed25519: str
-    merkle_tree_root: str
-    
-    # Layer 16: Verification Output
-    v11_referee_verdict: Optional[str] = None
-```
+### Permissible Receipt Findings
+If an abrupt, multivector phase change is observed at temporal marker $t^*$, the only scientifically and legally defensible statement issued by a DCAP-16 receipt is:
+
+$$\textbf{“Reproducible physical state transition detected at } t^* \pm \delta t \text{ [UTC / TAI]. Metaphysical interpretation unverified.”}$$
+
+Attributing that transition to "consciousness entering the body" remains strictly blocked by frozen v11.4 claim gating until an independent, falsifiable physical mechanism establishes that the measured neural signal tracks conscious awareness rather than oxygenation onset, circulatory shunts, catecholamine surges, or sensory shock.
