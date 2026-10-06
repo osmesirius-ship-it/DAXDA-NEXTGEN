@@ -63,7 +63,6 @@ class SeparatedReportFields:
         self.audit_completed = False
         self.audit_hash = None
         self.audit_gates = {}
-        
         self.action_released = False
         self.action_authority = None
         self.action_signature = None

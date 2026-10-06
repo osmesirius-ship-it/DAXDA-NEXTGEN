@@ -4,3 +4,6 @@
 .venv/
 .vscode/
 .DS_Store
+osmesirius@gmail.com/
+.env*
+daxda-next-gen/.env*
