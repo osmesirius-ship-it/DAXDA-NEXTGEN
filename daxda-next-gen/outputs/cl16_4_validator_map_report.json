@@ -1,15 +1,15 @@
 {
-  "timestamp": 1791325944.560895,
+  "timestamp": 1791644725.6536021,
   "total_bounties": 20,
   "certified_bounties": 20,
   "certification_rate_pct": 100.0,
   "total_payout_usd": 280000.0,
-  "total_latency_seconds": 0.0023,
+  "total_latency_seconds": 0.0022,
   "cl16_4_space_size": 1820,
   "active_configurations_used": 20,
   "graph_algebraic_connectivity_lambda2": 1.382,
   "is_topologically_closed": true,
-  "merkle_state_root": "d21e875bf516e5aeb45b342b73aca2eeb2a43aad2a39fcae5ddea83c9ef2ac8f",
+  "merkle_state_root": "32c8cef7802a1fa86dc38bc02cfb705687374cca7cc52601d1549d2dba924585",
   "domain_breakdown": {
     "Domain 1: Geometric Algebra": {
       "total": 4,
@@ -61,8 +61,8 @@
       "dax_stability_score": 0.9605,
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-1",
-      "validation_latency_ms": 0.049,
-      "receipt_hash": "e762568d93e8d4825bfe5934b87bd6f27fc16f7661fbb4e4ef7b75c665912746",
+      "validation_latency_ms": 0.053,
+      "receipt_hash": "df814494263e2fa6c9132041d13c8d705f761881f49dad9074c15778e60b72f6",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_HILBERT_TEMPORAL_LATTICES"
       ],
@@ -91,8 +91,8 @@
       "dax_stability_score": 0.9465,
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-2",
-      "validation_latency_ms": 0.04,
-      "receipt_hash": "3a4a2c81d93bb425edea9772b613687103e4d49654b9a66ecb6f1640045dda56",
+      "validation_latency_ms": 0.036,
+      "receipt_hash": "91e7c33a9d2da29d36646eb1e2a59cf1616bea4b97f012ce397d7f9ded16efed",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_MULTI_AGENT_QUANTUM_TEMPORAL_CONSENSUS"
       ],
@@ -121,8 +121,8 @@
       "dax_stability_score": 0.9605,
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-3",
-      "validation_latency_ms": 0.027,
-      "receipt_hash": "aa74015507bb9325a6ed29e1d1b201447eeb9b883d873d5d46c1355c2f9f43c1",
+      "validation_latency_ms": 0.025,
+      "receipt_hash": "869bc17cafd282f48b06238fc59b177def72c3cf4ecf4503c0672d9f2a530f06",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_ATOMIC_CLOCK_PHASE_LOCKED_5D"
       ],
@@ -151,8 +151,8 @@
       "dax_stability_score": 0.954,
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-4",
-      "validation_latency_ms": 0.023,
-      "receipt_hash": "be02c7960c3c8fa31b592e6b5cda3b4e02da0357b00b6c192fe319151613ba39",
+      "validation_latency_ms": 0.024,
+      "receipt_hash": "41a64403847353691fe8c27133df22692ef42b177ba06e75fe92434030bc1c6a",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_TEMPORAL_STEGANOGRAPHY_DETECTION"
       ],
@@ -182,7 +182,7 @@
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-5",
       "validation_latency_ms": 0.024,
-      "receipt_hash": "0eb46fd347df306c646fdd6921c2db030c4e45f4cb6f2c8efc009c0f61b7e0f1",
+      "receipt_hash": "030378e75c9edb64a6f9d6ec4b6c419962fd166d06435b242e13910d230d55e1",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_FPGA_NANOSECOND_VALIDATOR"
       ],
@@ -211,8 +211,8 @@
       "dax_stability_score": 0.9455,
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-6",
-      "validation_latency_ms": 0.022,
-      "receipt_hash": "4961d3fad7b8e3fd4275cf81cca19678bb5644a15e551f1f3b751e627fe8b25a",
+      "validation_latency_ms": 0.026,
+      "receipt_hash": "5ae0df9d377fcee3176f17f639695d0b93d532807fedd21ce8db6ed318c6691d",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_TPU_POD_XLA_ORCHESTRATION"
       ],
@@ -241,8 +241,8 @@
       "dax_stability_score": 0.954,
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-7",
-      "validation_latency_ms": 0.021,
-      "receipt_hash": "49ac9a25588f81da96f328732dfa91e2defb942e1e2c1f385330936b91103bc9",
+      "validation_latency_ms": 0.022,
+      "receipt_hash": "0c157daff26158223cd522c4f99a6f76617216a28d7dcc46cabc540e125cb224",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_CARBON_AWARE_ENERGY_ARBITRAGE"
       ],
@@ -272,7 +272,7 @@
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-0",
       "validation_latency_ms": 0.022,
-      "receipt_hash": "eb9afc3a0e5579b0e375b1bda622cbb0b4d35d3d3abd1e4235b123ff052ae8ca",
+      "receipt_hash": "a04aa20458c47d1af7f3a1b6964d963868a33a5ab811851da267fec175c218c9",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_DEPIN_VALIDATOR_NETWORK"
       ],
@@ -301,8 +301,8 @@
       "dax_stability_score": 0.969,
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-1",
-      "validation_latency_ms": 0.023,
-      "receipt_hash": "7af163e39de5696437e67ad1683ee86c2d13182b537d3acb17fa10a040632a87",
+      "validation_latency_ms": 0.024,
+      "receipt_hash": "446df86f4d961b73290f4e950de8896afdcf3802f75cc7e357633e6edf7813d8",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_MULTIMODAL_ADVERSARIAL_GENERATION"
       ],
@@ -331,8 +331,8 @@
       "dax_stability_score": 0.953,
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-2",
-      "validation_latency_ms": 0.02,
-      "receipt_hash": "e93d4ff4943718fbe7943f95e66298e669b04fd26676407726a339357be336ad",
+      "validation_latency_ms": 0.024,
+      "receipt_hash": "3290291b27c78c2197fec646cd6628ac72d0bd927906f73b75f9cf975df95f47",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_NEURO_SYMBOLIC_HONEYTOKEN_SWARMS"
       ],
@@ -361,8 +361,8 @@
       "dax_stability_score": 0.9425,
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-3",
-      "validation_latency_ms": 0.02,
-      "receipt_hash": "b65c1353c397907a4e57a32913f75bf165fe99f97c8796d9a7470f273aa1fd81",
+      "validation_latency_ms": 0.021,
+      "receipt_hash": "dae80dea5ec39084fcfa72171893770421236569b5253b1e5d164e64a8dc3fd9",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_EBPF_FORMAL_SANDBOX_VERIFICATION"
       ],
@@ -391,8 +391,8 @@
       "dax_stability_score": 0.949,
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-4",
-      "validation_latency_ms": 0.021,
-      "receipt_hash": "0f3a5d6465bc16d7ecc502c4f34123abf5e677130e8d16d94ee9d84166d865aa",
+      "validation_latency_ms": 0.022,
+      "receipt_hash": "268728121609a3af021737f21fe4ffbdd1b85886db3c9941b248797e7b1193e3",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_CROSS_CLUSTER_REDTEAM_SIMULATION"
       ],
@@ -421,8 +421,8 @@
       "dax_stability_score": 0.934,
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-5",
-      "validation_latency_ms": 0.02,
-      "receipt_hash": "73bed82c184b7c27f86f77d9b2877cee47023d87b339d50b80b50ca5073f348c",
+      "validation_latency_ms": 0.021,
+      "receipt_hash": "c0b3b82d3a97ac571da2deaa52944e384698341590feb227cf5c65655fde8cfd",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_NEURO_FMRI_MATCHING"
       ],
@@ -451,8 +451,8 @@
       "dax_stability_score": 0.946,
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-6",
-      "validation_latency_ms": 0.02,
-      "receipt_hash": "dca41125825034a2f37109571148513c7f8bc578bfd54bec6ef39fdcca1d6858",
+      "validation_latency_ms": 0.021,
+      "receipt_hash": "d244f9b62ae3d9477035d64cde83610cb479637e7c7c44a0f7b2c427feb8bbe1",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_BCI_ALIGNMENT"
       ],
@@ -481,8 +481,8 @@
       "dax_stability_score": 0.968,
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-7",
-      "validation_latency_ms": 0.02,
-      "receipt_hash": "382d34d31fcb3d3cfede2564d97d31e811bf27b249bb7f59acaf90809dc1a3a2",
+      "validation_latency_ms": 0.021,
+      "receipt_hash": "6d41effdf7d570d62982e6faea7ba33d433d2e66deae1e3f6b663a5b0a86e694",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_QUANTUM_PSYCHOMETRICS"
       ],
@@ -512,7 +512,7 @@
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-0",
       "validation_latency_ms": 0.021,
-      "receipt_hash": "481444a4e9382710e9718015816562ba69e78ae141589b0b0cd14ad351564e07",
+      "receipt_hash": "12040e29b6918563c39f175b1d869d2a697f1143fe05cfec21fd85feccc43156",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_MULTIVERSAL_CONSENSUS"
       ],
@@ -542,7 +542,7 @@
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-1",
       "validation_latency_ms": 0.02,
-      "receipt_hash": "010a47d4953dc00d8fb34163b9131f7400c205251c125d5c964f8109da150c60",
+      "receipt_hash": "9526ab195f066ca46d65f5eeb27a652287e458993d174314ce7134316d0095df",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_CL64_16_HYPERMANIFOLDS"
       ],
@@ -571,8 +571,8 @@
       "dax_stability_score": 0.957,
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-2",
-      "validation_latency_ms": 0.02,
-      "receipt_hash": "7b15de71b3411ccf376460f47dddb35a56fba18ca3f4bcce6523cd542dce9689",
+      "validation_latency_ms": 0.031,
+      "receipt_hash": "6edfbb009e273b6666bfaf2de92a26ae2ef04ab49521e9390090fd861e111993",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_PHOTONIC_CLIFFORD_ACCELERATOR"
       ],
@@ -601,8 +601,8 @@
       "dax_stability_score": 0.9645,
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-3",
-      "validation_latency_ms": 0.02,
-      "receipt_hash": "c5c2176f6f433163c30be9f530509786b5edba7608a1b038f51c68ea4ab69013",
+      "validation_latency_ms": 0.03,
+      "receipt_hash": "7300fdbbf64681302c07e45be4a060f7de80fec9b34e4fcef7f58f60ff38d967",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_LEAN4_CLIFFORD_THEOREM_PROVING"
       ],
@@ -631,8 +631,8 @@
       "dax_stability_score": 0.965,
       "dax_decision": "ACCEPT",
       "cluster_worker_id": "worker-4",
-      "validation_latency_ms": 0.02,
-      "receipt_hash": "deaf08069ae932f84772fb7da34670ab3d6435b92ac033dbd14821ce05f9e26b",
+      "validation_latency_ms": 0.019,
+      "receipt_hash": "e8adc4cde6de41cef7463a32633b49243d55f4f4dd04419a744c59430155d08c",
       "entangled_targets": [
         "BOUNTY_DAXDA_L3_QUANTUM_ERROR_CORRECTED_CLIFFORD"
       ],
