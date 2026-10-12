@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAXDA Sentry — Fire TV Ambient Living Room Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="tv-mode">
+  <div class="tv-container">
+    <!-- Top Status Bar -->
+    <header class="tv-header">
+      <div class="brand">
+        <span class="shield-icon">🛡️</span>
+        <span class="brand-title">DAXDA SENTRY</span>
+        <span class="badge">FIRE OS / VEGA OS</span>
+      </div>
+      <div class="header-clock" id="clock-display">12:00 PM</div>
+      <div class="device-pills">
+        <span class="pill pill-online">● ALEXA+ MCP ACTIVE</span>
+        <span class="pill pill-online">● RING LINKED</span>
+        <span class="pill pill-online">● BEE WEARABLE SYNCED</span>
+      </div>
+    </header>
+
+    <!-- Main 10-Foot Content Layout -->
+    <main class="tv-grid">
+      <!-- Left: Ambient Content / Entertainment View -->
+      <section class="card media-card focusable" tabindex="0" id="card-media">
+        <div class="card-tag">LIVING ROOM DISPLAY</div>
+        <h2>Ambient AI Cinema & Safety Feed</h2>
+        <div class="video-preview-box">
+          <div class="mock-cinema-art">
+            <div class="cinema-gradient"></div>
+            <div class="cinema-caption">
+              <h3>Cosmic Geometry & Spacetime Invariants</h3>
+              <p>4K HDR Stream • Ambient Volume Governed</p>
+            </div>
+          </div>
+        </div>
+        <div class="media-controls">
+          <button class="tv-btn focusable" id="btn-play">▶ Play</button>
+          <button class="tv-btn focusable" id="btn-cameras">🎥 All Cameras</button>
+          <button class="tv-btn focusable" id="btn-governance">⚖️ DAXDA Gate</button>
+        </div>
+      </section>
+
+      <!-- Right: Real-Time Sentry Live Feed & Multi-Device Feeds -->
+      <section class="sidebar-grid">
+        <!-- Ring Camera Card -->
+        <div class="card sentry-card focusable" tabindex="0" id="card-ring">
+          <div class="card-header-flex">
+            <span class="card-tag">RING PERIMETER CAM</span>
+            <span class="status-live" id="ring-badge">LIVE MONITORING</span>
+          </div>
+          <div class="camera-canvas">
+            <div class="cam-overlay">
+              <span class="cam-label">FRONT PORCH PRO 2</span>
+              <span class="cam-rec">● REC</span>
+            </div>
+            <div class="vision-bounding-box" id="vision-box">
+              <span class="tag-box">PACKAGE DETECTED (98%)</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span id="ring-status-text">Door Lock: <strong style="color: #4ade80;">LOCKED</strong> • No Intrusion</span>
+          </div>
+        </div>
+
+        <!-- Bee Wearable & Alexa+ Context Card -->
+        <div class="card context-card focusable" tabindex="0" id="card-context">
+          <div class="card-tag">BEE WEARABLE + ALEXA+ CONTEXT</div>
+          <div class="context-item">
+            <span class="context-label">Recent Voice Memo:</span>
+            <p class="context-text" id="bee-text">"Heading out to the garage. Alexa, check front door and arm cameras."</p>
+          </div>
+          <div class="context-meta-row">
+            <span>❤️ Heart Rate: <strong id="bee-hr">72 BPM</strong></span>
+            <span>⚡ Threat Level: <strong id="dax-gate" style="color: #4ade80;">ZERO (ALLOW)</strong></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Picture-in-Picture (PIP) Dynamic Alert Overlay -->
+    <div class="pip-overlay hidden" id="pip-modal">
+      <div class="pip-box">
+        <div class="pip-header">
+          <span class="pip-alert-icon">🚨</span>
+          <span class="pip-title" id="pip-title">RING EVENT NOTIFICATION</span>
+        </div>
+        <div class="pip-body" id="pip-body">
+          Visitor arrived at Front Door. Picture-in-Picture cast initiated by Alexa+.
+        </div>
+        <div class="pip-actions">
+          <button class="tv-btn focusable" id="pip-dismiss">Dismiss (Back)</button>
+          <button class="tv-btn focusable" id="pip-unlock">Unlock Door (DAXDA Governed)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- D-Pad Navigation Remote Guide -->
+    <footer class="tv-footer">
+      <span>Navigation: [▲ ▼ ◄ ►] Arrow Keys &bull; [Enter/OK] Select &bull; [Esc/Back] Dismiss PIP Overlay</span>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

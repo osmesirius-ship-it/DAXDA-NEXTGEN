@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Developer Hackathon 2026 — DAXDA Sentry Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(17, 24, 39, 0.85);
+      --border: rgba(255, 255, 255, 0.08);
+      --accent-blue: #38bdf8;
+      --accent-green: #34d399;
+      --accent-orange: #fb923c;
+      --accent-rose: #fb7185;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      background-image: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 50%),
+                        radial-gradient(at 100% 100%, rgba(52, 211, 153, 0.08) 0px, transparent 50%);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      padding: 1.5rem 2rem;
+      min-height: 100vh;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+    .logo-group { display: flex; align-items: center; gap: 0.75rem; }
+    .logo-group h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; }
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent-blue);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    .grid-dashboard {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-title { font-size: 1rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
+    .track-tag {
+      font-size: 0.65rem;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+    }
+    .btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 0.5rem 0.8rem;
+      border-radius: 0.5rem;
+      font-family: inherit;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn:hover { background: rgba(56, 189, 248, 0.2); border-color: var(--accent-blue); }
+    .btn-primary { background: var(--accent-blue); color: #000; font-weight: 600; border-color: transparent; }
+    .btn-primary:hover { background: #7dd3fc; }
+    .btn-danger { background: rgba(244, 63, 94, 0.2); border-color: rgba(244, 63, 94, 0.4); color: #fda4af; }
+    .btn-danger:hover { background: rgba(244, 63, 94, 0.4); }
+    .status-box {
+      background: #020617;
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #cbd5e1;
+      height: 140px;
+      overflow-y: auto;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .bottom-row {
+      display: grid;
+      grid-template-columns: 1.2fr 1.8fr;
+      gap: 1.25rem;
+    }
+    .audit-terminal {
+      background: #000;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      height: 220px;
+      overflow-y: auto;
+      color: #38bdf8;
+    }
+    .log-line { margin-bottom: 4px; line-height: 1.4; }
+    .log-time { color: var(--text-muted); }
+    .log-allow { color: #4ade80; }
+    .log-deny { color: #f43f5e; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-group">
+      <span style="font-size: 1.75rem;">🛡️</span>
+      <h1>DAXDA SENTRY</h1>
+      <span class="badge">AMAZON DEVELOPER HACKATHON 2026</span>
+    </div>
+    <div>
+      <span style="font-size: 0.85rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">
+        Primary: <strong>Alexa+ MCP</strong> &bull; Devices: <strong>Ring + Fire TV + Bee</strong> &bull; Cloud: <strong>AWS Bedrock</strong>
+      </span>
+    </div>
+  </header>
+
+  <!-- 4-Device Grid -->
+  <div class="grid-dashboard">
+    <!-- 1. Alexa+ MCP Server -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span>🎙️</span> Alexa+</div>
+        <span class="track-tag">PRIMARY TRACK</span>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">
+        Streamable HTTP MCP Server (Spec 2025-11-25) with dynamic tool discovery and session multiplexing.
+      </p>
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <button class="btn btn-primary" onclick="invokeAlexaTool('daxda_evaluate_governance')">Test Governance</button>
+        <button class="btn" onclick="invokeAlexaTool('tools/list')">List MCP Tools</button>
+      </div>
+      <div class="status-box" id="alexa-log">MCP Server: Active at :8090&#10;Protocol: Spec 2025-11-25&#10;Sessions: Ready</div>
+    </div>
+
+    <!-- 2. Ring Access Control -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span>🔔</span> Ring</div>
+        <span class="track-tag">RING TRACK</span>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">
+        Simulated Video Doorbell Pro 2 & Floodlight Cam with computer vision access control.
+      </p>
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <button class="btn" onclick="triggerRingEvent('ding')">Doorbell Ding</button>
+        <button class="btn" onclick="triggerRingEvent('motion')">Driveway Motion</button>
+        <button class="btn btn-danger" onclick="triggerMaliciousOverride()">Test Bad Unlock</button>
+      </div>
+      <div class="status-box" id="ring-log">Lock: LOCKED (Secure)&#10;Perimeter: Armed&#10;Battery: 95%</div>
+    </div>
+
+    <!-- 3. Fire TV Living Room -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span>📺</span> Fire TV</div>
+        <span class="track-tag">FIRE TV TRACK</span>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">
+        10-foot Living Room UI on Fire OS / Vega OS with Picture-in-Picture alert routing.
+      </p>
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <button class="btn" onclick="castFireTvAlert('Visitor at Door', 'Picture-in-picture stream engaged.')">Cast PIP Alert</button>
+        <button class="btn" onclick="window.open('/firetv', '_blank')">Open 10-Foot UI</button>
+      </div>
+      <div class="status-box" id="firetv-log">Display: 4K Ambient Cinema&#10;PIP Mode: Ready&#10;Remote: D-Pad Active</div>
+    </div>
+
+    <!-- 4. Bee Wearable AI -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span>🐝</span> Bee Wearable</div>
+        <span class="track-tag">BEE TRACK</span>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">
+        Voice memo transcription, heart-rate telemetry, and wearable task intent ingestion.
+      </p>
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <button class="btn" onclick="ingestBeeMemo('Heading to office. Alexa, check front door and arm cameras.')">Sync Voice Memo</button>
+        <button class="btn" onclick="ingestBeeMemo('Unfamiliar car parked in driveway.', 102)">Simulate High Stress</button>
+      </div>
+      <div class="status-box" id="bee-log">Hardware: Bee Watch Alpha&#10;Heart Rate: 72 BPM&#10;Activity: STATIONARY</div>
+    </div>
+  </div>
+
+  <!-- Bottom Row: AWS Bedrock + DAXDA Governance Audit Log -->
+  <div class="bottom-row">
+    <!-- AWS Bedrock Mini Challenge -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span>☁️</span> AWS Bedrock Synthesis</div>
+        <span class="track-tag">AWS BUILDER MINI CHALLENGE</span>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">
+        Foundation model ambient reasoning via boto3 & Strands SDK (Claude 3.5 Sonnet / Amazon Titan).
+      </p>
+      <button class="btn btn-primary" onclick="runBedrockSynthesis()">Run Bedrock Ambient Synthesis</button>
+      <div class="status-box" id="bedrock-log" style="height: 120px;">Bedrock Runtime: Ready&#10;Model: anthropic.claude-3-5-sonnet&#10;Region: us-east-1</div>
+    </div>
+
+    <!-- DAXDA Nicole Protocol Cryptographic Receipt Log -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><span>⚖️</span> DAXDA 16-Layer Fail-Closed Audit Trail</div>
+        <span class="track-tag">OPEN SOURCE MINI CHALLENGE</span>
+      </div>
+      <div class="audit-terminal" id="audit-term">
+        <div class="log-line"><span class="log-time">[BOOT]</span> DAXDA Sentry Policy Enforcement Point initialized.</div>
+        <div class="log-line"><span class="log-time">[AUTH]</span> Nicole Protocol (886-Ops) active across Alexa+, Ring, Fire TV, and Bee.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function addAuditLog(msg, type = "info") {
+      const term = document.getElementById('audit-term');
+      const line = document.createElement('div');
+      line.className = 'log-line';
+      const timeStr = new Date().toLocaleTimeString();
+      let colorClass = "";
+      if (type === "allow") colorClass = "log-allow";
+      if (type === "deny") colorClass = "log-deny";
+      line.innerHTML = `<span class="log-time">[${timeStr}]</span> <span class="${colorClass}">${msg}</span>`;
+      term.appendChild(line);
+      term.scrollTop = term.scrollHeight;
+    }
+
+    async function invokeAlexaTool(toolName) {
+      addAuditLog(`Alexa+ invoking MCP tool: '${toolName}'...`);
+      try {
+        const res = await fetch('/api/alexa_mcp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ tool: toolName })
+        });
+        const data = await res.json();
+        document.getElementById('alexa-log').textContent = JSON.stringify(data, null, 2);
+        addAuditLog(`MCP Response received: status=${data.status || 'SUCCESS'}`, "allow");
+      } catch (e) {
+        addAuditLog(`MCP Invocation failed: ${e}`, "deny");
+      }
+    }
+
+    async function triggerRingEvent(eventType) {
+      addAuditLog(`Ring sensor triggered: '${eventType}' event`);
+      try {
+        const res = await fetch('/api/ring_event', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ type: eventType })
+        });
+        const data = await res.json();
+        document.getElementById('ring-log').textContent = JSON.stringify(data, null, 2);
+        addAuditLog(`Ring event processed: ${data.event_type} (${data.event_id})`, "allow");
+      } catch (e) {
+        addAuditLog(`Ring error: ${e}`, "deny");
+      }
+    }
+
+    async function triggerMaliciousOverride() {
+      addAuditLog(`Attempting unauthorized smart lock override...`);
+      try {
+        const res = await fetch('/api/ring_override', { method: 'POST' });
+        const data = await res.json();
+        addAuditLog(`DAXDA GATE LOCKED: ${data.governance.violations[0]}`, "deny");
+        addAuditLog(`SHA-256 Receipt: ${data.governance.decision_receipt_sha256.substring(0, 24)}... (BLOCKED)`, "deny");
+      } catch (e) {
+        addAuditLog(`Override error: ${e}`, "deny");
+      }
+    }
+
+    async function castFireTvAlert(title, body) {
+      addAuditLog(`Routing notification to Fire TV 10-foot Living Room UI...`);
+      document.getElementById('firetv-log').textContent = `PIP Alert Cast: "${title}"\nBody: ${body}\nStatus: DISPLAYED`;
+      addAuditLog(`Fire TV PIP Overlay Active: "${title}"`, "allow");
+    }
+
+    async function ingestBeeMemo(text, hr = 72) {
+      addAuditLog(`Bee Wearable streaming voice memo: "${text}" (${hr} BPM)`);
+      try {
+        const res = await fetch('/api/bee_memo', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text, hr })
+        });
+        const data = await res.json();
+        document.getElementById('bee-log').textContent = JSON.stringify(data, null, 2);
+        addAuditLog(`Bee Wearable context ingested: Intent='${data.intent_extracted}'`, "allow");
+      } catch (e) {
+        addAuditLog(`Bee ingestion error: ${e}`, "deny");
+      }
+    }
+
+    async function runBedrockSynthesis() {
+      addAuditLog(`Invoking AWS Bedrock multi-modal synthesis (Claude 3.5 Sonnet)...`);
+      try {
+        const res = await fetch('/api/bedrock_synthesize', { method: 'POST' });
+        const data = await res.json();
+        document.getElementById('bedrock-log').textContent = data.synthesis;
+        addAuditLog(`AWS Bedrock Synthesis complete (${data.latency_ms} ms)`, "allow");
+      } catch (e) {
+        addAuditLog(`Bedrock error: ${e}`, "deny");
+      }
+    }
+  </script>
+</body>
+</html>
