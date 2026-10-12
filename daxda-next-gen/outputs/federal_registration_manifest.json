@@ -1,0 +1,71 @@
+{
+  "title": "DAXDA.IA Federal Entity Registration & DARPA BAA Package Manifest",
+  "timestamp_utc": "2026-10-12T18:43:11.982497+00:00",
+  "entity": {
+    "legal_name": "DAXDA.IA Technologies LLC",
+    "architect": "Nicole Bess",
+    "agent_profile": "Dexter (DAXDA.IA)",
+    "primary_naics": "541715",
+    "secondary_naics": [
+      "541512",
+      "541511",
+      "541519",
+      "541690"
+    ],
+    "psc_codes": [
+      "AC12",
+      "AJ11",
+      "DA01",
+      "DJ01"
+    ]
+  },
+  "target_solicitations": [
+    "DARPA I2O: Assured Neuro Symbolic Learning and Reasoning (ANSR)",
+    "DARPA I2O: Guaranteeing AI Robustness against Deception (GARD)",
+    "DARPA DSO: Disruptive Capabilities in High-Dimensional Decision Verification",
+    "DoD CDAO: Tradewind Solutions Marketplace AI Procurement"
+  ],
+  "readiness_score": 100.0,
+  "artifacts": [
+    {
+      "id": "FED_DOSSIER",
+      "name": "Federal Entity Registration Dossier",
+      "category": "Federal SAM.gov & Governance Charter",
+      "path": "docs/compliance/DAXDA_FEDERAL_ENTITY_REGISTRATION_DOSSIER.md",
+      "exists": true,
+      "size_bytes": 9418,
+      "sha256": "9a31b7ddbbf4ad8d0640f01a40cbd00248a7fc3242e77e5dfb0e8d002df4d991",
+      "status": "\u2705 CERTIFIED"
+    },
+    {
+      "id": "DARPA_BAA_PROPOSAL",
+      "name": "DARPA BAA AI Governance Technical Proposal",
+      "category": "Defense / DARPA Proposal Package",
+      "path": "docs/proposals/DARPA_BAA_AI_GOVERNANCE_PROPOSAL.md",
+      "exists": true,
+      "size_bytes": 9308,
+      "sha256": "8635f361bd89f1c66a0eebed8c5309c948d2319c90a1de362b29bea4b0efd300",
+      "status": "\u2705 CERTIFIED"
+    },
+    {
+      "id": "NIST_TEVV_COMMENT",
+      "name": "NIST AI 200-2 TEVV-Athlon Public Comment",
+      "category": "Standards & Compliance Submission",
+      "path": "docs/compliance/NIST_AI_200_2_TEVV_ATHLON_PUBLIC_COMMENT_OCTOBER_2026.md",
+      "exists": true,
+      "size_bytes": 16779,
+      "sha256": "354014caaf1c11a74f7427d107116c0bcecd962aa61d4a44b09363fd4f1e9326",
+      "status": "\u2705 CERTIFIED"
+    },
+    {
+      "id": "L4_MASTER_PAYOUT",
+      "name": "Level 4 Master Payout Claim & 5-Cycle Manifold",
+      "category": "Evidentiary Baseline & Verification",
+      "path": "daxda-meta-bounty-submission/solutions/level4/DAXDA_L4_MASTER_PAYOUT_CLAIM.md",
+      "exists": true,
+      "size_bytes": 8392,
+      "sha256": "591d20df141e55a5adbcaf679b8bd30728f73f060df5d4140491892d39bc4816",
+      "status": "\u2705 CERTIFIED"
+    }
+  ]
+}
