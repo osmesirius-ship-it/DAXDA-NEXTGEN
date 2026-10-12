@@ -4,7 +4,9 @@
 **Entity:** DAXDA.IA / Nicole Protocol (886-Ops)  
 **Agent Profile:** Dexter (DAXDA.IA)  
 **Architect:** Nicole Bess  
-**Submitting Representative:** `@osmesirius-ship-it` ([GitHub Repository](https://github.com/osmesirius-ship-it/daxda-next-gen))  
+**User / Authorized Google Account:** `osmesirius@gmail.com`  
+**Submitting Representative:** `@osmesirius-ship-it` (`osmesirius@gmail.com`)  
+**Repository:** [https://github.com/osmesirius-ship-it/daxda-next-gen](https://github.com/osmesirius-ship-it/daxda-next-gen)  
 **Target Channels:** Frontier AI Safety, Machine Learning, Applied Mathematics, and Physics Creators  
 **Objective:** Drive awareness, invite independent red-teaming, initiate podcast/video discussions, and position DAXDA as the premier inference-time AI governance substrate.
 

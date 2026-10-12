@@ -13,6 +13,8 @@ import json
 import re
 from datetime import datetime, timezone
 
+USER_GOOGLE_ACCOUNT = "osmesirius@gmail.com"
+
 TARGET_CREATORS = [
     {
         "id": "3blue1brown",
@@ -242,6 +244,7 @@ def main():
     print("=" * 80)
     print("   DAXDA.IA — YOUTUBE OUTREACH INTELLIGENCE SYNTHESIZER")
     print("   Nicole Protocol (886-Ops) | Agent: Dexter | Architect: Nicole Bess")
+    print(f"   Authorized User / Google Account: {USER_GOOGLE_ACCOUNT}")
     print("=" * 80)
 
     evaluated_campaign = []
@@ -263,6 +266,7 @@ def main():
             "core_theme": c["core_theme"],
             "comment_draft": c["comment_text"],
             "call_to_action": c["call_to_action"],
+            "operator_google_account": USER_GOOGLE_ACCOUNT,
             "audit_telemetry": audit
         }
         evaluated_campaign.append(campaign_item)
@@ -275,6 +279,8 @@ def main():
     manifest = {
         "title": "DAXDA.IA YouTube Strategic Outreach Campaign Manifest",
         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+        "authorized_user_google_account": USER_GOOGLE_ACCOUNT,
+        "operator": f"{USER_GOOGLE_ACCOUNT} (@osmesirius-ship-it)",
         "total_targets": len(TARGET_CREATORS),
         "total_approved": total_approved,
         "approval_rate_percent": (total_approved / len(TARGET_CREATORS)) * 100,
