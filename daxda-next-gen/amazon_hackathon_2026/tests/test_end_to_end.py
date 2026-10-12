@@ -193,3 +193,17 @@ class TestDAXDAGovernancePolicy:
         )
         assert decision.disposition == "ALLOW"
         assert len(decision.decision_receipt_sha256) == 64
+
+
+class TestDAXDAClaimValidation:
+    """Verifies that all claims made in demo script and submission artifacts are formally validated."""
+
+    def test_claims_validation_suite(self):
+        from governance.validate_claims import DAXDAClaimValidator
+        validator = DAXDAClaimValidator()
+        report = validator.verify_all_claims()
+        assert report["claims_verified"] == report["total_claims_audited"] == 10
+        assert report["pass_rate_percentage"] == 100.0
+        assert report["cl16_4_certification"]["is_valid"] is True
+        assert report["chrono_novikov_certification"]["is_novikov_compliant"] is True
+
