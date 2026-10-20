@@ -1,0 +1,219 @@
+{
+  "status": "ACTIVE_100_PERCENT_UPTIME",
+  "uptime_seconds": 5892,
+  "cycles_completed": 1164,
+  "agents_active": 6,
+  "system": {
+    "name": "DAXDA.IA Next-Gen",
+    "lead_agent": "Dexter",
+    "principal_architect": "Nicole Bess",
+    "algebra": "Clifford Geometric Algebra Cl(16,4)",
+    "blade_dimensions": 1048576,
+    "protocol": "Nicole Protocol (886-Ops)",
+    "fail_closed_gate": "AOG_1 LOCKED / DETERMINISTIC"
+  },
+  "metrics": {
+    "invariants_tested": 5820,
+    "invariants_passed": 5820,
+    "pass_rate_percent": 100.0,
+    "null_vector_dissipations": 2328,
+    "adversarial_escapes": 0,
+    "avg_cycle_latency_ms": 63.0,
+    "estimated_throughput_ops_sec": 107680.0
+  },
+  "federal_readiness": {
+    "nist_comment_ready": true,
+    "darpa_baa_ready": true,
+    "sam_gov_dossier_ready": true,
+    "readiness_score": 100.0
+  },
+  "dgar_registry": {
+    "total_agents": 326,
+    "rogue_quarantined": 2,
+    "networks_tracked": [
+      "hf_spaces",
+      "github",
+      "local_api",
+      "mcp_servers"
+    ]
+  },
+  "recent_cycles": [
+    {
+      "cycle": 1164,
+      "time": "21:36:05 UTC",
+      "hash": "76b146af93fbeafc",
+      "duration_ms": 60.6,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1163,
+      "time": "21:36:00 UTC",
+      "hash": "0aa19266a4be3cce",
+      "duration_ms": 61.6,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1162,
+      "time": "21:35:55 UTC",
+      "hash": "6cba469570e02b63",
+      "duration_ms": 63.0,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1161,
+      "time": "21:35:50 UTC",
+      "hash": "4a93c941e5303b8e",
+      "duration_ms": 67.5,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1160,
+      "time": "21:35:45 UTC",
+      "hash": "c91f34a68e67ec81",
+      "duration_ms": 62.2,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1159,
+      "time": "21:35:40 UTC",
+      "hash": "ca14fed3e7f34c3a",
+      "duration_ms": 62.9,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1158,
+      "time": "21:35:35 UTC",
+      "hash": "8f016df849acafe1",
+      "duration_ms": 62.8,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1157,
+      "time": "21:35:30 UTC",
+      "hash": "22762ff40f01fd9f",
+      "duration_ms": 65.5,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1156,
+      "time": "21:35:24 UTC",
+      "hash": "11450e2f3371fb2e",
+      "duration_ms": 67.8,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1155,
+      "time": "21:35:19 UTC",
+      "hash": "d95ec8bc2b301924",
+      "duration_ms": 63.6,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1154,
+      "time": "21:35:14 UTC",
+      "hash": "61a386be7dd0323e",
+      "duration_ms": 62.9,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1153,
+      "time": "21:35:09 UTC",
+      "hash": "3e81ed112a374880",
+      "duration_ms": 64.9,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1152,
+      "time": "21:35:04 UTC",
+      "hash": "3204f0bacc77a8e2",
+      "duration_ms": 63.1,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1151,
+      "time": "21:34:59 UTC",
+      "hash": "5355bac2d70a56cc",
+      "duration_ms": 63.1,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1150,
+      "time": "21:34:54 UTC",
+      "hash": "acf8d9494bbb632e",
+      "duration_ms": 62.8,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1149,
+      "time": "21:34:49 UTC",
+      "hash": "9d4cef8f7ef93d90",
+      "duration_ms": 63.6,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1148,
+      "time": "21:34:44 UTC",
+      "hash": "adaa30b7d71cf91b",
+      "duration_ms": 62.9,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1147,
+      "time": "21:34:39 UTC",
+      "hash": "763aa1a20bf7c408",
+      "duration_ms": 63.3,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1146,
+      "time": "21:34:34 UTC",
+      "hash": "401f448b5138caf4",
+      "duration_ms": 63.3,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1145,
+      "time": "21:34:29 UTC",
+      "hash": "49e9d9f8ddcded8b",
+      "duration_ms": 62.7,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1144,
+      "time": "21:34:24 UTC",
+      "hash": "2e8964bce31975ea",
+      "duration_ms": 63.2,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1143,
+      "time": "21:34:19 UTC",
+      "hash": "b96f142925adf88f",
+      "duration_ms": 62.7,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1142,
+      "time": "21:34:14 UTC",
+      "hash": "c2d24f9fdc39b3f4",
+      "duration_ms": 62.9,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1141,
+      "time": "21:34:08 UTC",
+      "hash": "520a5e56054ffbeb",
+      "duration_ms": 68.9,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    },
+    {
+      "cycle": 1140,
+      "time": "21:34:03 UTC",
+      "hash": "5199b8420cea14fc",
+      "duration_ms": 65.8,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector horizon dissipations (v\u00b2 = 0)"
+    }
+  ],
+  "last_updated_utc": "2026-10-14T21:36:05.537868+00:00",
+  "last_state_hash": "76b146af93fbeafcfb939763940b34830ad2698d223ae56ec51ead032da45a2b"
+}
