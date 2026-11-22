@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "akash": {
+      "source": "akash-network/akash-skill",
+      "sourceType": "github",
+      "skillPath": "skills/akash/SKILL.md",
+      "computedHash": "7dba72fff01aea7834532cffc9d38809435cbbe5d3dea67971c93f68ac39f064"
+    }
+  }
+}
