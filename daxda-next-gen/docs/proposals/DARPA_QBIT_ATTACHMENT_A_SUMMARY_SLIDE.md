@@ -1,6 +1,7 @@
 # DARPA QBIT STAGE A — ATTACHMENT A: EXECUTIVE QUAD-CHART SLIDE CONTENT
 ## Solicitation: DARPA-PA-26-02-02 (Quantum Benchmarking Initiative)
-### Proposing Entity: DAXDA AI, LLC (Ohio Small Business) | PI: Nicole Bess | Lead: Dexter
+### Prime Federal Awardee: Standing American Milestone (Active CAGE / UEI) | Representative: Nicholas Hartman
+### Core Technology Partner: DAXDA AI, LLC (Ohio Small Business) | PI: Nicole Bess | Lead: Dexter
 
 ---
 
@@ -38,6 +39,8 @@
 
 ### **QUADRANT 4: STAGE A SCHEDULE, COST & DELIVERABLES**
 * **Period of Performance:** 9 Months | **Proposed Cost:** $485,000 USD (Firm-Fixed-Price).
+* **Federal Disbursement Vehicle:** Authorized Treasury EFT Direct Deposit via Standing American Milestone (Nicholas Hartman).
+* **DARPA ePS & Grants.gov Submission:** Nicholas Hartman (AOR) & Nicole Bess (PI / Invariant Architect).
 * **Key Milestone "Exams":**
   * **M2 (Month 2):** Surface-17 / Surface-49 multivector stabilizer mapping.
   * **M4 (Month 4):** $\ge 10\times$ throughput advantage over MWPM/Union-Find decoders.

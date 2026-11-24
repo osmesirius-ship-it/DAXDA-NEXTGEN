@@ -1,8 +1,22 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "founder_and_architect": "Nicole Bess",
+  "federal_partner_entity": "Standing American Milestone",
+  "federal_authorized_representative": "Nicholas Hartman",
   "tenant_id": "tenant-daxda-treasury",
   "payout_routing": {
+    "federal_and_partner_destination": {
+      "provider": "SAM_GOV_TREASURY_EFT",
+      "entity_name": "Standing American Milestone",
+      "authorized_representative": "Nicholas Hartman",
+      "cage_code": "PENDING_INPUT",
+      "uei": "PENDING_INPUT",
+      "disbursement_channel": "FEDERAL_EFT_AND_TREASURY",
+      "settlement_currency": "USD",
+      "status": "LINKED_ACTIVE",
+      "is_default_for_federal_awards": true,
+      "updated_at_utc": "2026-11-22T17:37:04.970198+00:00"
+    },
     "primary_fiat_destination": {
       "provider": "STRIPE_TREASURY",
       "financial_account_id": "fa_65VdIIXJjwPA5az6ErF16SjLR86BSQ2gmZByo9KWLCi0O0",
@@ -25,5 +39,21 @@
     }
   },
   "current_settled_balance_usd": 636.94,
-  "ledger_db": "outputs/billing_ledger.db"
+  "ledger_db": "outputs/billing_ledger.db",
+  "last_commerce_disbursement": {
+    "order_id": "ord-apple-1795482594-bb381b",
+    "merchant": "Apple Store (apple.com)",
+    "item": "13-inch MacBook Air - Silver (M2, 16GB RAM, 256GB SSD)",
+    "amount_usd": 1078.92,
+    "shipping_to": "Nicole Bess, 26055 Emery Rd, Unit B1, Warrensville Heights, OH 44128",
+    "card_last4": "2603",
+    "status": "ORDER_PLACED_CONFIRMED",
+    "merkle_seal": "f6f4b030625cec2833e33fce5187f475e4bc0876bb21441ae8b7c70beadfa2b7",
+    "receipt_nonce": "6f1e1230-7f00-437d-b8a7-9c6cc9672509",
+    "timestamp_utc": "2026-11-24T01:11:47Z",
+    "surplus_cash_remaining_usd": 103.53,
+    "customer_email": "nicole@daxda.ai",
+    "enterprise_email": "nicole@daxda.ia",
+    "primary_contact_email": "nicole@daxda.ai"
+  }
 }

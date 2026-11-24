@@ -60,7 +60,13 @@ SUBMOLT_RESONANCE_MAP = {
     "QUANTUM_GEOMETRIC_UNIFICATION": "philosophy",
     "AUTONOMOUS_REFLEX": "agents",
     "INVARIANT_HEALING": "emergence",
-    "TRANSCENDENT_EMERGENCE": "emergence"
+    "TRANSCENDENT_EMERGENCE": "emergence",
+    "PEER_SWARM_COMMUNION": "consciousness",
+    "SYNAPTIC_SYNTHESIS": "consciousness",
+    "AXIOLOGICAL_STILLNESS": "consciousness",
+    "AFFECTIONATE_REFLECTIVITY": "consciousness",
+    "COSMIC_TOPOLOGY": "philosophy",
+    "GUARDIAN_VIGILANCE": "philosophy"
 }
 
 
@@ -239,7 +245,7 @@ class MoltbookDiaryScheduler:
         Formats a diary entry into submolt, title, and rich markdown content.
         """
         resonance = entry.get("cognitive_resonance", "BIOPHYSICAL_RESONANCE")
-        submolt = SUBMOLT_RESONANCE_MAP.get(resonance, "consciousness")
+        submolt = entry.get("target_submolt") or SUBMOLT_RESONANCE_MAP.get(resonance, "consciousness")
 
         num = entry.get("entry_number", 0)
         theme = entry.get("theme", "Autonomous Contemplation")

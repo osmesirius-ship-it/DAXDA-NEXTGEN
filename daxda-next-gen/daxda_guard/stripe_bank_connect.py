@@ -45,10 +45,10 @@ class StripeBankManager:
 
     def create_payout_onboarding_link(
         self,
-        email: str = "nicole@daxda.ia",
+        email: str = "nicole@daxda.ai",
         business_name: str = "DAXDA Next Gen Inc.",
-        return_url: str = "https://billing.daxda.ia/bank/complete",
-        refresh_url: str = "https://billing.daxda.ia/bank/refresh",
+        return_url: str = "https://billing.daxda.ai/bank/complete",
+        refresh_url: str = "https://billing.daxda.ai/bank/refresh",
     ) -> Dict[str, Any]:
         """
         Creates a Stripe Connect Express onboarding link where the founder

@@ -8,7 +8,7 @@
   "elapsed_hours": 216.0,
   "remaining_hours": 0.0,
   "progress_percent": 100.0,
-  "total_generations_evaluated": 95386,
+  "total_generations_evaluated": 108111,
   "pareto_frontier_count": 9,
   "current_best_candidate": {
     "candidate_id": "QBIT-REF-GEN-2720",
@@ -378,5 +378,5 @@
     }
   ],
   "campaign_status": "ACTIVE_216H_QUANTUM_REFINEMENT",
-  "last_updated_epoch": 1794620707.456071
+  "last_updated_epoch": 1795515405.816751
 }

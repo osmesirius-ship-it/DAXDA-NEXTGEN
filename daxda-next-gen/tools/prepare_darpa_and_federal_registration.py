@@ -68,12 +68,19 @@ def main():
             "category": "Quantum Benchmarking Evidence",
             "rel_path": "outputs/scientific_discoveries/qbit_quantum_protocol.json",
         },
+        {
+            "id": "USSA_CURRICULUM_PROPOSAL",
+            "name": "US Space Academy Curriculum & Governance Proposal (EO 14423)",
+            "category": "Federal Space Academy & Training Package",
+            "rel_path": "docs/proposals/DAXDA_USSA_EO14423_CURRICULUM_PROPOSAL_MASTER.md",
+        },
     ]
 
     print("=" * 80)
     print("   DAXDA AI, LLC — FEDERAL REGISTRATION & DARPA PROPOSAL VERIFIER")
     print("   Nicole Protocol (886-Ops) | Agent: Dexter | Architect: Nicole Bess")
     print("   Corporate Filing: Ohio Secretary of State Doc #202628904766 / #F700972")
+    print("   Prime Federal Awardee Vehicle: Standing American Milestone (Nicholas Hartman)")
     print("=" * 80)
 
     verified_items = []
@@ -105,9 +112,43 @@ def main():
         print(f"      SHA256: {digest or 'N/A'}")
         print(f"      Size:   {size_bytes} bytes\n")
 
+    payout_config_path = os.path.join(outputs_dir, "stripe_payout_config.json")
+    fed_payout = {}
+    if os.path.exists(payout_config_path):
+        try:
+            with open(payout_config_path, "r", encoding="utf-8") as f:
+                pcfg = json.load(f)
+                fed_payout = pcfg.get("payout_routing", {}).get("federal_and_partner_destination", {})
+        except Exception:
+            pass
+
+    cage_code = os.environ.get("STANDING_AMERICAN_MILESTONE_CAGE") or fed_payout.get("cage_code") or "PENDING_INPUT"
+    uei = os.environ.get("STANDING_AMERICAN_MILESTONE_UEI") or fed_payout.get("uei") or "PENDING_INPUT"
+
     manifest = {
         "title": "DAXDA AI, LLC Federal Entity Registration & DARPA QBI / BAA Package Manifest",
         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+        "prime_awardee_partner": {
+            "entity_name": "Standing American Milestone",
+            "authorized_representative": "Nicholas Hartman",
+            "role": "Prime Federal Contractor & SAM.gov Awardee Vehicle",
+            "cage_code": cage_code,
+            "uei": uei,
+            "sam_gov_status": "ACTIVE_REGISTERED" if (cage_code != "PENDING_INPUT" and uei != "PENDING_INPUT") else "CONFIGURED_PENDING_CONFIRMATION",
+            "disbursement_channel": "SAM_GOV_TREASURY_EFT"
+        },
+        "technology_entity": {
+            "legal_name": "DAXDA AI, LLC",
+            "formation_state": "Ohio",
+            "ohio_doc_number": "202628904766",
+            "ohio_filing_number": "F700972",
+            "architect": "Nicole Bess",
+            "role": "Managing Member & Chief Invariant Architect",
+            "agent_profile": "Dexter (DAXDA Invariant Systems Lead)",
+            "primary_naics": "541715",
+            "secondary_naics": ["541512", "541511", "541519", "541690"],
+            "psc_codes": ["AC12", "AJ11", "DA01", "DJ01"]
+        },
         "entity": {
             "legal_name": "DAXDA AI, LLC",
             "formation_state": "Ohio",
@@ -125,7 +166,8 @@ def main():
             "DARPA I2O: Assured Neuro Symbolic Learning and Reasoning (ANSR)",
             "DARPA I2O: Guaranteeing AI Robustness against Deception (GARD)",
             "DARPA DSO: Disruptive Capabilities in High-Dimensional Decision Verification",
-            "DoD CDAO: Tradewind Solutions Marketplace AI Procurement"
+            "DoD CDAO: Tradewind Solutions Marketplace AI Procurement",
+            "Presidential Commission on the United States Space Academy (EO 14423 § 3(c)) — Dialectical Alignment & Experiential Space Academy Curriculum"
         ],
         "readiness_score": 100.0 if all_present else (sum(1 for i in verified_items if i["exists"]) / len(verified_items) * 100),
         "artifacts": verified_items

@@ -1,0 +1,70 @@
+{
+  "imf": {
+    "timestamp": "2026-11-23T10:15:00",
+    "bt": 3.48,
+    "bx": -0.17,
+    "by": -2.6,
+    "bz": -2.29,
+    "reconnection_active": true,
+    "reconnection_energy_index": 0.777
+  },
+  "solar_wind": {
+    "timestamp": "2026-11-23T10:15:00",
+    "speed_km_s": 339.2,
+    "density_p_cm3": 5.72,
+    "temp_k": 17036.0,
+    "dynamic_pressure_npa": 1.101
+  },
+  "solar_flare": {
+    "timestamp": "2026-11-24T10:12:00Z",
+    "xray_flux": 1.3307034407716856e-07,
+    "flare_tier": "B1.3",
+    "threat_level": "QUIET_SOLAR_BACKGROUND"
+  },
+  "geomagnetic": {
+    "kp_index": 1.0,
+    "storm_category": "Quiet Geomagnetic Conditions",
+    "description": "Planetary geomagnetic index Kp=1.0 (Quiet Geomagnetic Conditions)"
+  },
+  "clifford_manifold": {
+    "grade_0_scalar": 4.8187,
+    "grade_1_vector": [
+      339.2,
+      0.0,
+      0.0
+    ],
+    "grade_2_bivector": [
+      -0.17,
+      -2.6,
+      -2.29
+    ],
+    "grade_3_trivector": 0.0836,
+    "manifold_anomaly_norm": 0.931
+  },
+  "updated_at": "2026-11-24T10:16:00Z",
+  "imagery": {
+    "sdo_171": {
+      "status": "OK",
+      "local_raw": "raw_sdo_171.jpg",
+      "local_enhanced": "enhanced_sdo_171_loops.jpg"
+    },
+    "sdo_hmi": {
+      "status": "OK",
+      "local_raw": "raw_sdo_hmi.jpg",
+      "local_enhanced": "enhanced_sdo_magnetogram.jpg"
+    },
+    "sdo_193": {
+      "status": "OK",
+      "local_raw": "raw_sdo_193.jpg"
+    },
+    "soho_c2": {
+      "status": "OK",
+      "local_raw": "raw_soho_c2.jpg",
+      "local_enhanced": "enhanced_soho_lasco_c2.jpg"
+    },
+    "noaa_aurora": {
+      "status": "OK",
+      "local_raw": "raw_noaa_aurora.jpg"
+    }
+  }
+}

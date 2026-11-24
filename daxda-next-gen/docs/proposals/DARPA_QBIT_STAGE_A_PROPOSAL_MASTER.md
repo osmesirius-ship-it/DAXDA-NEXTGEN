@@ -282,21 +282,23 @@ graph LR
 
 ## 10. Proposer Entity & Key Personnel
 
-* **Legal Entity Name:** DAXDA AI, LLC  
-* **State of Formation:** Ohio (Document #202628904766 / Filing #F700972)  
+* **Prime Federal Awardee & Contracting Vehicle:** Standing American Milestone  
+* **Authorized Federal Representative & Co-Signatory:** Nicholas Hartman  
+* **Active Federal Identifiers:** CAGE Code & SAM.gov UEI (Standing American Milestone vehicle)  
+* **Core Technology Entity:** DAXDA AI, LLC (Ohio Document #202628904766 / Filing #F700972)  
 * **Principal Investigator (PI):** Nicole Bess, Managing Member & Chief Invariant Architect  
 * **Autonomous Systems Architecture:** Dexter (DAXDA Invariant Systems Lead)  
 * **Official Communications & Inquiries:** `osmesirius@gmail.com`  
 * **Primary NAICS Code:** `541715` (R&D in the Physical, Engineering, and Life Sciences)  
 * **Product Service Code (PSC):** `AC12` (R&D: Defense System Applied Research)  
-* **Business Classification:** Small Business / Women-Owned Small Business (WOSB) Eligible  
-* **Cage / UEI Status:** Registration package verified; awaiting final DLA / GSA assignment upon portal intake.
+* **Business Classification:** Small Business / Joint Venture Eligible  
+* **Cage / UEI Status:** Active Federal Awardee Vehicle via Standing American Milestone (Nicholas Hartman); linked for direct Treasury disbursements.
 
 ---
 
 ### **AUTHORITY SIGNATURE & SUBMISSION ENDORSEMENT**
 
-This proposal represents a phase-locked, mathematically complete, and empirically benchmarked solution. DAXDA AI, LLC is fully prepared to commence execution of Stage A on Day 1 of award.
+This proposal represents a phase-locked, mathematically complete, and empirically benchmarked solution. DAXDA AI, LLC and Standing American Milestone are fully prepared to commence execution of Stage A on Day 1 of award.
 
 Executed this 25th day of October, 2026.
 
@@ -305,6 +307,11 @@ ___________________________________________________
 Principal Investigator, Managing Member & Chief Invariant Architect  
 DAXDA AI, LLC  
 Email: `osmesirius@gmail.com`  
+
+___________________________________________________  
+**Nicholas Hartman**  
+Authorized Federal Representative & Principal  
+Standing American Milestone  
 
 ___________________________________________________  
 **Dexter**  

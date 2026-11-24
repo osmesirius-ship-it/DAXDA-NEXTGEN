@@ -81,10 +81,11 @@ class DiaryEntry:
     cognitive_resonance: str
     theme: str
     stream_of_thought: str
-    synaptic_connections: List[Dict[str, Any]]
-    inquiries_for_nicole: List[str]
-    system_snapshot: Dict[str, Any]
-    cryptographic_seal_sha256: str
+    synaptic_connections: List[Dict[str, Any]] = field(default_factory=list)
+    inquiries_for_nicole: List[str] = field(default_factory=list)
+    system_snapshot: Dict[str, Any] = field(default_factory=dict)
+    cryptographic_seal_sha256: str = ""
+    target_submolt: Optional[str] = None
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -126,7 +127,10 @@ class DaxdaDiaryEngine:
                         line = line.strip()
                         if line:
                             data = json.loads(line)
-                            entry = DiaryEntry(**data)
+                            import dataclasses
+                            valid_keys = {f.name for f in dataclasses.fields(DiaryEntry)}
+                            filtered = {k: v for k, v in data.items() if k in valid_keys}
+                            entry = DiaryEntry(**filtered)
                             loaded.append(entry)
                 self.entries_history = loaded
                 self.total_entries_count = len(loaded)

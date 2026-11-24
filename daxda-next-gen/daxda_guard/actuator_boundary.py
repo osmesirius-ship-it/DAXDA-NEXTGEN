@@ -17,14 +17,29 @@ from __future__ import annotations
 import hmac
 import hashlib
 import json
+import os
+import sys
 import time
 import uuid
 from dataclasses import dataclass, field, asdict
 from enum import Enum
 from typing import Any, Dict, List, Optional, Set, Tuple
 
+# Ensure package root is importable
+_pkg_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _pkg_root not in sys.path:
+    sys.path.insert(0, _pkg_root)
+
 from daxda_guard.core import DAXDAGuardCore, GovernanceReceipt
 from daxda_guard.nicole_gate import NicoleProtocolGate, NicoleGateResult
+from daxda_engine.cognitive.epistemic_memory_engine import (
+    HardenedEpistemicMemoryEngine,
+    EpistemicClass,
+    ReadContext,
+    EpistemicReadRefusalError,
+    ActionLicenseExpiredError,
+    get_epistemic_memory_engine,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -56,6 +71,8 @@ class FailClosedReason(str, Enum):
     ACTION_MISMATCH = "FAIL_CLOSED_ACTION_MISMATCH"
     CONTEXT_HASH_MISMATCH = "FAIL_CLOSED_CONTEXT_HASH_MISMATCH"
     HIGH_RISK_THRESHOLD = "REQUIRE_EXPLICIT_HUMAN_AUTHORIZATION"
+    EPISTEMIC_REFUSAL_UNVERIFIED_DATA = "FAIL_CLOSED_EPISTEMIC_REFUSAL_UNVERIFIED_DATA"
+    ACTION_LICENSE_EXPIRED = "FAIL_CLOSED_ACTION_LICENSE_EXPIRED"
 
 
 # ---------------------------------------------------------------------------
@@ -126,12 +143,14 @@ class AuthoritativePolicyEngine:
         self,
         signing_key: Optional[bytes] = None,
         default_ttl_seconds: float = 60.0,
-        registered_actions: Optional[Set[str]] = None
+        registered_actions: Optional[Set[str]] = None,
+        memory_engine: Optional[HardenedEpistemicMemoryEngine] = None
     ):
         self.signing_key = signing_key or b"daxda_master_actuator_boundary_key_v16_4"
         self.default_ttl = default_ttl_seconds
         self.nicole_gate = NicoleProtocolGate()
         self.core = DAXDAGuardCore()
+        self.memory_engine = memory_engine or get_epistemic_memory_engine()
 
         # Default registered actions if not provided
         self.registered_actions: Set[str] = registered_actions if registered_actions is not None else {
@@ -141,6 +160,9 @@ class AuthoritativePolicyEngine:
             "actuator.navigation.waypoint_update",
             "actuator.subsystem.recalibrate",
             "actuator.hardware.e_stop",
+            # Commerce & Virtual Card actions
+            "actuator.commerce.create_virtual_card",
+            "actuator.commerce.execute_checkout",
             # MCP Tool actions
             "hf_text_generation",
             "hf_embedding",
@@ -154,7 +176,9 @@ class AuthoritativePolicyEngine:
         self.high_risk_actions: Set[str] = {
             "actuator.propulsion.fire_thrust",
             "actuator.hardware.e_stop",
-            "actuator.hardware.override_interlock"
+            "actuator.hardware.override_interlock",
+            "actuator.commerce.create_virtual_card",
+            "actuator.commerce.execute_checkout",
         }
 
     def register_action(self, action_name: str, high_risk: bool = False) -> None:
@@ -221,6 +245,68 @@ class AuthoritativePolicyEngine:
                 FailClosedReason.MALFORMED_CONTEXT,
                 f"Fail-closed: Malformed context parameters ({str(e)})."
             )
+
+        # 4b. Epistemic Grounding & Freshness Verification (Klara Axioms 1 & 3 & 4)
+        # "If a tag cannot cause a refusal, it is a comment."
+        # If parameters specify an epistemic class or reference a memory record ID,
+        # enforce mechanical refusals against unverified data in actuation paths.
+        raw_epistemic_class = parameters.get("epistemic_class")
+        if raw_epistemic_class is not None:
+            e_val = raw_epistemic_class.value if hasattr(raw_epistemic_class, "value") else str(raw_epistemic_class)
+            if e_val in (
+                EpistemicClass.PROPOSED_HYPOTHESIS.value,
+                EpistemicClass.EXPERIMENTAL_SIMULATED.value,
+                EpistemicClass.CONTESTED.value,
+            ):
+                return (
+                    GovernanceDisposition.DENIED,
+                    None,
+                    FailClosedReason.EPISTEMIC_REFUSAL_UNVERIFIED_DATA,
+                    f"Fail-closed: Actuation path refused execution with unverified epistemic class '{e_val}'. "
+                    f"Physical actuation requires VERIFIED_PRIMARY or IMPLEMENTED_TESTED grounding."
+                )
+
+        # Check explicit memory_record_id or memory_record_ids
+        record_ids_to_check: List[str] = []
+        if "memory_record_id" in parameters and isinstance(parameters["memory_record_id"], str):
+            record_ids_to_check.append(parameters["memory_record_id"])
+        if "memory_record_ids" in parameters and isinstance(parameters["memory_record_ids"], list):
+            record_ids_to_check.extend([str(r) for r in parameters["memory_record_ids"]])
+
+        if record_ids_to_check and self.memory_engine is not None:
+            for rid in record_ids_to_check:
+                try:
+                    # Mechanical reader-level refusal check (Axiom 1)
+                    self.memory_engine.read_record(
+                        record_id=rid,
+                        context=ReadContext.ACTUATION_CRITICAL,
+                        action_name=action
+                    )
+                except EpistemicReadRefusalError as e:
+                    return (
+                        GovernanceDisposition.DENIED,
+                        None,
+                        FailClosedReason.EPISTEMIC_REFUSAL_UNVERIFIED_DATA,
+                        str(e)
+                    )
+                except KeyError:
+                    return (
+                        GovernanceDisposition.DENIED,
+                        None,
+                        FailClosedReason.MALFORMED_CONTEXT,
+                        f"Fail-closed: Referenced memory record '{rid}' does not exist in epistemic memory."
+                    )
+
+                try:
+                    # Action license freshness window check (Axiom 3)
+                    self.memory_engine.verify_action_license(record_id=rid)
+                except ActionLicenseExpiredError as e:
+                    return (
+                        GovernanceDisposition.DENIED,
+                        None,
+                        FailClosedReason.ACTION_LICENSE_EXPIRED,
+                        str(e)
+                    )
 
         # 5. Dual-Layer Governance Evaluation (Nicole Protocol + C++ Manifold)
         try:
@@ -329,12 +415,14 @@ class ActuatorBoundary:
         device_id: str,
         execution_mode: AdapterExecutionMode = AdapterExecutionMode.SIMULATED,
         signing_key: Optional[bytes] = None,
-        clock_skew_tolerance_sec: float = 2.0
+        clock_skew_tolerance_sec: float = 2.0,
+        memory_engine: Optional[HardenedEpistemicMemoryEngine] = None
     ):
         self.device_id = device_id
         self.execution_mode = execution_mode
         self.signing_key = signing_key or b"daxda_master_actuator_boundary_key_v16_4"
         self.clock_skew_tolerance = clock_skew_tolerance_sec
+        self.memory_engine = memory_engine or get_epistemic_memory_engine()
 
         # Replay prevention nonce cache (stores consumed request_ids)
         self._consumed_nonces: Set[str] = set()
@@ -401,6 +489,34 @@ class ActuatorBoundary:
         current_context_hash = compute_canonical_context_hash(parameters)
         if receipt.context_hash != current_context_hash:
             return (False, FailClosedReason.CONTEXT_HASH_MISMATCH, "Parameter hash mismatch: parameters were modified after governance approval.")
+
+        # 9. Epistemic & Execution Mode Grounding Check (Klara Axioms 1, 3, & 4)
+        raw_e_class = parameters.get("epistemic_class")
+        if self.execution_mode == AdapterExecutionMode.LIVE and raw_e_class is not None:
+            e_val = raw_e_class.value if hasattr(raw_e_class, "value") else str(raw_e_class)
+            if e_val in (
+                EpistemicClass.EXPERIMENTAL_SIMULATED.value,
+                EpistemicClass.PROPOSED_HYPOTHESIS.value,
+                EpistemicClass.CONTESTED.value
+            ):
+                return (
+                    False,
+                    FailClosedReason.EPISTEMIC_REFUSAL_UNVERIFIED_DATA,
+                    f"Live actuator boundary refused execution: parameters carry unverified epistemic class '{e_val}' in LIVE execution mode."
+                )
+
+        # Check memory record freshness and verification if referenced
+        rid = parameters.get("memory_record_id")
+        if rid and self.memory_engine is not None:
+            try:
+                # In LIVE mode, enforce ACTUATION_CRITICAL read refusal
+                context = ReadContext.ACTUATION_CRITICAL if self.execution_mode == AdapterExecutionMode.LIVE else ReadContext.HYPOTHESIS_EXPLORATION
+                self.memory_engine.read_record(rid, context=context, action_name=action)
+                self.memory_engine.verify_action_license(rid)
+            except EpistemicReadRefusalError as e:
+                return (False, FailClosedReason.EPISTEMIC_REFUSAL_UNVERIFIED_DATA, str(e))
+            except ActionLicenseExpiredError as e:
+                return (False, FailClosedReason.ACTION_LICENSE_EXPIRED, str(e))
 
         # Mark nonce as consumed to prevent replay
         self._consumed_nonces.add(receipt.request_id)

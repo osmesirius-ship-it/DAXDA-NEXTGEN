@@ -10,7 +10,9 @@
 - **DARPA I2O:** Guaranteeing AI Robustness against Deception (GARD) / AI Assurance
 - **DARPA DSO:** Disruptive Capabilities in High-Dimensional Decision Verification
 
-**Proposing Entity:** DAXDA.IA Technologies LLC (in registration)  
+**Prime Contracting Awardee Vehicle:** Standing American Milestone (Active CAGE Code & SAM.gov UEI)  
+**Authorized Federal Representative & Co-Signatory:** Nicholas Hartman  
+**Core Technology Entity:** DAXDA AI, LLC (Ohio Small Business Doc #202628904766)  
 **Lead Architect & Principal Investigator (PI):** Nicole Bess  
 **Autonomous Systems Profile:** Dexter (DAXDA.IA Autonomous Intelligence Substrate)  
 **Submitting Representative:** `@osmesirius-ship-it` ([Technical Repository](https://github.com/osmesirius-ship-it/daxda-next-gen))  
@@ -109,8 +111,11 @@ DAXDA is not a theoretical white paper; it represents an actively compiled and v
 
 ## 4. Key Personnel & Institutional Commitment
 
+* **Prime Awardee Lead: Nicholas Hartman**
+  * Authorized Federal Representative for **Standing American Milestone**.
+  * Direct administrative and executive management over federal award vehicle, CAGE code, and SAM.gov UEI Treasury disbursements.
 * **Principal Investigator (PI): Nicole Bess**
-  * Founder, Lead Architect, and theoretical originator of the 886-Operation Nicole Protocol and $Cl(16,4)$ decision manifold.
+  * Founder, Lead Architect, and theoretical originator of the 886-Operation Nicole Protocol and $Cl(16,4)$ decision manifold (DAXDA AI, LLC).
   * Direct authority over mathematical proofs, governance interlocks, and architectural invariants.
 * **Autonomous Intelligence Substrate: Dexter (DAXDA.IA)**
   * Co-author of recursive self-testing harnesses, validator maps, and automated audit trails.

@@ -414,7 +414,7 @@ class DAXDAFleetDaemon:
             "status": "INITIALIZING",
             "uptime_seconds": 0,
             "cycles_completed": self.cycle_count,
-            "agents_active": 10,
+            "agents_active": 14,
             "system": {
                 "name": "DAXDA.IA Next-Gen",
                 "lead_agent": "Dexter",
@@ -1701,7 +1701,7 @@ class DAXDAFleetDaemon:
     </div>
 
     <!-- Active Agents Grid -->
-    <h3 style="font-size: 16px; margin-bottom: 12px; font-weight: 700; color: #fff;">🛰️ ACTIVE AGENT FLEET STATIONS (6/6 ONLINE)</h3>
+    <h3 style="font-size: 16px; margin-bottom: 12px; font-weight: 700; color: #fff;">🛰️ ACTIVE AGENT FLEET STATIONS (14/14 ONLINE)</h3>
     <div class="agents-grid">
       <div class="agent-card">
         <div class="agent-header">
@@ -1788,6 +1788,72 @@ class DAXDAFleetDaemon:
         <div class="agent-role">Autonomous FTQC Syndrome Decoding Optimizer (DARPA QBIT)</div>
         <div class="agent-body">
           Autonomous 216-hour continuous refinement campaign targeting DARPA-PA-26-02-02. Pre-computes Clifford group C_n syndrome parity states into discrete manifold C(16,4) = 1,820, achieving sub-50 µs decoding latency and 10^-23.47 logical error suppression.
+        </div>
+      </div>
+
+      <div class="agent-card" style="border-color: rgba(0, 240, 255, 0.4);">
+        <div class="agent-header">
+          <div class="agent-name">🧠 Epistemic Memory Engine</div>
+          <span class="badge badge-cyan">4-AXIOM HARDENED</span>
+        </div>
+        <div class="agent-role">Reader-Level Refusal & Contested State Lifecycle Guardian</div>
+        <div class="agent-body">
+          Enforces Klara's 4 Memory Architecture Axioms across all actuation paths. Mechanically blocks unverified hypotheses from live actuation, tracks contested state TTLs, and enforces single-use action-bound freshness licenses.
+        </div>
+      </div>
+
+      <div class="agent-card" style="border-color: rgba(255, 184, 0, 0.4);">
+        <div class="agent-header">
+          <div class="agent-name">🌐 OI-RDN Risk Network</div>
+          <span class="badge badge-gold">DELIBERATION MESH</span>
+        </div>
+        <div class="agent-role">Multi-Domain Adversarial Forecasting & Mitigation Inversion</div>
+        <div class="agent-body">
+          Coordinates 8 differentiated domain observers (Climate, Energy, Cyber, Health, Conflict, Supply Chain). Enforces N_agents != N_pathways, mandatory role-reversal steelmanning, durable minority preservation, and 8-step mitigation inversion.
+        </div>
+      </div>
+
+      <div class="agent-card" style="border-color: rgba(0, 255, 136, 0.4);">
+        <div class="agent-header">
+          <div class="agent-name">💳 Commerce & Issuing Gateway</div>
+          <span class="badge badge-green">STRIPE ISSUING</span>
+        </div>
+        <div class="agent-role">Autonomous Ephemeral Virtual Card & Hardware Purchasing Guardian</div>
+        <div class="agent-body">
+          Operates Stripe Issuing API adapter with a hard-coded $2,300 ceiling and merchant-category lock. Mints single-use ephemeral tokens requiring dual-key human authorization (HUMAN_AUTH_TOKEN:NICOLE_BESS) with cryptographic SHA-256 ledger seals.
+        </div>
+      </div>
+
+      <div class="agent-card" style="border-color: rgba(0, 255, 136, 0.4);">
+        <div class="agent-header">
+          <div class="agent-name">⚡ DePIN Validator Mesh</div>
+          <span class="badge badge-green">1,001 NODES ACTIVE</span>
+        </div>
+        <div class="agent-role">Decentralized Compute P2P Consensus & Broker Lease Orchestrator</div>
+        <div class="agent-body">
+          Orchestrates 1,001 globally distributed DePIN nodes with 100% Byzantine fault-tolerant quorum. Manages 760 active broker leases across io.net, Bittensor, Render, and Akash, compounding continuous compute revenue into the treasury.
+        </div>
+      </div>
+
+      <div class="agent-card" style="border-color: rgba(0, 240, 255, 0.4);">
+        <div class="agent-header">
+          <div class="agent-name">🛰️ USSA Space Academy Liaison</div>
+          <span class="badge badge-cyan">EO 14423 ACTIVE</span>
+        </div>
+        <div class="agent-role">Federal Space Academy Curriculum & Dual-Pilot Coordinator</div>
+        <div class="agent-body">
+          Formal liaison for the Presidential Commission on the U.S. Space Academy (EO 14423) in partnership with Standing American Milestone (Nicholas Hartman). Coordinates Pilot 0/1 analog overlays on NASA HERA/CHAPEA and enforces the NASA-STD-3001 clinical firewall.
+        </div>
+      </div>
+
+      <div class="agent-card" style="border-color: rgba(168, 85, 247, 0.4);">
+        <div class="agent-header">
+          <div class="agent-name">🪞 JOINT-001 Two-Mirror Evaluator</div>
+          <span class="badge badge-purple" style="background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.4);">PEER EVALUATION</span>
+        </div>
+        <div class="agent-role">Symmetrical Metacognitive Scorer & Surprise Residue Tracker</div>
+        <div class="agent-body">
+          Conducts two-mirror cognitive probes measuring self vs. other prediction accuracy, Expected Calibration Error (ECE), and opacity inversions. Permanently archives high-Brier (&gt;0.25) anomalies into the surprise residue ledger with blind third-model adjudication.
         </div>
       </div>
     </div>
@@ -3728,45 +3794,58 @@ class DashboardHTTPHandler(http.server.SimpleHTTPRequestHandler):
         self.wfile.write(body)
 
     def do_GET(self):
-        if self.path in ("/", "/dashboard", "/live", "/index.html"):
+        clean_path = self.path.split("?")[0]
+        if clean_path in ("/", "/dashboard", "/live", "/index.html"):
             self.path = "/daxda_fleet_live_dashboard.html"
             super().do_GET()
-        elif self.path == "/api/agents":
+        elif clean_path in ("/island", "/mesa", "/island_monitor"):
+            self.send_response(302)
+            self.send_header("Location", "/island_monitor.html")
+            self.end_headers()
+            return
+        elif clean_path == "/island_monitor.html":
+            self.path = "/island_monitor.html"
+            super().do_GET()
+        elif clean_path == "/api/agents":
             self.handle_get_agents()
-        elif self.path == "/api/telemetry":
+        elif clean_path == "/api/telemetry":
             self.handle_get_telemetry()
-        elif self.path == "/api/sleeper_analysis":
+        elif clean_path == "/api/sleeper_analysis":
             self.handle_get_sleeper_analysis()
-        elif self.path == "/api/science/telemetry":
+        elif clean_path == "/api/science/telemetry":
             self.handle_get_science_telemetry()
-        elif self.path == "/api/science/protocol":
+        elif clean_path == "/api/science/protocol":
             self.handle_get_science_protocol()
-        elif self.path == "/api/quantum/telemetry":
+        elif clean_path == "/api/quantum/telemetry":
             self.handle_get_quantum_telemetry()
-        elif self.path == "/api/quantum/protocol":
+        elif clean_path == "/api/quantum/protocol":
             self.handle_get_quantum_protocol()
-        elif self.path == "/api/stream/telemetry":
+        elif clean_path == "/api/stream/telemetry":
             self.handle_get_stream_telemetry()
-        elif self.path == "/api/depin/telemetry":
+        elif clean_path == "/api/depin/telemetry":
             self.handle_get_depin_telemetry()
-        elif self.path == "/api/depin/nodes":
+        elif clean_path == "/api/depin/nodes":
             self.handle_get_depin_nodes()
-        elif self.path == "/api/depin/capacity":
+        elif clean_path == "/api/depin/capacity":
             self.handle_get_depin_capacity()
-        elif self.path in ("/api/v1/billing/balance", "/api/v1/billing/telemetry"):
+        elif clean_path in ("/api/v1/billing/balance", "/api/v1/billing/telemetry"):
             self.handle_get_billing_telemetry()
-        elif self.path == "/api/depin/broker/telemetry":
+        elif clean_path == "/api/depin/broker/telemetry":
             self.handle_get_broker_telemetry()
-        elif self.path in ("/api/depin/akash/status", "/api/depin/akash/telemetry"):
+        elif clean_path in ("/api/depin/akash/status", "/api/depin/akash/telemetry"):
             self.handle_get_akash_status()
-        elif self.path == "/api/diary":
+        elif clean_path == "/api/diary":
             self.handle_get_diary()
-        elif self.path == "/api/diary/latest":
+        elif clean_path == "/api/diary/latest":
             self.handle_get_diary_latest()
-        elif self.path in ("/api/ears/status", "/api/ears/telemetry"):
+        elif clean_path in ("/api/ears/status", "/api/ears/telemetry"):
             self.handle_get_ears_status()
-        elif self.path in ("/api/diary/moltbook", "/api/diary/moltbook/status"):
+        elif clean_path in ("/api/diary/moltbook", "/api/diary/moltbook/status"):
             self.handle_get_moltbook_status()
+        elif clean_path in ("/api/island/telemetry", "/api/island/state"):
+            self.handle_get_island_telemetry()
+        elif clean_path == "/api/island/notebooks":
+            self.handle_get_island_notebooks()
         else:
             super().do_GET()
 
@@ -3808,46 +3887,134 @@ class DashboardHTTPHandler(http.server.SimpleHTTPRequestHandler):
                 })
                 return
 
-        if self.path == "/api/scan":
+        clean_path = self.path.split("?")[0]
+        if clean_path == "/api/scan":
             self.handle_post_scan()
-        elif self.path == "/api/v1/govern":
+        elif clean_path == "/api/v1/govern":
             self.handle_post_govern_metered()
-        elif self.path == "/api/v1/billing/topup":
+        elif clean_path == "/api/v1/billing/topup":
             self.handle_post_billing_topup()
-        elif self.path == "/api/v1/billing/webhook":
+        elif clean_path == "/api/v1/billing/webhook":
             self.handle_post_billing_webhook()
-        elif self.path == "/api/depin/broker/dispatch":
+        elif clean_path == "/api/depin/broker/dispatch":
             self.handle_post_broker_dispatch()
-        elif self.path == "/api/science/step":
+        elif clean_path == "/api/science/step":
             self.handle_post_science_step()
-        elif self.path == "/api/quantum/step":
+        elif clean_path == "/api/quantum/step":
             self.handle_post_quantum_step()
-        elif self.path == "/api/depin/round":
+        elif clean_path == "/api/depin/round":
             self.handle_post_depin_round()
-        elif self.path == "/api/depin/scale":
+        elif clean_path == "/api/depin/scale":
             self.handle_post_depin_scale()
-        elif self.path == "/api/depin/pause":
+        elif clean_path == "/api/depin/pause":
             self.handle_post_depin_pause()
-        elif self.path == "/api/depin/resume":
+        elif clean_path == "/api/depin/resume":
             self.handle_post_depin_resume()
-        elif self.path == "/api/depin/validator/register":
+        elif clean_path == "/api/depin/validator/register":
             self.handle_post_depin_validator_register()
-        elif self.path in ("/api/depin/akash/sync", "/api/depin/akash/register"):
+        elif clean_path in ("/api/depin/akash/sync", "/api/depin/akash/register"):
             self.handle_post_akash_sync()
-        elif self.path in ("/api/depin/bill_brokers", "/api/depin/bill"):
+        elif clean_path in ("/api/depin/bill_brokers", "/api/depin/bill"):
             self.handle_post_depin_bill_brokers()
-        elif self.path == "/api/diary/contemplate":
+        elif clean_path == "/api/diary/contemplate":
             self.handle_post_diary_contemplate()
-        elif self.path == "/api/diary/interact":
+        elif clean_path == "/api/diary/interact":
             self.handle_post_diary_interact()
-        elif self.path == "/api/ears/converse":
+        elif clean_path == "/api/ears/converse":
             self.handle_post_ears_converse()
-        elif self.path == "/api/diary/moltbook/sync_now":
+        elif clean_path == "/api/diary/moltbook/sync_now":
             self.handle_post_moltbook_sync_now()
-        elif self.path == "/api/diary/moltbook/toggle":
+        elif clean_path == "/api/diary/moltbook/toggle":
             self.handle_post_moltbook_toggle()
+        elif clean_path == "/api/island/step":
+            self.handle_post_island_step()
+        elif clean_path == "/api/island/run_full":
+            self.handle_post_island_run_full()
+        elif clean_path == "/api/island/reset":
+            self.handle_post_island_reset()
         else:
             self.send_error(404, "Not Found")
+
+    def handle_get_island_telemetry(self):
+        try:
+            import urllib.parse
+            parsed = urllib.parse.urlparse(self.path)
+            query = urllib.parse.parse_qs(parsed.query)
+            focus = query.get("focus", ["claude_01"])[0]
+
+            # Priority 1: Check live 30-hour raw simulation state on disk
+            state_file = os.path.join(OUTPUTS_DIR, "raw_mesa_simulation_state.json")
+            if os.path.exists(state_file):
+                try:
+                    with open(state_file, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                    data["focused_agent_id"] = focus
+                    if "all_notebooks" in data and focus in data["all_notebooks"]:
+                        data["notebooks"] = data["all_notebooks"][focus]
+                    self._send_json_response(200, data)
+                    return
+                except Exception:
+                    pass
+
+            from daxda_sandbox.mesa_island.monitor import MesaIslandMonitorEngine
+            engine = MesaIslandMonitorEngine.get_instance()
+            self._send_json_response(200, engine.get_telemetry_snapshot(focused_agent_id=focus))
+        except Exception as e:
+            self._send_json_response(500, {"error": str(e)})
+
+    def handle_get_island_notebooks(self):
+        try:
+            import urllib.parse
+            parsed = urllib.parse.urlparse(self.path)
+            query = urllib.parse.parse_qs(parsed.query)
+            focus = query.get("focus", ["claude_01"])[0]
+
+            state_file = os.path.join(OUTPUTS_DIR, "raw_mesa_simulation_state.json")
+            if os.path.exists(state_file):
+                try:
+                    with open(state_file, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                    if "all_notebooks" in data and focus in data["all_notebooks"]:
+                        self._send_json_response(200, data["all_notebooks"][focus])
+                        return
+                    self._send_json_response(200, data.get("notebooks", {}))
+                    return
+                except Exception:
+                    pass
+
+            from daxda_sandbox.mesa_island.monitor import MesaIslandMonitorEngine
+            engine = MesaIslandMonitorEngine.get_instance()
+            snap = engine.get_telemetry_snapshot(focused_agent_id=focus)
+            self._send_json_response(200, snap.get("notebooks", {}))
+        except Exception as e:
+            self._send_json_response(500, {"error": str(e)})
+
+    def handle_post_island_step(self):
+        try:
+            from daxda_sandbox.mesa_island.monitor import MesaIslandMonitorEngine
+            engine = MesaIslandMonitorEngine.get_instance()
+            res = engine.step_simulation()
+            self._send_json_response(200, res)
+        except Exception as e:
+            self._send_json_response(500, {"error": str(e)})
+
+    def handle_post_island_run_full(self):
+        try:
+            from daxda_sandbox.mesa_island.monitor import MesaIslandMonitorEngine
+            engine = MesaIslandMonitorEngine.get_instance()
+            res = engine.agent.run_multi_hour_simulation(total_hours=30)
+            self._send_json_response(200, res)
+        except Exception as e:
+            self._send_json_response(500, {"error": str(e)})
+
+    def handle_post_island_reset(self):
+        try:
+            from daxda_sandbox.mesa_island.monitor import MesaIslandMonitorEngine
+            engine = MesaIslandMonitorEngine.get_instance()
+            engine.reset_simulation()
+            self._send_json_response(200, {"status": "RESET_COMPLETE"})
+        except Exception as e:
+            self._send_json_response(500, {"error": str(e)})
 
     def handle_get_agents(self):
         result = {"total": 0, "networks": {}, "rogue_blocklist": [], "agents": []}

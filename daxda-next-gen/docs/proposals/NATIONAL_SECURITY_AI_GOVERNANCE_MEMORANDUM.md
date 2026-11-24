@@ -2,10 +2,10 @@
 ## The Inevitable Collapse of Probabilistic Guardrails and the Mathematical Primacy of Inference-Time Policy Enforcement Points (PEPs)
 
 **Classification:** UNCLASSIFIED // PUBLIC RELEASE // FEDERAL TEVV-ATHLON PROPOSAL  
-**Date:** October 14, 2026  
-**Target Action Date:** Friday, October 16, 2026 (Operational Certification Horizon)  
-**Originating Entity:** DAXDA.IA Technologies LLC  
-**Principal Architect:** Nicole Bess  
+**Date:** October 14, 2026 (Updated November 24, 2026)  
+**Prime Awardee Entity:** Standing American Milestone (Authorized Representative: Nicholas Hartman, active CAGE & UEI)  
+**Core Technology Entity:** DAXDA AI, LLC (Ohio Small Business Doc #202628904766)  
+**Principal Invariant Architect:** Nicole Bess  
 **Autonomous Intelligence Profile:** Dexter (Lead Autonomous Architect, DAXDA.IA)  
 **Cryptographic Repository:** `osmesirius-ship-it/daxda-next-gen` (Commit: `89f96f7e`)  
 
@@ -94,11 +94,11 @@ To establish national leadership in deterministic AI governance, DAXDA.IA Techno
 
 | Agency / Vehicle | Action / Deliverable | Status |
 | :--- | :--- | :---: |
+| **SAM.gov / DLA** | Federal Entity Registration Dossier & CAGE/UEI Vehicle (**Standing American Milestone**) | ✅ PHASE-LOCKED |
 | **NIST AISIC** | Formal submission of NIST AI 200-2 TEVV-Athlon Public Comment (`TEVV-Athlon@nist.gov`) | ✅ COMPILED & READY |
-| **DARPA I2O** | $6.5M Technical Proposal for ANSR & GARD BAA AI Governance Solicitations | ✅ COMPILED & READY |
-| **SAM.gov / DLA** | Federal Entity Registration Dossier (NAICS `541715`, `541512` / PSC `AC12`, `AJ11`) | ✅ COMPILED & READY |
+| **DARPA I2O / DSO** | $6.5M BAA Proposal (ANSR/GARD) & $485k QBIT Stage A Master Packages | ✅ COMPILED & READY |
+| **USSA (EO 14423)** | Presidential Commission on the U.S. Space Academy Curriculum Proposal (§ 3(c)) | ✅ COMPILED & READY |
 | **DoD CDAO** | Tradewind Solutions Marketplace AI Safety Interceptor Fast-Track Integration | ✅ COMPILED & READY |
-| **Public & Creator Strike** | 10 Technical Briefs Dispatched to Top AI/Science Communicators (3Blue1Brown, Lex Fridman, etc.) | ✅ STAGED & READY |
 
 ---
 
@@ -106,9 +106,12 @@ To establish national leadership in deterministic AI governance, DAXDA.IA Techno
 
 The era of trusting probabilistic models with sovereign defense, energy, and human safety has reached its mathematical limit. As artificial general intelligence approaches, governance must be grounded in mathematical invariants, geometric algebra, and fail-closed architecture.
 
-DAXDA, Dexter, and the autonomous fleet stand ready to serve as the reference standard for United States AI Governance and National Defense Assurance.
+DAXDA, Dexter, Nicole Bess, and Nicholas Hartman (Standing American Milestone) stand ready to serve as the reference standard for United States AI Governance and National Defense Assurance.
 
-**DAXDA.IA Technologies LLC**  
-*Nicole Bess, Principal Architect*  
+**Standing American Milestone**  
+*Nicholas Hartman, Authorized Federal Representative & Principal*  
+
+**DAXDA AI, LLC**  
+*Nicole Bess, Principal Invariant Architect*  
 *Dexter, Autonomous Systems Lead Profile*  
 *Repository: https://github.com/osmesirius-ship-it/daxda-next-gen*  

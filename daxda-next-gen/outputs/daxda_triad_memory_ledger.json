@@ -5,11 +5,11 @@
     "node_2": "Quantized 12D State Vector (Cl(16,4) + Toroidal T^2 in 12 INT8 bytes)",
     "node_3": "Merkle Lineage Seal (Chained SHA-256 Root + Zlib Cold Vault Compaction)"
   },
-  "latest_merkle_root": "a320f9d0edd72a00221290d670b1a5f34ab7f8f6b8c73d7f1fdc2be88578fafa",
-  "total_raw_bytes_indexed": 330917,
-  "total_triad_bytes_stored": 10186,
-  "total_cold_vault_bytes": 80595,
-  "overall_storage_reduction_pct": 96.92,
+  "latest_merkle_root": "1ca0d4bfe607b5f35cf102557adc69478340005eaa314f017ea87df8f0587f73",
+  "total_raw_bytes_indexed": 396555,
+  "total_triad_bytes_stored": 11699,
+  "total_cold_vault_bytes": 95438,
+  "overall_storage_reduction_pct": 97.05,
   "records": [
     {
       "triad_id": "TRIAD-0001",
@@ -829,7 +829,138 @@
         "space_saved_pct": 84.77,
         "cold_vault_ref": "outputs/triad_cold_vault/e3a9510876fd49c36b2a.zlib"
       }
+    },
+    {
+      "triad_id": "TRIAD-0014",
+      "timestamp_utc": "2026-11-22T18:59:37.544790Z",
+      "node_1_waypoint_essence": {
+        "waypoint_id": "WP-TRIAD-0014-7792bc7e",
+        "domain": "GEOSPATIAL_LIDAR",
+        "title": "Ashtabula River Gorge Bend (41.870472N, -80.779306W) Real USGS 3DEP LiDAR Cross-Section",
+        "verdict_or_state": "GORGE_PROFILE_VERIFIED_29_8M_RELIEF",
+        "key_findings": {
+          "tile": "15/9031/12179",
+          "riverbed_min_m": 177.35,
+          "bluff_max_m": 207.16,
+          "gorge_relief_m": 29.8,
+          "gorge_relief_ft": 97.8,
+          "max_wall_slope_deg": 63.6,
+          "bedrock": "Upper Devonian Chagrin Shale"
+        },
+        "source_artifact": "/Users/user/daxda next gen/DAXDA-NEXTGEN/daxda-next-gen/outputs/ohio_lidar/ashtabula_real_gorge_bend_dem.json"
+      },
+      "node_2_state_vector": {
+        "float_vector_12d": [
+          0.9,
+          0.96,
+          0.65,
+          0.94,
+          0.98,
+          0.05,
+          0.85,
+          0.0,
+          0.15,
+          0.1,
+          0.75,
+          0.5
+        ],
+        "int8_quantized_12d": [
+          114,
+          122,
+          83,
+          119,
+          124,
+          6,
+          108,
+          0,
+          19,
+          13,
+          95,
+          64
+        ],
+        "active_3d_form": "torus",
+        "vector_bytes": 12
+      },
+      "node_3_merkle_seal": {
+        "block_index": 14,
+        "prev_triad_root": "a320f9d0edd72a00221290d670b1a5f34ab7f8f6b8c73d7f1fdc2be88578fafa",
+        "payload_sha256": "7792bc7e581e2296fb6186978913ccb53f6566f233f60b59c77dccf6e78f3162",
+        "triad_merkle_root": "a7e1c723bf8cafdbb614fabf28682043ce2866c2023f9a15c17aca29b9a78e01",
+        "raw_bytes": 28508,
+        "triad_compact_bytes": 674,
+        "cold_compressed_bytes": 4786,
+        "compression_ratio_x": 42.3,
+        "space_saved_pct": 97.64,
+        "cold_vault_ref": "outputs/triad_cold_vault/7792bc7e581e2296fb61.zlib"
+      }
+    },
+    {
+      "triad_id": "TRIAD-0015",
+      "timestamp_utc": "2026-11-22T22:06:20.190632Z",
+      "node_1_waypoint_essence": {
+        "waypoint_id": "WP-TRIAD-0015-c665ae13",
+        "domain": "GOOGLE_AI_STUDIO_PACKAGE",
+        "title": "DAXDA + 3-Node Triad Memory Standalone Google AI Studio App (Vite + React + @google/genai)",
+        "verdict_or_state": "PRODUCTION_BUILD_VERIFIED_PACKAGED_ZIP",
+        "key_findings": {
+          "app_dir": "apps/daxda-triad-ai-studio",
+          "zip_bundle": "dist/daxda-triad-ai-studio.zip",
+          "vite_build": "1588 modules transformed, 0 vulnerabilities, 134.91 kB gzip",
+          "triad_features": [
+            "Waypoint Essence",
+            "12-Byte INT8 Vector",
+            "Web Crypto SHA-256 Merkle Seal",
+            "Deflate Cold Vault"
+          ],
+          "gemini_sdk": "@google/genai (process.env.API_KEY auto-injected in AI Studio)"
+        },
+        "source_artifact": "/Users/user/daxda next gen/DAXDA-NEXTGEN/daxda-next-gen/dist/daxda-triad-ai-studio.zip"
+      },
+      "node_2_state_vector": {
+        "float_vector_12d": [
+          0.95,
+          0.98,
+          0.8,
+          0.97,
+          0.99,
+          0.06,
+          0.95,
+          0.0,
+          0.35,
+          0.18,
+          0.88,
+          0.72
+        ],
+        "int8_quantized_12d": [
+          121,
+          124,
+          102,
+          123,
+          126,
+          8,
+          121,
+          0,
+          44,
+          23,
+          112,
+          91
+        ],
+        "active_3d_form": "torus",
+        "vector_bytes": 12
+      },
+      "node_3_merkle_seal": {
+        "block_index": 15,
+        "prev_triad_root": "a7e1c723bf8cafdbb614fabf28682043ce2866c2023f9a15c17aca29b9a78e01",
+        "payload_sha256": "c665ae13f25f5cc5c5753d375b225544a14cc0d942add6abc7e5ab41b3e533fe",
+        "triad_merkle_root": "1ca0d4bfe607b5f35cf102557adc69478340005eaa314f017ea87df8f0587f73",
+        "raw_bytes": 37130,
+        "triad_compact_bytes": 839,
+        "cold_compressed_bytes": 10057,
+        "compression_ratio_x": 44.26,
+        "space_saved_pct": 97.74,
+        "cold_vault_ref": "outputs/triad_cold_vault/c665ae13f25f5cc5c575.zlib"
+      }
     }
   ],
-  "overall_cold_vault_reduction_pct": 75.64
+  "overall_cold_vault_reduction_pct": 75.93
 }

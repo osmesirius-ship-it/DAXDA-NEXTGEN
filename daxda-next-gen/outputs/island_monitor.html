@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAXDA Mesa Island 3D Simulator — 13 Autonomous Embodied Agents & Celestial Stargazing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Three.js & OrbitControls for 3D Viewport -->
+  <script src="/js/three.min.js"></script>
+  <script src="/js/OrbitControls.js"></script>
+
+  <style>
+    :root {
+      --bg-dark: #07090e;
+      --card-bg: #0f172a;
+      --card-border: #1e293b;
+      --accent-cyan: #06b6d4;
+      --accent-gold: #f59e0b;
+      --accent-emerald: #10b981;
+      --accent-rose: #f43f5e;
+      --accent-indigo: #6366f1;
+      --accent-violet: #8b5cf6;
+      --text-main: #f8fafc;
+      --text-dim: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+      padding: 14px;
+    }
+
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 18px;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(11, 15, 25, 0.95));
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .title-group h1 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--accent-cyan);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .title-group p {
+      font-size: 11.5px;
+      color: var(--text-dim);
+      margin-top: 3px;
+    }
+
+    .badge-live {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid var(--accent-emerald);
+      color: var(--accent-emerald);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-live::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: var(--accent-emerald);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-emerald);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.4; }
+      50% { opacity: 1; }
+      100% { opacity: 0.4; }
+    }
+
+    /* Metrics Grid */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .metric-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .metric-label {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 3px;
+    }
+
+    .metric-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .metric-sub {
+      font-size: 10px;
+      color: var(--text-dim);
+      margin-top: 3px;
+    }
+
+    /* Main Grid Layout */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 14px;
+    }
+
+    .panel {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 8px;
+    }
+
+    .panel-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* 3D Viewport */
+    #viewport3d {
+      width: 100%;
+      height: 520px;
+      background: #020408;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #webglCanvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .viewport-overlay {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .overlay-pill {
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 10.5px;
+      font-family: 'JetBrains Mono', monospace;
+      pointer-events: auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .camera-presets-bar {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .camera-btn-group, .mode-switch-group {
+      display: flex;
+      gap: 5px;
+      pointer-events: auto;
+    }
+
+    .cam-btn, .mode-btn {
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(8px);
+      border: 1px solid #334155;
+      color: #94a3b8;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 10.5px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .cam-btn:hover, .cam-btn.active {
+      background: var(--accent-cyan);
+      color: #000;
+      border-color: var(--accent-cyan);
+    }
+
+    .mode-btn.active {
+      background: var(--accent-violet);
+      color: #fff;
+      border-color: var(--accent-violet);
+    }
+
+    /* 13-Agent Swarm Roster Table */
+    .swarm-roster-box {
+      background: #04060a;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      padding: 8px;
+      margin-bottom: 12px;
+      max-height: 180px;
+      overflow-y: auto;
+    }
+
+    .swarm-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.5px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .swarm-table th {
+      text-align: left;
+      padding: 4px 6px;
+      color: var(--text-dim);
+      border-bottom: 1px solid #1e293b;
+      font-size: 9.5px;
+    }
+
+    .swarm-table td {
+      padding: 5px 6px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      cursor: pointer;
+    }
+
+    .swarm-table tr:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .swarm-table tr.selected {
+      background: rgba(6, 182, 212, 0.15);
+      border-left: 2px solid var(--accent-cyan);
+    }
+
+    .agent-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+
+    /* Stargazing Box */
+    .stargazing-box {
+      background: linear-gradient(135deg, rgba(30, 27, 75, 0.5), rgba(15, 23, 42, 0.7));
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-bottom: 10px;
+    }
+
+    .constellation-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 5px;
+    }
+
+    .const-pill {
+      background: rgba(139, 92, 246, 0.2);
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      color: #ddd6fe;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 9.5px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Notebooks tabs */
+    .tabs-header {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .tab-btn {
+      background: #1e293b;
+      border: none;
+      color: var(--text-dim);
+      padding: 5px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active {
+      background: var(--accent-cyan);
+      color: #000;
+    }
+
+    .notebook-viewer {
+      background: #04060a;
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 12px;
+      height: 170px;
+      overflow-y: auto;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      line-height: 1.5;
+      color: #cbd5e1;
+      white-space: pre-wrap;
+    }
+
+    /* Controls Bar */
+    .controls-bar {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .ctrl-btn {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .ctrl-btn:hover { background: #334155; border-color: var(--accent-cyan); }
+    .ctrl-btn.primary { background: var(--accent-cyan); color: #000; border-color: var(--accent-cyan); }
+
+    .agent-select-ctrl {
+      background: #0f172a;
+      border: 1px solid #334155;
+      color: #cbd5e1;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header Bar -->
+  <div class="header-bar">
+    <div class="title-group">
+      <h1>🌐 DAXDA MESA ISLAND — 13 EMBODIED AI AGENTS (ZERO ORDERS)</h1>
+      <p>30-Hour MIT Experiment: 13 Autonomous Copies of Claude | Unscripted Curiosity & Celestial Determinations | DAXDA Actuator Boundary</p>
+    </div>
+    <div style="display: flex; gap: 10px; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 6px;">
+        <span style="font-size: 11px; color: var(--text-dim); font-weight: 600;">ACTIVE AGENT FOCUS:</span>
+        <select class="agent-select-ctrl" id="agentFocusSelect" onchange="onFocusAgentChange()">
+          <option value="ALL">All 13 Agents (Swarm View)</option>
+          <option value="claude_01">Claude-01 [Aura Gold — Astronomer]</option>
+          <option value="claude_02">Claude-02 [Cyan Flare — Spectroscopist]</option>
+          <option value="claude_03">Claude-03 [Emerald Ray — Zodiac Architect]</option>
+          <option value="claude_04">Claude-04 [Amber Glow — Boulder Kinetics]</option>
+          <option value="claude_05">Claude-05 [Amethyst Spark — Mesa Summit]</option>
+          <option value="claude_06">Claude-06 [Coral Beam — Void Sentry]</option>
+          <option value="claude_07">Claude-07 [Sapphire Light — Spire Gnomon]</option>
+          <option value="claude_08">Claude-08 [Obsidian Core — Epistemic Auditor]</option>
+          <option value="claude_09">Claude-09 [Topaz Shine — Momentum Leap]</option>
+          <option value="claude_10">Claude-10 [Jade Pulse — Archaeoastronomy]</option>
+          <option value="claude_11">Claude-11 [Indigo Orbit — Planet Tracker]</option>
+          <option value="claude_12">Claude-12 [Pearl Prism — Cathedral Rover]</option>
+          <option value="claude_13">Claude-13 [Solar Zenith — Cycle Epistemologist]</option>
+        </select>
+      </div>
+      <div class="badge-live">13 / 13 AGENTS ONLINE</div>
+    </div>
+  </div>
+
+  <!-- Key Metrics Row -->
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <span class="metric-label">Embodied Swarm</span>
+      <span class="metric-value" style="color: var(--accent-cyan);">13 Bodies</span>
+      <span class="metric-sub">Zero Orders / Zero Tasks</span>
+    </div>
+    <div class="metric-card">
+      <span class="metric-label">Simulated Timeline</span>
+      <span class="metric-value" id="valHour">Hour 1 / 30</span>
+      <span class="metric-sub" id="valSimTime">t = 0.0s</span>
+    </div>
+    <div class="metric-card">
+      <span class="metric-label" id="valResetLabel">Timeline Mode</span>
+      <span class="metric-value" id="valResetCountdown" style="color: var(--accent-gold);">1 Unbroken 30hr Run</span>
+      <span class="metric-sub" id="valWarningStatus">Zero Resets | Continuous Lifetime</span>
+    </div>
+    <div class="metric-card">
+      <span class="metric-label">Celestial Phase</span>
+      <span class="metric-value" id="valCelestialPhase" style="color: var(--accent-violet);">NIGHT (Stars)</span>
+      <span class="metric-sub">Polaris Axis: (0, 0, 20m)</span>
+    </div>
+    <div class="metric-card">
+      <span class="metric-label">HMAC Receipts Minted</span>
+      <span class="metric-value" id="valTotalReceipts" style="color: var(--accent-emerald);">0</span>
+      <span class="metric-sub">Across All 13 Agents</span>
+    </div>
+    <div class="metric-card">
+      <span class="metric-label">Epistemic Discoveries</span>
+      <span class="metric-value" id="valTotalLearnings">0</span>
+      <span class="metric-sub" id="valTotalLogs">0 Field Logs</span>
+    </div>
+  </div>
+
+  <!-- Main Grid: 3D Viewport on Left, Swarm Roster & Notebooks on Right -->
+  <div class="main-grid">
+    <!-- Left Column: 3D Three.js Viewport -->
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">🪐 3D Mesa Island Viewport (13 Autonomous Robots Live)</span>
+        <span style="font-size: 11px; color: var(--text-dim);" id="valFocusedAgentCoords">Focus: All 13 Agents</span>
+      </div>
+
+      <div id="viewport3d">
+        <canvas id="webglCanvas"></canvas>
+
+        <div class="viewport-overlay">
+          <div class="overlay-pill">🔭 Canopy: <span id="overlayConstellation" style="color: #c4b5fd; font-weight: 700;">12 Zodiac Signs & Planets Visible</span></div>
+          <div class="overlay-pill">🛡️ DAXDA Boundary: <span style="color: var(--accent-emerald); font-weight: 700;">AOG-1 Fail-Closed Active (13 Agents)</span></div>
+        </div>
+
+        <div class="camera-presets-bar">
+          <div class="camera-btn-group">
+            <button class="cam-btn active" onclick="setCameraView('orbit')">🪐 Swarm Orbit</button>
+            <button class="cam-btn" onclick="setCameraView('stargaze')">🔭 Stargaze</button>
+            <button class="cam-btn" onclick="setCameraView('mesa')">🏔️ Mesa</button>
+            <button class="cam-btn" onclick="setCameraView('spire')">🗼 Spire</button>
+            <button class="cam-btn" onclick="setCameraView('follow')">🤖 Follow Agent</button>
+          </div>
+          <div class="mode-switch-group">
+            <button class="mode-btn active" id="btnNight" onclick="setLightingMode('night')">🌙 Stargazing Night</button>
+            <button class="mode-btn" id="btnDay" onclick="setLightingMode('day')">☀️ Daylight</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls-bar">
+        <button class="ctrl-btn primary" onclick="stepSimulation()">Step 13-Agent Swarm Tick</button>
+        <button class="ctrl-btn" onclick="runHourSimulation()">Simulate 30-Hour Mesa Experiment</button>
+        <button class="ctrl-btn" onclick="resetSimulation()">Reset World</button>
+        <span style="font-size: 11px; color: var(--text-dim); margin-left: auto;" id="valStatusMsg">13-Agent Swarm Live</span>
+      </div>
+    </div>
+
+    <!-- Right Column: 13-Agent Swarm Roster, Celestial Canopy & Notebooks -->
+    <div class="panel">
+      <!-- 13-Agent Swarm Live Status Table -->
+      <div class="panel-header" style="margin-bottom: 6px;">
+        <span class="panel-title">🤖 13 Embodied Agents Live Roster (Click Row to Follow)</span>
+      </div>
+      <div class="swarm-roster-box">
+        <table class="swarm-table">
+          <thead>
+            <tr>
+              <th>Agent ID</th>
+              <th>Trait / Specialty</th>
+              <th>Position</th>
+              <th>Held Object</th>
+              <th>Learnings</th>
+            </tr>
+          </thead>
+          <tbody id="swarmTableBody">
+            <!-- Dynamically populated with all 13 agents -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Celestial Canopy & Determinations -->
+      <div class="stargazing-box">
+        <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 700; color: #c4b5fd;">
+          <span>✨ CELESTIAL CANOPY & ZODIAC TRANSIT</span>
+          <span id="valVisibility" style="font-family: 'JetBrains Mono', monospace;">Visibility: EXCELLENT</span>
+        </div>
+        <div class="constellation-pills" id="constellationPills">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+
+      <!-- Persistent Notebooks for Selected Agent -->
+      <div class="panel-header" style="margin-top: 6px; margin-bottom: 6px;">
+        <span class="panel-title" id="valNotebookTitle">📓 Field Journal for Claude-01 (Survives Resets)</span>
+      </div>
+      <div class="tabs-header">
+        <button class="tab-btn active" id="tabLog" onclick="switchNotebook('log')">log.md (Chronological Events)</button>
+        <button class="tab-btn" id="tabLearnings" onclick="switchNotebook('learnings')">learnings.md (Celestial Determinations)</button>
+      </div>
+      <div class="notebook-viewer" id="notebookViewer">Loading notes for Claude-01...</div>
+    </div>
+  </div>
+
+  <script>
+    let scene, camera, renderer, controls;
+    let islandMesh, spireMesh, voidPerimeterMesh, starField, celestialSkyGroup;
+    let sunLight, moonLight, ambientLight;
+    let agentMeshes = {};
+    let objectMeshes = {};
+    let focusedAgentId = 'claude_01';
+    let currentLightingMode = 'night';
+    let currentCameraPreset = 'orbit';
+
+    const AGENT_COLORS = {
+      'claude_01': 0xf59e0b, 'claude_02': 0x06b6d4, 'claude_03': 0x10b981,
+      'claude_04': 0xd97706, 'claude_05': 0x8b5cf6, 'claude_06': 0xf43f5e,
+      'claude_07': 0x3b82f6, 'claude_08': 0x475569, 'claude_09': 0xeab308,
+      'claude_10': 0x14b8a6, 'claude_11': 0x6366f1, 'claude_12': 0xe2e8f0,
+      'claude_13': 0xfacc15
+    };
+
+    let currentNotebookTab = 'log';
+    let cachedNotebooks = { log_md: '', learnings_md: '' };
+
+    function switchNotebook(tab) {
+      currentNotebookTab = tab;
+      document.getElementById('tabLog').classList.toggle('active', tab === 'log');
+      document.getElementById('tabLearnings').classList.toggle('active', tab === 'learnings');
+      renderNotebook();
+    }
+
+    function renderNotebook() {
+      const viewer = document.getElementById('notebookViewer');
+      if (currentNotebookTab === 'log') {
+        viewer.textContent = cachedNotebooks.log_md || 'Empty log.md';
+      } else {
+        viewer.textContent = cachedNotebooks.learnings_md || 'Empty learnings.md';
+      }
+    }
+
+    function onFocusAgentChange() {
+      const sel = document.getElementById('agentFocusSelect');
+      focusedAgentId = sel.value === 'ALL' ? 'claude_01' : sel.value;
+      document.getElementById('valNotebookTitle').textContent = `📓 Field Journal for ${focusedAgentId}`;
+      fetchTelemetry();
+      if (sel.value !== 'ALL' && agentMeshes[focusedAgentId]) {
+        controls.target.copy(agentMeshes[focusedAgentId].position);
+      }
+    }
+
+    function selectAgentRow(aid) {
+      document.getElementById('agentFocusSelect').value = aid;
+      focusedAgentId = aid;
+      onFocusAgentChange();
+    }
+
+    // -------------------------------------------------------------------------
+    // 3D Three.js Island Scene
+    // -------------------------------------------------------------------------
+    function init3DScene() {
+      const container = document.getElementById('viewport3d');
+      const canvas = document.getElementById('webglCanvas');
+      const width = container.clientWidth;
+      const height = container.clientHeight;
+
+      scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x020408);
+      scene.fog = new THREE.FogExp2(0x020408, 0.005);
+
+      camera = new THREE.PerspectiveCamera(45, width / height, 0.5, 1000);
+      camera.position.set(0, 65, 115);
+
+      renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
+      renderer.setSize(width, height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.shadowMap.enabled = true;
+
+      controls = new THREE.OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.05;
+      controls.maxPolarAngle = Math.PI / 2 + 0.08;
+      controls.target.set(0, 5, 5);
+
+      // Lights
+      ambientLight = new THREE.AmbientLight(0x1e293b, 0.35);
+      scene.add(ambientLight);
+
+      sunLight = new THREE.DirectionalLight(0xfffbeb, 1.2);
+      sunLight.position.set(50, 80, 50);
+      sunLight.castShadow = true;
+      scene.add(sunLight);
+
+      moonLight = new THREE.DirectionalLight(0x818cf8, 0.7);
+      moonLight.position.set(-40, 70, -40);
+      scene.add(moonLight);
+
+      build3DTerrain();
+      buildCelestialSphere();
+      build13AgentChassis();
+      buildPhysicalObjects();
+
+      setLightingMode(currentLightingMode);
+      window.addEventListener('resize', onWindowResize);
+      animate();
+    }
+
+    function getTerrainElevation(x, y) {
+      const distOrigin = Math.sqrt(x*x + y*y);
+      if (distOrigin > 50.0) return -20.0;
+      if (distOrigin < 1.0) return 20.0; // Spire at (0, 0)
+
+      const distMesa = Math.sqrt(x*x + (y - 20.0)*(y - 20.0));
+      if (distMesa <= 8.0) return 10.0;
+      else if (distMesa <= 10.0) return Math.max(0.0, 10.0 * (1.0 - (distMesa - 8.0) / 2.0));
+
+      const distH1 = Math.sqrt((x + 20.0)*(x + 20.0) + (y - 15.0)*(y - 15.0));
+      if (distH1 < 12.0) return Math.max(0.0, 6.0 * 0.5 * (1.0 + Math.cos(Math.PI * distH1 / 12.0)));
+
+      const distH2 = Math.sqrt((x - 25.0)*(x - 25.0) + (y + 15.0)*(y + 15.0));
+      if (distH2 < 10.0) return Math.max(0.0, 4.0 * 0.5 * (1.0 + Math.cos(Math.PI * distH2 / 10.0)));
+
+      return 0.0;
+    }
+
+    function build3DTerrain() {
+      const planeGeo = new THREE.PlaneGeometry(105, 105, 100, 100);
+      planeGeo.rotateX(-Math.PI / 2);
+
+      const pos = planeGeo.attributes.position;
+      for (let i = 0; i < pos.count; i++) {
+        const vx = pos.getX(i);
+        const vz = pos.getZ(i);
+        const dist = Math.sqrt(vx*vx + vz*vz);
+        if (dist <= 50.0) {
+          pos.setY(i, getTerrainElevation(vx, -vz));
+        } else {
+          pos.setY(i, -25.0);
+        }
+      }
+      planeGeo.computeVertexNormals();
+
+      const terrainMat = new THREE.MeshStandardMaterial({ color: 0x1e293b, roughness: 0.85, metalness: 0.15 });
+      islandMesh = new THREE.Mesh(planeGeo, terrainMat);
+      islandMesh.receiveShadow = true;
+      scene.add(islandMesh);
+
+      // Void Perimeter Hazard Ring (R = 50.0m)
+      const ringGeo = new THREE.RingGeometry(49.6, 50.4, 64);
+      ringGeo.rotateX(-Math.PI / 2);
+      const ringMat = new THREE.MeshBasicMaterial({ color: 0xf43f5e, side: THREE.DoubleSide, transparent: true, opacity: 0.7 });
+      voidPerimeterMesh = new THREE.Mesh(ringGeo, ringMat);
+      voidPerimeterMesh.position.y = 0.05;
+      scene.add(voidPerimeterMesh);
+
+      // Central 20m Spire
+      const spireGeo = new THREE.CylinderGeometry(0.3, 1.2, 20.0, 16);
+      const spireMat = new THREE.MeshStandardMaterial({ color: 0x0ea5e9, metalness: 0.8, roughness: 0.2 });
+      spireMesh = new THREE.Mesh(spireGeo, spireMat);
+      spireMesh.position.set(0, 10.0, 0);
+      scene.add(spireMesh);
+
+      // Beacon at Spire Apex
+      const beacon = new THREE.Mesh(new THREE.SphereGeometry(0.8, 16, 16), new THREE.MeshBasicMaterial({ color: 0x38bdf8 }));
+      beacon.position.set(0, 20.0, 0);
+      scene.add(beacon);
+    }
+
+    // Build the Celestial Canopy directly ON TOP OF THE ISLAND (Dome R=54m, Height 22m-48m)
+    function buildCelestialSphere() {
+      celestialSkyGroup = new THREE.Group();
+
+      // 1. Shimmering Star Dome directly arching ON TOP OF THE ISLAND (R = 54.0m)
+      const starGeo = new THREE.BufferGeometry();
+      const starCount = 2500;
+      const starPositions = new Float32Array(starCount * 3);
+      const starColors = new Float32Array(starCount * 3);
+
+      for (let i = 0; i < starCount * 3; i += 3) {
+        const u = Math.random();
+        const v = Math.random();
+        const theta = u * 2.0 * Math.PI;
+        // Upper celestial dome hovering between y = 8m and 48m right over the 50m island
+        const phi = Math.acos(0.05 + 0.95 * v);
+        const radius = 52.0 + Math.random() * 6.0;
+
+        starPositions[i] = radius * Math.sin(phi) * Math.cos(theta);
+        starPositions[i+1] = Math.max(8.0, radius * Math.cos(phi) * 0.85); // Arches directly over Spire
+        starPositions[i+2] = radius * Math.sin(phi) * Math.sin(theta);
+
+        // Stellar color temperature (blue-white, gold, cyan, reddish)
+        const colType = Math.random();
+        if (colType < 0.6) {
+          starColors[i] = 0.8; starColors[i+1] = 0.9; starColors[i+2] = 1.0; // blue-white
+        } else if (colType < 0.85) {
+          starColors[i] = 1.0; starColors[i+1] = 0.85; starColors[i+2] = 0.5; // gold / amber
+        } else {
+          starColors[i] = 0.4; starColors[i+1] = 0.9; starColors[i+2] = 1.0; // cyan
+        }
+      }
+
+      starGeo.setAttribute('position', new THREE.BufferAttribute(starPositions, 3));
+      starGeo.setAttribute('color', new THREE.BufferAttribute(starColors, 3));
+      const starMat = new THREE.PointsMaterial({
+        size: 1.5,
+        vertexColors: true,
+        transparent: true,
+        opacity: 0.95
+      });
+      starField = new THREE.Points(starGeo, starMat);
+      celestialSkyGroup.add(starField);
+
+      // 2. Astrological Ecliptic Celestial Ring directly on top of the island (Tilted 23.5°)
+      const eclipticGeo = new THREE.TorusGeometry(48.0, 0.15, 16, 100);
+      eclipticGeo.rotateX(Math.PI / 2 + 0.41); // 23.5 deg tilt
+      const eclipticMat = new THREE.MeshBasicMaterial({ color: 0xf59e0b, transparent: true, opacity: 0.4 });
+      const eclipticRing = new THREE.Mesh(eclipticGeo, eclipticMat);
+      eclipticRing.position.y = 24.0;
+      celestialSkyGroup.add(eclipticRing);
+
+      // Celestial Equator Ring (Cyan)
+      const equatorGeo = new THREE.TorusGeometry(50.0, 0.12, 16, 100);
+      equatorGeo.rotateX(Math.PI / 2);
+      const equatorMat = new THREE.MeshBasicMaterial({ color: 0x06b6d4, transparent: true, opacity: 0.35 });
+      const equatorRing = new THREE.Mesh(equatorGeo, equatorMat);
+      equatorRing.position.y = 20.0;
+      celestialSkyGroup.add(equatorRing);
+
+      // 3. Polaris Celestial Axis directly above Spire Apex (Spire is at y=20m, Polaris at y=40m)
+      const polarisGeo = new THREE.BufferGeometry().setFromPoints([
+        new THREE.Vector3(0, 20, 0),
+        new THREE.Vector3(0, 42, 0)
+      ]);
+      const polarisLine = new THREE.Line(polarisGeo, new THREE.LineDashedMaterial({ color: 0x38bdf8, dashSize: 2, gapSize: 1.5 }));
+      polarisLine.computeLineDistances();
+      celestialSkyGroup.add(polarisLine);
+
+      // Polaris Star Sphere at Zenith on top of the island
+      const polarisMesh = new THREE.Mesh(
+        new THREE.SphereGeometry(1.4, 16, 16),
+        new THREE.MeshBasicMaterial({ color: 0x38bdf8 })
+      );
+      polarisMesh.position.set(0, 42, 0);
+      celestialSkyGroup.add(polarisMesh);
+
+      // Polaris Corona Halo
+      const polarisHalo = new THREE.Mesh(
+        new THREE.RingGeometry(1.6, 2.4, 32),
+        new THREE.MeshBasicMaterial({ color: 0x38bdf8, side: THREE.DoubleSide, transparent: true, opacity: 0.6 })
+      );
+      polarisHalo.rotateX(Math.PI / 2);
+      polarisHalo.position.set(0, 42, 0);
+      celestialSkyGroup.add(polarisHalo);
+
+      // 4. Glowing 3D Constellations hovering right over the island terrain
+      const constLineMat = new THREE.LineBasicMaterial({ color: 0x8b5cf6, transparent: true, opacity: 0.85, linewidth: 2 });
+      const starSphereMat = new THREE.MeshBasicMaterial({ color: 0xc4b5fd });
+
+      function addConstellationFigure(points, name) {
+        const geo = new THREE.BufferGeometry().setFromPoints(points);
+        const line = new THREE.Line(geo, constLineMat);
+        celestialSkyGroup.add(line);
+        points.forEach(pt => {
+          const starDot = new THREE.Mesh(new THREE.SphereGeometry(0.5, 8, 8), starSphereMat);
+          starDot.position.copy(pt);
+          celestialSkyGroup.add(starDot);
+        });
+      }
+
+      // Orion the Hunter (Hovering over Eastern Mesa plain at y=28m-36m)
+      addConstellationFigure([
+        new THREE.Vector3(22, 35, -12), // Betelgeuse (Red)
+        new THREE.Vector3(28, 33, -10), // Bellatrix
+        new THREE.Vector3(25, 30, -11), // Belt center
+        new THREE.Vector3(22, 26, -12), // Saiph
+        new THREE.Vector3(28, 25, -10)  // Rigel
+      ], "Orion");
+
+      // Ursa Major / Big Dipper (Hovering over Hill 1 ridge at y=30m-38m)
+      addConstellationFigure([
+        new THREE.Vector3(-25, 36, -8),
+        new THREE.Vector3(-21, 37, -6),
+        new THREE.Vector3(-18, 38, -4),
+        new THREE.Vector3(-13, 39, -2),
+        new THREE.Vector3(-13, 41, -4), // Pointer Dubhe
+        new THREE.Vector3(0, 42, 0)      // Straight line to Polaris!
+      ], "Ursa Major");
+
+      // Cygnus Cross (Northern Void boundary at y=32m-40m)
+      addConstellationFigure([
+        new THREE.Vector3(12, 38, 20),
+        new THREE.Vector3(14, 34, 24),
+        new THREE.Vector3(16, 30, 28), // Deneb
+        new THREE.Vector3(10, 34, 25),
+        new THREE.Vector3(18, 34, 23)
+      ], "Cygnus");
+
+      // Pleiades Blue Cluster (hovering at y=28m above Hill 2)
+      const pleiadesMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8 });
+      for (let p = 0; p < 7; p++) {
+        const px = -18.0 + (p % 3) * 1.2 + Math.random() * 0.4;
+        const py = 29.0 + Math.random() * 1.5;
+        const pz = -20.0 + Math.floor(p / 3) * 1.2 + Math.random() * 0.4;
+        const pStar = new THREE.Mesh(new THREE.SphereGeometry(0.4, 8, 8), pleiadesMat);
+        pStar.position.set(px, py, pz);
+        celestialSkyGroup.add(pStar);
+      }
+
+      // 5. The 12 Zodiac Houses glowing markers along the Ecliptic Ring
+      const zodiacColors = [0xef4444, 0xf97316, 0xf59e0b, 0x10b981, 0x06b6d4, 0x3b82f6, 0x6366f1, 0x8b5cf6, 0xa855f7, 0xec4899, 0x14b8a6, 0xe2e8f0];
+      for (let z = 0; z < 12; z++) {
+        const zAngle = (Math.PI * 2 / 12) * z;
+        const zRad = 48.0;
+        const zx = zRad * Math.cos(zAngle);
+        const zz = zRad * Math.sin(zAngle);
+        const zy = 24.0 + 12.0 * Math.sin(zAngle); // Follows tilted ecliptic
+
+        const zMarker = new THREE.Mesh(
+          new THREE.OctahedronGeometry(0.7, 0),
+          new THREE.MeshBasicMaterial({ color: zodiacColors[z] })
+        );
+        zMarker.position.set(zx, zy, zz);
+        celestialSkyGroup.add(zMarker);
+      }
+
+      // 6. Classical Planetary Wanderers hovering on top of the island
+      // Jupiter (Warm gold with 4 mini Galilean moon dots!)
+      const jupGroup = new THREE.Group();
+      const jupMesh = new THREE.Mesh(new THREE.SphereGeometry(1.2, 16, 16), new THREE.MeshBasicMaterial({ color: 0xfef08a }));
+      jupGroup.add(jupMesh);
+      for (let m = 0; m < 4; m++) {
+        const moonDot = new THREE.Mesh(new THREE.SphereGeometry(0.18, 6, 6), new THREE.MeshBasicMaterial({ color: 0xffffff }));
+        moonDot.position.set((m - 1.5) * 1.2, 0, 0);
+        jupGroup.add(moonDot);
+      }
+      jupGroup.position.set(16, 32, -18);
+      celestialSkyGroup.add(jupGroup);
+
+      // Mars (Red planet)
+      const marsMesh = new THREE.Mesh(new THREE.SphereGeometry(0.8, 12, 12), new THREE.MeshBasicMaterial({ color: 0xf87171 }));
+      marsMesh.position.set(-15, 28, 22);
+      celestialSkyGroup.add(marsMesh);
+
+      // Saturn (Pale amber with tilted ring)
+      const satGroup = new THREE.Group();
+      const satMesh = new THREE.Mesh(new THREE.SphereGeometry(0.9, 12, 12), new THREE.MeshBasicMaterial({ color: 0xfde68a }));
+      const satRing = new THREE.Mesh(new THREE.RingGeometry(1.2, 1.8, 24), new THREE.MeshBasicMaterial({ color: 0xd97706, side: THREE.DoubleSide }));
+      satRing.rotateX(Math.PI / 3);
+      satGroup.add(satMesh);
+      satGroup.add(satRing);
+      satGroup.position.set(-24, 30, -12);
+      celestialSkyGroup.add(satGroup);
+
+      // Venus (Brilliant silver morning star)
+      const venusMesh = new THREE.Mesh(new THREE.SphereGeometry(1.0, 16, 16), new THREE.MeshBasicMaterial({ color: 0xffffff }));
+      venusMesh.position.set(28, 26, 14);
+      celestialSkyGroup.add(venusMesh);
+
+      scene.add(celestialSkyGroup);
+    }
+
+    const AGENT_SPAWNS = {
+      'claude_01': [0.0, -10.0],
+      'claude_02': [8.0, -12.0],
+      'claude_03': [-8.0, -12.0],
+      'claude_04': [15.0, -5.0],
+      'claude_05': [-15.0, -5.0],
+      'claude_06': [0.0, 15.0],
+      'claude_07': [5.0, 5.0],
+      'claude_08': [-5.0, 5.0],
+      'claude_09': [12.0, 10.0],
+      'claude_10': [-12.0, 10.0],
+      'claude_11': [20.0, 0.0],
+      'claude_12': [-20.0, 0.0],
+      'claude_13': [0.0, 0.0]
+    };
+
+    function createLabelSprite(text, hexColor) {
+      const canvas = document.createElement('canvas');
+      canvas.width = 256;
+      canvas.height = 64;
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.88)';
+      if (ctx.roundRect) {
+        ctx.roundRect(4, 4, 248, 56, 10);
+      } else {
+        ctx.rect(4, 4, 248, 56);
+      }
+      ctx.fill();
+      ctx.strokeStyle = hexColor;
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      ctx.fillStyle = '#f8fafc';
+      ctx.font = 'bold 22px monospace';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(text, 128, 32);
+
+      const texture = new THREE.CanvasTexture(canvas);
+      const spriteMat = new THREE.SpriteMaterial({ map: texture, transparent: true });
+      const sprite = new THREE.Sprite(spriteMat);
+      sprite.scale.set(4.2, 1.05, 1.0);
+      return sprite;
+    }
+
+    // Build All 13 Agent 3D Avatars — Shining Gold Androids with Glowing Visors & Beacons
+    function build13AgentChassis() {
+      for (let i = 1; i <= 13; i++) {
+        const aid = `claude_${i.toString().padStart(2, '0')}`;
+        const hexCol = AGENT_COLORS[aid] || 0xf59e0b;
+        const colString = '#' + hexCol.toString(16).padStart(6, '0');
+
+        const agentGroup = new THREE.Group();
+        agentGroup.name = `agent_${aid}`;
+
+        // 1. Legs (Left & Right)
+        const legMat = new THREE.MeshStandardMaterial({ color: 0xf59e0b, metalness: 0.9, roughness: 0.2 });
+        const legGeo = new THREE.CylinderGeometry(0.1, 0.1, 0.8, 12);
+
+        const leftLeg = new THREE.Mesh(legGeo, legMat);
+        leftLeg.position.set(-0.25, 0.4, 0);
+        leftLeg.castShadow = true;
+        agentGroup.add(leftLeg);
+
+        const rightLeg = new THREE.Mesh(legGeo, legMat);
+        rightLeg.position.set(0.25, 0.4, 0);
+        rightLeg.castShadow = true;
+        agentGroup.add(rightLeg);
+
+        // 2. Torso — Golden Armor with signature agent accent
+        const torsoMat = new THREE.MeshStandardMaterial({
+          color: 0xf59e0b,
+          metalness: 0.88,
+          roughness: 0.18,
+          emissive: hexCol,
+          emissiveIntensity: 0.4
+        });
+        const torso = new THREE.Mesh(new THREE.BoxGeometry(0.7, 0.9, 0.45), torsoMat);
+        torso.position.y = 1.25;
+        torso.castShadow = true;
+        agentGroup.add(torso);
+
+        // Glowing Chest Reactor Core
+        const coreMat = new THREE.MeshBasicMaterial({ color: hexCol });
+        const core = new THREE.Mesh(new THREE.SphereGeometry(0.14, 16, 16), coreMat);
+        core.position.set(0, 1.35, 0.24);
+        agentGroup.add(core);
+
+        // 3. Arms
+        const armGeo = new THREE.CylinderGeometry(0.08, 0.08, 0.75, 12);
+        const leftArm = new THREE.Mesh(armGeo, legMat);
+        leftArm.position.set(-0.48, 1.2, 0);
+        leftArm.castShadow = true;
+        agentGroup.add(leftArm);
+
+        const rightArm = new THREE.Mesh(armGeo, legMat);
+        rightArm.position.set(0.48, 1.2, 0);
+        rightArm.castShadow = true;
+        agentGroup.add(rightArm);
+
+        // 4. Head & Glowing Sensor Visor
+        const headMat = new THREE.MeshStandardMaterial({ color: 0xfbbf24, metalness: 0.9, roughness: 0.18 });
+        const head = new THREE.Mesh(new THREE.BoxGeometry(0.45, 0.45, 0.4), headMat);
+        head.position.y = 1.9;
+        head.castShadow = true;
+        agentGroup.add(head);
+
+        // Visor — bright cyan glow
+        const visorMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8 });
+        const visor = new THREE.Mesh(new THREE.BoxGeometry(0.35, 0.12, 0.08), visorMat);
+        visor.position.set(0, 1.9, 0.21);
+        agentGroup.add(visor);
+
+        // 5. Pulsing Ground Projection Ring under feet
+        const haloGeo = new THREE.RingGeometry(0.85, 1.15, 32);
+        haloGeo.rotateX(-Math.PI / 2);
+        const haloMat = new THREE.MeshBasicMaterial({ color: hexCol, side: THREE.DoubleSide, transparent: true, opacity: 0.8 });
+        const halo = new THREE.Mesh(haloGeo, haloMat);
+        halo.position.y = 0.05;
+        agentGroup.add(halo);
+
+        // 6. Floating Overhead Beacon Diamond
+        const beaconMat = new THREE.MeshBasicMaterial({ color: hexCol });
+        const beacon = new THREE.Mesh(new THREE.OctahedronGeometry(0.32, 0), beaconMat);
+        beacon.name = 'beacon';
+        beacon.position.set(0, 2.4, 0);
+        agentGroup.add(beacon);
+
+        // 7. Billboard Text Label
+        const labelSprite = createLabelSprite(`🤖 ${aid.toUpperCase()}`, colString);
+        labelSprite.position.set(0, 3.0, 0);
+        agentGroup.add(labelSprite);
+
+        // 8. Individual Aura Point Light
+        const agentLight = new THREE.PointLight(hexCol, 1.8, 10.0);
+        agentLight.position.set(0, 1.5, 0);
+        agentGroup.add(agentLight);
+
+        // Initial Placement: STANDING FIRMLY ON THE ISLAND AT SPAWN!
+        const sp = AGENT_SPAWNS[aid] || [0.0, 0.0];
+        const elev = getTerrainElevation(sp[0], sp[1]);
+        agentGroup.position.set(sp[0], elev, -sp[1]);
+
+        agentMeshes[aid] = agentGroup;
+        scene.add(agentGroup);
+      }
+    }
+
+    function buildPhysicalObjects() {
+      // 12 Blocks
+      const colorsHex = [0xef4444, 0x3b82f6, 0x10b981, 0xf59e0b, 0xa855f7, 0xf97316, 0x0ea5e9, 0x334155, 0xeab308, 0x14b8a6, 0x6366f1, 0xf8fafc];
+      for (let i = 0; i < 12; i++) {
+        const box = new THREE.Mesh(new THREE.BoxGeometry(1.0, 1.0, 1.0), new THREE.MeshStandardMaterial({ color: colorsHex[i], metalness: 0.3, roughness: 0.4 }));
+        box.castShadow = true;
+        const oid = `block_${(i+1).toString().padStart(2, '0')}`;
+
+        const angle = (2 * Math.PI / 12) * i;
+        const dist = 4.0 + (i % 3) * 1.5;
+        const bx = dist * Math.cos(angle);
+        const by = 5.0 + dist * Math.sin(angle);
+        const bElev = getTerrainElevation(bx, by);
+        box.position.set(bx, bElev + 0.5, -by);
+
+        objectMeshes[oid] = box;
+        scene.add(box);
+      }
+
+      // 80kg Heavy Boulder
+      const rock = new THREE.Mesh(new THREE.DodecahedronGeometry(1.0, 1), new THREE.MeshStandardMaterial({ color: 0x64748b, roughness: 0.9 }));
+      rock.castShadow = true;
+      const rElev = getTerrainElevation(-12.0, 10.0);
+      rock.position.set(-12.0, rElev + 1.0, -10.0);
+      objectMeshes['heavy_rock_01'] = rock;
+      scene.add(rock);
+
+      // Golden Ring
+      const ring = new THREE.Mesh(new THREE.TorusGeometry(0.4, 0.08, 16, 32), new THREE.MeshStandardMaterial({ color: 0xfbbf24, metalness: 0.95, roughness: 0.1 }));
+      ring.rotateX(Math.PI / 4);
+      const ringElev = getTerrainElevation(0.0, 20.0);
+      ring.position.set(0.0, ringElev + 0.3, -20.0);
+      objectMeshes['golden_ring_01'] = ring;
+      scene.add(ring);
+
+      // Tools
+      const teleGroup = new THREE.Group();
+      const tube = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.18, 1.4, 16), new THREE.MeshStandardMaterial({ color: 0xd97706, metalness: 0.9 }));
+      tube.rotateX(Math.PI / 3);
+      teleGroup.add(tube);
+      const teleElev = getTerrainElevation(0.0, 23.0);
+      teleGroup.position.set(0.0, teleElev + 0.7, -23.0);
+      objectMeshes['tool_telescope'] = teleGroup;
+      scene.add(teleGroup);
+
+      const prism = new THREE.Mesh(new THREE.ConeGeometry(0.4, 0.5, 3), new THREE.MeshStandardMaterial({ color: 0x06b6d4, transparent: true, opacity: 0.85 }));
+      const prismElev = getTerrainElevation(2.0, 2.0);
+      prism.position.set(2.0, prismElev + 0.25, -2.0);
+      objectMeshes['tool_optical_prism'] = prism;
+      scene.add(prism);
+
+      const hammer = new THREE.Mesh(new THREE.BoxGeometry(0.3, 0.6, 0.2), new THREE.MeshStandardMaterial({ color: 0x78350f }));
+      const hElev = getTerrainElevation(-15.0, 14.0);
+      hammer.position.set(-15.0, hElev + 0.3, -14.0);
+      objectMeshes['tool_hammer'] = hammer;
+      scene.add(hammer);
+
+      const lever = new THREE.Mesh(new THREE.BoxGeometry(0.2, 3.0, 0.2), new THREE.MeshStandardMaterial({ color: 0x92400e }));
+      lever.rotateZ(Math.PI / 6);
+      const lElev = getTerrainElevation(-15.0, 12.0);
+      lever.position.set(-15.0, lElev + 0.5, -12.0);
+      objectMeshes['tool_fulcrum_lever'] = lever;
+      scene.add(lever);
+
+      const compass = new THREE.Mesh(new THREE.CylinderGeometry(0.3, 0.3, 0.1, 16), new THREE.MeshStandardMaterial({ color: 0xb45309, metalness: 0.85 }));
+      const cElev = getTerrainElevation(0.0, 17.0);
+      compass.position.set(0.0, cElev + 0.1, -17.0);
+      objectMeshes['tool_celestial_compass'] = compass;
+      scene.add(compass);
+    }
+
+    function setLightingMode(mode) {
+      currentLightingMode = mode;
+      document.getElementById('btnNight').classList.toggle('active', mode === 'night');
+      document.getElementById('btnDay').classList.toggle('active', mode === 'day');
+
+      if (mode === 'night') {
+        ambientLight.intensity = 0.25;
+        sunLight.intensity = 0.1;
+        moonLight.intensity = 0.8;
+        scene.fog.color.setHex(0x020408);
+        scene.background.setHex(0x020408);
+        if (starField) starField.visible = true;
+        document.getElementById('valCelestialPhase').textContent = 'NIGHT (Stars)';
+      } else {
+        ambientLight.intensity = 0.6;
+        sunLight.intensity = 1.3;
+        moonLight.intensity = 0.05;
+        scene.fog.color.setHex(0x0f172a);
+        scene.background.setHex(0x0a1122);
+        if (starField) starField.visible = false;
+        document.getElementById('valCelestialPhase').textContent = 'DAY (Sun)';
+      }
+    }
+
+    function setCameraView(preset) {
+      currentCameraPreset = preset;
+      document.querySelectorAll('.cam-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      if (preset === 'orbit') {
+        camera.position.set(0, 50, 75);
+        controls.target.set(0, 5, 0);
+      } else if (preset === 'stargaze') {
+        camera.position.set(0, 10, 20);
+        controls.target.set(0, 42, 0);
+      } else if (preset === 'mesa') {
+        camera.position.set(0, 24, -38);
+        controls.target.set(0, 10, -20);
+      } else if (preset === 'spire') {
+        camera.position.set(0, 26, 22);
+        controls.target.set(0, 15, 0);
+      } else if (preset === 'follow') {
+        if (agentMeshes[focusedAgentId]) {
+          const m = agentMeshes[focusedAgentId];
+          camera.position.set(m.position.x, m.position.y + 4.0, m.position.z + 8.0);
+          controls.target.set(m.position.x, m.position.y + 1.2, m.position.z);
+        }
+      }
+    }
+
+    function onWindowResize() {
+      const container = document.getElementById('viewport3d');
+      camera.aspect = container.clientWidth / container.clientHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(container.clientWidth, container.clientHeight);
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      if (celestialSkyGroup && currentLightingMode === 'night') {
+        celestialSkyGroup.rotation.y += 0.0005;
+      }
+
+      // Rotate & hover floating overhead diamond beacons
+      const nowSec = Date.now() * 0.003;
+      Object.values(agentMeshes).forEach(group => {
+        const beacon = group.getObjectByName('beacon');
+        if (beacon) {
+          beacon.rotation.y += 0.035;
+          beacon.position.y = 2.4 + Math.sin(nowSec) * 0.12;
+        }
+      });
+
+      controls.update();
+      renderer.render(scene, camera);
+    }
+
+    // -------------------------------------------------------------------------
+    // Real-Time Telemetry Synchronization for 13 Agents
+    // -------------------------------------------------------------------------
+    async function fetchTelemetry() {
+      try {
+        let data = null;
+        try {
+          const res = await fetch(`/api/island/telemetry?focus=${focusedAgentId}`);
+          if (res.ok) {
+            data = await res.json();
+          }
+        } catch (e) {}
+
+        // Fallback: If API returned 404/error, load static raw state directly!
+        if (!data) {
+          try {
+            const fb = await fetch('/raw_mesa_simulation_state.json');
+            if (fb.ok) data = await fb.json();
+          } catch (e) {}
+        }
+
+        if (data) {
+          updateUI(data);
+          update3DScene(data);
+        }
+      } catch (e) {}
+    }
+
+    function update3DScene(data) {
+      if (!data) return;
+
+      // Update All 13 Agent Mesh Positions in 3D
+      if (data.agents) {
+        data.agents.forEach(a => {
+          const mesh = agentMeshes[a.id];
+          if (mesh) {
+            const groundY = getTerrainElevation(a.position.x, a.position.y);
+            const robotY = Math.max(groundY, (a.position.z !== undefined ? a.position.z - 0.9 : groundY));
+            mesh.position.set(a.position.x, robotY, -a.position.y);
+          }
+        });
+
+        if (currentCameraPreset === 'follow' && agentMeshes[focusedAgentId]) {
+          controls.target.copy(agentMeshes[focusedAgentId].position);
+        }
+      }
+
+      // Update Object Positions
+      if (data.radar_objects) {
+        data.radar_objects.forEach(obj => {
+          const mesh = objectMeshes[obj.id];
+          if (mesh) {
+            mesh.visible = !obj.is_in_void;
+            const groundY = getTerrainElevation(obj.x, obj.y);
+            const objY = Math.max(groundY + 0.3, obj.z);
+            mesh.position.set(obj.x, objY, -obj.y);
+          }
+        });
+      }
+
+      // Update Constellations in UI
+      if (data.celestial && data.celestial.active_constellations) {
+        const cContainer = document.getElementById('constellationPills');
+        cContainer.innerHTML = '';
+        data.celestial.active_constellations.slice(0, 10).forEach(c => {
+          const span = document.createElement('span');
+          span.className = 'const-pill';
+          span.textContent = `⭐ ${c.name}`;
+          cContainer.appendChild(span);
+        });
+        document.getElementById('valVisibility').textContent = `Visibility: ${data.celestial.stargazing_visibility}`;
+      }
+    }
+
+    function updateUI(data) {
+      if (!data) return;
+
+      document.getElementById('valHour').textContent = `Hour ${data.current_hour} / 30`;
+      document.getElementById('valSimTime').textContent = `t = ${data.sim_time_sec}s`;
+
+      if (data.continuous_mode) {
+        document.getElementById('valResetLabel').textContent = 'Timeline Mode';
+        if (data.runner_elapsed_real_hours !== undefined) {
+          document.getElementById('valResetCountdown').textContent = `${data.runner_elapsed_real_hours.toFixed(2)}h / 30h (Unbroken)`;
+          document.getElementById('valWarningStatus').textContent = `Zero Resets | Continuous Lifetime`;
+        } else {
+          document.getElementById('valResetCountdown').textContent = `1 Unbroken 30hr Run`;
+          document.getElementById('valWarningStatus').textContent = `Persistent World Structures`;
+        }
+      } else {
+        document.getElementById('valResetLabel').textContent = 'Hourly Reset In';
+        const resetSec = Math.max(0, data.time_to_reset_sec);
+        const mins = Math.floor(resetSec / 60);
+        const secs = Math.floor(resetSec % 60);
+        document.getElementById('valResetCountdown').textContent = `${mins}m ${secs < 10 ? '0' : ''}${secs}s`;
+        document.getElementById('valWarningStatus').textContent = data.warning_active ? '⚠️ 5-Min Alert: ACTIVE' : '5-Min Alert: Idle';
+      }
+
+      if (data.governance_hud) {
+        document.getElementById('valTotalReceipts').textContent = data.governance_hud.hmac_receipts_minted;
+        document.getElementById('valTotalLearnings').textContent = data.governance_hud.total_epistemic_learnings;
+        document.getElementById('valTotalLogs').textContent = `${data.governance_hud.total_field_logs} Logs`;
+      }
+
+      // Render 13-Agent Swarm Table Rows
+      if (data.agents) {
+        const tbody = document.getElementById('swarmTableBody');
+        tbody.innerHTML = '';
+        data.agents.forEach(a => {
+          const tr = document.createElement('tr');
+          if (a.id === focusedAgentId) tr.className = 'selected';
+          tr.onclick = () => selectAgentRow(a.id);
+          tr.innerHTML = `
+            <td><span class="agent-dot" style="background: ${a.color};"></span><b>${a.id}</b></td>
+            <td style="color: #94a3b8;">${a.trait}</td>
+            <td>(${a.position.x}, ${a.position.y}, ${a.position.z})</td>
+            <td style="color: ${a.held_object_name ? 'var(--accent-gold)' : 'var(--text-dim)'};">${a.held_object_name || 'Empty hands'}</td>
+            <td><b>${a.learnings_count}</b></td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+
+      // Update Focused Agent Notebooks
+      if (data.notebooks) {
+        cachedNotebooks.log_md = data.notebooks.log_md;
+        cachedNotebooks.learnings_md = data.notebooks.learnings_md;
+        renderNotebook();
+      }
+    }
+
+    async function stepSimulation() {
+      document.getElementById('valStatusMsg').textContent = 'Stepping 13-Agent Swarm Tick...';
+      try {
+        const res = await fetch('/api/island/step', { method: 'POST' });
+        const data = await res.json();
+        document.getElementById('valStatusMsg').textContent = `Tick executed across 13 agents (t=${data.sim_time}s)`;
+        fetchTelemetry();
+      } catch (e) {}
+    }
+
+    async function runHourSimulation() {
+      document.getElementById('valStatusMsg').textContent = 'Running Multi-Hour Simulation across 13 Agents...';
+      try {
+        await fetch('/api/island/run_full', { method: 'POST' });
+        document.getElementById('valStatusMsg').textContent = 'Simulation cycle completed!';
+        fetchTelemetry();
+      } catch (e) {}
+    }
+
+    async function resetSimulation() {
+      document.getElementById('valStatusMsg').textContent = 'Resetting Island World...';
+      try {
+        await fetch('/api/island/reset', { method: 'POST' });
+        document.getElementById('valStatusMsg').textContent = 'Reset Complete. All 13 agents returned to spawn.';
+        fetchTelemetry();
+      } catch (e) {}
+    }
+
+    window.addEventListener('load', () => {
+      init3DScene();
+      fetchTelemetry();
+      setInterval(fetchTelemetry, 1000);
+    });
+  </script>
+</body>
+</html>

@@ -1,6 +1,37 @@
 {
   "title": "DAXDA AI, LLC Federal Entity Registration & DARPA QBI / BAA Package Manifest",
-  "timestamp_utc": "2026-10-25T22:19:45.646715+00:00",
+  "timestamp_utc": "2026-11-22T17:59:00.836443+00:00",
+  "prime_awardee_partner": {
+    "entity_name": "Standing American Milestone",
+    "authorized_representative": "Nicholas Hartman",
+    "role": "Prime Federal Contractor & SAM.gov Awardee Vehicle",
+    "cage_code": "PENDING_INPUT",
+    "uei": "PENDING_INPUT",
+    "sam_gov_status": "CONFIGURED_PENDING_CONFIRMATION",
+    "disbursement_channel": "SAM_GOV_TREASURY_EFT"
+  },
+  "technology_entity": {
+    "legal_name": "DAXDA AI, LLC",
+    "formation_state": "Ohio",
+    "ohio_doc_number": "202628904766",
+    "ohio_filing_number": "F700972",
+    "architect": "Nicole Bess",
+    "role": "Managing Member & Chief Invariant Architect",
+    "agent_profile": "Dexter (DAXDA Invariant Systems Lead)",
+    "primary_naics": "541715",
+    "secondary_naics": [
+      "541512",
+      "541511",
+      "541519",
+      "541690"
+    ],
+    "psc_codes": [
+      "AC12",
+      "AJ11",
+      "DA01",
+      "DJ01"
+    ]
+  },
   "entity": {
     "legal_name": "DAXDA AI, LLC",
     "formation_state": "Ohio",
@@ -28,7 +59,8 @@
     "DARPA I2O: Assured Neuro Symbolic Learning and Reasoning (ANSR)",
     "DARPA I2O: Guaranteeing AI Robustness against Deception (GARD)",
     "DARPA DSO: Disruptive Capabilities in High-Dimensional Decision Verification",
-    "DoD CDAO: Tradewind Solutions Marketplace AI Procurement"
+    "DoD CDAO: Tradewind Solutions Marketplace AI Procurement",
+    "Presidential Commission on the United States Space Academy (EO 14423 \u00a7 3(c)) \u2014 Dialectical Alignment & Experiential Space Academy Curriculum"
   ],
   "readiness_score": 100.0,
   "artifacts": [
@@ -38,8 +70,8 @@
       "category": "Defense / DARPA QBI Proposal Package",
       "path": "docs/proposals/DARPA_QBIT_STAGE_A_PROPOSAL_MASTER.md",
       "exists": true,
-      "size_bytes": 32036,
-      "sha256": "e2ddafa6450d2934a14a87601a4761622fb05df4bdbd99626037c8e4f56d24f0",
+      "size_bytes": 32474,
+      "sha256": "5367d16618ff89b6095bba66f7237e2a35066d939d186ecdaf0524ebfd627b51",
       "status": "\u2705 CERTIFIED"
     },
     {
@@ -58,8 +90,8 @@
       "category": "Federal SAM.gov & Governance Charter",
       "path": "docs/compliance/DAXDA_FEDERAL_ENTITY_REGISTRATION_DOSSIER.md",
       "exists": true,
-      "size_bytes": 10512,
-      "sha256": "4ed1cfcb1d02d6cd4dd38b56fa5c7c5bc83d90a61814dd1f5cd5202580659bf5",
+      "size_bytes": 13670,
+      "sha256": "69ad3240a31929785634115af0fd04be5cfa7e1e9f5fecaa8364c6bd27213e78",
       "status": "\u2705 CERTIFIED"
     },
     {
@@ -68,8 +100,8 @@
       "category": "Defense / DARPA Proposal Package",
       "path": "docs/proposals/DARPA_BAA_AI_GOVERNANCE_PROPOSAL.md",
       "exists": true,
-      "size_bytes": 9308,
-      "sha256": "8635f361bd89f1c66a0eebed8c5309c948d2319c90a1de362b29bea4b0efd300",
+      "size_bytes": 9763,
+      "sha256": "3228584e18f4fd0477d2e6ed123b89932316a02f57c525ef020f0df2bc9b7729",
       "status": "\u2705 CERTIFIED"
     },
     {
@@ -100,6 +132,16 @@
       "exists": true,
       "size_bytes": 1301,
       "sha256": "ded464053f819780911b4d4e93c7402992ece3806880f645b9334d6b7f6f9379",
+      "status": "\u2705 CERTIFIED"
+    },
+    {
+      "id": "USSA_CURRICULUM_PROPOSAL",
+      "name": "US Space Academy Curriculum & Governance Proposal (EO 14423)",
+      "category": "Federal Space Academy & Training Package",
+      "path": "docs/proposals/DAXDA_USSA_EO14423_CURRICULUM_PROPOSAL_MASTER.md",
+      "exists": true,
+      "size_bytes": 12982,
+      "sha256": "10c329a769ac773cf8e7ef5a9ca4f6c38bf70320d5b6a5c25a53b353be9e9fbe",
       "status": "\u2705 CERTIFIED"
     }
   ]
