@@ -104,6 +104,12 @@ def main():
             "category": "Federal Space Academy & Training Package",
             "rel_path": "docs/proposals/USSA_APEP_FEDERAL_ACQUISITION_AND_PILOT_SUBMISSION.md",
         },
+        {
+            "id": "NASA_ANALOG_CLIENT_SPEC",
+            "name": "NASA HERA & CHAPEA Analog Mission Client Integration Specification",
+            "category": "Federal Space Academy & Analog Overlay Package",
+            "rel_path": "docs/compliance/NASA_HERA_CHAPEA_ANALOG_CLIENT_SPECIFICATION.md",
+        },
     ]
 
     print("=" * 80)

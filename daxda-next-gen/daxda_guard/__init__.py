@@ -13,6 +13,16 @@ from .actuator_boundary import (
     GovernanceDisposition,
     FailClosedReason,
 )
+from .nasa_analog_client import (
+    NASAAnalogClientSession,
+    AnalogMissionType,
+    CrewStationRole,
+    DataSensitivity,
+    ClinicalMedicalFirewall,
+    DeepSpaceCommsBuffer,
+    AnalogPEPActionGate,
+    GateDisposition,
+)
 
 __version__ = "1.0.0"
 __all__ = [
@@ -27,4 +37,12 @@ __all__ = [
     "GovernedPropulsionActuator",
     "GovernanceDisposition",
     "FailClosedReason",
+    "NASAAnalogClientSession",
+    "AnalogMissionType",
+    "CrewStationRole",
+    "DataSensitivity",
+    "ClinicalMedicalFirewall",
+    "DeepSpaceCommsBuffer",
+    "AnalogPEPActionGate",
+    "GateDisposition",
 ]

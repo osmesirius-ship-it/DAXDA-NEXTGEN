@@ -1,6 +1,6 @@
 {
   "title": "DAXDA AI, LLC Federal Entity Registration & DARPA QBI / BAA Package Manifest",
-  "timestamp_utc": "2026-11-24T15:24:22.758868+00:00",
+  "timestamp_utc": "2026-11-24T16:42:37.044899+00:00",
   "prime_awardee_partner": {
     "entity_name": "AMERICAN MILESTONE INC",
     "authorized_representative": "Nicholas Hartman",
@@ -208,6 +208,16 @@
       "exists": true,
       "size_bytes": 9361,
       "sha256": "c7c4d73260bed03f636376c2e762146a045064ff2b3c6907b38d143674729679",
+      "status": "\u2705 CERTIFIED"
+    },
+    {
+      "id": "NASA_ANALOG_CLIENT_SPEC",
+      "name": "NASA HERA & CHAPEA Analog Mission Client Integration Specification",
+      "category": "Federal Space Academy & Analog Overlay Package",
+      "path": "docs/compliance/NASA_HERA_CHAPEA_ANALOG_CLIENT_SPECIFICATION.md",
+      "exists": true,
+      "size_bytes": 8662,
+      "sha256": "f812bfe9819ad7ffe3562865dad7df496a1e514c9a41c583e6c5a6c0748b2b57",
       "status": "\u2705 CERTIFIED"
     }
   ]

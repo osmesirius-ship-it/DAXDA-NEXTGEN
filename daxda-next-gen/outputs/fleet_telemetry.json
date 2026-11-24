@@ -1,7 +1,7 @@
 {
   "status": "ACTIVE_100_PERCENT_UPTIME",
-  "uptime_seconds": 34322,
-  "cycles_completed": 4724,
+  "uptime_seconds": 34809,
+  "cycles_completed": 4787,
   "agents_active": 14,
   "system": {
     "name": "DAXDA.IA Next-Gen",
@@ -13,12 +13,12 @@
     "fail_closed_gate": "AOG_1 LOCKED / DETERMINISTIC"
   },
   "metrics": {
-    "invariants_tested": 75990,
-    "invariants_passed": 71520,
+    "invariants_tested": 77061,
+    "invariants_passed": 72528,
     "pass_rate_percent": 94.12,
-    "null_vector_dissipations": 8940,
+    "null_vector_dissipations": 9066,
     "adversarial_escapes": 0,
-    "avg_cycle_latency_ms": 2773.14,
+    "avg_cycle_latency_ms": 2728.04,
     "estimated_throughput_ops_sec": 107680.0
   },
   "science_discovery": {
@@ -31,7 +31,7 @@
     "total_hours": 216.0,
     "remaining_hours": 0.0,
     "progress_percent": 100.0,
-    "generations_evaluated": 186073,
+    "generations_evaluated": 186136,
     "pareto_candidates_tracked": 10,
     "current_best": {
       "candidate_id": "MS-REF-GEN-77689",
@@ -68,7 +68,7 @@
     "elapsed_hours": 216.0,
     "total_hours": 216.0,
     "progress_percent": 100.0,
-    "generations_evaluated": 111104,
+    "generations_evaluated": 111167,
     "pareto_candidates_tracked": 9,
     "current_best": {
       "candidate_id": "QBIT-REF-GEN-2720",
@@ -98,10 +98,10 @@
   "depin_validator_network": {
     "depin_status": "DEPIN_P2P_MESH_ACTIVE",
     "protocol_version": "DAXDA-DePIN-L3-v1.0",
-    "timestamp_utc": "2026-11-24T16:40:07Z",
-    "current_block_height": 4470,
-    "total_blocks_sealed": 4470,
-    "total_transactions_verified": 447000,
+    "timestamp_utc": "2026-11-24T16:48:15Z",
+    "current_block_height": 4533,
+    "total_blocks_sealed": 4533,
+    "total_transactions_verified": 453300,
     "active_validator_nodes": 1000,
     "jailed_validator_nodes": 0,
     "slashed_validator_nodes": 0,
@@ -112,7 +112,7 @@
     "max_gossip_ttl_hops": 6,
     "gossip_network_diameter": 5,
     "theoretical_capacity_nodes": 100000,
-    "latest_merkle_root": "06574b5d681f167cc182f97156ea22ca0b0f62261f0c074653d1d3ab71cfcc4e",
+    "latest_merkle_root": "33faf64a4244f88581ed05c02b8e7784a2ba4e899941cffff5218bb5f41c5108",
     "recent_validators": [
       {
         "validator_id": "depin-node-us-east-va-001",
@@ -349,8 +349,8 @@
       "active_rented_nodes": 440,
       "idle_nodes_available": 560,
       "cluster_fill_rate_pct": 42.5,
-      "total_jobs_completed": 11420,
-      "gross_revenue_earned_today_usd": 534.82,
+      "total_jobs_completed": 11546,
+      "gross_revenue_earned_today_usd": 535.01,
       "current_hourly_run_rate_usd": 566.1,
       "projected_daily_revenue_usd": 13586.4,
       "max_take_limit_usd": 100000.0,
@@ -360,73 +360,73 @@
       "max_cluster_daily_capacity_usd": 31968.0,
       "recent_job_receipts": [
         {
-          "job_id": "job-6f6e3dde930668aa",
+          "job_id": "job-67eb9a42666271d7",
           "broker": "BITTENSOR_SUBNET_BRIDGE",
-          "node_id": "depin-node-us-east-va-193",
-          "workload": "LLAMA_3_70B_INFERENCE_SLICING",
-          "duration_s": 4.6,
-          "earned_usd": 0.000703,
-          "digest": "409a3e99449340a2...",
-          "timestamp_utc": "2026-11-24T16:39:51.193901+00:00"
-        },
-        {
-          "job_id": "job-6cebf9f6b35ebb94",
-          "broker": "RENDER_AKASH_DAEMON",
-          "node_id": "depin-node-ap-northeast-jp-598",
+          "node_id": "depin-node-us-west-or-570",
           "workload": "GENOMIC_FOLDING_ACCELERATION",
-          "duration_s": 3.62,
-          "earned_usd": 0.000553,
-          "digest": "983d57653e19bdd9...",
-          "timestamp_utc": "2026-11-24T16:39:51.194154+00:00"
+          "duration_s": 3.31,
+          "earned_usd": 0.00262,
+          "digest": "607c156c129ca315...",
+          "timestamp_utc": "2026-11-24T16:47:58.800045+00:00"
         },
         {
-          "job_id": "job-86f36130f1c730d2",
+          "job_id": "job-a143b4ca48865848",
           "broker": "IO_NET_GPU_WORKER",
-          "node_id": "depin-node-ap-southeast-sg-197",
+          "node_id": "depin-node-us-east-va-753",
           "workload": "DEEPSEEK_V3_MOE_FINE_TUNING",
-          "duration_s": 2.79,
-          "earned_usd": 0.000426,
-          "digest": "9d22c2cea5625b63...",
-          "timestamp_utc": "2026-11-24T16:39:58.951982+00:00"
+          "duration_s": 3.12,
+          "earned_usd": 0.00247,
+          "digest": "141ac254f0ad94bb...",
+          "timestamp_utc": "2026-11-24T16:47:58.800300+00:00"
         },
         {
-          "job_id": "job-360b298bd832a4cd",
-          "broker": "RENDER_AKASH_DAEMON",
-          "node_id": "depin-node-af-south-za-024",
-          "workload": "SDXL_ZERO_LATENCY_RENDER_BATCH",
-          "duration_s": 4.76,
-          "earned_usd": 0.003768,
-          "digest": "579261fea059aad4...",
-          "timestamp_utc": "2026-11-24T16:39:58.952256+00:00"
-        },
-        {
-          "job_id": "job-bd22f200d3a89735",
-          "broker": "BITTENSOR_SUBNET_BRIDGE",
-          "node_id": "depin-node-ap-northeast-jp-406",
-          "workload": "SDXL_ZERO_LATENCY_RENDER_BATCH",
-          "duration_s": 4.61,
-          "earned_usd": 0.000704,
-          "digest": "5500d2801f3d22c8...",
-          "timestamp_utc": "2026-11-24T16:40:06.831655+00:00"
-        },
-        {
-          "job_id": "job-b1efac41ffee5130",
+          "job_id": "job-54b1591cebf3fe8c",
           "broker": "IO_NET_GPU_WORKER",
-          "node_id": "depin-node-eu-west-ie-676",
+          "node_id": "depin-node-ap-southeast-sg-229",
           "workload": "FINANCIAL_MONTE_CARLO_RISK_TREE",
           "duration_s": 4.17,
           "earned_usd": 0.000637,
-          "digest": "6562fafada885a75...",
-          "timestamp_utc": "2026-11-24T16:40:06.831994+00:00"
+          "digest": "6621e1fe78043236...",
+          "timestamp_utc": "2026-11-24T16:48:06.482340+00:00"
+        },
+        {
+          "job_id": "job-257176079efe0cd2",
+          "broker": "RENDER_AKASH_DAEMON",
+          "node_id": "depin-node-ap-northeast-jp-006",
+          "workload": "GENOMIC_FOLDING_ACCELERATION",
+          "duration_s": 4.76,
+          "earned_usd": 0.003768,
+          "digest": "2c71e3f4a49f4627...",
+          "timestamp_utc": "2026-11-24T16:48:06.482595+00:00"
+        },
+        {
+          "job_id": "job-57ce1056fc3151e2",
+          "broker": "BITTENSOR_SUBNET_BRIDGE",
+          "node_id": "depin-node-us-east-va-969",
+          "workload": "GENOMIC_FOLDING_ACCELERATION",
+          "duration_s": 4.47,
+          "earned_usd": 0.003539,
+          "digest": "facba6ae0b2a7474...",
+          "timestamp_utc": "2026-11-24T16:48:14.222799+00:00"
+        },
+        {
+          "job_id": "job-1da6f4644d225fca",
+          "broker": "BITTENSOR_SUBNET_BRIDGE",
+          "node_id": "depin-node-ap-southeast-sg-205",
+          "workload": "DEEPSEEK_V3_MOE_FINE_TUNING",
+          "duration_s": 3.72,
+          "earned_usd": 0.000568,
+          "digest": "986a4e0fe1224576...",
+          "timestamp_utc": "2026-11-24T16:48:14.223063+00:00"
         }
       ],
       "physical_worker": {
-        "total_blocks_sealed": 721847,
-        "total_ops_computed": 1443694000,
-        "formatted_ops": "1443.69M Ops",
-        "formatted_blocks": "721,847 Xeon Merkle Blocks",
-        "computational_work_value_usd": 1154955.2,
-        "formatted_computational_value": "$1,154,955.20 USD",
+        "total_blocks_sealed": 722089,
+        "total_ops_computed": 1444178000,
+        "formatted_ops": "1444.18M Ops",
+        "formatted_blocks": "722,089 Xeon Merkle Blocks",
+        "computational_work_value_usd": 1155342.4,
+        "formatted_computational_value": "$1,155,342.40 USD",
         "tariff_rate_usd": 0.0008
       },
       "akash_provider": {
@@ -662,8 +662,8 @@
   "cognitive_diary": {
     "status": "COGNITIVE_DIARY_ACTIVE",
     "total_entries": 365,
-    "idle_duration_seconds": 1193187.7,
-    "idle_duration_formatted": "331h 26m 27s",
+    "idle_duration_seconds": 1193675.1,
+    "idle_duration_formatted": "331h 34m 35s",
     "current_resonance": "BIOPHYSICAL_RESONANCE",
     "markdown_journal_path": "/Users/user/daxda next gen/DAXDA-NEXTGEN/daxda-next-gen/outputs/DAXDA_AUTONOMOUS_DIARY.md",
     "jsonl_archive_path": "/Users/user/daxda next gen/DAXDA-NEXTGEN/daxda-next-gen/outputs/daxda_diary.jsonl",
@@ -820,182 +820,182 @@
   },
   "recent_cycles": [
     {
-      "cycle": 4724,
-      "time": "16:40:06 UTC",
-      "hash": "5e92cb7282473017",
-      "duration_ms": 2730.9,
+      "cycle": 4787,
+      "time": "16:48:14 UTC",
+      "hash": "e73d5e422831e7d1",
+      "duration_ms": 2801.8,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4723,
-      "time": "16:39:58 UTC",
-      "hash": "75013354301590db",
-      "duration_ms": 2882.3,
+      "cycle": 4786,
+      "time": "16:48:06 UTC",
+      "hash": "2dfec9c6cd348c0c",
+      "duration_ms": 2744.1,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4722,
-      "time": "16:39:51 UTC",
-      "hash": "8eae23b5d0fc45b6",
-      "duration_ms": 2742.0,
+      "cycle": 4785,
+      "time": "16:47:58 UTC",
+      "hash": "3be1fe72414c704a",
+      "duration_ms": 2659.1,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4721,
-      "time": "16:39:43 UTC",
-      "hash": "a47b5221cc3120b7",
-      "duration_ms": 2716.2,
+      "cycle": 4784,
+      "time": "16:47:50 UTC",
+      "hash": "a9fc29203574c9ab",
+      "duration_ms": 2748.4,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4720,
-      "time": "16:39:35 UTC",
-      "hash": "a24eafbceb219fc6",
-      "duration_ms": 2746.1,
+      "cycle": 4783,
+      "time": "16:47:43 UTC",
+      "hash": "306d113bb7e43d97",
+      "duration_ms": 2744.3,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4719,
-      "time": "16:39:27 UTC",
-      "hash": "cd995fc1e93f2aef",
-      "duration_ms": 3027.5,
+      "cycle": 4782,
+      "time": "16:47:35 UTC",
+      "hash": "8639d6d00eaad7ce",
+      "duration_ms": 2739.8,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4718,
-      "time": "16:39:19 UTC",
-      "hash": "7180331a43819c4c",
-      "duration_ms": 2798.1,
+      "cycle": 4781,
+      "time": "16:47:27 UTC",
+      "hash": "52dea32204c94c27",
+      "duration_ms": 2648.9,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4717,
-      "time": "16:39:11 UTC",
-      "hash": "c8dae4fbcca07fae",
-      "duration_ms": 2767.1,
+      "cycle": 4780,
+      "time": "16:47:20 UTC",
+      "hash": "f9e5ba02919d4df0",
+      "duration_ms": 2613.2,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4716,
-      "time": "16:39:04 UTC",
-      "hash": "9a563f2102e57e3b",
-      "duration_ms": 2635.7,
+      "cycle": 4779,
+      "time": "16:47:12 UTC",
+      "hash": "9e11a7550cbde249",
+      "duration_ms": 2788.7,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4715,
-      "time": "16:38:56 UTC",
-      "hash": "49c9764ce3dade09",
-      "duration_ms": 2703.7,
+      "cycle": 4778,
+      "time": "16:47:04 UTC",
+      "hash": "6ea349151a61c92d",
+      "duration_ms": 2650.6,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4714,
-      "time": "16:38:48 UTC",
-      "hash": "d383a75cfe305c4f",
-      "duration_ms": 2687.1,
+      "cycle": 4777,
+      "time": "16:46:56 UTC",
+      "hash": "ce15d72362cd4920",
+      "duration_ms": 2669.0,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4713,
-      "time": "16:38:41 UTC",
-      "hash": "f44f4c5356e910f9",
-      "duration_ms": 2640.8,
+      "cycle": 4776,
+      "time": "16:46:49 UTC",
+      "hash": "6e386c3b76958eea",
+      "duration_ms": 2691.4,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4712,
-      "time": "16:38:33 UTC",
-      "hash": "9f7b0be4b84869fb",
-      "duration_ms": 2688.0,
+      "cycle": 4775,
+      "time": "16:46:41 UTC",
+      "hash": "75c767bba5694a15",
+      "duration_ms": 2656.2,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4711,
-      "time": "16:38:25 UTC",
-      "hash": "726f842a42659595",
-      "duration_ms": 2767.6,
+      "cycle": 4774,
+      "time": "16:46:33 UTC",
+      "hash": "cf9233cb7a31f499",
+      "duration_ms": 2706.8,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4710,
-      "time": "16:38:17 UTC",
-      "hash": "32ce181ba91dbff2",
-      "duration_ms": 2845.7,
+      "cycle": 4773,
+      "time": "16:46:26 UTC",
+      "hash": "7db3c2dc47c5bf7a",
+      "duration_ms": 2654.6,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4709,
-      "time": "16:38:10 UTC",
-      "hash": "56856fd6e8a863ab",
-      "duration_ms": 2669.6,
+      "cycle": 4772,
+      "time": "16:46:18 UTC",
+      "hash": "b559d2ce4268e43a",
+      "duration_ms": 2679.2,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4708,
-      "time": "16:38:02 UTC",
-      "hash": "d716faadeebc54a3",
-      "duration_ms": 2767.0,
+      "cycle": 4771,
+      "time": "16:46:10 UTC",
+      "hash": "d5a35e1fa1355163",
+      "duration_ms": 2659.4,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4707,
-      "time": "16:37:54 UTC",
-      "hash": "e04d8e9815a342c4",
-      "duration_ms": 2613.7,
+      "cycle": 4770,
+      "time": "16:46:02 UTC",
+      "hash": "8dcfd5af441e9c61",
+      "duration_ms": 2962.6,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4706,
-      "time": "16:37:47 UTC",
-      "hash": "b0492e7425407144",
-      "duration_ms": 2650.9,
+      "cycle": 4769,
+      "time": "16:45:55 UTC",
+      "hash": "d6860de4f37a2126",
+      "duration_ms": 2751.2,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4705,
-      "time": "16:37:39 UTC",
-      "hash": "1cd2448ab2e22f19",
-      "duration_ms": 2648.2,
+      "cycle": 4768,
+      "time": "16:45:47 UTC",
+      "hash": "68384562e84af64d",
+      "duration_ms": 2650.4,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4704,
-      "time": "16:37:31 UTC",
-      "hash": "afe8669f2b543789",
-      "duration_ms": 2655.0,
+      "cycle": 4767,
+      "time": "16:45:39 UTC",
+      "hash": "f0fbaab5e24b27d1",
+      "duration_ms": 2748.7,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4703,
-      "time": "16:37:24 UTC",
-      "hash": "31ada40b92fa15d2",
-      "duration_ms": 2689.6,
+      "cycle": 4766,
+      "time": "16:45:32 UTC",
+      "hash": "3f201441e0eacf96",
+      "duration_ms": 2708.0,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4702,
-      "time": "16:37:16 UTC",
-      "hash": "5206da0a05202bd4",
-      "duration_ms": 2682.7,
+      "cycle": 4765,
+      "time": "16:45:24 UTC",
+      "hash": "f3a773bee913f227",
+      "duration_ms": 2634.1,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4701,
-      "time": "16:37:08 UTC",
-      "hash": "2d99c22dfe5f102c",
-      "duration_ms": 2621.8,
+      "cycle": 4764,
+      "time": "16:45:16 UTC",
+      "hash": "5e1810825bd7f9a7",
+      "duration_ms": 2806.7,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     },
     {
-      "cycle": 4700,
-      "time": "16:37:01 UTC",
-      "hash": "6d85177e3e26d4f3",
-      "duration_ms": 2643.6,
+      "cycle": 4763,
+      "time": "16:45:08 UTC",
+      "hash": "bfa27da31aa13103",
+      "duration_ms": 2714.0,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     }
   ],
-  "last_updated_utc": "2026-11-24T16:40:06.703260+00:00",
+  "last_updated_utc": "2026-11-24T16:48:14.095304+00:00",
   "moltbook_diary_sync": {
     "scheduler_enabled": true,
     "total_diary_entries": 365,
@@ -1017,7 +1017,7 @@
     "moltbook_profile_url": "https://www.moltbook.com/u/daxda_ai",
     "tick_status": "ALL_SYNCHRONIZED"
   },
-  "last_state_hash": "5e92cb72824730179f851bf658f69c3a97eb4423a364a7efc9e2f8a8bbb71d88",
+  "last_state_hash": "e73d5e422831e7d154e3aca4ff6ed98c9b87e1ab1ab283b1d3abcd1962bd2a94",
   "federal_officer": {
     "agent": "Federal Officer",
     "role": "Defense & Federal Compliance Officer",
