@@ -10,7 +10,7 @@
 - **DARPA I2O:** Guaranteeing AI Robustness against Deception (GARD) / AI Assurance
 - **DARPA DSO:** Disruptive Capabilities in High-Dimensional Decision Verification
 
-**Prime Contracting Awardee Vehicle:** Standing American Milestone (Active CAGE Code & SAM.gov UEI)  
+**Prime Contracting Awardee Vehicle:** American Milestone Inc (SAM.gov UEI: `MXEFU6TQJUB9` | CAGE: `214X7`) (formerly referenced as Standing American Milestone)  
 **Authorized Federal Representative & Co-Signatory:** Nicholas Hartman  
 **Core Technology Entity:** DAXDA AI, LLC (Ohio Small Business Doc #202628904766)  
 **Lead Architect & Principal Investigator (PI):** Nicole Bess  
@@ -112,7 +112,7 @@ DAXDA is not a theoretical white paper; it represents an actively compiled and v
 ## 4. Key Personnel & Institutional Commitment
 
 * **Prime Awardee Lead: Nicholas Hartman**
-  * Authorized Federal Representative for **Standing American Milestone**.
+  * Authorized Federal Representative for **American Milestone Inc** (CAGE: `214X7`, UEI: `MXEFU6TQJUB9`).
   * Direct administrative and executive management over federal award vehicle, CAGE code, and SAM.gov UEI Treasury disbursements.
 * **Principal Investigator (PI): Nicole Bess**
   * Founder, Lead Architect, and theoretical originator of the 886-Operation Nicole Protocol and $Cl(16,4)$ decision manifold (DAXDA AI, LLC).

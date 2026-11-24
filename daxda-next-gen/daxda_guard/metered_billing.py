@@ -451,7 +451,7 @@ class MeteredBillingEngine:
     def link_federal_partner_destination(
         self,
         tenant_id: str = "tenant-daxda-treasury",
-        entity_name: str = "Standing American Milestone",
+        entity_name: str = "American Milestone Inc",
         representative: str = "Nicholas Hartman",
         cage_code: str = "PENDING_INPUT",
         uei: str = "PENDING_INPUT",
@@ -459,12 +459,17 @@ class MeteredBillingEngine:
         is_default: int = 0
     ) -> Dict[str, Any]:
         """
-        Registers Standing American Milestone (Nicholas Hartman) CAGE & UEI federal contracting payout route.
+        Registers American Milestone Inc (Nicholas Hartman) CAGE & UEI federal contracting payout route.
         Links SAM.gov Treasury EFT disbursement channel in the commercial ledger.
         """
         account_id = f"CAGE:{cage_code}|UEI:{uei}"
         platform_desc = f"{entity_name} / SAM.gov Federal EFT (Rep: {representative})"
         owner = f"{representative} ({entity_name})"
+        with self._get_connection() as conn:
+            conn.execute(
+                "DELETE FROM payout_destinations WHERE tenant_id = ? AND destination_type = 'FEDERAL_PARTNER_CAGE_UEI';",
+                (tenant_id,)
+            )
         return self.link_payout_destination(
             tenant_id=tenant_id,
             owner_name=owner,

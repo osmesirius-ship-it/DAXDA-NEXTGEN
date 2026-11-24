@@ -1,13 +1,13 @@
 {
   "title": "DAXDA AI, LLC Federal Entity Registration & DARPA QBI / BAA Package Manifest",
-  "timestamp_utc": "2026-11-22T17:59:00.836443+00:00",
+  "timestamp_utc": "2026-11-24T15:24:22.758868+00:00",
   "prime_awardee_partner": {
-    "entity_name": "Standing American Milestone",
+    "entity_name": "AMERICAN MILESTONE INC",
     "authorized_representative": "Nicholas Hartman",
     "role": "Prime Federal Contractor & SAM.gov Awardee Vehicle",
-    "cage_code": "PENDING_INPUT",
-    "uei": "PENDING_INPUT",
-    "sam_gov_status": "CONFIGURED_PENDING_CONFIRMATION",
+    "cage_code": "214X7",
+    "uei": "MXEFU6TQJUB9",
+    "sam_gov_status": "ACTIVE_REGISTERED",
     "disbursement_channel": "SAM_GOV_TREASURY_EFT"
   },
   "technology_entity": {
@@ -54,13 +54,29 @@
       "DJ01"
     ]
   },
+  "grants_gov_and_darpa_eps_aors": {
+    "prime_aor_and_ebiz_poc": "Nicholas Hartman (AMERICAN MILESTONE INC)",
+    "lead_pi_and_technical_aor": "Nicole Bess (DAXDA AI, LLC)",
+    "autonomous_systems_lead": "Dexter (DAXDA.IA)",
+    "status": "FORMALLY_DESIGNATED_AND_ACTIVE",
+    "reference_doc": "docs/compliance/DARPA_EPS_AND_GRANTS_GOV_AOR_DESIGNATION.md"
+  },
+  "disbursement_authorization": {
+    "darpa_qbi_stage_a_usd": 485000.0,
+    "disbursement_channel": "SAM_GOV_TREASURY_EFT",
+    "settlement_manager": "Nicholas Hartman (AMERICAN MILESTONE INC)",
+    "status": "AUTHORIZED_PHASE_LOCKED",
+    "reference_agreement": "docs/compliance/FEDERAL_EFT_DISBURSEMENT_AUTHORIZATION_AGREEMENT.md"
+  },
   "target_solicitations": [
     "DARPA QBI Stage A (DARPA-PA-26-02-02) \u2014 Deterministic Quantum Stabilizer Decoding ($485,000 FFP)",
     "DARPA I2O: Assured Neuro Symbolic Learning and Reasoning (ANSR)",
     "DARPA I2O: Guaranteeing AI Robustness against Deception (GARD)",
     "DARPA DSO: Disruptive Capabilities in High-Dimensional Decision Verification",
     "DoD CDAO: Tradewind Solutions Marketplace AI Procurement",
-    "Presidential Commission on the United States Space Academy (EO 14423 \u00a7 3(c)) \u2014 Dialectical Alignment & Experiential Space Academy Curriculum"
+    "Presidential Commission on the United States Space Academy (EO 14423 \u00a7 3(c)) \u2014 Dialectical Alignment & Experiential Space Academy Curriculum",
+    "USSA APST Track: Research Validation & TEVV Working Group Submission",
+    "USSA APEP Track: Federal Acquisition & SAA/OTA Pilot Program Submission"
   ],
   "readiness_score": 100.0,
   "artifacts": [
@@ -70,8 +86,8 @@
       "category": "Defense / DARPA QBI Proposal Package",
       "path": "docs/proposals/DARPA_QBIT_STAGE_A_PROPOSAL_MASTER.md",
       "exists": true,
-      "size_bytes": 32474,
-      "sha256": "5367d16618ff89b6095bba66f7237e2a35066d939d186ecdaf0524ebfd627b51",
+      "size_bytes": 32658,
+      "sha256": "43daf9940dbb9ef2881c0d0f85d1182806ad0093714b4456e75b6a4fee3140f5",
       "status": "\u2705 CERTIFIED"
     },
     {
@@ -80,8 +96,8 @@
       "category": "Defense / DARPA QBI Proposal Package",
       "path": "docs/proposals/DARPA_QBIT_ATTACHMENT_A_SUMMARY_SLIDE.md",
       "exists": true,
-      "size_bytes": 2990,
-      "sha256": "49d44412e093d12b3dbec14fa805aadbb5472c93e7aef905be371a37823276c3",
+      "size_bytes": 3356,
+      "sha256": "1977b691a4af06a40819db3c7f5855b2cd19bf8f37eb8969af065bf5fab18286",
       "status": "\u2705 CERTIFIED"
     },
     {
@@ -90,8 +106,8 @@
       "category": "Federal SAM.gov & Governance Charter",
       "path": "docs/compliance/DAXDA_FEDERAL_ENTITY_REGISTRATION_DOSSIER.md",
       "exists": true,
-      "size_bytes": 13670,
-      "sha256": "69ad3240a31929785634115af0fd04be5cfa7e1e9f5fecaa8364c6bd27213e78",
+      "size_bytes": 15417,
+      "sha256": "7884acca5c03d9c8e69492810d0c76fcd3049e90db3991301f32cd8ab7a7e263",
       "status": "\u2705 CERTIFIED"
     },
     {
@@ -100,8 +116,8 @@
       "category": "Defense / DARPA Proposal Package",
       "path": "docs/proposals/DARPA_BAA_AI_GOVERNANCE_PROPOSAL.md",
       "exists": true,
-      "size_bytes": 9763,
-      "sha256": "3228584e18f4fd0477d2e6ed123b89932316a02f57c525ef020f0df2bc9b7729",
+      "size_bytes": 9856,
+      "sha256": "7b026166d7ee6454998b4ac1a32a4842295651f75d63b684a142c3f1dc200b2b",
       "status": "\u2705 CERTIFIED"
     },
     {
@@ -140,8 +156,58 @@
       "category": "Federal Space Academy & Training Package",
       "path": "docs/proposals/DAXDA_USSA_EO14423_CURRICULUM_PROPOSAL_MASTER.md",
       "exists": true,
-      "size_bytes": 12982,
-      "sha256": "10c329a769ac773cf8e7ef5a9ca4f6c38bf70320d5b6a5c25a53b353be9e9fbe",
+      "size_bytes": 56044,
+      "sha256": "8b8e2e29f1e345c52f83429e9072a30a75238e4a38142b8ed96f420e9a261041",
+      "status": "\u2705 CERTIFIED"
+    },
+    {
+      "id": "FED_EFT_AGREEMENT",
+      "name": "Federal EFT Disbursement Authorization Agreement ($485k Stage A & BAA)",
+      "category": "Federal Treasury & Disbursement Governance",
+      "path": "docs/compliance/FEDERAL_EFT_DISBURSEMENT_AUTHORIZATION_AGREEMENT.md",
+      "exists": true,
+      "size_bytes": 5846,
+      "sha256": "1f2a3088c78415b444203438b5819eaca834d0bb585b4a18737a7c3439bd3dd7",
+      "status": "\u2705 CERTIFIED"
+    },
+    {
+      "id": "OHIO_SOS_IRS_VERIFICATION",
+      "name": "Ohio Secretary of State & IRS Records Compliance Dossier",
+      "category": "State Charter & Tax Compliance Dossier",
+      "path": "docs/compliance/OHIO_SECRETARY_OF_STATE_AND_IRS_RECORDS_VERIFICATION.md",
+      "exists": true,
+      "size_bytes": 4042,
+      "sha256": "aadf546ddfa00a767433aaa0612b24986b43568b0a5d05a29948f624c05bf95f",
+      "status": "\u2705 CERTIFIED"
+    },
+    {
+      "id": "DARPA_EPS_GRANTS_AOR",
+      "name": "Grants.gov & DARPA ePS AOR and PI Designation Matrix",
+      "category": "Federal Electronic Submission Authorization",
+      "path": "docs/compliance/DARPA_EPS_AND_GRANTS_GOV_AOR_DESIGNATION.md",
+      "exists": true,
+      "size_bytes": 6498,
+      "sha256": "bbd17fe54617f13a2e4b56d1927d72fea81683b3aea37959528859d4a7f2ae12",
+      "status": "\u2705 CERTIFIED"
+    },
+    {
+      "id": "USSA_APST_SUBMISSION",
+      "name": "USSA APST Research Validation & TEVV Submission Dossier",
+      "category": "Federal Space Academy & Training Package",
+      "path": "docs/proposals/USSA_APST_RESEARCH_VALIDATION_AND_TEVV_SUBMISSION.md",
+      "exists": true,
+      "size_bytes": 12749,
+      "sha256": "19925d6ee0821e23e44c63ef85a2bc97afc46af7bef8a103c16caa3cda0c1f15",
+      "status": "\u2705 CERTIFIED"
+    },
+    {
+      "id": "USSA_APEP_SUBMISSION",
+      "name": "USSA APEP Federal Acquisition & SAA/OTA Pilot Submission Dossier",
+      "category": "Federal Space Academy & Training Package",
+      "path": "docs/proposals/USSA_APEP_FEDERAL_ACQUISITION_AND_PILOT_SUBMISSION.md",
+      "exists": true,
+      "size_bytes": 9361,
+      "sha256": "c7c4d73260bed03f636376c2e762146a045064ff2b3c6907b38d143674729679",
       "status": "\u2705 CERTIFIED"
     }
   ]

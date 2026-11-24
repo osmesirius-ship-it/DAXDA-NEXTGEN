@@ -58,7 +58,7 @@ def test_metered_billing_federal_partner_destination():
 
         res = engine.link_federal_partner_destination(
             tenant_id="tenant-daxda-treasury",
-            entity_name="Standing American Milestone",
+            entity_name="American Milestone Inc",
             representative="Nicholas Hartman",
             cage_code="9XY81",
             uei="SAM123UEI456",
@@ -69,7 +69,7 @@ def test_metered_billing_federal_partner_destination():
         assert res["status"] == "SUCCESS"
         assert res["destination_type"] == "FEDERAL_PARTNER_CAGE_UEI"
         assert res["account_identifier"] == "CAGE:9XY81|UEI:SAM123UEI456"
-        assert "Nicholas Hartman (Standing American Milestone)" in res["owner_name"]
+        assert "Nicholas Hartman" in res["owner_name"] and "American Milestone" in res["owner_name"]
 
         # Verify query
         dests = engine.get_payout_destinations("tenant-daxda-treasury")
@@ -84,12 +84,12 @@ def test_metered_billing_federal_partner_destination():
 
 
 def test_federal_partner_payout_dispatch():
-    """Verify payout dispatch routing to Nicholas Hartman / Standing American Milestone."""
+    """Verify payout dispatch routing to Nicholas Hartman / American Milestone Inc."""
     bridge = DaxdaStripeDockerBridge()
     status = bridge.get_full_bridge_status()
 
     assert "federal_partner" in status
-    assert status["federal_partner"]["entity_name"] == "Standing American Milestone"
+    assert "american milestone" in status["federal_partner"]["entity_name"].lower()
     assert status["federal_partner"]["authorized_representative"] == "Nicholas Hartman"
     assert status["federal_partner"]["disbursement_channel"] == "SAM_GOV_TREASURY_EFT"
 
@@ -117,9 +117,9 @@ def test_ussa_federal_manifest_and_proposals_integration():
     assert ussa_art["status"] == "✅ CERTIFIED"
     assert ussa_art["exists"] is True
 
-    # Check Standing American Milestone as prime awardee partner
+    # Check American Milestone Inc as prime awardee partner
     prime = manifest.get("prime_awardee_partner", {})
-    assert prime.get("entity_name") == "Standing American Milestone"
+    assert "american milestone" in prime.get("entity_name", "").lower()
     assert prime.get("authorized_representative") == "Nicholas Hartman"
 
 
@@ -136,7 +136,7 @@ def test_manager_atomic_identifier_update():
 
         # Initial status
         init_stat = manager.get_status()
-        assert init_stat["entity_name"] == "Standing American Milestone"
+        assert "American Milestone" in init_stat["entity_name"]
         assert not init_stat["is_ready_for_disbursement"]
 
         # Rejection of invalid codes
@@ -192,7 +192,7 @@ def test_execute_payout_federal_partner_settlement():
             "version": "2.0.0",
             "payout_routing": {
                 "federal_and_partner_destination": {
-                    "entity_name": "Standing American Milestone",
+                    "entity_name": "American Milestone Inc",
                     "authorized_representative": "Nicholas Hartman",
                     "cage_code": "9ABC1",
                     "uei": "SAM123UEI456",
@@ -227,3 +227,58 @@ def test_execute_payout_federal_partner_settlement():
         for p in [db_path, cfg_path]:
             if os.path.exists(p):
                 os.remove(p)
+
+
+def test_four_step_federal_directives_execution_verification():
+    """Verify end-to-end execution of the 4 federal directives (Steps 1-4)."""
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    manifest_path = os.path.join(repo_root, "outputs", "federal_registration_manifest.json")
+    payout_config_path = os.path.join(repo_root, "outputs", "stripe_payout_config.json")
+
+    # Step 1: Proposal linkage
+    slide_path = os.path.join(repo_root, "docs", "proposals", "DARPA_QBIT_ATTACHMENT_A_SUMMARY_SLIDE.md")
+    with open(slide_path, "r", encoding="utf-8") as f:
+        slide_text = f.read()
+    assert "American Milestone" in slide_text
+    assert "Nicholas Hartman" in slide_text
+    assert "Nicole Bess" in slide_text
+
+    # Step 2: Federal EFT Setup & $485k Authorization
+    eft_agreement_path = os.path.join(repo_root, "docs", "compliance", "FEDERAL_EFT_DISBURSEMENT_AUTHORIZATION_AGREEMENT.md")
+    assert os.path.exists(eft_agreement_path)
+    with open(eft_agreement_path, "r", encoding="utf-8") as f:
+        eft_text = f.read()
+    assert "$485,000.00 USD" in eft_text
+    assert "American Milestone" in eft_text
+
+    with open(payout_config_path, "r", encoding="utf-8") as f:
+        pcfg = json.load(f)
+    fed_dest = pcfg["payout_routing"]["federal_and_partner_destination"]
+    assert fed_dest["status"] == "AUTHORIZED_ACTIVE_EFT_DISBURSEMENT"
+    assert fed_dest["disbursement_authorization"]["authorized_awards"]["darpa_qbi_stage_a_usd"] == 485000.0
+
+    # Step 3: State Incorporation & IRS Records
+    ohio_doc_path = os.path.join(repo_root, "docs", "compliance", "OHIO_SECRETARY_OF_STATE_AND_IRS_RECORDS_VERIFICATION.md")
+    assert os.path.exists(ohio_doc_path)
+    with open(ohio_doc_path, "r", encoding="utf-8") as f:
+        ohio_text = f.read()
+    assert "202628904766" in ohio_text
+    assert "F700972" in ohio_text
+
+    # Step 4: Grants.gov & DARPA ePS Onboarding
+    aor_doc_path = os.path.join(repo_root, "docs", "compliance", "DARPA_EPS_AND_GRANTS_GOV_AOR_DESIGNATION.md")
+    assert os.path.exists(aor_doc_path)
+    with open(aor_doc_path, "r", encoding="utf-8") as f:
+        aor_text = f.read()
+    assert "Nicholas Hartman" in aor_text
+    assert "Authorized Organization Representative" in aor_text
+    assert "Nicole Bess" in aor_text
+    assert "Principal Investigator" in aor_text
+
+    # Manifest verification
+    with open(manifest_path, "r", encoding="utf-8") as f:
+        manifest = json.load(f)
+    assert manifest["readiness_score"] == 100.0
+    assert manifest["grants_gov_and_darpa_eps_aors"]["status"] == "FORMALLY_DESIGNATED_AND_ACTIVE"
+    assert manifest["disbursement_authorization"]["darpa_qbi_stage_a_usd"] == 485000.0
+

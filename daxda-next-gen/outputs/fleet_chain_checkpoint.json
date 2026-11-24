@@ -1,6 +1,6 @@
 {
-  "terminal_cycle": 1730,
-  "terminal_state_hash": "c8cedb67a8b61ed56129ef5db40e5b54b95b11353110408f3677bfdbb922c0a6",
-  "timestamp_utc": "2026-11-24T10:16:40.688126+00:00",
-  "checkpoint_signature": "600565cacf7d128205c20545f9e95315bc5cc9c51af50b7d37279794bb5526ee"
+  "terminal_cycle": 4724,
+  "terminal_state_hash": "5e92cb72824730179f851bf658f69c3a97eb4423a364a7efc9e2f8a8bbb71d88",
+  "timestamp_utc": "2026-11-24T16:40:09.436900+00:00",
+  "checkpoint_signature": "f993e7a2472cdcbc9c6d23671417dc3f6b9afd646799059032c097b4ec4b2649"
 }

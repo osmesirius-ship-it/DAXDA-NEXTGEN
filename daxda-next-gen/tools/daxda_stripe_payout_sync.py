@@ -114,7 +114,7 @@ class DaxdaStripeDockerBridge:
             "status": "BRIDGE_ONLINE",
             "founder": "Nicole Bess",
             "federal_partner": {
-                "entity_name": "Standing American Milestone",
+                "entity_name": fed_partner_meta.get("entity_name") or "American Milestone Inc",
                 "authorized_representative": "Nicholas Hartman",
                 "cage_code": cage_code,
                 "uei": uei,

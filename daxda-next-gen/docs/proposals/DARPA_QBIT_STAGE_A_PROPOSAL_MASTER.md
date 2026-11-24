@@ -282,9 +282,9 @@ graph LR
 
 ## 10. Proposer Entity & Key Personnel
 
-* **Prime Federal Awardee & Contracting Vehicle:** Standing American Milestone  
+* **Prime Federal Awardee & Contracting Vehicle:** American Milestone Inc (SAM.gov UEI: `MXEFU6TQJUB9` | CAGE: `214X7`) (formerly referenced as Standing American Milestone)  
 * **Authorized Federal Representative & Co-Signatory:** Nicholas Hartman  
-* **Active Federal Identifiers:** CAGE Code & SAM.gov UEI (Standing American Milestone vehicle)  
+* **Active Federal Identifiers:** CAGE Code: `214X7` & SAM.gov UEI: `MXEFU6TQJUB9` (American Milestone Inc vehicle)  
 * **Core Technology Entity:** DAXDA AI, LLC (Ohio Document #202628904766 / Filing #F700972)  
 * **Principal Investigator (PI):** Nicole Bess, Managing Member & Chief Invariant Architect  
 * **Autonomous Systems Architecture:** Dexter (DAXDA Invariant Systems Lead)  
@@ -292,13 +292,13 @@ graph LR
 * **Primary NAICS Code:** `541715` (R&D in the Physical, Engineering, and Life Sciences)  
 * **Product Service Code (PSC):** `AC12` (R&D: Defense System Applied Research)  
 * **Business Classification:** Small Business / Joint Venture Eligible  
-* **Cage / UEI Status:** Active Federal Awardee Vehicle via Standing American Milestone (Nicholas Hartman); linked for direct Treasury disbursements.
+* **Cage / UEI Status:** Active Federal Awardee Vehicle via American Milestone Inc (Nicholas Hartman — CAGE: `214X7`, UEI: `MXEFU6TQJUB9`); linked for direct Treasury disbursements.
 
 ---
 
 ### **AUTHORITY SIGNATURE & SUBMISSION ENDORSEMENT**
 
-This proposal represents a phase-locked, mathematically complete, and empirically benchmarked solution. DAXDA AI, LLC and Standing American Milestone are fully prepared to commence execution of Stage A on Day 1 of award.
+This proposal represents a phase-locked, mathematically complete, and empirically benchmarked solution. DAXDA AI, LLC and American Milestone Inc are fully prepared to commence execution of Stage A on Day 1 of award.
 
 Executed this 25th day of October, 2026.
 
@@ -311,7 +311,8 @@ Email: `osmesirius@gmail.com`
 ___________________________________________________  
 **Nicholas Hartman**  
 Authorized Federal Representative & Principal  
-Standing American Milestone  
+American Milestone Inc  
+SAM.gov UEI: `MXEFU6TQJUB9` | CAGE: `214X7`  
 
 ___________________________________________________  
 **Dexter**  

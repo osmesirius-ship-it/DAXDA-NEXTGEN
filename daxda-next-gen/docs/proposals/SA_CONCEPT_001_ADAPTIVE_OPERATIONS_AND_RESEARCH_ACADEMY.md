@@ -2,9 +2,9 @@
 
 **Document Identifier:** `USSA-ARCH-SA-CONCEPT-001-V1`  
 **Governing Authority:** United States Space Academy (Executive Order 14423)  
-**Prime Federal Awardee:** Standing American Milestone (Authorized Representative: Nicholas Hartman)  
+**Prime Federal Awardee:** AMERICAN MILESTONE INC (SAM.gov UEI: `MXEFU6TQJUB9` | DLA CAGE: `214X7`; Authorized Representative: Nicholas Hartman)  
 **Lead Invariant Architect:** Nicole Bess (DAXDA AI, LLC)  
-**Biomedical & Observer Intelligence Lead:** Alexander Tsutsidze, MD  
+**Operational, Biomedical Logistics & Observer Intelligence Seat:** Position Hire Pending (Principal Advisor, Operational Readiness, Biomedical Logistics & Applied Intelligence + Federal Space Medicine / IRB Liaison)  
 **Autonomous Systems Architecture:** Dexter  
 **Status:** Working Concept Architecture (Incorporating Evidence Review `GPT/NASA-R1`)  
 **Epistemic Notice:** Federal-facing claims must distinguish established science, proposed program design, and frontier hypotheses. Capital builds are deferred in favor of existing NASA/partner analog facility overlay.

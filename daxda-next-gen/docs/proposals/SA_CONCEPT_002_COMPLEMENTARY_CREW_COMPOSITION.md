@@ -2,10 +2,10 @@
 
 **Document Identifier:** `USSA-ARCH-SA-CONCEPT-002-V1`  
 **Governing Authority:** United States Space Academy (*Executive Order 14423*, August 28, 2026)  
-**Prime Federal Awardee & Contracting Vehicle:** Standing American Milestone (Authorized Representative: Nicholas Hartman)  
+**Prime Federal Awardee & Contracting Vehicle:** AMERICAN MILESTONE INC (SAM.gov UEI: `MXEFU6TQJUB9` | DLA CAGE: `214X7`; Authorized Representative: Nicholas Hartman)  
 **Originating Technology Entity:** `DAXDA AI, LLC` (DBA `DAXDA.IA / DAXDA-NEXTGEN`)  
 **Lead Invariant Architect & Principal Investigator:** Nicole Bess (`nicole@daxda.ai`)  
-**Biomedical & Observer Intelligence Lead:** Alexander Tsutsidze, MD  
+**Operational, Biomedical Logistics & Observer Intelligence Seat:** Position Hire Pending (Principal Advisor, Operational Readiness, Biomedical Logistics & Applied Intelligence)  
 **Autonomous Systems Architecture:** Dexter  
 **Status:** Supporting Research Architecture for SA-CONCEPT-002  
 **Epistemic Notice:** This document defines testable program-design hypotheses; it is not an established selection doctrine, demographic ranking system, or claim of participation by any named agency.
@@ -363,8 +363,8 @@ flowchart TD
 timeline
     title USSA Architecture Phasing Timeline
     Phase 1 : 2026 Q4 (Commission Review) : Formal Submission of SA-CONCEPT-001 & 002
-            : Dec 2026 Presidential Report : Standing American Milestone Federal Consultation
-    Phase 2 : 2027 H1 (Analog Pilot 0) : Vertical Analog Node vs Remote Contrasting Field Station
+            : Dec 2026 Presidential Report : AMERICAN MILESTONE INC Federal Consultation (UEI MXEFU6TQJUB9 / CAGE 214X7)
+    Phase 2 : 2027 H1 (Analog Pilot 0) : Federated Analog Overlay (HERA/CHAPEA) vs Contrasting Field Node
             : Dual-Node Validation : Baseline H5 Hypothesis Testing
     Phase 3 : 2027 H2 (Faculty Ingestion) : Initial Federated Faculty & Practitioner Corps Appointments
             : Clinical-Research Firewall Audit : Observer Intelligence Telemetry Mesh Deployment
@@ -373,8 +373,8 @@ timeline
 
 ### Proposed Commission Consultation Representatives:
 - **Nicole Bess** — *Founder & Lead Invariant Architect, DAXDA AI, LLC* (`nicole@daxda.ai`)
-- **Nicholas Hartman** — *Authorized Federal Representative, Standing American Milestone*
-- **Alexander Tsutsidze, MD** — *Biomedical & Applied Intelligence Lead, DAXDA.IA*
+- **Nicholas Hartman** — *Authorized Federal Representative & AOR, AMERICAN MILESTONE INC* (UEI: `MXEFU6TQJUB9` | CAGE: `214X7`)
+- **Principal Advisor, Operational Readiness, Biomedical Logistics & Applied Intelligence** — *Position Hire Pending (DAXDA.IA Triad)*
 - **Dexter** — *Autonomous Systems Architecture Lead, DAXDA.IA*
 
 ---
