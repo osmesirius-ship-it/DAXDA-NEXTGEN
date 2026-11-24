@@ -1,10 +1,10 @@
 {
   "depin_status": "DEPIN_P2P_MESH_ACTIVE",
   "protocol_version": "DAXDA-DePIN-L3-v1.0",
-  "timestamp_utc": "2026-11-24T16:48:29Z",
-  "current_block_height": 4535,
-  "total_blocks_sealed": 4535,
-  "total_transactions_verified": 453500,
+  "timestamp_utc": "2026-11-24T16:48:37Z",
+  "current_block_height": 4536,
+  "total_blocks_sealed": 4536,
+  "total_transactions_verified": 453600,
   "active_validator_nodes": 1000,
   "jailed_validator_nodes": 0,
   "slashed_validator_nodes": 0,
@@ -15,7 +15,7 @@
   "max_gossip_ttl_hops": 6,
   "gossip_network_diameter": 5,
   "theoretical_capacity_nodes": 100000,
-  "latest_merkle_root": "4a70578b5ee11f4d0104af54dd4022ed6befa980d7ca392d9a5f3c6ddedfa7ca",
+  "latest_merkle_root": "a101aeb66817ab11c94385951912c0173b5d66aa034dd63da6dc5cea8f0caed6",
   "recent_validators": [
     {
       "validator_id": "depin-node-us-east-va-001",
@@ -252,7 +252,7 @@
     "active_rented_nodes": 440,
     "idle_nodes_available": 560,
     "cluster_fill_rate_pct": 42.5,
-    "total_jobs_completed": 11550,
+    "total_jobs_completed": 11552,
     "gross_revenue_earned_today_usd": 535.02,
     "current_hourly_run_rate_usd": 566.1,
     "projected_daily_revenue_usd": 13586.4,
@@ -262,26 +262,6 @@
     "target_scale_1000_usd_day_progress_pct": 100.0,
     "max_cluster_daily_capacity_usd": 31968.0,
     "recent_job_receipts": [
-      {
-        "job_id": "job-57ce1056fc3151e2",
-        "broker": "BITTENSOR_SUBNET_BRIDGE",
-        "node_id": "depin-node-us-east-va-969",
-        "workload": "GENOMIC_FOLDING_ACCELERATION",
-        "duration_s": 4.47,
-        "earned_usd": 0.003539,
-        "digest": "facba6ae0b2a7474...",
-        "timestamp_utc": "2026-11-24T16:48:14.222799+00:00"
-      },
-      {
-        "job_id": "job-1da6f4644d225fca",
-        "broker": "BITTENSOR_SUBNET_BRIDGE",
-        "node_id": "depin-node-ap-southeast-sg-205",
-        "workload": "DEEPSEEK_V3_MOE_FINE_TUNING",
-        "duration_s": 3.72,
-        "earned_usd": 0.000568,
-        "digest": "986a4e0fe1224576...",
-        "timestamp_utc": "2026-11-24T16:48:14.223063+00:00"
-      },
       {
         "job_id": "job-5904774d36f06668",
         "broker": "RENDER_AKASH_DAEMON",
@@ -321,15 +301,35 @@
         "earned_usd": 0.00062,
         "digest": "6ddc6f6df8c61eef...",
         "timestamp_utc": "2026-11-24T16:48:29.826312+00:00"
+      },
+      {
+        "job_id": "job-a5c0f237ce1299cf",
+        "broker": "IO_NET_GPU_WORKER",
+        "node_id": "depin-node-eu-central-de-139",
+        "workload": "LLAMA_3_70B_INFERENCE_SLICING",
+        "duration_s": 2.73,
+        "earned_usd": 0.000417,
+        "digest": "764d4216f3266f8a...",
+        "timestamp_utc": "2026-11-24T16:48:37.593129+00:00"
+      },
+      {
+        "job_id": "job-aac329ffae2fef42",
+        "broker": "RENDER_AKASH_DAEMON",
+        "node_id": "depin-node-ap-southeast-sg-229",
+        "workload": "LLAMA_3_70B_INFERENCE_SLICING",
+        "duration_s": 3.75,
+        "earned_usd": 0.000573,
+        "digest": "6f8b231695cbb541...",
+        "timestamp_utc": "2026-11-24T16:48:37.593385+00:00"
       }
     ],
     "physical_worker": {
-      "total_blocks_sealed": 722096,
-      "total_ops_computed": 1444192000,
-      "formatted_ops": "1444.19M Ops",
-      "formatted_blocks": "722,096 Xeon Merkle Blocks",
-      "computational_work_value_usd": 1155353.6,
-      "formatted_computational_value": "$1,155,353.60 USD",
+      "total_blocks_sealed": 722100,
+      "total_ops_computed": 1444200000,
+      "formatted_ops": "1444.20M Ops",
+      "formatted_blocks": "722,100 Xeon Merkle Blocks",
+      "computational_work_value_usd": 1155360.0,
+      "formatted_computational_value": "$1,155,360.00 USD",
       "tariff_rate_usd": 0.0008
     },
     "akash_provider": {
