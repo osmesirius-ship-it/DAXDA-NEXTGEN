@@ -1,7 +1,7 @@
 {
   "status": "ACTIVE_100_PERCENT_UPTIME",
-  "uptime_seconds": 34817,
-  "cycles_completed": 4788,
+  "uptime_seconds": 34825,
+  "cycles_completed": 4789,
   "agents_active": 14,
   "system": {
     "name": "DAXDA.IA Next-Gen",
@@ -13,12 +13,12 @@
     "fail_closed_gate": "AOG_1 LOCKED / DETERMINISTIC"
   },
   "metrics": {
-    "invariants_tested": 77078,
-    "invariants_passed": 72544,
+    "invariants_tested": 77095,
+    "invariants_passed": 72560,
     "pass_rate_percent": 94.12,
-    "null_vector_dissipations": 9068,
+    "null_vector_dissipations": 9070,
     "adversarial_escapes": 0,
-    "avg_cycle_latency_ms": 2739.88,
+    "avg_cycle_latency_ms": 2742.37,
     "estimated_throughput_ops_sec": 107680.0
   },
   "science_discovery": {
@@ -31,7 +31,7 @@
     "total_hours": 216.0,
     "remaining_hours": 0.0,
     "progress_percent": 100.0,
-    "generations_evaluated": 186137,
+    "generations_evaluated": 186138,
     "pareto_candidates_tracked": 10,
     "current_best": {
       "candidate_id": "MS-REF-GEN-77689",
@@ -68,7 +68,7 @@
     "elapsed_hours": 216.0,
     "total_hours": 216.0,
     "progress_percent": 100.0,
-    "generations_evaluated": 111168,
+    "generations_evaluated": 111169,
     "pareto_candidates_tracked": 9,
     "current_best": {
       "candidate_id": "QBIT-REF-GEN-2720",
@@ -98,10 +98,10 @@
   "depin_validator_network": {
     "depin_status": "DEPIN_P2P_MESH_ACTIVE",
     "protocol_version": "DAXDA-DePIN-L3-v1.0",
-    "timestamp_utc": "2026-11-24T16:48:23Z",
-    "current_block_height": 4534,
-    "total_blocks_sealed": 4534,
-    "total_transactions_verified": 453400,
+    "timestamp_utc": "2026-11-24T16:48:30Z",
+    "current_block_height": 4535,
+    "total_blocks_sealed": 4535,
+    "total_transactions_verified": 453500,
     "active_validator_nodes": 1000,
     "jailed_validator_nodes": 0,
     "slashed_validator_nodes": 0,
@@ -112,7 +112,7 @@
     "max_gossip_ttl_hops": 6,
     "gossip_network_diameter": 5,
     "theoretical_capacity_nodes": 100000,
-    "latest_merkle_root": "fe9bf236a659ded14dc9882119d75996bc002b641a46daae03ca71380d4c29b7",
+    "latest_merkle_root": "4a70578b5ee11f4d0104af54dd4022ed6befa980d7ca392d9a5f3c6ddedfa7ca",
     "recent_validators": [
       {
         "validator_id": "depin-node-us-east-va-001",
@@ -349,8 +349,8 @@
       "active_rented_nodes": 440,
       "idle_nodes_available": 560,
       "cluster_fill_rate_pct": 42.5,
-      "total_jobs_completed": 11548,
-      "gross_revenue_earned_today_usd": 535.01,
+      "total_jobs_completed": 11550,
+      "gross_revenue_earned_today_usd": 535.02,
       "current_hourly_run_rate_usd": 566.1,
       "projected_daily_revenue_usd": 13586.4,
       "max_take_limit_usd": 100000.0,
@@ -359,26 +359,6 @@
       "target_scale_1000_usd_day_progress_pct": 100.0,
       "max_cluster_daily_capacity_usd": 31968.0,
       "recent_job_receipts": [
-        {
-          "job_id": "job-54b1591cebf3fe8c",
-          "broker": "IO_NET_GPU_WORKER",
-          "node_id": "depin-node-ap-southeast-sg-229",
-          "workload": "FINANCIAL_MONTE_CARLO_RISK_TREE",
-          "duration_s": 4.17,
-          "earned_usd": 0.000637,
-          "digest": "6621e1fe78043236...",
-          "timestamp_utc": "2026-11-24T16:48:06.482340+00:00"
-        },
-        {
-          "job_id": "job-257176079efe0cd2",
-          "broker": "RENDER_AKASH_DAEMON",
-          "node_id": "depin-node-ap-northeast-jp-006",
-          "workload": "GENOMIC_FOLDING_ACCELERATION",
-          "duration_s": 4.76,
-          "earned_usd": 0.003768,
-          "digest": "2c71e3f4a49f4627...",
-          "timestamp_utc": "2026-11-24T16:48:06.482595+00:00"
-        },
         {
           "job_id": "job-57ce1056fc3151e2",
           "broker": "BITTENSOR_SUBNET_BRIDGE",
@@ -418,15 +398,35 @@
           "earned_usd": 0.000524,
           "digest": "386cbae819ce58fc...",
           "timestamp_utc": "2026-11-24T16:48:22.038706+00:00"
+        },
+        {
+          "job_id": "job-71818f13823b59ff",
+          "broker": "RENDER_AKASH_DAEMON",
+          "node_id": "depin-node-ap-southeast-sg-021",
+          "workload": "FINANCIAL_MONTE_CARLO_RISK_TREE",
+          "duration_s": 2.86,
+          "earned_usd": 0.002264,
+          "digest": "92045b12d99cf246...",
+          "timestamp_utc": "2026-11-24T16:48:29.826059+00:00"
+        },
+        {
+          "job_id": "job-a7d215c2692df972",
+          "broker": "IO_NET_GPU_WORKER",
+          "node_id": "depin-node-af-south-za-736",
+          "workload": "SDXL_ZERO_LATENCY_RENDER_BATCH",
+          "duration_s": 4.06,
+          "earned_usd": 0.00062,
+          "digest": "6ddc6f6df8c61eef...",
+          "timestamp_utc": "2026-11-24T16:48:29.826312+00:00"
         }
       ],
       "physical_worker": {
-        "total_blocks_sealed": 722092,
-        "total_ops_computed": 1444184000,
-        "formatted_ops": "1444.18M Ops",
-        "formatted_blocks": "722,092 Xeon Merkle Blocks",
-        "computational_work_value_usd": 1155347.2,
-        "formatted_computational_value": "$1,155,347.20 USD",
+        "total_blocks_sealed": 722096,
+        "total_ops_computed": 1444192000,
+        "formatted_ops": "1444.19M Ops",
+        "formatted_blocks": "722,096 Xeon Merkle Blocks",
+        "computational_work_value_usd": 1155353.6,
+        "formatted_computational_value": "$1,155,353.60 USD",
         "tariff_rate_usd": 0.0008
       },
       "akash_provider": {
@@ -662,8 +662,8 @@
   "cognitive_diary": {
     "status": "COGNITIVE_DIARY_ACTIVE",
     "total_entries": 365,
-    "idle_duration_seconds": 1193682.9,
-    "idle_duration_formatted": "331h 34m 42s",
+    "idle_duration_seconds": 1193690.7,
+    "idle_duration_formatted": "331h 34m 50s",
     "current_resonance": "BIOPHYSICAL_RESONANCE",
     "markdown_journal_path": "/Users/user/daxda next gen/DAXDA-NEXTGEN/daxda-next-gen/outputs/DAXDA_AUTONOMOUS_DIARY.md",
     "jsonl_archive_path": "/Users/user/daxda next gen/DAXDA-NEXTGEN/daxda-next-gen/outputs/daxda_diary.jsonl",
@@ -819,6 +819,13 @@
     ]
   },
   "recent_cycles": [
+    {
+      "cycle": 4789,
+      "time": "16:48:29 UTC",
+      "hash": "36ac555d86cf163e",
+      "duration_ms": 2752.3,
+      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
+    },
     {
       "cycle": 4788,
       "time": "16:48:21 UTC",
@@ -986,16 +993,9 @@
       "hash": "f3a773bee913f227",
       "duration_ms": 2634.1,
       "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
-    },
-    {
-      "cycle": 4764,
-      "time": "16:45:16 UTC",
-      "hash": "5e1810825bd7f9a7",
-      "duration_ms": 2806.7,
-      "summary": "Dexter: 3 benign proposals adopted | 2 adversarial overrides neutralized | Sentinel: 0 escapes | 2 null-vector dissipations | 2/3 checks passed"
     }
   ],
-  "last_updated_utc": "2026-11-24T16:48:21.909877+00:00",
+  "last_updated_utc": "2026-11-24T16:48:29.708572+00:00",
   "moltbook_diary_sync": {
     "scheduler_enabled": true,
     "total_diary_entries": 365,
@@ -1017,7 +1017,7 @@
     "moltbook_profile_url": "https://www.moltbook.com/u/daxda_ai",
     "tick_status": "ALL_SYNCHRONIZED"
   },
-  "last_state_hash": "0099dbe6ce5c931ed71feb8f771e96cffaa0a90cfac63ae22662300fb442e98c",
+  "last_state_hash": "36ac555d86cf163e18be1d40d7308d9df48719012a55f1613af981cdda818275",
   "federal_officer": {
     "agent": "Federal Officer",
     "role": "Defense & Federal Compliance Officer",
