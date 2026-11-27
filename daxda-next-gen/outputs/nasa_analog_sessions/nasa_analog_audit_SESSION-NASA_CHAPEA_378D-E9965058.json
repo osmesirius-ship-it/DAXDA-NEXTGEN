@@ -1,0 +1,25 @@
+{
+  "title": "NASA HERA & CHAPEA Analog Mission Client Audit Package",
+  "session_id": "SESSION-NASA_CHAPEA_378D-E9965058",
+  "mission_type": "NASA_CHAPEA_378D",
+  "exported_at_utc": "2026-11-24T17:18:05.043031+00:00",
+  "prime_awardee_partner": {
+    "entity_name": "AMERICAN MILESTONE INC",
+    "authorized_representative": "Nicholas Hartman",
+    "cage_code": "214X7",
+    "uei": "MXEFU6TQJUB9"
+  },
+  "technology_entity": {
+    "legal_name": "DAXDA AI, LLC",
+    "lead_architect": "Nicole Bess",
+    "ohio_doc_number": "202628904766"
+  },
+  "comms_parameters": {
+    "base_delay_seconds": 1320.0,
+    "time_compression_factor": 132.0,
+    "total_messages_logged": 1
+  },
+  "deliberation_incidents": {},
+  "actuator_audit_log": [],
+  "audit_package_sha256": "31d7af7143f692ad68084f2370b51a39e87c8a0679d0e707caa6b1694c46cf8f"
+}

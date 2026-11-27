@@ -1,10 +1,10 @@
 {
   "depin_status": "DEPIN_P2P_MESH_ACTIVE",
   "protocol_version": "DAXDA-DePIN-L3-v1.0",
-  "timestamp_utc": "2026-11-24T16:48:53Z",
-  "current_block_height": 4538,
-  "total_blocks_sealed": 4538,
-  "total_transactions_verified": 453800,
+  "timestamp_utc": "2026-11-27T04:48:42Z",
+  "current_block_height": 174,
+  "total_blocks_sealed": 174,
+  "total_transactions_verified": 17400,
   "active_validator_nodes": 1000,
   "jailed_validator_nodes": 0,
   "slashed_validator_nodes": 0,
@@ -15,7 +15,7 @@
   "max_gossip_ttl_hops": 6,
   "gossip_network_diameter": 5,
   "theoretical_capacity_nodes": 100000,
-  "latest_merkle_root": "f52a7c3577db3c669a76fde6d77e4d40e1e47be82860cce899645af29f9db8a2",
+  "latest_merkle_root": "813fa2542aab508295603ac4ca4d066aae4aa7ceb5386589d0e4ab76b2490c0c",
   "recent_validators": [
     {
       "validator_id": "depin-node-us-east-va-001",
@@ -221,187 +221,105 @@
   "recent_slashing_history": [],
   "compute_broker": {
     "broker_bridge_status": "COMPUTE_BROKER_MARKET_CONNECTED",
+    "revenue_verification_mode": "STRICT_VERIFIED_EXTERNAL_ONLY",
     "is_paused": false,
     "connected_brokers": [
       {
         "name": "io.net GPU Marketplace",
-        "status": "AUTHENTICATED_ONLINE",
+        "status": "AUTHENTICATED_STANDBY",
         "registered_workers": 1000,
         "tier": "TIER_1_CLUSTER",
-        "active_contracts": 360,
+        "active_contracts": 0,
         "api_authenticated": true,
         "auth_protocol": "IO Intelligence & Cloud IO v2 JWT",
         "owner_id": "6ba06439-3094-443b-b96c-7705ce69183a"
       },
       {
         "name": "Bittensor Subnet 19 & 44 Bridge",
-        "status": "VALIDATOR_SYNCHRONIZED",
+        "status": "STANDBY_NO_EXTERNAL_MINER",
         "registered_workers": 1000,
         "emission_yield_token": "TAO_INCENTIVE_POOL",
-        "active_contracts": 240
+        "active_contracts": 0
       },
       {
         "name": "Render & Akash Compute Daemon",
-        "status": "DAEMON_READY",
+        "status": "STANDBY_NO_ACTIVE_LEASE",
         "registered_workers": 1000,
         "container_spec": "daxda/cl16_4-worker:latest",
-        "active_contracts": 160
+        "active_contracts": 0
       }
     ],
     "total_registered_nodes": 1000,
-    "active_rented_nodes": 440,
-    "idle_nodes_available": 560,
-    "cluster_fill_rate_pct": 42.5,
-    "total_jobs_completed": 11556,
-    "gross_revenue_earned_today_usd": 535.03,
-    "current_hourly_run_rate_usd": 566.1,
-    "projected_daily_revenue_usd": 13586.4,
+    "active_rented_nodes": 0,
+    "idle_nodes_available": 1000,
+    "cluster_fill_rate_pct": 0.0,
+    "total_jobs_completed": 0,
+    "gross_revenue_earned_today_usd": 0.0,
+    "current_hourly_run_rate_usd": 0.0,
+    "projected_daily_revenue_usd": 0.0,
     "max_take_limit_usd": 100000.0,
     "target_revenue_limit_usd": 100000.0,
-    "progress_to_take_limit_pct": 0.535,
-    "target_scale_1000_usd_day_progress_pct": 100.0,
+    "progress_to_take_limit_pct": 0.0,
+    "target_scale_1000_usd_day_progress_pct": 0.0,
     "max_cluster_daily_capacity_usd": 31968.0,
-    "recent_job_receipts": [
-      {
-        "job_id": "job-a5c0f237ce1299cf",
-        "broker": "IO_NET_GPU_WORKER",
-        "node_id": "depin-node-eu-central-de-139",
-        "workload": "LLAMA_3_70B_INFERENCE_SLICING",
-        "duration_s": 2.73,
-        "earned_usd": 0.000417,
-        "digest": "764d4216f3266f8a...",
-        "timestamp_utc": "2026-11-24T16:48:37.593129+00:00"
-      },
-      {
-        "job_id": "job-aac329ffae2fef42",
-        "broker": "RENDER_AKASH_DAEMON",
-        "node_id": "depin-node-ap-southeast-sg-229",
-        "workload": "LLAMA_3_70B_INFERENCE_SLICING",
-        "duration_s": 3.75,
-        "earned_usd": 0.000573,
-        "digest": "6f8b231695cbb541...",
-        "timestamp_utc": "2026-11-24T16:48:37.593385+00:00"
-      },
-      {
-        "job_id": "job-45817cf9a01e7390",
-        "broker": "RENDER_AKASH_DAEMON",
-        "node_id": "depin-node-sa-east-br-183",
-        "workload": "LLAMA_3_70B_INFERENCE_SLICING",
-        "duration_s": 2.56,
-        "earned_usd": 0.002027,
-        "digest": "b759a70633e4e63b...",
-        "timestamp_utc": "2026-11-24T16:48:45.593475+00:00"
-      },
-      {
-        "job_id": "job-7351ea0e3bc8e523",
-        "broker": "RENDER_AKASH_DAEMON",
-        "node_id": "depin-node-us-west-or-834",
-        "workload": "SDXL_ZERO_LATENCY_RENDER_BATCH",
-        "duration_s": 2.52,
-        "earned_usd": 0.001995,
-        "digest": "21429fba2f227d27...",
-        "timestamp_utc": "2026-11-24T16:48:45.593711+00:00"
-      },
-      {
-        "job_id": "job-1e85db91af500391",
-        "broker": "IO_NET_GPU_WORKER",
-        "node_id": "depin-node-eu-central-de-387",
-        "workload": "GENOMIC_FOLDING_ACCELERATION",
-        "duration_s": 3.19,
-        "earned_usd": 0.002525,
-        "digest": "9a458a81aec53e9b...",
-        "timestamp_utc": "2026-11-24T16:48:53.404178+00:00"
-      },
-      {
-        "job_id": "job-6f9d6b6330ff7251",
-        "broker": "IO_NET_GPU_WORKER",
-        "node_id": "depin-node-us-west-or-738",
-        "workload": "SDXL_ZERO_LATENCY_RENDER_BATCH",
-        "duration_s": 3.25,
-        "earned_usd": 0.002573,
-        "digest": "ad67da5955ebc686...",
-        "timestamp_utc": "2026-11-24T16:48:53.404478+00:00"
-      }
-    ],
+    "recent_job_receipts": [],
     "physical_worker": {
-      "total_blocks_sealed": 722107,
-      "total_ops_computed": 1444214000,
-      "formatted_ops": "1444.21M Ops",
-      "formatted_blocks": "722,107 Xeon Merkle Blocks",
-      "computational_work_value_usd": 1155371.2,
-      "formatted_computational_value": "$1,155,371.20 USD",
+      "total_blocks_sealed": 828861,
+      "total_ops_computed": 1657722000,
+      "formatted_ops": "1657.72M Ops",
+      "formatted_blocks": "828,861 Xeon Merkle Blocks",
+      "computational_work_value_usd": 1326177.6,
+      "formatted_computational_value": "$1,326,177.60 USD",
       "tariff_rate_usd": 0.0008
     },
     "akash_provider": {
-      "source": "AKASH_PROVIDER_PLAYBOOK_PROVISIONED",
+      "source": "PROVIDER_OFFLINE_UNVERIFIED",
       "provider_address": "akash1daxda778xxh100providercluster99alpha",
       "provider_domain": "provider.daxda.ai",
-      "status": "ONLINE_ACTIVE",
+      "status": "OFFLINE",
       "kubernetes": {
-        "distribution": "K3s v1.35.3+k3s1",
-        "cni": "Calico v3.31.5",
-        "helm_version": "v4.2.4",
-        "control_planes": 1,
-        "workers": 3,
-        "total_nodes": 3
+        "distribution": "UNVERIFIED",
+        "control_planes": 0,
+        "workers": 0,
+        "total_nodes": 0
       },
       "components": {
-        "akash_node": "SYNCED",
-        "akash_provider": "v0.1.1 (DAEMON_ACTIVE)",
-        "akash_hostname_operator": "RUNNING",
-        "akash_inventory_operator": "HEALTHY",
-        "nvidia_gpu_operator": "v26.7.0 (READY)",
-        "rook_ceph_storage": "v1.19.10 (HEALTHY)",
-        "ceph_image": "quay.io/ceph/ceph:v19.2.6-20260818"
+        "akash_node": "OFFLINE",
+        "akash_provider": "OFFLINE",
+        "nvidia_gpu_operator": "UNAVAILABLE",
+        "rook_ceph_storage": "UNAVAILABLE"
       },
       "hardware_capacity": {
-        "cpu_cores_total": 96,
-        "cpu_cores_allocated": 32,
-        "memory_total_gb": 768,
-        "memory_allocated_gb": 500,
-        "memory_available_gb": 268,
+        "cpu_cores_total": 0,
+        "cpu_cores_allocated": 0,
+        "memory_total_gb": 0,
+        "memory_allocated_gb": 0,
+        "memory_available_gb": 0,
         "gpus": {
-          "model": "NVIDIA H100 PCIe 80GB",
-          "total_count": 8,
-          "allocated_count": 6,
-          "available_count": 2,
-          "cuda_version": "12.6",
-          "driver_version": "560.35.03",
-          "sxm_fabric_manager": false
-        },
-        "storage_classes": {
-          "beta1_hdd_gb": 0,
-          "beta2_ssd_gb": 1000,
-          "beta3_nvme_gb": 7680,
-          "rook_osd_count": 6,
-          "redundancy": "3 copies, minimum 2 (Host Failure Domain)"
+          "model": "NONE_DETECTED",
+          "total_count": 0,
+          "allocated_count": 0,
+          "available_count": 0
         }
       },
       "market_operations": {
-        "active_leases": 14,
-        "won_bids_24h": 38,
-        "total_orders_processed": 1420,
-        "earned_akt_24h": 128.45,
-        "earned_usd_equivalent_24h": 411.04,
-        "akt_token_balance": 842.1,
-        "escrow_locked_akt": 150.0,
-        "bid_engine_active": true,
+        "active_leases": 0,
+        "won_bids_24h": 0,
+        "total_orders_processed": 0,
+        "earned_akt_24h": 0.0,
+        "earned_usd_equivalent_24h": 0.0,
+        "akt_token_balance": 0.0,
+        "escrow_locked_akt": 0.0,
+        "bid_engine_active": false,
         "cl16_4_worker_contract": "daxda/cl16_4-worker:latest"
       },
-      "network_attributes": {
-        "region": "us-east-va",
-        "city": "Ashburn",
-        "country": "US",
-        "tls_provider": "Cloudflare DNS-01",
-        "ingress_ip": "198.51.100.22"
-      },
-      "updated_at": "2026-10-26T15:53:02.863312+00:00",
+      "updated_at": "2026-11-25T06:15:13.488496+00:00",
       "console_account": {
-        "raw_uact_balance": 1000000,
-        "balance_usd": 1.0,
+        "raw_uact_balance": 0,
+        "balance_usd": 0.0,
         "escrow_deployments_usd": 0.0,
-        "total_credits_usd": 1.0,
-        "formatted": "$1.00 USD (1,000,000 uact)",
+        "total_credits_usd": 0.0,
+        "formatted": "$0.00 USD (0 uact)",
         "status": "AUTHENTICATED_ONLINE"
       }
     }

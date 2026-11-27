@@ -5,11 +5,11 @@
     "node_2": "Quantized 12D State Vector (Cl(16,4) + Toroidal T^2 in 12 INT8 bytes)",
     "node_3": "Merkle Lineage Seal (Chained SHA-256 Root + Zlib Cold Vault Compaction)"
   },
-  "latest_merkle_root": "1ca0d4bfe607b5f35cf102557adc69478340005eaa314f017ea87df8f0587f73",
-  "total_raw_bytes_indexed": 396555,
-  "total_triad_bytes_stored": 11699,
-  "total_cold_vault_bytes": 95438,
-  "overall_storage_reduction_pct": 97.05,
+  "latest_merkle_root": "4520635cd36e3659c0341801b54cf8909264fd859c1a6ffa7dda260e59d9c21f",
+  "total_raw_bytes_indexed": 408693,
+  "total_triad_bytes_stored": 12570,
+  "total_cold_vault_bytes": 98824,
+  "overall_storage_reduction_pct": 96.92,
   "records": [
     {
       "triad_id": "TRIAD-0001",
@@ -960,7 +960,75 @@
         "space_saved_pct": 97.74,
         "cold_vault_ref": "outputs/triad_cold_vault/c665ae13f25f5cc5c575.zlib"
       }
+    },
+    {
+      "triad_id": "TRIAD-0016",
+      "timestamp_utc": "2026-11-26T16:21:41.952133Z",
+      "node_1_waypoint_essence": {
+        "waypoint_id": "WP-TRIAD-0016-6fb22433",
+        "domain": "FEDERAL_MILESTONE_PAYMENTS",
+        "title": "Standing American Milestone Payments Pytest Suite Verification (7/7 Passed)",
+        "verdict_or_state": "ALL_7_TESTS_PASSED_2_87S",
+        "key_findings": {
+          "tests_passed": "7/7",
+          "duration_sec": 2.87,
+          "verified_cases": [
+            "test_cage_and_uei_format_validation",
+            "test_metered_billing_federal_partner_destination",
+            "test_federal_partner_payout_dispatch",
+            "test_ussa_federal_manifest_and_proposals_integration",
+            "test_manager_atomic_identifier_update",
+            "test_execute_payout_federal_partner_settlement",
+            "test_four_step_federal_directives_execution_verification"
+          ]
+        },
+        "source_artifact": "/Users/user/daxda next gen/DAXDA-NEXTGEN/daxda-next-gen/tests/test_standing_american_milestone_payments.py"
+      },
+      "node_2_state_vector": {
+        "float_vector_12d": [
+          0.96,
+          0.99,
+          0.82,
+          0.98,
+          0.99,
+          0.04,
+          0.96,
+          0.0,
+          0.3,
+          0.14,
+          0.9,
+          0.74
+        ],
+        "int8_quantized_12d": [
+          122,
+          126,
+          104,
+          124,
+          126,
+          5,
+          122,
+          0,
+          38,
+          18,
+          114,
+          94
+        ],
+        "active_3d_form": "torus",
+        "vector_bytes": 12
+      },
+      "node_3_merkle_seal": {
+        "block_index": 16,
+        "prev_triad_root": "1ca0d4bfe607b5f35cf102557adc69478340005eaa314f017ea87df8f0587f73",
+        "payload_sha256": "6fb224330a3b4dc25b6add75fe0f9c5164ecf80fefb28b6ca7677c44f61e19f2",
+        "triad_merkle_root": "4520635cd36e3659c0341801b54cf8909264fd859c1a6ffa7dda260e59d9c21f",
+        "raw_bytes": 12138,
+        "triad_compact_bytes": 871,
+        "cold_compressed_bytes": 3386,
+        "compression_ratio_x": 13.94,
+        "space_saved_pct": 92.82,
+        "cold_vault_ref": "outputs/triad_cold_vault/6fb224330a3b4dc25b6a.zlib"
+      }
     }
   ],
-  "overall_cold_vault_reduction_pct": 75.93
+  "overall_cold_vault_reduction_pct": 75.82
 }

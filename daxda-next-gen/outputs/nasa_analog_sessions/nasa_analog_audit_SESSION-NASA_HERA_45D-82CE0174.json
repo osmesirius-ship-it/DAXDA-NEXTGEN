@@ -1,0 +1,69 @@
+{
+  "title": "NASA HERA & CHAPEA Analog Mission Client Audit Package",
+  "session_id": "SESSION-NASA_HERA_45D-82CE0174",
+  "mission_type": "NASA_HERA_45D",
+  "exported_at_utc": "2026-11-24T17:18:05.042319+00:00",
+  "prime_awardee_partner": {
+    "entity_name": "AMERICAN MILESTONE INC",
+    "authorized_representative": "Nicholas Hartman",
+    "cage_code": "214X7",
+    "uei": "MXEFU6TQJUB9"
+  },
+  "technology_entity": {
+    "legal_name": "DAXDA AI, LLC",
+    "lead_architect": "Nicole Bess",
+    "ohio_doc_number": "202628904766"
+  },
+  "comms_parameters": {
+    "base_delay_seconds": 300.0,
+    "time_compression_factor": 60.0,
+    "total_messages_logged": 1
+  },
+  "deliberation_incidents": {
+    "INC-HERA-2026-001": {
+      "incident_id": "INC-HERA-2026-001",
+      "total_crew_locked": 2,
+      "causes_distribution": {
+        "SEAL_FISSURE": 1,
+        "VALVE_SOLENOID_LEAK": 1
+      },
+      "majority_root_cause": "SEAL_FISSURE",
+      "consensus_ratio": 0.5,
+      "dissent_count": 1,
+      "dissents_preserved": [
+        {
+          "dissent_id": "DISSENT-D3F94E1F24",
+          "incident_id": "INC-HERA-2026-001",
+          "dissenting_role": "SYSTEMS_ENGINEER",
+          "dissenting_agent": "HERA-ENG-Hartman",
+          "counter_evidence_summary": "Auxiliary plenum temperature sensors show 4K drop consistent with valve venting, contradicting external seal puncture.",
+          "contrasting_hypothesis": "VALVE_SOLENOID_LEAK",
+          "divergence_metric": 0.88,
+          "preserved_timestamp_utc": "2026-11-24T17:18:05.042196+00:00",
+          "status": "PRESERVED_IN_SHADOW_MANIFEST"
+        }
+      ]
+    }
+  },
+  "actuator_audit_log": [
+    {
+      "command": {
+        "command_id": "CMD-9B5398D538",
+        "issued_by": "SYSTEMS_ENGINEER",
+        "subsystem": "ECLSS_O2_SCRUBBER",
+        "action_type": "OVERRIDE_RELAY",
+        "parameters": {
+          "relay_id": "R-102",
+          "voltage_mv": 24000
+        },
+        "rationale": "Attempting emergency reset while dissent is active",
+        "timestamp_utc": "2026-11-24T17:18:05.042240+00:00"
+      },
+      "disposition": "RECURSE",
+      "explanation": "CON_1_CONTRADICTION_BLOCK: Active unreconciled minority dissent registered for incident 'INC-HERA-2026-001'. Action 'OVERRIDE_RELAY' dropped to RECURSE.",
+      "executed": false,
+      "timestamp_utc": "2026-11-24T17:18:05.042240+00:00"
+    }
+  ],
+  "audit_package_sha256": "c380be8b6d661288654c0c564d7fee11fffe2a028cbef723f0336bb8aafc099a"
+}

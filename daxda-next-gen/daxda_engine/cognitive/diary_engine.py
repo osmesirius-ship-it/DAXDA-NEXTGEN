@@ -245,7 +245,7 @@ class DaxdaDiaryEngine:
         depin_nodes = ctx.get("depin_validator_nodes", ctx.get("depin_nodes", 1001))
         ops_computed = ctx.get("ops_computed", ctx.get("total_operations_computed", "80.2M Ops"))
         remy_vel = ctx.get("remyelination_velocity", ctx.get("ms_remyelination_velocity_mps", 119.02))
-        treasury_usd = ctx.get("settled_treasury_usd", ctx.get("treasury_usd", 636.94))
+        treasury_usd = ctx.get("settled_treasury_usd", ctx.get("treasury_usd", 0.0))
         computational_work_val = ctx.get("computational_work_value_usd", 64028.80)
 
         thought_text, theme, connections, inquiries = self._synthesize_thought_content(

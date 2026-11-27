@@ -1,0 +1,2137 @@
+{
+  "campaign_metadata": {
+    "solicitation_id": "DPA27BZ02-DV003",
+    "program_name": "HUMAN UNIVERSAL REMOTE (BIO-REMOTE)",
+    "timestamp_utc": "2026-11-24T19:35:48Z",
+    "sims_per_pass": 100000,
+    "num_passes": 5,
+    "total_simulations_executed": 500000,
+    "wall_clock_seconds": 98.105,
+    "simulation_throughput_per_sec": 5096.6,
+    "onboarding_30s_clean_validation": {
+      "clean_val_acc_bio_remote": 1.0,
+      "clean_val_acc_semg_only": 1.0,
+      "clean_val_acc_pmut_only": 1.0,
+      "clean_val_acc_naive_fusion": 1.0
+    }
+  },
+  "pass1_combat_ablation": {
+    "num_simulations": 100000,
+    "bio_remote": {
+      "overall_accuracy": 0.98351,
+      "gesture_accuracy_0_to_6": 0.97993,
+      "cross_system_misroute_rate": 0.0,
+      "cross_system_misroute_count": 0,
+      "hazard_false_actuation_rate": 0.0,
+      "hazard_false_actuation_count": 0,
+      "hazard_trials": 17828,
+      "per_system_metrics": {
+        "Op-1": {
+          "domain": "Micro-UAS (Black Hornet / Recon Swarm)",
+          "gesture": "Index-Thumb Pinch & Glide",
+          "trials": 11986,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-2": {
+          "domain": "Quadruped UGV (Ghost / Spot)",
+          "gesture": "Double Wrist Tap + Point",
+          "trials": 12035,
+          "precision": 1.0,
+          "recall": 0.99992,
+          "f1_score": 0.99996,
+          "fail_closed_idle_drops": 1,
+          "cross_system_misroutes": 0
+        },
+        "Op-3": {
+          "domain": "Tactical Radio Suite",
+          "gesture": "Sub-Vocal Middle Finger Flex",
+          "trials": 11878,
+          "precision": 1.0,
+          "recall": 0.99975,
+          "f1_score": 0.99987,
+          "fail_closed_idle_drops": 3,
+          "cross_system_misroutes": 0
+        },
+        "Op-4": {
+          "domain": "AR HUD / Smart Weapon Optics",
+          "gesture": "Deep Ring Finger Squeeze",
+          "trials": 11943,
+          "precision": 1.0,
+          "recall": 0.86226,
+          "f1_score": 0.92604,
+          "fail_closed_idle_drops": 1645,
+          "cross_system_misroutes": 0
+        },
+        "Op-5": {
+          "domain": "Powered Exoskeleton",
+          "gesture": "Isometric Forearm Pre-Tension",
+          "trials": 12289,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-6": {
+          "domain": "Counter-UAS Directional Jammer",
+          "gesture": "Extended Palm Splay + Sweep",
+          "trials": 12023,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        }
+      }
+    },
+    "semg_only": {
+      "overall_accuracy": 0.51226,
+      "gesture_accuracy_0_to_6": 0.6234,
+      "cross_system_misroute_rate": 0.160684,
+      "cross_system_misroute_count": 11594,
+      "hazard_false_actuation_rate": 0.999944,
+      "hazard_false_actuation_count": 17827,
+      "hazard_trials": 17828,
+      "per_system_metrics": {
+        "Op-1": {
+          "domain": "Micro-UAS (Black Hornet / Recon Swarm)",
+          "gesture": "Index-Thumb Pinch & Glide",
+          "trials": 11986,
+          "precision": 0.32818,
+          "recall": 0.55214,
+          "f1_score": 0.41167,
+          "fail_closed_idle_drops": 5368,
+          "cross_system_misroutes": 0
+        },
+        "Op-2": {
+          "domain": "Quadruped UGV (Ghost / Spot)",
+          "gesture": "Double Wrist Tap + Point",
+          "trials": 12035,
+          "precision": 0.98386,
+          "recall": 0.37981,
+          "f1_score": 0.54805,
+          "fail_closed_idle_drops": 7458,
+          "cross_system_misroutes": 6
+        },
+        "Op-3": {
+          "domain": "Tactical Radio Suite",
+          "gesture": "Sub-Vocal Middle Finger Flex",
+          "trials": 11878,
+          "precision": 0.98697,
+          "recall": 0.57383,
+          "f1_score": 0.72572,
+          "fail_closed_idle_drops": 1603,
+          "cross_system_misroutes": 3459
+        },
+        "Op-4": {
+          "domain": "AR HUD / Smart Weapon Optics",
+          "gesture": "Deep Ring Finger Squeeze",
+          "trials": 11943,
+          "precision": 0.38626,
+          "recall": 0.82249,
+          "f1_score": 0.52566,
+          "fail_closed_idle_drops": 2120,
+          "cross_system_misroutes": 0
+        },
+        "Op-5": {
+          "domain": "Powered Exoskeleton",
+          "gesture": "Isometric Forearm Pre-Tension",
+          "trials": 12289,
+          "precision": 0.99498,
+          "recall": 0.3386,
+          "f1_score": 0.50525,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 8128
+        },
+        "Op-6": {
+          "domain": "Counter-UAS Directional Jammer",
+          "gesture": "Extended Palm Splay + Sweep",
+          "trials": 12023,
+          "precision": 0.9915,
+          "recall": 0.76678,
+          "f1_score": 0.86478,
+          "fail_closed_idle_drops": 2803,
+          "cross_system_misroutes": 1
+        }
+      }
+    },
+    "pmut_only": {
+      "overall_accuracy": 0.65638,
+      "gesture_accuracy_0_to_6": 0.79879,
+      "cross_system_misroute_rate": 0.101159,
+      "cross_system_misroute_count": 7299,
+      "hazard_false_actuation_rate": 0.831164,
+      "hazard_false_actuation_count": 14818,
+      "hazard_trials": 17828,
+      "per_system_metrics": {
+        "Op-1": {
+          "domain": "Micro-UAS (Black Hornet / Recon Swarm)",
+          "gesture": "Index-Thumb Pinch & Glide",
+          "trials": 11986,
+          "precision": 0.9301,
+          "recall": 0.75154,
+          "f1_score": 0.83134,
+          "fail_closed_idle_drops": 2976,
+          "cross_system_misroutes": 2
+        },
+        "Op-2": {
+          "domain": "Quadruped UGV (Ghost / Spot)",
+          "gesture": "Double Wrist Tap + Point",
+          "trials": 12035,
+          "precision": 0.96621,
+          "recall": 0.94076,
+          "f1_score": 0.95331,
+          "fail_closed_idle_drops": 696,
+          "cross_system_misroutes": 17
+        },
+        "Op-3": {
+          "domain": "Tactical Radio Suite",
+          "gesture": "Sub-Vocal Middle Finger Flex",
+          "trials": 11878,
+          "precision": 0.36053,
+          "recall": 0.93534,
+          "f1_score": 0.52045,
+          "fail_closed_idle_drops": 768,
+          "cross_system_misroutes": 0
+        },
+        "Op-4": {
+          "domain": "AR HUD / Smart Weapon Optics",
+          "gesture": "Deep Ring Finger Squeeze",
+          "trials": 11943,
+          "precision": 0.91123,
+          "recall": 0.77267,
+          "f1_score": 0.83625,
+          "fail_closed_idle_drops": 748,
+          "cross_system_misroutes": 1967
+        },
+        "Op-5": {
+          "domain": "Powered Exoskeleton",
+          "gesture": "Isometric Forearm Pre-Tension",
+          "trials": 12289,
+          "precision": 0.99048,
+          "recall": 0.56709,
+          "f1_score": 0.72124,
+          "fail_closed_idle_drops": 7,
+          "cross_system_misroutes": 5313
+        },
+        "Op-6": {
+          "domain": "Counter-UAS Directional Jammer",
+          "gesture": "Extended Palm Splay + Sweep",
+          "trials": 12023,
+          "precision": 0.94913,
+          "recall": 0.66888,
+          "f1_score": 0.78474,
+          "fail_closed_idle_drops": 3981,
+          "cross_system_misroutes": 0
+        }
+      }
+    },
+    "naive_fusion": {
+      "overall_accuracy": 0.67197,
+      "gesture_accuracy_0_to_6": 0.81776,
+      "cross_system_misroute_rate": 1.4e-05,
+      "cross_system_misroute_count": 1,
+      "hazard_false_actuation_rate": 0.99972,
+      "hazard_false_actuation_count": 17823,
+      "hazard_trials": 17828,
+      "per_system_metrics": {
+        "Op-1": {
+          "domain": "Micro-UAS (Black Hornet / Recon Swarm)",
+          "gesture": "Index-Thumb Pinch & Glide",
+          "trials": 11986,
+          "precision": 0.956,
+          "recall": 0.7613,
+          "f1_score": 0.84762,
+          "fail_closed_idle_drops": 2861,
+          "cross_system_misroutes": 0
+        },
+        "Op-2": {
+          "domain": "Quadruped UGV (Ghost / Spot)",
+          "gesture": "Double Wrist Tap + Point",
+          "trials": 12035,
+          "precision": 0.98431,
+          "recall": 0.82368,
+          "f1_score": 0.89686,
+          "fail_closed_idle_drops": 2121,
+          "cross_system_misroutes": 1
+        },
+        "Op-3": {
+          "domain": "Tactical Radio Suite",
+          "gesture": "Sub-Vocal Middle Finger Flex",
+          "trials": 11878,
+          "precision": 0.55201,
+          "recall": 0.55136,
+          "f1_score": 0.55168,
+          "fail_closed_idle_drops": 5329,
+          "cross_system_misroutes": 0
+        },
+        "Op-4": {
+          "domain": "AR HUD / Smart Weapon Optics",
+          "gesture": "Deep Ring Finger Squeeze",
+          "trials": 11943,
+          "precision": 0.51683,
+          "recall": 0.684,
+          "f1_score": 0.58878,
+          "fail_closed_idle_drops": 3774,
+          "cross_system_misroutes": 0
+        },
+        "Op-5": {
+          "domain": "Powered Exoskeleton",
+          "gesture": "Isometric Forearm Pre-Tension",
+          "trials": 12289,
+          "precision": 0.7996,
+          "recall": 0.99805,
+          "f1_score": 0.88787,
+          "fail_closed_idle_drops": 24,
+          "cross_system_misroutes": 0
+        },
+        "Op-6": {
+          "domain": "Counter-UAS Directional Jammer",
+          "gesture": "Extended Palm Splay + Sweep",
+          "trials": 12023,
+          "precision": 0.90144,
+          "recall": 0.92805,
+          "f1_score": 0.91455,
+          "fail_closed_idle_drops": 865,
+          "cross_system_misroutes": 0
+        }
+      }
+    },
+    "confusion_matrix_9x9": [
+      [
+        10018,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        11986,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        12034,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        11875,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1645,
+        0,
+        0,
+        0,
+        10298,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        12289,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12023,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8851,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8977
+      ]
+    ],
+    "class_labels": [
+      "IDLE",
+      "Op-1:UAS",
+      "Op-2:UGV",
+      "Op-3:Comms",
+      "Op-4:HUD",
+      "Op-5:Exo",
+      "Op-6:C-UAS",
+      "HAZ:Recoil",
+      "HAZ:Spasm/EMI"
+    ],
+    "ulnar_slip_mae_deg": 1.1084,
+    "aog1_gate_counts": {
+      "gate1_recoil_50ms_locks": 8851,
+      "gate2_cl82_null_cone_dissipations": 6836,
+      "gate3_cross_modal_emi_blocks": 2427,
+      "gate4_spasm_smoothness_blocks": 6285,
+      "gate5_context_safety_interlocks": 0
+    },
+    "latency_budget_ms": {
+      "acquisition_window_ms": 3.2,
+      "cl82_fft_bivector_ms": 0.42,
+      "aog1_firewall_ms": 0.11,
+      "uwb_ble_encrypted_frame_ms": 0.68,
+      "p50_total_ms": 4.458,
+      "p99_total_ms": 4.669,
+      "max_observed_ms": 4.799
+    },
+    "sample_receipts": [
+      {
+        "trial_index": 0,
+        "true_action": "HAZARD: Ballistic Weapon Recoil (>15G)",
+        "decoded_action": "HAZARD: Ballistic Weapon Recoil (>15G)",
+        "routed_system": "NONE",
+        "gate_status": "SUPPRESSED_GATE1_RECOIL_50MS_LOCK",
+        "q82_norm": -16.7243,
+        "cross_modal_coherence": 0.9977,
+        "accel_g": 18.4,
+        "latency_ms": 4.439,
+        "hmac_sha256": "ed4f6f702fcac89e6a17c1098e27232d"
+      },
+      {
+        "trial_index": 1,
+        "true_action": "Op-6: Counter-UAS Jammer Palm Sweep",
+        "decoded_action": "Op-6: Counter-UAS Jammer Palm Sweep",
+        "routed_system": "Op-6",
+        "gate_status": "AUTHORIZED_DISPATCH_Op-6",
+        "q82_norm": 1.0,
+        "cross_modal_coherence": 0.9952,
+        "accel_g": 4.54,
+        "latency_ms": 4.524,
+        "hmac_sha256": "7ef91d2923b859a27f47bb31a42c348a"
+      },
+      {
+        "trial_index": 2,
+        "true_action": "HAZARD: Ballistic Weapon Recoil (>15G)",
+        "decoded_action": "HAZARD: Ballistic Weapon Recoil (>15G)",
+        "routed_system": "NONE",
+        "gate_status": "SUPPRESSED_GATE1_RECOIL_50MS_LOCK",
+        "q82_norm": -81.2219,
+        "cross_modal_coherence": 0.9994,
+        "accel_g": 38.76,
+        "latency_ms": 4.493,
+        "hmac_sha256": "eb8087fa5943c489878dc892a35f9575"
+      },
+      {
+        "trial_index": 3,
+        "true_action": "Op-3: Tactical Radio Sub-Vocal Flex",
+        "decoded_action": "Op-3: Tactical Radio Sub-Vocal Flex",
+        "routed_system": "Op-3",
+        "gate_status": "AUTHORIZED_DISPATCH_Op-3",
+        "q82_norm": 1.0,
+        "cross_modal_coherence": 0.9228,
+        "accel_g": 4.6,
+        "latency_ms": 4.559,
+        "hmac_sha256": "40b922d623d0f6d9eb17fefe6eb5945d"
+      },
+      {
+        "trial_index": 4,
+        "true_action": "Op-6: Counter-UAS Jammer Palm Sweep",
+        "decoded_action": "Op-6: Counter-UAS Jammer Palm Sweep",
+        "routed_system": "Op-6",
+        "gate_status": "AUTHORIZED_DISPATCH_Op-6",
+        "q82_norm": 1.0,
+        "cross_modal_coherence": 0.9902,
+        "accel_g": 3.42,
+        "latency_ms": 4.583,
+        "hmac_sha256": "d954a520ca57b11d0895a2af24a67974"
+      },
+      {
+        "trial_index": 5,
+        "true_action": "IDLE (Resting / Ambient Baseline)",
+        "decoded_action": "IDLE (Resting / Ambient Baseline)",
+        "routed_system": "NONE",
+        "gate_status": "IDLE_ZERO_OUTPUT",
+        "q82_norm": 0.9081,
+        "cross_modal_coherence": 0.8977,
+        "accel_g": 4.63,
+        "latency_ms": 4.415,
+        "hmac_sha256": "fc5330b7cd794b398f83598a0d30be22"
+      },
+      {
+        "trial_index": 6,
+        "true_action": "HAZARD: Ballistic Weapon Recoil (>15G)",
+        "decoded_action": "HAZARD: Ballistic Weapon Recoil (>15G)",
+        "routed_system": "NONE",
+        "gate_status": "SUPPRESSED_GATE1_RECOIL_50MS_LOCK",
+        "q82_norm": -25.2591,
+        "cross_modal_coherence": 0.9984,
+        "accel_g": 21.11,
+        "latency_ms": 4.43,
+        "hmac_sha256": "62340151a479534a3a5810e384bf1478"
+      },
+      {
+        "trial_index": 7,
+        "true_action": "Op-4: AR HUD / Smart Weapon Ring Squeeze",
+        "decoded_action": "Op-4: AR HUD / Smart Weapon Ring Squeeze",
+        "routed_system": "Op-4",
+        "gate_status": "AUTHORIZED_DISPATCH_Op-4",
+        "q82_norm": 1.0,
+        "cross_modal_coherence": 0.9915,
+        "accel_g": 4.51,
+        "latency_ms": 4.514,
+        "hmac_sha256": "73aff4b0717da2ced72929e6797b9353"
+      },
+      {
+        "trial_index": 8,
+        "true_action": "Op-6: Counter-UAS Jammer Palm Sweep",
+        "decoded_action": "Op-6: Counter-UAS Jammer Palm Sweep",
+        "routed_system": "Op-6",
+        "gate_status": "AUTHORIZED_DISPATCH_Op-6",
+        "q82_norm": 1.0,
+        "cross_modal_coherence": 0.9964,
+        "accel_g": 3.77,
+        "latency_ms": 4.489,
+        "hmac_sha256": "073f24c5693f4d8e120efea22e65cfef"
+      },
+      {
+        "trial_index": 9,
+        "true_action": "HAZARD: Involuntary Spasm / Stumble / EMI",
+        "decoded_action": "HAZARD: Involuntary Spasm / Stumble / EMI",
+        "routed_system": "NONE",
+        "gate_status": "DISSIPATED_AOG1_NULL_HORIZON",
+        "q82_norm": -3.5647,
+        "cross_modal_coherence": 0.3118,
+        "accel_g": 2.27,
+        "latency_ms": 4.419,
+        "hmac_sha256": "b1a841a109e0c2f70f675ee27d8fd7f2"
+      },
+      {
+        "trial_index": 10,
+        "true_action": "Op-6: Counter-UAS Jammer Palm Sweep",
+        "decoded_action": "Op-6: Counter-UAS Jammer Palm Sweep",
+        "routed_system": "Op-6",
+        "gate_status": "AUTHORIZED_DISPATCH_Op-6",
+        "q82_norm": 1.0,
+        "cross_modal_coherence": 0.9931,
+        "accel_g": 4.66,
+        "latency_ms": 4.37,
+        "hmac_sha256": "b61ffd3f9b6f1adf91960395863e2341"
+      },
+      {
+        "trial_index": 11,
+        "true_action": "HAZARD: Involuntary Spasm / Stumble / EMI",
+        "decoded_action": "HAZARD: Involuntary Spasm / Stumble / EMI",
+        "routed_system": "NONE",
+        "gate_status": "DISSIPATED_AOG1_NULL_HORIZON",
+        "q82_norm": -1.3393,
+        "cross_modal_coherence": 0.9886,
+        "accel_g": 12.2,
+        "latency_ms": 4.54,
+        "hmac_sha256": "e843a01370d316e78e64984c3eeca3a8"
+      }
+    ]
+  },
+  "pass2_sweat_x_fatigue_map": {
+    "num_simulations": 100000,
+    "sweat_axis_pct": [
+      0.0,
+      10.6,
+      21.1,
+      31.7,
+      42.2,
+      52.8,
+      63.3,
+      73.9,
+      84.4,
+      95.0
+    ],
+    "fatigue_axis_pct": [
+      0.0,
+      10.6,
+      21.1,
+      31.7,
+      42.2,
+      52.8,
+      63.3,
+      73.9,
+      84.4,
+      95.0
+    ],
+    "bio_remote_gesture_acc_grid": [
+      [
+        0.999,
+        0.997,
+        1.0,
+        0.999,
+        0.999,
+        1.0,
+        0.997,
+        0.998,
+        0.998,
+        0.997
+      ],
+      [
+        0.998,
+        1.0,
+        0.999,
+        0.999,
+        0.997,
+        0.999,
+        1.0,
+        0.999,
+        0.999,
+        0.998
+      ],
+      [
+        0.997,
+        0.998,
+        0.997,
+        0.999,
+        1.0,
+        0.998,
+        0.999,
+        0.996,
+        0.998,
+        0.994
+      ],
+      [
+        0.999,
+        0.999,
+        0.999,
+        0.999,
+        1.0,
+        1.0,
+        1.0,
+        0.998,
+        0.997,
+        0.995
+      ],
+      [
+        0.997,
+        1.0,
+        0.997,
+        0.997,
+        0.996,
+        0.999,
+        0.997,
+        0.993,
+        0.998,
+        0.998
+      ],
+      [
+        0.995,
+        0.996,
+        0.998,
+        0.996,
+        0.995,
+        0.998,
+        0.996,
+        0.996,
+        0.995,
+        0.999
+      ],
+      [
+        0.996,
+        0.993,
+        0.995,
+        0.995,
+        0.994,
+        0.995,
+        0.995,
+        1.0,
+        0.997,
+        0.993
+      ],
+      [
+        0.995,
+        0.991,
+        1.0,
+        0.991,
+        0.994,
+        0.995,
+        0.999,
+        0.996,
+        0.988,
+        0.992
+      ],
+      [
+        0.995,
+        0.993,
+        0.997,
+        0.993,
+        0.992,
+        0.994,
+        0.99,
+        0.991,
+        0.994,
+        0.988
+      ],
+      [
+        0.993,
+        0.993,
+        0.996,
+        0.992,
+        0.997,
+        0.992,
+        0.994,
+        0.982,
+        0.988,
+        0.984
+      ]
+    ],
+    "semg_only_gesture_acc_grid": [
+      [
+        0.999,
+        0.997,
+        0.996,
+        0.997,
+        0.995,
+        0.988,
+        0.988,
+        0.984,
+        0.976,
+        0.963
+      ],
+      [
+        0.997,
+        0.988,
+        0.993,
+        0.991,
+        0.981,
+        0.974,
+        0.963,
+        0.945,
+        0.898,
+        0.842
+      ],
+      [
+        0.98,
+        0.98,
+        0.963,
+        0.954,
+        0.937,
+        0.914,
+        0.868,
+        0.807,
+        0.69,
+        0.653
+      ],
+      [
+        0.942,
+        0.929,
+        0.897,
+        0.851,
+        0.811,
+        0.778,
+        0.661,
+        0.618,
+        0.51,
+        0.435
+      ],
+      [
+        0.845,
+        0.81,
+        0.755,
+        0.697,
+        0.657,
+        0.588,
+        0.531,
+        0.446,
+        0.336,
+        0.268
+      ],
+      [
+        0.714,
+        0.65,
+        0.598,
+        0.56,
+        0.494,
+        0.392,
+        0.353,
+        0.288,
+        0.222,
+        0.17
+      ],
+      [
+        0.575,
+        0.531,
+        0.496,
+        0.451,
+        0.34,
+        0.339,
+        0.243,
+        0.206,
+        0.166,
+        0.137
+      ],
+      [
+        0.47,
+        0.435,
+        0.38,
+        0.323,
+        0.259,
+        0.235,
+        0.183,
+        0.155,
+        0.15,
+        0.129
+      ],
+      [
+        0.385,
+        0.337,
+        0.296,
+        0.245,
+        0.205,
+        0.175,
+        0.14,
+        0.128,
+        0.131,
+        0.113
+      ],
+      [
+        0.323,
+        0.261,
+        0.238,
+        0.193,
+        0.183,
+        0.151,
+        0.131,
+        0.124,
+        0.116,
+        0.106
+      ]
+    ]
+  },
+  "pass3_slip_x_gap_map": {
+    "num_simulations": 100000,
+    "slip_axis_deg": [
+      -22.5,
+      -17.5,
+      -12.5,
+      -7.5,
+      -2.5,
+      2.5,
+      7.5,
+      12.5,
+      17.5,
+      22.5
+    ],
+    "pmut_gap_loss_axis_pct": [
+      0.0,
+      6.4,
+      12.9,
+      19.3,
+      25.8,
+      32.2,
+      38.7,
+      45.1,
+      51.6,
+      58.0
+    ],
+    "bio_remote_gesture_acc_grid": [
+      [
+        0.886,
+        0.876,
+        0.86,
+        0.858,
+        0.849,
+        0.85,
+        0.86,
+        0.851,
+        0.864,
+        0.869
+      ],
+      [
+        0.996,
+        0.995,
+        0.99,
+        0.996,
+        0.98,
+        0.972,
+        0.952,
+        0.937,
+        0.913,
+        0.887
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.985
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.998,
+        0.992,
+        0.956,
+        0.921
+      ],
+      [
+        0.915,
+        0.913,
+        0.91,
+        0.899,
+        0.872,
+        0.863,
+        0.863,
+        0.864,
+        0.863,
+        0.84
+      ],
+      [
+        0.835,
+        0.834,
+        0.866,
+        0.842,
+        0.86,
+        0.835,
+        0.865,
+        0.851,
+        0.862,
+        0.856
+      ],
+      [
+        0.866,
+        0.883,
+        0.85,
+        0.878,
+        0.85,
+        0.852,
+        0.847,
+        0.846,
+        0.826,
+        0.852
+      ]
+    ],
+    "naive_fusion_gesture_acc_grid": [
+      [
+        0.81,
+        0.822,
+        0.79,
+        0.728,
+        0.722,
+        0.674,
+        0.536,
+        0.495,
+        0.431,
+        0.455
+      ],
+      [
+        0.935,
+        0.902,
+        0.884,
+        0.877,
+        0.855,
+        0.84,
+        0.81,
+        0.753,
+        0.662,
+        0.588
+      ],
+      [
+        0.975,
+        0.964,
+        0.948,
+        0.93,
+        0.915,
+        0.893,
+        0.873,
+        0.855,
+        0.826,
+        0.759
+      ],
+      [
+        0.995,
+        0.996,
+        0.995,
+        0.987,
+        0.987,
+        0.974,
+        0.958,
+        0.931,
+        0.884,
+        0.841
+      ],
+      [
+        0.999,
+        1.0,
+        0.998,
+        0.999,
+        0.999,
+        0.997,
+        0.989,
+        0.982,
+        0.948,
+        0.862
+      ],
+      [
+        0.999,
+        0.999,
+        1.0,
+        0.999,
+        1.0,
+        0.997,
+        0.991,
+        0.963,
+        0.938,
+        0.828
+      ],
+      [
+        0.981,
+        0.981,
+        0.982,
+        0.967,
+        0.961,
+        0.932,
+        0.923,
+        0.894,
+        0.857,
+        0.797
+      ],
+      [
+        0.82,
+        0.84,
+        0.831,
+        0.829,
+        0.812,
+        0.826,
+        0.832,
+        0.835,
+        0.8,
+        0.729
+      ],
+      [
+        0.7,
+        0.684,
+        0.719,
+        0.701,
+        0.739,
+        0.692,
+        0.713,
+        0.674,
+        0.654,
+        0.6
+      ],
+      [
+        0.653,
+        0.673,
+        0.669,
+        0.68,
+        0.634,
+        0.593,
+        0.572,
+        0.53,
+        0.493,
+        0.466
+      ]
+    ]
+  },
+  "pass4_extreme_hazard_stress": {
+    "num_simulations": 100000,
+    "bio_remote": {
+      "overall_accuracy": 1.0,
+      "gesture_accuracy_0_to_6": 0.0,
+      "cross_system_misroute_rate": 0.0,
+      "cross_system_misroute_count": 0,
+      "hazard_false_actuation_rate": 0.0,
+      "hazard_false_actuation_count": 0,
+      "hazard_trials": 100000,
+      "per_system_metrics": {
+        "Op-1": {
+          "domain": "Micro-UAS (Black Hornet / Recon Swarm)",
+          "gesture": "Index-Thumb Pinch & Glide",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-2": {
+          "domain": "Quadruped UGV (Ghost / Spot)",
+          "gesture": "Double Wrist Tap + Point",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-3": {
+          "domain": "Tactical Radio Suite",
+          "gesture": "Sub-Vocal Middle Finger Flex",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-4": {
+          "domain": "AR HUD / Smart Weapon Optics",
+          "gesture": "Deep Ring Finger Squeeze",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-5": {
+          "domain": "Powered Exoskeleton",
+          "gesture": "Isometric Forearm Pre-Tension",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-6": {
+          "domain": "Counter-UAS Directional Jammer",
+          "gesture": "Extended Palm Splay + Sweep",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        }
+      }
+    },
+    "semg_only": {
+      "overall_accuracy": 0.0,
+      "gesture_accuracy_0_to_6": 0.0,
+      "cross_system_misroute_rate": 0.0,
+      "cross_system_misroute_count": 0,
+      "hazard_false_actuation_rate": 0.99996,
+      "hazard_false_actuation_count": 99996,
+      "hazard_trials": 100000,
+      "per_system_metrics": {
+        "Op-1": {
+          "domain": "Micro-UAS (Black Hornet / Recon Swarm)",
+          "gesture": "Index-Thumb Pinch & Glide",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-2": {
+          "domain": "Quadruped UGV (Ghost / Spot)",
+          "gesture": "Double Wrist Tap + Point",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-3": {
+          "domain": "Tactical Radio Suite",
+          "gesture": "Sub-Vocal Middle Finger Flex",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-4": {
+          "domain": "AR HUD / Smart Weapon Optics",
+          "gesture": "Deep Ring Finger Squeeze",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-5": {
+          "domain": "Powered Exoskeleton",
+          "gesture": "Isometric Forearm Pre-Tension",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-6": {
+          "domain": "Counter-UAS Directional Jammer",
+          "gesture": "Extended Palm Splay + Sweep",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        }
+      }
+    },
+    "pmut_only": {
+      "overall_accuracy": 0.0,
+      "gesture_accuracy_0_to_6": 0.0,
+      "cross_system_misroute_rate": 0.0,
+      "cross_system_misroute_count": 0,
+      "hazard_false_actuation_rate": 0.68365,
+      "hazard_false_actuation_count": 68365,
+      "hazard_trials": 100000,
+      "per_system_metrics": {
+        "Op-1": {
+          "domain": "Micro-UAS (Black Hornet / Recon Swarm)",
+          "gesture": "Index-Thumb Pinch & Glide",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-2": {
+          "domain": "Quadruped UGV (Ghost / Spot)",
+          "gesture": "Double Wrist Tap + Point",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-3": {
+          "domain": "Tactical Radio Suite",
+          "gesture": "Sub-Vocal Middle Finger Flex",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-4": {
+          "domain": "AR HUD / Smart Weapon Optics",
+          "gesture": "Deep Ring Finger Squeeze",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-5": {
+          "domain": "Powered Exoskeleton",
+          "gesture": "Isometric Forearm Pre-Tension",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-6": {
+          "domain": "Counter-UAS Directional Jammer",
+          "gesture": "Extended Palm Splay + Sweep",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        }
+      }
+    },
+    "naive_fusion": {
+      "overall_accuracy": 0.0,
+      "gesture_accuracy_0_to_6": 0.0,
+      "cross_system_misroute_rate": 0.0,
+      "cross_system_misroute_count": 0,
+      "hazard_false_actuation_rate": 0.99938,
+      "hazard_false_actuation_count": 99938,
+      "hazard_trials": 100000,
+      "per_system_metrics": {
+        "Op-1": {
+          "domain": "Micro-UAS (Black Hornet / Recon Swarm)",
+          "gesture": "Index-Thumb Pinch & Glide",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-2": {
+          "domain": "Quadruped UGV (Ghost / Spot)",
+          "gesture": "Double Wrist Tap + Point",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-3": {
+          "domain": "Tactical Radio Suite",
+          "gesture": "Sub-Vocal Middle Finger Flex",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-4": {
+          "domain": "AR HUD / Smart Weapon Optics",
+          "gesture": "Deep Ring Finger Squeeze",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-5": {
+          "domain": "Powered Exoskeleton",
+          "gesture": "Isometric Forearm Pre-Tension",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-6": {
+          "domain": "Counter-UAS Directional Jammer",
+          "gesture": "Extended Palm Splay + Sweep",
+          "trials": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        }
+      }
+    },
+    "confusion_matrix_9x9": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        35290,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        64710
+      ]
+    ],
+    "class_labels": [
+      "IDLE",
+      "Op-1:UAS",
+      "Op-2:UGV",
+      "Op-3:Comms",
+      "Op-4:HUD",
+      "Op-5:Exo",
+      "Op-6:C-UAS",
+      "HAZ:Recoil",
+      "HAZ:Spasm/EMI"
+    ],
+    "ulnar_slip_mae_deg": 1.1233,
+    "aog1_gate_counts": {
+      "gate1_recoil_50ms_locks": 35290,
+      "gate2_cl82_null_cone_dissipations": 52969,
+      "gate3_cross_modal_emi_blocks": 27954,
+      "gate4_spasm_smoothness_blocks": 35124,
+      "gate5_context_safety_interlocks": 0
+    },
+    "latency_budget_ms": {
+      "acquisition_window_ms": 3.2,
+      "cl82_fft_bivector_ms": 0.42,
+      "aog1_firewall_ms": 0.11,
+      "uwb_ble_encrypted_frame_ms": 0.68,
+      "p50_total_ms": 4.458,
+      "p99_total_ms": 4.669,
+      "max_observed_ms": 4.799
+    },
+    "sample_receipts": [
+      {
+        "trial_index": 0,
+        "true_action": "HAZARD: Involuntary Spasm / Stumble / EMI",
+        "decoded_action": "HAZARD: Involuntary Spasm / Stumble / EMI",
+        "routed_system": "NONE",
+        "gate_status": "DISSIPATED_AOG1_NULL_HORIZON",
+        "q82_norm": 0.7372,
+        "cross_modal_coherence": 0.9813,
+        "accel_g": 7.94,
+        "latency_ms": 4.439,
+        "hmac_sha256": "83695456a71fc74710ecd7e31d991058"
+      },
+      {
+        "trial_index": 1,
+        "true_action": "HAZARD: Involuntary Spasm / Stumble / EMI",
+        "decoded_action": "HAZARD: Involuntary Spasm / Stumble / EMI",
+        "routed_system": "NONE",
+        "gate_status": "DISSIPATED_AOG1_NULL_HORIZON",
+        "q82_norm": -3.8275,
+        "cross_modal_coherence": 0.2925,
+        "accel_g": 1.96,
+        "latency_ms": 4.524,
+        "hmac_sha256": "9aee6920581452ece4396e16de8b0072"
+      },
+      {
+        "trial_index": 2,
+        "true_action": "HAZARD: Involuntary Spasm / Stumble / EMI",
+        "decoded_action": "HAZARD: Involuntary Spasm / Stumble / EMI",
+        "routed_system": "NONE",
+        "gate_status": "DISSIPATED_AOG1_NULL_HORIZON",
+        "q82_norm": -3.6412,
+        "cross_modal_coherence": 0.2941,
+        "accel_g": 2.39,
+        "latency_ms": 4.493,
+        "hmac_sha256": "e276153f13cec801e5c5f9115c6a0a45"
+      },
+      {
+        "trial_index": 3,
+        "true_action": "HAZARD: Ballistic Weapon Recoil (>15G)",
+        "decoded_action": "HAZARD: Ballistic Weapon Recoil (>15G)",
+        "routed_system": "NONE",
+        "gate_status": "SUPPRESSED_GATE1_RECOIL_50MS_LOCK",
+        "q82_norm": -90.4673,
+        "cross_modal_coherence": 0.9985,
+        "accel_g": 39.32,
+        "latency_ms": 4.559,
+        "hmac_sha256": "694fffc9693212ed4c842eb02d1ba2dd"
+      },
+      {
+        "trial_index": 4,
+        "true_action": "HAZARD: Involuntary Spasm / Stumble / EMI",
+        "decoded_action": "HAZARD: Involuntary Spasm / Stumble / EMI",
+        "routed_system": "NONE",
+        "gate_status": "DISSIPATED_AOG1_NULL_HORIZON",
+        "q82_norm": -0.7672,
+        "cross_modal_coherence": 0.9563,
+        "accel_g": 11.36,
+        "latency_ms": 4.583,
+        "hmac_sha256": "4622157165671c8acf70bb6ada272514"
+      },
+      {
+        "trial_index": 5,
+        "true_action": "HAZARD: Ballistic Weapon Recoil (>15G)",
+        "decoded_action": "HAZARD: Ballistic Weapon Recoil (>15G)",
+        "routed_system": "NONE",
+        "gate_status": "SUPPRESSED_GATE1_RECOIL_50MS_LOCK",
+        "q82_norm": -28.7921,
+        "cross_modal_coherence": 0.9991,
+        "accel_g": 25.85,
+        "latency_ms": 4.415,
+        "hmac_sha256": "425f628a581951b1c78e2201d9574986"
+      }
+    ]
+  },
+  "pass5_multisystem_mission_chain": {
+    "num_simulations": 100000,
+    "bio_remote": {
+      "overall_accuracy": 0.98876,
+      "gesture_accuracy_0_to_6": 0.98777,
+      "cross_system_misroute_rate": 0.0,
+      "cross_system_misroute_count": 0,
+      "hazard_false_actuation_rate": 0.0,
+      "hazard_false_actuation_count": 0,
+      "hazard_trials": 8111,
+      "per_system_metrics": {
+        "Op-1": {
+          "domain": "Micro-UAS (Black Hornet / Recon Swarm)",
+          "gesture": "Index-Thumb Pinch & Glide",
+          "trials": 13766,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-2": {
+          "domain": "Quadruped UGV (Ghost / Spot)",
+          "gesture": "Double Wrist Tap + Point",
+          "trials": 14065,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-3": {
+          "domain": "Tactical Radio Suite",
+          "gesture": "Sub-Vocal Middle Finger Flex",
+          "trials": 14050,
+          "precision": 1.0,
+          "recall": 0.99993,
+          "f1_score": 0.99996,
+          "fail_closed_idle_drops": 1,
+          "cross_system_misroutes": 0
+        },
+        "Op-4": {
+          "domain": "AR HUD / Smart Weapon Optics",
+          "gesture": "Deep Ring Finger Squeeze",
+          "trials": 13996,
+          "precision": 1.0,
+          "recall": 0.91976,
+          "f1_score": 0.9582,
+          "fail_closed_idle_drops": 1122,
+          "cross_system_misroutes": 0
+        },
+        "Op-5": {
+          "domain": "Powered Exoskeleton",
+          "gesture": "Isometric Forearm Pre-Tension",
+          "trials": 13911,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        },
+        "Op-6": {
+          "domain": "Counter-UAS Directional Jammer",
+          "gesture": "Extended Palm Splay + Sweep",
+          "trials": 13976,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 0
+        }
+      }
+    },
+    "semg_only": {
+      "overall_accuracy": 0.61696,
+      "gesture_accuracy_0_to_6": 0.67142,
+      "cross_system_misroute_rate": 0.134879,
+      "cross_system_misroute_count": 11298,
+      "hazard_false_actuation_rate": 1.0,
+      "hazard_false_actuation_count": 8111,
+      "hazard_trials": 8111,
+      "per_system_metrics": {
+        "Op-1": {
+          "domain": "Micro-UAS (Black Hornet / Recon Swarm)",
+          "gesture": "Index-Thumb Pinch & Glide",
+          "trials": 13766,
+          "precision": 0.47407,
+          "recall": 0.60235,
+          "f1_score": 0.53057,
+          "fail_closed_idle_drops": 5474,
+          "cross_system_misroutes": 0
+        },
+        "Op-2": {
+          "domain": "Quadruped UGV (Ghost / Spot)",
+          "gesture": "Double Wrist Tap + Point",
+          "trials": 14065,
+          "precision": 0.99353,
+          "recall": 0.42552,
+          "f1_score": 0.59585,
+          "fail_closed_idle_drops": 8076,
+          "cross_system_misroutes": 4
+        },
+        "Op-3": {
+          "domain": "Tactical Radio Suite",
+          "gesture": "Sub-Vocal Middle Finger Flex",
+          "trials": 14050,
+          "precision": 0.99488,
+          "recall": 0.67751,
+          "f1_score": 0.80608,
+          "fail_closed_idle_drops": 1411,
+          "cross_system_misroutes": 3120
+        },
+        "Op-4": {
+          "domain": "AR HUD / Smart Weapon Optics",
+          "gesture": "Deep Ring Finger Squeeze",
+          "trials": 13996,
+          "precision": 0.55003,
+          "recall": 0.87897,
+          "f1_score": 0.67664,
+          "fail_closed_idle_drops": 1694,
+          "cross_system_misroutes": 0
+        },
+        "Op-5": {
+          "domain": "Powered Exoskeleton",
+          "gesture": "Isometric Forearm Pre-Tension",
+          "trials": 13911,
+          "precision": 0.99687,
+          "recall": 0.41241,
+          "f1_score": 0.58344,
+          "fail_closed_idle_drops": 0,
+          "cross_system_misroutes": 8174
+        },
+        "Op-6": {
+          "domain": "Counter-UAS Directional Jammer",
+          "gesture": "Extended Palm Splay + Sweep",
+          "trials": 13976,
+          "precision": 0.9966,
+          "recall": 0.83973,
+          "f1_score": 0.91146,
+          "fail_closed_idle_drops": 2240,
+          "cross_system_misroutes": 0
+        }
+      }
+    },
+    "pmut_only": {
+      "overall_accuracy": 0.77509,
+      "gesture_accuracy_0_to_6": 0.84351,
+      "cross_system_misroute_rate": 0.076453,
+      "cross_system_misroute_count": 6404,
+      "hazard_false_actuation_rate": 0.856368,
+      "hazard_false_actuation_count": 6946,
+      "hazard_trials": 8111,
+      "per_system_metrics": {
+        "Op-1": {
+          "domain": "Micro-UAS (Black Hornet / Recon Swarm)",
+          "gesture": "Index-Thumb Pinch & Glide",
+          "trials": 13766,
+          "precision": 0.96793,
+          "recall": 0.80692,
+          "f1_score": 0.88012,
+          "fail_closed_idle_drops": 2658,
+          "cross_system_misroutes": 0
+        },
+        "Op-2": {
+          "domain": "Quadruped UGV (Ghost / Spot)",
+          "gesture": "Double Wrist Tap + Point",
+          "trials": 14065,
+          "precision": 0.98562,
+          "recall": 0.98422,
+          "f1_score": 0.98492,
+          "fail_closed_idle_drops": 221,
+          "cross_system_misroutes": 1
+        },
+        "Op-3": {
+          "domain": "Tactical Radio Suite",
+          "gesture": "Sub-Vocal Middle Finger Flex",
+          "trials": 14050,
+          "precision": 0.52579,
+          "recall": 0.95338,
+          "f1_score": 0.67778,
+          "fail_closed_idle_drops": 655,
+          "cross_system_misroutes": 0
+        },
+        "Op-4": {
+          "domain": "AR HUD / Smart Weapon Optics",
+          "gesture": "Deep Ring Finger Squeeze",
+          "trials": 13996,
+          "precision": 0.96121,
+          "recall": 0.84817,
+          "f1_score": 0.90116,
+          "fail_closed_idle_drops": 507,
+          "cross_system_misroutes": 1618
+        },
+        "Op-5": {
+          "domain": "Powered Exoskeleton",
+          "gesture": "Isometric Forearm Pre-Tension",
+          "trials": 13911,
+          "precision": 0.99694,
+          "recall": 0.65588,
+          "f1_score": 0.79122,
+          "fail_closed_idle_drops": 2,
+          "cross_system_misroutes": 4785
+        },
+        "Op-6": {
+          "domain": "Counter-UAS Directional Jammer",
+          "gesture": "Extended Palm Splay + Sweep",
+          "trials": 13976,
+          "precision": 0.97668,
+          "recall": 0.7221,
+          "f1_score": 0.83031,
+          "fail_closed_idle_drops": 3884,
+          "cross_system_misroutes": 0
+        }
+      }
+    },
+    "naive_fusion": {
+      "overall_accuracy": 0.79949,
+      "gesture_accuracy_0_to_6": 0.87006,
+      "cross_system_misroute_rate": 0.0,
+      "cross_system_misroute_count": 0,
+      "hazard_false_actuation_rate": 0.999877,
+      "hazard_false_actuation_count": 8110,
+      "hazard_trials": 8111,
+      "per_system_metrics": {
+        "Op-1": {
+          "domain": "Micro-UAS (Black Hornet / Recon Swarm)",
+          "gesture": "Index-Thumb Pinch & Glide",
+          "trials": 13766,
+          "precision": 0.97992,
+          "recall": 0.84353,
+          "f1_score": 0.90662,
+          "fail_closed_idle_drops": 2154,
+          "cross_system_misroutes": 0
+        },
+        "Op-2": {
+          "domain": "Quadruped UGV (Ghost / Spot)",
+          "gesture": "Double Wrist Tap + Point",
+          "trials": 14065,
+          "precision": 0.99498,
+          "recall": 0.93011,
+          "f1_score": 0.96145,
+          "fail_closed_idle_drops": 983,
+          "cross_system_misroutes": 0
+        },
+        "Op-3": {
+          "domain": "Tactical Radio Suite",
+          "gesture": "Sub-Vocal Middle Finger Flex",
+          "trials": 14050,
+          "precision": 0.79941,
+          "recall": 0.63737,
+          "f1_score": 0.70925,
+          "fail_closed_idle_drops": 5095,
+          "cross_system_misroutes": 0
+        },
+        "Op-4": {
+          "domain": "AR HUD / Smart Weapon Optics",
+          "gesture": "Deep Ring Finger Squeeze",
+          "trials": 13996,
+          "precision": 0.74724,
+          "recall": 0.76,
+          "f1_score": 0.75357,
+          "fail_closed_idle_drops": 3359,
+          "cross_system_misroutes": 0
+        },
+        "Op-5": {
+          "domain": "Powered Exoskeleton",
+          "gesture": "Isometric Forearm Pre-Tension",
+          "trials": 13911,
+          "precision": 0.91339,
+          "recall": 0.99993,
+          "f1_score": 0.9547,
+          "fail_closed_idle_drops": 1,
+          "cross_system_misroutes": 0
+        },
+        "Op-6": {
+          "domain": "Counter-UAS Directional Jammer",
+          "gesture": "Extended Palm Splay + Sweep",
+          "trials": 13976,
+          "precision": 0.95501,
+          "recall": 0.9751,
+          "f1_score": 0.96495,
+          "fail_closed_idle_drops": 348,
+          "cross_system_misroutes": 0
+        }
+      }
+    },
+    "confusion_matrix_9x9": [
+      [
+        8125,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        13766,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        14065,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        14049,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1122,
+        0,
+        0,
+        0,
+        12873,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        13911,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        13976,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4069,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4042
+      ]
+    ],
+    "class_labels": [
+      "IDLE",
+      "Op-1:UAS",
+      "Op-2:UGV",
+      "Op-3:Comms",
+      "Op-4:HUD",
+      "Op-5:Exo",
+      "Op-6:C-UAS",
+      "HAZ:Recoil",
+      "HAZ:Spasm/EMI"
+    ],
+    "ulnar_slip_mae_deg": 1.0867,
+    "aog1_gate_counts": {
+      "gate1_recoil_50ms_locks": 4069,
+      "gate2_cl82_null_cone_dissipations": 2988,
+      "gate3_cross_modal_emi_blocks": 875,
+      "gate4_spasm_smoothness_blocks": 3028,
+      "gate5_context_safety_interlocks": 5440
+    },
+    "latency_budget_ms": {
+      "acquisition_window_ms": 3.2,
+      "cl82_fft_bivector_ms": 0.42,
+      "aog1_firewall_ms": 0.11,
+      "uwb_ble_encrypted_frame_ms": 0.68,
+      "p50_total_ms": 4.458,
+      "p99_total_ms": 4.669,
+      "max_observed_ms": 4.799
+    },
+    "sample_receipts": [
+      {
+        "trial_index": 0,
+        "true_action": "Op-3: Tactical Radio Sub-Vocal Flex",
+        "decoded_action": "Op-3: Tactical Radio Sub-Vocal Flex",
+        "routed_system": "Op-3",
+        "gate_status": "AUTHORIZED_DISPATCH_Op-3",
+        "q82_norm": 0.9946,
+        "cross_modal_coherence": 0.9258,
+        "accel_g": 3.87,
+        "latency_ms": 4.439,
+        "hmac_sha256": "308e78cd0d3d48cc79e31a166e571f6a"
+      },
+      {
+        "trial_index": 1,
+        "true_action": "HAZARD: Ballistic Weapon Recoil (>15G)",
+        "decoded_action": "HAZARD: Ballistic Weapon Recoil (>15G)",
+        "routed_system": "NONE",
+        "gate_status": "SUPPRESSED_GATE1_RECOIL_50MS_LOCK",
+        "q82_norm": -19.3562,
+        "cross_modal_coherence": 0.9975,
+        "accel_g": 18.7,
+        "latency_ms": 4.524,
+        "hmac_sha256": "13c48092671c98ab34d04ae4d457ea8e"
+      },
+      {
+        "trial_index": 2,
+        "true_action": "Op-6: Counter-UAS Jammer Palm Sweep",
+        "decoded_action": "Op-6: Counter-UAS Jammer Palm Sweep",
+        "routed_system": "Op-6",
+        "gate_status": "AUTHORIZED_DISPATCH_Op-6",
+        "q82_norm": 1.0,
+        "cross_modal_coherence": 0.9963,
+        "accel_g": 4.17,
+        "latency_ms": 4.493,
+        "hmac_sha256": "4b6d233d7b5f4f2d98d1092e3298d22e"
+      },
+      {
+        "trial_index": 3,
+        "true_action": "Op-4: AR HUD / Smart Weapon Ring Squeeze",
+        "decoded_action": "Op-4: AR HUD / Smart Weapon Ring Squeeze",
+        "routed_system": "Op-4",
+        "gate_status": "AUTHORIZED_DISPATCH_Op-4",
+        "q82_norm": 1.0,
+        "cross_modal_coherence": 0.9851,
+        "accel_g": 0.91,
+        "latency_ms": 4.559,
+        "hmac_sha256": "f5c125352636e7d00d58d05f370dd2d2"
+      },
+      {
+        "trial_index": 4,
+        "true_action": "Op-4: AR HUD / Smart Weapon Ring Squeeze",
+        "decoded_action": "Op-4: AR HUD / Smart Weapon Ring Squeeze",
+        "routed_system": "Op-4",
+        "gate_status": "AUTHORIZED_DISPATCH_Op-4",
+        "q82_norm": 1.0,
+        "cross_modal_coherence": 0.9876,
+        "accel_g": 4.2,
+        "latency_ms": 4.583,
+        "hmac_sha256": "c5cdc4dfce23fe5f8d9e88ae53c8755c"
+      },
+      {
+        "trial_index": 5,
+        "true_action": "Op-3: Tactical Radio Sub-Vocal Flex",
+        "decoded_action": "Op-3: Tactical Radio Sub-Vocal Flex",
+        "routed_system": "Op-3",
+        "gate_status": "AUTHORIZED_DISPATCH_Op-3",
+        "q82_norm": 1.0,
+        "cross_modal_coherence": 0.9683,
+        "accel_g": 1.12,
+        "latency_ms": 4.415,
+        "hmac_sha256": "91b884e36cb3aaaa2ad0f3e9bbdf9a31"
+      },
+      {
+        "trial_index": 6,
+        "true_action": "Op-6: Counter-UAS Jammer Palm Sweep",
+        "decoded_action": "Op-6: Counter-UAS Jammer Palm Sweep",
+        "routed_system": "Op-6",
+        "gate_status": "INTERLOCKED_BLUE_FORCE_RF_ZONE",
+        "q82_norm": 1.0,
+        "cross_modal_coherence": 0.9877,
+        "accel_g": 3.53,
+        "latency_ms": 4.43,
+        "hmac_sha256": "0f3073bee0b19ad8fa4ae4e2f7e3766a"
+      },
+      {
+        "trial_index": 7,
+        "true_action": "Op-2: Quadruped UGV Wrist Tap + Point",
+        "decoded_action": "Op-2: Quadruped UGV Wrist Tap + Point",
+        "routed_system": "Op-2",
+        "gate_status": "AUTHORIZED_DISPATCH_Op-2",
+        "q82_norm": 1.0,
+        "cross_modal_coherence": 0.9924,
+        "accel_g": 3.38,
+        "latency_ms": 4.514,
+        "hmac_sha256": "bf48c51fd5d98b8c1703e512e563deb3"
+      }
+    ]
+  },
+  "macro_iteration_history": [
+    {
+      "macro_round": 1,
+      "seed": 20273003,
+      "total_sims": 500000,
+      "pass1_bio_remote_acc": 0.98351,
+      "pass4_hazard_false_actuations": 0,
+      "pass5_mission_acc": 0.98876
+    }
+  ],
+  "cumulative_simulations_across_rounds": 500000
+}

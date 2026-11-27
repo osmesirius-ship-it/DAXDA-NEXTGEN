@@ -244,10 +244,6 @@ class DePINClusterManager:
         self.total_blocks_sealed += 1
         self.sealed_receipts.append(receipt)
 
-        # Execute monetized compute broker tasks during cycle idle duty-cycle
-        if hasattr(self, "compute_broker") and self.compute_broker:
-            self.compute_broker.simulate_compute_tick(count=2)
-
         round_summary = {
             "round_status": "BLOCK_SEALED_VALID",
             "block_height": height,

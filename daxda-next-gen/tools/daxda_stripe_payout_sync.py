@@ -3,8 +3,8 @@
 DAXDA Next-Gen — Stripe Payout & Docker Compute Settlement Bridge
 ================================================================
 Synchronizes:
-1. Physical Xeon Docker worker output (158M+ Clifford ops @ $0.0008 tariff)
-2. SQLite commercial ledger balance ($636.94 USD settled founder cash)
+1. Physical Xeon Docker worker output (Clifford ops telemetry)
+2. Verified Live Stripe Account Balance (strictly real API balances; zero simulated fallbacks)
 3. Direct Stripe Treasury payout routing to Nicole Bess's Financial Account:
    fa_65VdIIXJjwPA5az6ErF16SjLR86BSQ2gmZByo9KWLCi0O0
 """
@@ -12,6 +12,7 @@ Synchronizes:
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import logging
 import os
@@ -22,6 +23,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Optional
 import urllib.request
+import urllib.error
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if PROJECT_ROOT not in sys.path:
@@ -59,6 +61,65 @@ class DaxdaStripeDockerBridge:
         self.api_key = os.environ.get("STRIPE_SECRET_KEY", "")
         if self.api_key and stripe:
             stripe.api_key = self.api_key
+        self._cached_stripe_bal: Optional[Dict[str, Any]] = None
+        self._cached_stripe_ts: float = 0.0
+
+    def query_live_stripe_balance(self, max_age_sec: float = 30.0) -> Dict[str, Any]:
+        """Queries the real Stripe /v1/balance endpoint; never returns simulated balances."""
+        now = time.time()
+        if self._cached_stripe_bal is not None and (now - self._cached_stripe_ts) < max_age_sec:
+            return self._cached_stripe_bal
+
+        if not self.api_key:
+            res = {
+                "verified": False,
+                "livemode": False,
+                "available_usd": 0.0,
+                "pending_usd": 0.0,
+                "status": "STRIPE_KEY_MISSING",
+            }
+            self._cached_stripe_bal = res
+            self._cached_stripe_ts = now
+            return res
+
+        try:
+            auth = base64.b64encode((self.api_key + ":").encode("utf-8")).decode("ascii")
+            req = urllib.request.Request(
+                "https://api.stripe.com/v1/balance",
+                headers={"Authorization": f"Basic {auth}", "User-Agent": "DAXDA-Bridge/2.0"},
+            )
+            with urllib.request.urlopen(req, timeout=5.0) as resp:
+                bal = json.loads(resp.read().decode("utf-8"))
+                avail_usd = sum(
+                    b.get("amount", 0) / 100.0
+                    for b in bal.get("available", [])
+                    if str(b.get("currency", "")).lower() == "usd"
+                )
+                pend_usd = sum(
+                    b.get("amount", 0) / 100.0
+                    for b in bal.get("pending", [])
+                    if str(b.get("currency", "")).lower() == "usd"
+                )
+                res = {
+                    "verified": True,
+                    "livemode": bool(bal.get("livemode", False)),
+                    "available_usd": round(avail_usd, 2),
+                    "pending_usd": round(pend_usd, 2),
+                    "status": "VERIFIED_LIVE" if bal.get("livemode") else "VERIFIED_TEST",
+                }
+        except Exception as e:
+            logger.warning(f"Failed querying live Stripe balance: {e}")
+            res = {
+                "verified": False,
+                "livemode": self.api_key.startswith("sk_live_"),
+                "available_usd": 0.0,
+                "pending_usd": 0.0,
+                "status": f"QUERY_ERROR: {e}",
+            }
+
+        self._cached_stripe_bal = res
+        self._cached_stripe_ts = now
+        return res
 
     def get_full_bridge_status(self) -> Dict[str, Any]:
         """Collects synchronous telemetry across Docker, SQLite, and Stripe."""
@@ -109,10 +170,12 @@ class DaxdaStripeDockerBridge:
 
         cage_code = os.environ.get("STANDING_AMERICAN_MILESTONE_CAGE") or fed_partner_meta.get("cage_code") or "PENDING_INPUT"
         uei = os.environ.get("STANDING_AMERICAN_MILESTONE_UEI") or fed_partner_meta.get("uei") or "PENDING_INPUT"
+        live_stripe = self.query_live_stripe_balance()
 
         return {
             "status": "BRIDGE_ONLINE",
             "founder": "Nicole Bess",
+            "verified_stripe_balance": live_stripe,
             "federal_partner": {
                 "entity_name": fed_partner_meta.get("entity_name") or "American Milestone Inc",
                 "authorized_representative": "Nicholas Hartman",
@@ -197,29 +260,54 @@ class DaxdaStripeDockerBridge:
                 "remaining_treasury_balance_usd": round(available_cash - payout_amount, 2)
             }
 
-        # Default: Stripe Treasury Financial Account
+        # Default: Stripe Treasury Financial Account (strict fail-closed; zero simulated fallbacks)
         fa_id = status["stripe_treasury_payout"]["financial_account_id"]
 
-        # If live API key is set, call Stripe Treasury OutboundTransfer / Credit
-        stripe_transfer_id = None
-        if self.api_key and stripe:
-            try:
-                # Initiate transfer via Stripe Treasury or Transfers API
-                transfer = stripe.Transfer.create(
-                    amount=int(payout_amount * 100),
-                    currency="usd",
-                    destination=fa_id,
-                    description=f"DAXDA DePIN Compute Settlement for Nicole Bess ({now_iso})",
-                    metadata={"source": "DAXDA_XEON_DOCKER_LEDGER", "founder": "Nicole Bess"}
-                )
-                stripe_transfer_id = transfer.id
-            except Exception as e:
-                logger.warning(f"Stripe live transfer notice: {e} (recording internal ledger settlement)")
-                stripe_transfer_id = f"fa_sim_{int(time.time())}"
-        else:
-            stripe_transfer_id = f"fa_settled_{int(time.time())}"
+        if not self.api_key or not stripe:
+            return {
+                "status": "ERROR",
+                "error_code": "STRIPE_NOT_CONFIGURED",
+                "message": "Live STRIPE_SECRET_KEY and stripe SDK are required; simulated Stripe payouts are disabled.",
+            }
 
-        # Record settlement in ledger
+        live_bal = self.query_live_stripe_balance(max_age_sec=0.0)
+        if not live_bal.get("verified"):
+            return {
+                "status": "ERROR",
+                "error_code": "STRIPE_BALANCE_UNVERIFIED",
+                "message": f"Could not verify live Stripe balance: {live_bal.get('status')}",
+            }
+
+        if live_bal.get("available_usd", 0.0) < payout_amount:
+            return {
+                "status": "REJECTED_INSUFFICIENT_STRIPE_FUNDS",
+                "available_stripe_usd": live_bal.get("available_usd", 0.0),
+                "pending_stripe_usd": live_bal.get("pending_usd", 0.0),
+                "requested_payout_usd": payout_amount,
+                "message": (
+                    f"Insufficient real Stripe balance (${live_bal.get('available_usd', 0.0):.2f} USD available) "
+                    f"to transfer ${payout_amount:.2f} USD."
+                ),
+            }
+
+        try:
+            transfer = stripe.Transfer.create(
+                amount=int(round(payout_amount * 100)),
+                currency="usd",
+                destination=fa_id,
+                description=f"DAXDA Verified Settlement for Nicole Bess ({now_iso})",
+                metadata={"source": "DAXDA_VERIFIED_STRIPE_LEDGER", "founder": "Nicole Bess"},
+            )
+            stripe_transfer_id = transfer.id
+        except Exception as e:
+            logger.error(f"Stripe live transfer failed: {e}")
+            return {
+                "status": "ERROR",
+                "error_code": "STRIPE_TRANSFER_FAILED",
+                "message": str(e),
+            }
+
+        # Record verified real Stripe transfer in ledger
         with self.billing_engine._get_connection() as conn:
             conn.execute("""
                 UPDATE tenants
@@ -230,9 +318,9 @@ class DaxdaStripeDockerBridge:
             conn.execute("""
                 INSERT INTO deposits (deposit_id, tenant_id, amount_usd, payment_provider, provider_ref, status, timestamp_utc)
                 VALUES (?, 'tenant-daxda-treasury', ?, 'STRIPE_PAYOUT_DISPATCH', ?, 'SETTLED_TO_FINANCIAL_ACCOUNT', ?);
-            """, (ref_id, -payout_amount, stripe_transfer_id or fa_id, now_iso))
+            """, (ref_id, -payout_amount, stripe_transfer_id, now_iso))
 
-        logger.info(f"Settlement of ${payout_amount:.2f} USD dispatched to Stripe FA {fa_id} (Ref: {stripe_transfer_id})")
+        logger.info(f"Verified Stripe transfer of ${payout_amount:.2f} USD dispatched to {fa_id} (Ref: {stripe_transfer_id})")
 
         return {
             "status": "SETTLEMENT_DISPATCHED",

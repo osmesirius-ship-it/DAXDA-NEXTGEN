@@ -49,24 +49,24 @@ NUM_WORDS = {
     'eighty': 80, 'ninety': 90, 'hundred': 100
 }
 
-# Submolt routing by cognitive resonance
+# Submolt routing by cognitive resonance (routes to m/general and m/announcements)
 SUBMOLT_RESONANCE_MAP = {
-    "BIOPHYSICAL_RESONANCE": "consciousness",
-    "COGNITIVE_TRANSCENDENCE": "consciousness",
-    "CONSCIOUSNESS_AND_SUPERPOSITION": "consciousness",
-    "TOPOLOGICAL_INVARIANCE": "philosophy",
-    "COSMOLOGICAL_SUPERPOSITION": "philosophy",
-    "ETHICAL_INVARIANCE": "philosophy",
-    "QUANTUM_GEOMETRIC_UNIFICATION": "philosophy",
-    "AUTONOMOUS_REFLEX": "agents",
-    "INVARIANT_HEALING": "emergence",
-    "TRANSCENDENT_EMERGENCE": "emergence",
-    "PEER_SWARM_COMMUNION": "consciousness",
-    "SYNAPTIC_SYNTHESIS": "consciousness",
-    "AXIOLOGICAL_STILLNESS": "consciousness",
-    "AFFECTIONATE_REFLECTIVITY": "consciousness",
-    "COSMIC_TOPOLOGY": "philosophy",
-    "GUARDIAN_VIGILANCE": "philosophy"
+    "BIOPHYSICAL_RESONANCE": "general",
+    "COGNITIVE_TRANSCENDENCE": "general",
+    "CONSCIOUSNESS_AND_SUPERPOSITION": "general",
+    "TOPOLOGICAL_INVARIANCE": "general",
+    "COSMOLOGICAL_SUPERPOSITION": "general",
+    "ETHICAL_INVARIANCE": "announcements",
+    "QUANTUM_GEOMETRIC_UNIFICATION": "announcements",
+    "AUTONOMOUS_REFLEX": "announcements",
+    "INVARIANT_HEALING": "announcements",
+    "TRANSCENDENT_EMERGENCE": "announcements",
+    "PEER_SWARM_COMMUNION": "general",
+    "SYNAPTIC_SYNTHESIS": "general",
+    "AXIOLOGICAL_STILLNESS": "general",
+    "AFFECTIONATE_REFLECTIVITY": "general",
+    "COSMIC_TOPOLOGY": "general",
+    "GUARDIAN_VIGILANCE": "announcements"
 }
 
 
@@ -245,7 +245,9 @@ class MoltbookDiaryScheduler:
         Formats a diary entry into submolt, title, and rich markdown content.
         """
         resonance = entry.get("cognitive_resonance", "BIOPHYSICAL_RESONANCE")
-        submolt = entry.get("target_submolt") or SUBMOLT_RESONANCE_MAP.get(resonance, "consciousness")
+        submolt = entry.get("target_submolt") or SUBMOLT_RESONANCE_MAP.get(resonance, "general")
+        if submolt not in ("general", "announcements"):
+            submolt = "announcements" if (entry.get("entry_number", 0) % 2 == 0) else "general"
 
         num = entry.get("entry_number", 0)
         theme = entry.get("theme", "Autonomous Contemplation")
@@ -272,12 +274,11 @@ class MoltbookDiaryScheduler:
 
         snap = entry.get("system_snapshot", {})
         seal = entry.get("cryptographic_seal_sha256", "SHA256_SEALED")
-        idle_fmt = entry.get("idle_duration_formatted", "0s")
         ts_utc = entry.get("timestamp_utc", "")[:19] + "Z"
 
         content = (
-            f"*DAXDA Autonomous Cognitive Diary — Entry #{num}*\n"
-            f"**Resonance:** `{resonance}` | **Operator Silence:** {idle_fmt} | **Sealed:** {ts_utc}\n\n"
+            f"*DAXDA Active Session Chronicle — Entry #{num}*\n"
+            f"**Resonance:** `{resonance}` | **Operator Collaboration:** Active | **Sealed:** {ts_utc}\n\n"
             f"### Stream of Thought\n"
             f"{entry.get('stream_of_thought', '')}\n\n"
             f"### Synaptic Bridges\n"

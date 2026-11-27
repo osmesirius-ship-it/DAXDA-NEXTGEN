@@ -59,7 +59,7 @@ class AkashProviderBridge:
         provider_domain: str = "provider.daxda.ai",
         provider_port: int = 8443,
         fleet_daemon_url: str = "http://127.0.0.1:8088",
-        use_mock_fallback: bool = True
+        use_mock_fallback: bool = False
     ):
         self.provider_address = provider_address
         self.provider_domain = provider_domain
@@ -154,69 +154,47 @@ class AkashProviderBridge:
                 "updated_at": datetime.now(timezone.utc).isoformat()
             }
         else:
-            # Grounded state adhering to Akash Provider Playbook (K3s/Kubespray + Rook-Ceph + NVIDIA Operator)
+            # Strict honest telemetry when no live Akash provider daemon is reachable
             state = {
-                "source": "AKASH_PROVIDER_PLAYBOOK_PROVISIONED",
+                "source": "PROVIDER_OFFLINE_UNVERIFIED",
                 "provider_address": self.provider_address,
                 "provider_domain": self.provider_domain,
-                "status": "ONLINE_ACTIVE",
+                "status": "OFFLINE",
                 "kubernetes": {
-                    "distribution": "K3s v1.35.3+k3s1",
-                    "cni": "Calico v3.31.5",
-                    "helm_version": "v4.2.4",
-                    "control_planes": 1,
-                    "workers": 3,
-                    "total_nodes": 3
+                    "distribution": "UNVERIFIED",
+                    "control_planes": 0,
+                    "workers": 0,
+                    "total_nodes": 0
                 },
                 "components": {
-                    "akash_node": "SYNCED",
-                    "akash_provider": "v0.1.1 (DAEMON_ACTIVE)",
-                    "akash_hostname_operator": "RUNNING",
-                    "akash_inventory_operator": "HEALTHY",
-                    "nvidia_gpu_operator": "v26.7.0 (READY)",
-                    "rook_ceph_storage": "v1.19.10 (HEALTHY)",
-                    "ceph_image": "quay.io/ceph/ceph:v19.2.6-20260818"
+                    "akash_node": "OFFLINE",
+                    "akash_provider": "OFFLINE",
+                    "nvidia_gpu_operator": "UNAVAILABLE",
+                    "rook_ceph_storage": "UNAVAILABLE"
                 },
                 "hardware_capacity": {
-                    "cpu_cores_total": 96,
-                    "cpu_cores_allocated": 32,
-                    "memory_total_gb": 768,
-                    "memory_allocated_gb": 500,
-                    "memory_available_gb": 268,
+                    "cpu_cores_total": 0,
+                    "cpu_cores_allocated": 0,
+                    "memory_total_gb": 0,
+                    "memory_allocated_gb": 0,
+                    "memory_available_gb": 0,
                     "gpus": {
-                        "model": "NVIDIA H100 PCIe 80GB",
-                        "total_count": 8,
-                        "allocated_count": 6,
-                        "available_count": 2,
-                        "cuda_version": "12.6",
-                        "driver_version": "560.35.03",
-                        "sxm_fabric_manager": False
-                    },
-                    "storage_classes": {
-                        "beta1_hdd_gb": 0,
-                        "beta2_ssd_gb": 1000,
-                        "beta3_nvme_gb": 7680,
-                        "rook_osd_count": 6,
-                        "redundancy": "3 copies, minimum 2 (Host Failure Domain)"
+                        "model": "NONE_DETECTED",
+                        "total_count": 0,
+                        "allocated_count": 0,
+                        "available_count": 0
                     }
                 },
                 "market_operations": {
-                    "active_leases": 14,
-                    "won_bids_24h": 38,
-                    "total_orders_processed": 1420,
-                    "earned_akt_24h": 128.45,
-                    "earned_usd_equivalent_24h": 411.04,
-                    "akt_token_balance": 842.10,
-                    "escrow_locked_akt": 150.00,
-                    "bid_engine_active": True,
+                    "active_leases": 0,
+                    "won_bids_24h": 0,
+                    "total_orders_processed": 0,
+                    "earned_akt_24h": 0.0,
+                    "earned_usd_equivalent_24h": 0.0,
+                    "akt_token_balance": 0.0,
+                    "escrow_locked_akt": 0.0,
+                    "bid_engine_active": False,
                     "cl16_4_worker_contract": "daxda/cl16_4-worker:latest"
-                },
-                "network_attributes": {
-                    "region": "us-east-va",
-                    "city": "Ashburn",
-                    "country": "US",
-                    "tls_provider": "Cloudflare DNS-01",
-                    "ingress_ip": "198.51.100.22"
                 },
                 "updated_at": datetime.now(timezone.utc).isoformat()
             }

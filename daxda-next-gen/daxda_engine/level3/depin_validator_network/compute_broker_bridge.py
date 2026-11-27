@@ -75,6 +75,7 @@ class DePINComputeBrokerBridge:
     def __init__(self, cluster_manager=None, max_take_limit_usd: float = 100000.00):
         self.cluster = cluster_manager
         self.max_take_limit_usd = float(max_take_limit_usd)
+        self.started_at_ts = time.time()
         self.total_jobs_completed = 0
         self.total_compute_seconds_served = 0.0
         self.gross_revenue_earned_usd = 0.0
@@ -98,66 +99,59 @@ class DePINComputeBrokerBridge:
 
         ionet_key = os.environ.get("IONET_API_KEY") or os.environ.get("IO_NET_API_KEY")
 
-        # Broker Connectors
+        # Broker Connectors (strict verified external state; 0 active contracts until verified external leases exist)
         self.broker_registrations = {
             BrokerProtocol.IONET_WORKER.value: {
                 "name": "io.net GPU Marketplace",
-                "status": "AUTHENTICATED_ONLINE" if ionet_key else "CONNECTED_ONLINE",
+                "status": "AUTHENTICATED_STANDBY" if ionet_key else "UNAUTHENTICATED",
                 "registered_workers": 50,
                 "tier": "TIER_1_CLUSTER",
-                "active_contracts": 18,
+                "active_contracts": 0,
                 "api_authenticated": bool(ionet_key),
                 "auth_protocol": "IO Intelligence & Cloud IO v2 JWT",
                 "owner_id": "6ba06439-3094-443b-b96c-7705ce69183a" if ionet_key else None
             },
             BrokerProtocol.BITTENSOR_SUBNET.value: {
                 "name": "Bittensor Subnet 19 & 44 Bridge",
-                "status": "VALIDATOR_SYNCHRONIZED",
+                "status": "STANDBY_NO_EXTERNAL_MINER",
                 "registered_workers": 50,
                 "emission_yield_token": "TAO_INCENTIVE_POOL",
-                "active_contracts": 12
+                "active_contracts": 0
             },
             BrokerProtocol.RENDER_AKASH.value: {
                 "name": "Render & Akash Compute Daemon",
-                "status": "DAEMON_READY",
+                "status": "STANDBY_NO_ACTIVE_LEASE",
                 "registered_workers": 50,
                 "container_spec": "daxda/cl16_4-worker:latest",
-                "active_contracts": 8
+                "active_contracts": 0
             }
         }
-
-        # Seed initial historical run-time compute
-        self._seed_initial_compute_runtime()
-
-    def _seed_initial_compute_runtime(self):
-        """Initializes simulated compute credits matching the ~21 hours of uptime."""
-        # 50 nodes running over 20+ hours
-        # Assume blended average 38% commercial rental fill-rate across the day
-        fill_rate = 0.38
-        blended_nodes = 50 * fill_rate  # ~19 rented nodes continuously
-        hours_active = 20.67
-        # Blended hourly rate = (17 H100 * 2.85 + 33 3090 * 0.55) / 50 = $1.33/hr
-        blended_rate = 1.332
-        earned = round(blended_nodes * hours_active * blended_rate, 2)  # ~$522 USD
-        self.gross_revenue_earned_usd = earned
-        self.total_jobs_completed = int(hours_active * 120)  # ~2,480 jobs
 
     def dispatch_compute_job(
         self,
         broker_protocol: str = BrokerProtocol.IONET_WORKER.value,
         workload_type: str = "TENSOR_INFERENCE_AND_FINE_TUNING",
         duration_seconds: float = 3.5,
-        node_id: Optional[str] = None
-    ) -> ComputeJobReceipt:
+        node_id: Optional[str] = None,
+        verified_external: bool = False,
+        external_tx_id: Optional[str] = None,
+        settled_usd: Optional[float] = None,
+    ) -> Optional[ComputeJobReceipt]:
         """
-        Dispatches an external commercial compute job to a validator node during its idle duty-cycle.
-        Computes earned USD based on hardware class and logs a cryptographic receipt.
+        Records a verified external commercial compute job receipt.
+        Fail-closed against synthetic revenue: refuses to credit USD unless
+        verified_external=True and an external_tx_id settlement reference is supplied.
         """
         if getattr(self, "is_paused", False):
             return None
 
+        if not verified_external or not external_tx_id:
+            raise ValueError(
+                "Synthetic compute job monetization is disabled. "
+                "Pass verified_external=True and a verified external_tx_id settlement reference."
+            )
+
         if not node_id and self.cluster and self.cluster.nodes_metadata:
-            # Pick a non-jailed, active node
             active_ids = [
                 n_id for n_id, v in self.cluster.staking_engine.validators.items()
                 if not v.is_jailed and not v.is_slashed
@@ -171,11 +165,11 @@ class DePINComputeBrokerBridge:
             hw_class = self.cluster.nodes_metadata[node_id].get("hardware_class", hw_class)
 
         hourly_rate = HardwareRateCard.get_rate(hw_class)
-        earned = round((duration_seconds / 3600.0) * hourly_rate, 6)
+        earned = round(float(settled_usd) if settled_usd is not None else (duration_seconds / 3600.0) * hourly_rate, 6)
 
-        job_id = f"job-{secrets.token_hex(8)}"
+        job_id = str(external_tx_id)
         now_iso = datetime.now(timezone.utc).isoformat()
-        digest = hashlib.sha256(f"{job_id}:{node_id}:{duration_seconds}:{now_iso}".encode()).hexdigest()
+        digest = hashlib.sha256(f"{job_id}:{node_id}:{duration_seconds}:{earned}:{now_iso}".encode()).hexdigest()
 
         receipt = ComputeJobReceipt(
             job_id=job_id,
@@ -194,7 +188,7 @@ class DePINComputeBrokerBridge:
         self.gross_revenue_earned_usd = round(self.gross_revenue_earned_usd + earned, 4)
         self.recent_job_receipts.append(receipt)
 
-        # Log receipt to disk
+        # Log verified receipt to disk
         self._record_job_to_disk(receipt)
         return receipt
 
@@ -208,37 +202,14 @@ class DePINComputeBrokerBridge:
             "hardware_class": receipt.hardware_class,
             "earned_usd": receipt.earned_usd,
             "result_digest_sha256": receipt.result_digest_sha256,
-            "timestamp_utc": receipt.timestamp_utc
+            "timestamp_utc": receipt.timestamp_utc,
+            "verified_external": True,
         }
         try:
             with open(BROKER_LOG_PATH, "a", encoding="utf-8") as f:
                 f.write(json.dumps(rec_data) + "\n")
         except Exception as e:
             logger.warning(f"Failed logging broker receipt: {e}")
-
-    def simulate_compute_tick(self, count: int = 5):
-        """Simulates incoming compute batch from connected brokers during daemon cycle."""
-        if getattr(self, "is_paused", False):
-            return
-
-        protocols = [
-            BrokerProtocol.IONET_WORKER.value,
-            BrokerProtocol.BITTENSOR_SUBNET.value,
-            BrokerProtocol.RENDER_AKASH.value
-        ]
-        workloads = [
-            "LLAMA_3_70B_INFERENCE_SLICING",
-            "DEEPSEEK_V3_MOE_FINE_TUNING",
-            "SDXL_ZERO_LATENCY_RENDER_BATCH",
-            "GENOMIC_FOLDING_ACCELERATION",
-            "FINANCIAL_MONTE_CARLO_RISK_TREE"
-        ]
-        for _ in range(count):
-            self.dispatch_compute_job(
-                broker_protocol=random.choice(protocols),
-                workload_type=random.choice(workloads),
-                duration_seconds=round(random.uniform(2.5, 4.8), 2)
-            )
 
     def set_max_take_limit(self, limit_usd: float) -> float:
         """Sets the maximum take limit / revenue milestone cap for the owner."""
@@ -247,25 +218,29 @@ class DePINComputeBrokerBridge:
         return self.max_take_limit_usd
 
     def get_telemetry(self) -> Dict[str, Any]:
-        """Returns real-time compute broker telemetry and earnings run-rate."""
+        """Returns real-time verified compute broker telemetry (strictly $0.00 until verified external payouts arrive)."""
         node_count = len(self.cluster.staking_engine.validators) if (self.cluster and hasattr(self.cluster, "staking_engine")) else 50
-        scale_factor = max(1.0, node_count / 50.0)
-        
-        # Dynamically scale registered workers and active broker contracts to match cluster scale
-        if BrokerProtocol.IONET_WORKER.value in self.broker_registrations:
-            self.broker_registrations[BrokerProtocol.IONET_WORKER.value]["registered_workers"] = node_count
-            self.broker_registrations[BrokerProtocol.IONET_WORKER.value]["active_contracts"] = int(18 * scale_factor)
-        if BrokerProtocol.BITTENSOR_SUBNET.value in self.broker_registrations:
-            self.broker_registrations[BrokerProtocol.BITTENSOR_SUBNET.value]["registered_workers"] = node_count
-            self.broker_registrations[BrokerProtocol.BITTENSOR_SUBNET.value]["active_contracts"] = int(12 * scale_factor)
-        if BrokerProtocol.RENDER_AKASH.value in self.broker_registrations:
-            self.broker_registrations[BrokerProtocol.RENDER_AKASH.value]["registered_workers"] = node_count
-            self.broker_registrations[BrokerProtocol.RENDER_AKASH.value]["active_contracts"] = int(8 * scale_factor)
+
+        # Registered local validator pool size; active_contracts strictly reflects verified active external leases
+        for proto_key in (
+            BrokerProtocol.IONET_WORKER.value,
+            BrokerProtocol.BITTENSOR_SUBNET.value,
+            BrokerProtocol.RENDER_AKASH.value,
+        ):
+            if proto_key in self.broker_registrations:
+                self.broker_registrations[proto_key]["registered_workers"] = node_count
+                active_for_proto = sum(
+                    1 for meta in self.active_rented_nodes.values()
+                    if meta.get("broker_protocol") == proto_key
+                )
+                self.broker_registrations[proto_key]["active_contracts"] = active_for_proto
 
         total_cluster_daily_capacity_usd = round(node_count * 31.968, 2)
-        current_fill_rate_pct = 42.5  # Active blended commercial load
-        current_daily_run_rate_usd = round(total_cluster_daily_capacity_usd * (current_fill_rate_pct / 100.0), 2)
-        active_nodes = max(1, int(node_count * 0.44))
+        active_nodes = len(self.active_rented_nodes)
+        current_fill_rate_pct = round((active_nodes / max(1, node_count)) * 100.0, 2)
+        elapsed_hours = max(1.0, (time.time() - getattr(self, "started_at_ts", time.time())) / 3600.0)
+        current_hourly_run_rate_usd = round(self.gross_revenue_earned_usd / elapsed_hours, 2)
+        current_daily_run_rate_usd = round(current_hourly_run_rate_usd * 24.0, 2)
 
         recent_formatted = [
             {
@@ -297,6 +272,7 @@ class DePINComputeBrokerBridge:
         is_paused = getattr(self, "is_paused", False)
         return {
             "broker_bridge_status": "COMPUTE_BROKER_PAUSED_TAKING_BREAK" if is_paused else "COMPUTE_BROKER_MARKET_CONNECTED",
+            "revenue_verification_mode": "STRICT_VERIFIED_EXTERNAL_ONLY",
             "is_paused": is_paused,
             "connected_brokers": list(self.broker_registrations.values()),
             "total_registered_nodes": node_count,
@@ -305,7 +281,7 @@ class DePINComputeBrokerBridge:
             "cluster_fill_rate_pct": current_fill_rate_pct,
             "total_jobs_completed": self.total_jobs_completed,
             "gross_revenue_earned_today_usd": round(self.gross_revenue_earned_usd, 2),
-            "current_hourly_run_rate_usd": round(current_daily_run_rate_usd / 24.0, 2),
+            "current_hourly_run_rate_usd": current_hourly_run_rate_usd,
             "projected_daily_revenue_usd": current_daily_run_rate_usd,
             "max_take_limit_usd": self.max_take_limit_usd,
             "target_revenue_limit_usd": self.max_take_limit_usd,

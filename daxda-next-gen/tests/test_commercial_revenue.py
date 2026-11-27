@@ -128,7 +128,7 @@ def test_metered_billing_engine_lifecycle():
 
 
 def test_depin_compute_broker_bridge():
-    """Verify registration, rate card calculation, and idle cycle lease dispatch."""
+    """Verify strict zero-simulation startup, rejection of synthetic ticks, and verified external receipt recording."""
     bridge = DePINComputeBrokerBridge()
 
     # 1. Verify hardware rate cards
@@ -137,20 +137,31 @@ def test_depin_compute_broker_bridge():
     assert rate_h100 == 2.85
     assert rate_3090 == 0.55
 
-    # 2. Simulate compute ticks leasing idle cycles
-    initial_revenue = bridge.gross_revenue_earned_usd
-    bridge.simulate_compute_tick(count=10)
-    assert bridge.total_jobs_completed >= 10
-    assert bridge.gross_revenue_earned_usd > initial_revenue
+    # 2. Verify zero pre-seeded revenue and fail-closed rejection of unverified synthetic jobs
+    assert bridge.gross_revenue_earned_usd == 0.0
+    assert bridge.total_jobs_completed == 0
+    assert not hasattr(bridge, "simulate_compute_tick")
+    with pytest.raises(ValueError, match="Synthetic compute job monetization is disabled"):
+        bridge.dispatch_compute_job()
 
-    # 3. Check telemetry fields
-    telem = bridge.get_telemetry()
-    assert telem["broker_bridge_status"] == "COMPUTE_BROKER_MARKET_CONNECTED"
-    assert telem["total_registered_nodes"] == 50
-    assert telem["active_rented_nodes"] > 0
-    assert telem["max_cluster_daily_capacity_usd"] > 1000.0
-    assert telem["target_scale_1000_usd_day_progress_pct"] > 0.0
-    assert len(telem["recent_job_receipts"]) > 0
+    telem_idle = bridge.get_telemetry()
+    assert telem_idle["broker_bridge_status"] == "COMPUTE_BROKER_MARKET_CONNECTED"
+    assert telem_idle["revenue_verification_mode"] == "STRICT_VERIFIED_EXTERNAL_ONLY"
+    assert telem_idle["total_registered_nodes"] == 50
+    assert telem_idle["active_rented_nodes"] == 0
+    assert telem_idle["gross_revenue_earned_today_usd"] == 0.0
+    assert telem_idle["max_cluster_daily_capacity_usd"] > 1000.0
+
+    # 3. Verify recording of an explicitly verified external settlement receipt
+    receipt = bridge.dispatch_compute_job(
+        verified_external=True,
+        external_tx_id="ext_tx_ionet_verified_001",
+        settled_usd=1.25,
+    )
+    assert receipt is not None
+    assert bridge.total_jobs_completed == 1
+    assert bridge.gross_revenue_earned_usd == 1.25
+    assert len(bridge.get_telemetry()["recent_job_receipts"]) == 1
 
 
 def test_live_daemon_commercial_endpoints():

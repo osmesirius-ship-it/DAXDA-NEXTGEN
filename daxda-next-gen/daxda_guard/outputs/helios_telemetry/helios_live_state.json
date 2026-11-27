@@ -1,24 +1,24 @@
 {
   "imf": {
-    "timestamp": "2026-11-23T16:48:00",
-    "bt": 2.22,
-    "bx": 0.38,
-    "by": -2.04,
-    "bz": 0.75,
+    "timestamp": "2026-11-26T04:46:00",
+    "bt": 3.82,
+    "bx": -3.17,
+    "by": 1.98,
+    "bz": -0.79,
     "reconnection_active": false,
-    "reconnection_energy_index": 0.0
+    "reconnection_energy_index": 0.272
   },
   "solar_wind": {
-    "timestamp": "2026-11-23T16:46:00",
-    "speed_km_s": 320.4,
-    "density_p_cm3": 1.39,
-    "temp_k": 34836.0,
-    "dynamic_pressure_npa": 0.239
+    "timestamp": "2026-11-26T04:46:00",
+    "speed_km_s": 343.8,
+    "density_p_cm3": 2.8,
+    "temp_k": 27260.0,
+    "dynamic_pressure_npa": 0.553
   },
   "solar_flare": {
-    "timestamp": "2026-11-24T16:45:00Z",
-    "xray_flux": 1.5182124002421915e-07,
-    "flare_tier": "B1.5",
+    "timestamp": "2026-11-27T04:45:00Z",
+    "xray_flux": 4.52366322178932e-07,
+    "flare_tier": "B4.5",
     "threat_level": "QUIET_SOLAR_BACKGROUND"
   },
   "geomagnetic": {
@@ -27,21 +27,21 @@
     "description": "Planetary geomagnetic index Kp=1.0 (Quiet Geomagnetic Conditions)"
   },
   "clifford_manifold": {
-    "grade_0_scalar": 1.961,
+    "grade_0_scalar": 5.8063,
     "grade_1_vector": [
-      320.4,
+      343.8,
       0.0,
       0.0
     ],
     "grade_2_bivector": [
-      0.38,
-      -2.04,
-      0.75
+      -3.17,
+      1.98,
+      -0.79
     ],
-    "grade_3_trivector": 0.118,
-    "manifold_anomaly_norm": 0.347
+    "grade_3_trivector": 0.3398,
+    "manifold_anomaly_norm": 0.73
   },
-  "updated_at": "2026-11-24T16:48:17Z",
+  "updated_at": "2026-11-27T04:47:48Z",
   "imagery": {
     "sdo_171": {
       "status": "OK",

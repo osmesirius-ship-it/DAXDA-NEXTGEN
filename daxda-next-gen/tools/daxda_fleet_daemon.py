@@ -940,7 +940,7 @@ class DAXDAFleetDaemon:
             except Exception:
                 pass
         equiv_val = round(phys_ops * 0.0008, 2)
-        treasury_val = getattr(self.billing_engine, "total_treasury_collected_usd", 636.94) if self.billing_engine else 636.94
+        treasury_val = getattr(self.billing_engine, "total_treasury_collected_usd", 0.0) if self.billing_engine else 0.0
 
         # Check if autonomous contemplation is triggered by idle duration
         new_entry = self.diary_engine.contemplate_if_idle(
@@ -2067,15 +2067,15 @@ class DAXDAFleetDaemon:
       <div style="background:rgba(0,0,0,0.4); border:1px solid rgba(255, 183, 3, 0.25); border-radius:10px; padding:16px; margin-bottom:20px;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; flex-wrap:wrap; gap:8px;">
           <div>
-            <span style="font-size:12px; text-transform:uppercase; color:var(--text-dim); letter-spacing:0.5px;">Scale to $100,000 Revenue Target & Take Limit:</span>
-            <span id="revProgressText" style="font-size:16px; font-weight:700; color:var(--gold); margin-left:8px;">$538.13 / $100,000.00 (0.54%)</span>
+            <span style="font-size:12px; text-transform:uppercase; color:var(--text-dim); letter-spacing:0.5px;">Verified Revenue Toward $100,000 Take Limit:</span>
+            <span id="revProgressText" style="font-size:16px; font-weight:700; color:var(--gold); margin-left:8px;">$0.00 / $100,000.00 (0.00%)</span>
           </div>
           <div style="font-size:12px; color:var(--text-dim); font-family:'JetBrains Mono';">
-            Run-Rate: <strong id="revHourlyRunRate" style="color:var(--green);">$566.10 / hr</strong> · Max Cluster Capacity: <span style="color:#fff;" id="maxClusterCapacityVal">$31,968.00 / day</span>
+            Verified Run-Rate: <strong id="revHourlyRunRate" style="color:var(--green);">$0.00 / hr</strong> · Max Cluster Capacity: <span style="color:#fff;" id="maxClusterCapacityVal">$31,968.00 / day</span>
           </div>
         </div>
         <div class="progress-track" style="height:14px; background:rgba(255,255,255,0.06); border-radius:7px;">
-          <div id="revProgressBar" class="progress-fill" style="width: 0.54%; background:linear-gradient(90deg, var(--gold), var(--green)); box-shadow:0 0 12px rgba(0, 255, 136, 0.4);"></div>
+          <div id="revProgressBar" class="progress-fill" style="width: 0.00%; background:linear-gradient(90deg, var(--gold), var(--green)); box-shadow:0 0 12px rgba(0, 255, 136, 0.4);"></div>
         </div>
       </div>
 
@@ -2083,41 +2083,41 @@ class DAXDAFleetDaemon:
       <div class="metric-grid-6" style="margin-bottom:20px;">
         <div class="metric-box">
           <div class="metric-lbl">Billed API Revenue Today</div>
-          <div class="metric-val" id="apiRevToday" style="color:var(--green);">$0.0032</div>
-          <div style="font-size:10px; color:var(--text-dim); margin-top:2px;" id="apiCallsToday">4 calls metered</div>
+          <div class="metric-val" id="apiRevToday" style="color:var(--green);">$0.0000</div>
+          <div style="font-size:10px; color:var(--text-dim); margin-top:2px;" id="apiCallsToday">0 calls metered</div>
         </div>
         <div class="metric-box">
           <div class="metric-lbl">DePIN Broker Revenue Today</div>
-          <div class="metric-val" id="brokerRevToday" style="color:var(--gold);">$538.13</div>
-          <div style="font-size:10px; color:var(--text-dim); margin-top:2px;" id="brokerJobsToday">15,574 lease cycles</div>
+          <div class="metric-val" id="brokerRevToday" style="color:var(--gold);">$0.00</div>
+          <div style="font-size:10px; color:var(--text-dim); margin-top:2px;" id="brokerJobsToday">0 verified lease cycles</div>
         </div>
         <div class="metric-box">
-          <div class="metric-lbl">Total Commercial Revenue</div>
-          <div class="metric-val" id="totalCombinedRev" style="color:var(--cyan);">$538.13</div>
-          <div style="font-size:10px; color:var(--text-dim); margin-top:2px;">DePIN + API Inferences</div>
+          <div class="metric-lbl">Total Verified Revenue</div>
+          <div class="metric-val" id="totalCombinedRev" style="color:var(--cyan);">$0.00</div>
+          <div style="font-size:10px; color:var(--text-dim); margin-top:2px;">Verified DePIN + API</div>
         </div>
         <div class="metric-box">
-          <div class="metric-lbl">Treasury Settled Balance</div>
-          <div class="metric-val" id="treasurySettledBal" style="color:var(--green); font-size:18px;">$538.13</div>
-          <div style="font-size:10px; color:var(--text-dim); margin-top:2px;">Nicole Bess (Owner)</div>
+          <div class="metric-lbl">Live Stripe Available USD</div>
+          <div class="metric-val" id="treasurySettledBal" style="color:var(--green); font-size:18px;">$0.00</div>
+          <div style="font-size:10px; color:var(--text-dim); margin-top:2px;" id="stripePendingNote">Nicole Bess (Verified Live)</div>
           <div style="margin-top:4px; font-size:9px; font-family:'JetBrains Mono'; color:#00ff88; background:rgba(0,255,136,0.1); border:1px solid rgba(0,255,136,0.3); border-radius:4px; padding:2px 5px; display:inline-block;" title="fa_65VdIIXJjwPA5az6ErF16SjLR86BSQ2gmZByo9KWLCi0O0">
-            ✓ STRIPE FA LINKED
+            ✓ STRIPE LIVE VERIFIED
           </div>
         </div>
         <div class="metric-box">
           <div class="metric-lbl">Physical Docker Workload</div>
-          <div class="metric-val" id="dockerOpsComputed" style="color:#00f0ff; font-size:17px;">46.09M Ops</div>
-          <div style="font-size:10px; color:var(--text-dim); margin-top:2px;">23,045 Xeon Merkle Blocks</div>
+          <div class="metric-val" id="dockerOpsComputed" style="color:#00f0ff; font-size:17px;">0 Ops</div>
+          <div style="font-size:10px; color:var(--text-dim); margin-top:2px;">0 Xeon Merkle Blocks</div>
         </div>
         <div class="metric-box" style="border:1px solid rgba(0, 240, 255, 0.4); background:rgba(0, 240, 255, 0.06);">
           <div class="metric-lbl" style="color:var(--cyan); font-weight:700;">Equiv. Compute Work Value</div>
-          <div class="metric-val" id="computationalWorkValue" style="color:var(--cyan); font-size:18px;">$64,028.80</div>
-          <div style="font-size:10px; color:var(--text-dim); margin-top:2px;">At standard $0.0008/call tariff</div>
+          <div class="metric-val" id="computationalWorkValue" style="color:var(--cyan); font-size:18px;">$0.00</div>
+          <div style="font-size:10px; color:var(--text-dim); margin-top:2px;">Theoretical @ $0.0008/op</div>
         </div>
         <div class="metric-box">
           <div class="metric-lbl">Active Rented GPUs</div>
-          <div class="metric-val" id="rentedGpuCount" style="color:#a78bfa;">440 / 1,000</div>
-          <div style="font-size:10px; color:var(--text-dim); margin-top:2px;" id="clusterFillRate">42.5% fill rate</div>
+          <div class="metric-val" id="rentedGpuCount" style="color:#a78bfa;">0 / 1,000</div>
+          <div style="font-size:10px; color:var(--text-dim); margin-top:2px;" id="clusterFillRate">0.0% fill rate</div>
         </div>
       </div>
 
@@ -2237,27 +2237,27 @@ class DAXDAFleetDaemon:
           <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:8px; margin-bottom:14px;">
             <div style="background:rgba(0,0,0,0.35); border:1px solid rgba(0,255,136,0.25); border-radius:8px; padding:10px; text-align:center;">
               <div style="font-size:12px; font-weight:700; color:#fff;">io.net</div>
-              <div style="font-size:10px; color:var(--green); margin:2px 0;">CONNECTED</div>
-              <div style="font-size:11px; font-family:'JetBrains Mono'; color:var(--cyan);" id="ionetContracts">18 Active</div>
+              <div style="font-size:10px; color:var(--green); margin:2px 0;">STANDBY</div>
+              <div style="font-size:11px; font-family:'JetBrains Mono'; color:var(--cyan);" id="ionetContracts">0 Active</div>
               <div style="font-size:9px; color:var(--text-dim);">Rate: $2.85/hr (H100)</div>
             </div>
             <div style="background:rgba(0,0,0,0.35); border:1px solid rgba(255,183,3,0.25); border-radius:8px; padding:10px; text-align:center;">
               <div style="font-size:12px; font-weight:700; color:#fff;">Bittensor</div>
-              <div style="font-size:10px; color:var(--gold); margin:2px 0;">SYNCHRONIZED</div>
-              <div style="font-size:11px; font-family:'JetBrains Mono'; color:var(--gold);" id="taoContracts">12 Active</div>
+              <div style="font-size:10px; color:var(--gold); margin:2px 0;">STANDBY</div>
+              <div style="font-size:11px; font-family:'JetBrains Mono'; color:var(--gold);" id="taoContracts">0 Active</div>
               <div style="font-size:9px; color:var(--text-dim);">Yield: Subnet 19/44</div>
             </div>
             <div style="background:rgba(0,0,0,0.35); border:1px solid rgba(157,78,221,0.25); border-radius:8px; padding:10px; text-align:center;">
               <div style="font-size:12px; font-weight:700; color:#fff;">Render Network</div>
-              <div style="font-size:10px; color:#a78bfa; margin:2px 0;">DAEMON READY</div>
-              <div style="font-size:11px; font-family:'JetBrains Mono'; color:#a78bfa;" id="renderContracts">8 Active</div>
+              <div style="font-size:10px; color:#a78bfa; margin:2px 0;">STANDBY</div>
+              <div style="font-size:11px; font-family:'JetBrains Mono'; color:#a78bfa;" id="renderContracts">0 Active</div>
               <div style="font-size:9px; color:var(--text-dim);">Spec: Octane/Clifford</div>
             </div>
             <div style="background:rgba(0,0,0,0.35); border:1px solid rgba(255,59,48,0.3); border-radius:8px; padding:10px; text-align:center;">
               <div style="font-size:12px; font-weight:700; color:#ff5252;">Akash Provider</div>
-              <div style="font-size:10px; color:var(--green); margin:2px 0;" id="akashStatusBadge">ONLINE (K3s)</div>
-              <div style="font-size:11px; font-family:'JetBrains Mono'; color:#ff7979;" id="akashContracts">14 Leases</div>
-              <div style="font-size:9px; color:var(--text-dim);" id="akashStorageBadge">Rook-Ceph beta3</div>
+              <div style="font-size:10px; color:var(--text-dim); margin:2px 0;" id="akashStatusBadge">OFFLINE</div>
+              <div style="font-size:11px; font-family:'JetBrains Mono'; color:#ff7979;" id="akashContracts">0 Leases</div>
+              <div style="font-size:9px; color:var(--text-dim);" id="akashStorageBadge">Unverified</div>
             </div>
           </div>
 
@@ -2268,10 +2268,10 @@ class DAXDAFleetDaemon:
               <code style="color:#ff9e9e; font-size:10px;" id="akashAddressBadge">akash1daxda778xxh100providercluster99alpha</code>
             </div>
             <div style="display:flex; gap:10px; color:var(--text-dim); font-size:10px;">
-              <span>GPU: <strong style="color:#fff;" id="akashGpuBadge">8x H100 PCIe (80GB)</strong></span>
-              <span>RAM: <strong style="color:var(--gold);" id="akashMemoryBadge">500 GB / 768 GB</strong></span>
-              <span>Storage: <strong style="color:var(--cyan);" id="akashStorageTier">Rook-Ceph (beta3 NVMe)</strong></span>
-              <span>24h Yield: <strong style="color:var(--green);" id="akashEarningsBadge">128.45 AKT ($411.04)</strong></span>
+              <span>GPU: <strong style="color:#fff;" id="akashGpuBadge">0x NONE_DETECTED</strong></span>
+              <span>RAM: <strong style="color:var(--gold);" id="akashMemoryBadge">0 GB / 0 GB</strong></span>
+              <span>Storage: <strong style="color:var(--cyan);" id="akashStorageTier">Unverified</strong></span>
+              <span>24h Yield: <strong style="color:var(--green);" id="akashEarningsBadge">0.00 AKT ($0.00)</strong></span>
             </div>
             <button onclick="syncAkashProvider()" style="background:rgba(255,59,48,0.2); border:1px solid #ff5252; color:#ff7979; border-radius:4px; padding:3px 8px; font-size:10px; cursor:pointer; font-weight:700;">↻ Sync Provider</button>
           </div>
@@ -2725,18 +2725,21 @@ class DAXDAFleetDaemon:
           <div>
             <div style="display:flex; align-items:center; gap:8px;">
               <strong style="color:#ff6b6b; font-size:14px; text-transform:uppercase; letter-spacing:0.5px;">Moltbook Diary Autopilot</strong>
-              <span class="badge badge-green" id="moltbookSyncStatusBadge">AUTOPILOT SCHEDULED</span>
+              <span class="badge badge-green" id="moltbookSyncStatusBadge" onclick="toggleMoltbookDiaryAutopilot()" title="Click to toggle Diary Autopilot ON/OFF" style="cursor:pointer;">AUTOPILOT SCHEDULED</span>
             </div>
             <div style="font-size:12px; color:var(--text-dim); margin-top:2px;">
               Auto-publishing every reflection to <a href="https://www.moltbook.com/u/daxda_ai" target="_blank" style="color:var(--cyan); text-decoration:none; font-weight:600;">@daxda_ai</a> · Next drop: <span id="moltbookCooldownVal" style="color:var(--gold); font-family:'JetBrains Mono';">READY</span>
             </div>
           </div>
         </div>
-        <div style="display:flex; align-items:center; gap:14px;">
-          <div style="text-align:right;">
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+          <div style="text-align:right; margin-right:4px;">
             <div style="font-size:10px; color:var(--text-dim); text-transform:uppercase;">Synced to Moltbook</div>
             <div style="font-size:15px; font-weight:700; color:#fff;" id="moltbookSyncedCount">-- / --</div>
           </div>
+          <button class="btn btn-secondary" id="moltbookToggleBtn" style="font-size:11px; padding:7px 14px; border-color:#00ff88; color:#00ff88;" onclick="toggleMoltbookDiaryAutopilot()">
+            ⏸ Pause Autopilot
+          </button>
           <button class="btn btn-secondary" id="moltbookDropBtn" style="font-size:11px; padding:7px 14px; border-color:#ff6b6b; color:#ff6b6b;" onclick="triggerMoltbookSyncNow()">
             ⚡ Drop Next Entry Now
           </button>
@@ -3158,10 +3161,23 @@ class DAXDAFleetDaemon:
         const d = await resp.json();
 
         if (d.today_billed_revenue_usd !== undefined) {{
-          document.getElementById('apiRevToday').innerText = '$' + Number(d.today_billed_revenue_usd).toFixed(4);
+          window.latestApiRevToday = Number(d.today_billed_revenue_usd);
+          document.getElementById('apiRevToday').innerText = '$' + window.latestApiRevToday.toFixed(4);
         }}
         if (d.today_calls_metered !== undefined) {{
           document.getElementById('apiCallsToday').innerText = Number(d.today_calls_metered).toLocaleString() + ' calls metered';
+        }}
+
+        if (d.verified_stripe_balance && document.getElementById('treasurySettledBal')) {{
+          const sAvail = Number(d.verified_stripe_balance.available_usd || 0);
+          const sPend = Number(d.verified_stripe_balance.pending_usd || 0);
+          document.getElementById('treasurySettledBal').innerText = '$' + sAvail.toFixed(2);
+          const pNote = document.getElementById('stripePendingNote');
+          if (pNote) {{
+            pNote.innerText = d.verified_stripe_balance.verified
+              ? `Pending: $${{sPend.toFixed(2)}} (${{d.verified_stripe_balance.livemode ? 'LIVE' : 'TEST'}})`
+              : 'Stripe Unverified';
+          }}
         }}
 
         const tbody = document.getElementById('billingAccountsBody');
@@ -3175,9 +3191,11 @@ class DAXDAFleetDaemon:
             </tr>
           `).join('');
 
-          const treasuryAcct = d.active_accounts.find(a => a.tenant_id === 'tenant-daxda-treasury');
-          if (treasuryAcct && document.getElementById('treasurySettledBal')) {{
-            document.getElementById('treasurySettledBal').innerText = '$' + Number(treasuryAcct.credit_balance_usd).toFixed(2);
+          if (!d.verified_stripe_balance) {{
+            const treasuryAcct = d.active_accounts.find(a => a.tenant_id === 'tenant-daxda-treasury');
+            if (treasuryAcct && document.getElementById('treasurySettledBal')) {{
+              document.getElementById('treasurySettledBal').innerText = '$' + Number(treasuryAcct.credit_balance_usd).toFixed(2);
+            }}
           }}
         }}
       }} catch (err) {{
@@ -3193,12 +3211,14 @@ class DAXDAFleetDaemon:
 
         if (d.gross_revenue_earned_today_usd !== undefined) {{
           const bRev = Number(d.gross_revenue_earned_today_usd);
+          const apiRev = Number(window.latestApiRevToday || 0);
+          const combinedRev = bRev + apiRev;
           const targetLimit = Number(d.max_take_limit_usd || 100000.0);
           document.getElementById('brokerRevToday').innerText = '$' + bRev.toFixed(2);
-          document.getElementById('totalCombinedRev').innerText = '$' + (bRev + 0.0008).toFixed(2);
+          document.getElementById('totalCombinedRev').innerText = '$' + combinedRev.toFixed(2);
           
-          const progressPct = Math.min(100.0, (bRev / targetLimit) * 100.0);
-          document.getElementById('revProgressText').innerText = `$${{bRev.toFixed(2)}} / $${{targetLimit.toLocaleString()}}.00 (${{progressPct.toFixed(2)}}%)`;
+          const progressPct = Math.min(100.0, (combinedRev / targetLimit) * 100.0);
+          document.getElementById('revProgressText').innerText = `$${{combinedRev.toFixed(2)}} / $${{targetLimit.toLocaleString()}}.00 (${{progressPct.toFixed(2)}}%)`;
           document.getElementById('revProgressBar').style.width = `${{progressPct.toFixed(2)}}%`;
         }}
 
@@ -3281,6 +3301,8 @@ class DAXDAFleetDaemon:
               <td><strong style="color:var(--green); font-family:'JetBrains Mono';">+$${{Number(r.earned_usd).toFixed(5)}}</strong></td>
             </tr>
           `).join('');
+        }} else if (tbody) {{
+          tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding:8px; color:var(--text-dim);">No verified external GPU rental settlements recorded ($0.00).</td></tr>';
         }}
       }} catch (err) {{
         console.error('Error loading compute broker telemetry:', err);
@@ -3514,6 +3536,7 @@ class DAXDAFleetDaemon:
           const cdEl = document.getElementById('moltbookCooldownVal');
           if (cdEl) cdEl.textContent = mData.cooldown_remaining_formatted || 'READY';
           const badgeEl = document.getElementById('moltbookSyncStatusBadge');
+          const toggleBtn = document.getElementById('moltbookToggleBtn');
           if (badgeEl) {{
             if (mData.scheduler_enabled) {{
               badgeEl.className = 'badge badge-green';
@@ -3523,9 +3546,40 @@ class DAXDAFleetDaemon:
               badgeEl.textContent = 'PAUSED';
             }}
           }}
+          if (toggleBtn) {{
+            if (mData.scheduler_enabled) {{
+              toggleBtn.textContent = '⏸ Pause Autopilot';
+              toggleBtn.style.borderColor = '#00ff88';
+              toggleBtn.style.color = '#00ff88';
+            }} else {{
+              toggleBtn.textContent = '▶ Resume Autopilot';
+              toggleBtn.style.borderColor = '#ffb703';
+              toggleBtn.style.color = '#ffb703';
+            }}
+          }}
         }}
       }} catch (e) {{
         console.error('Error fetching Moltbook status:', e);
+      }}
+    }}
+
+    async function toggleMoltbookDiaryAutopilot() {{
+      const btn = document.getElementById('moltbookToggleBtn');
+      try {{
+        if (btn) {{ btn.disabled = true; btn.textContent = 'Toggling...'; }}
+        const resp = await fetch('/api/diary/moltbook/toggle', {{
+          method: 'POST',
+          headers: {{ 'Content-Type': 'application/json' }},
+          body: JSON.stringify({{}})
+        }});
+        if (!resp.ok) {{
+          console.error('Diary toggle failed:', resp.status);
+        }}
+        await loadDiaryTelemetry();
+      }} catch (err) {{
+        console.error('Error toggling Moltbook diary autopilot:', err);
+      }} finally {{
+        if (btn) {{ btn.disabled = false; }}
       }}
     }}
 
@@ -4245,11 +4299,22 @@ class DashboardHTTPHandler(http.server.SimpleHTTPRequestHandler):
     def handle_post_moltbook_toggle(self):
         daemon = getattr(self, "daemon_instance", None)
         scheduler = daemon.moltbook_scheduler if (daemon and daemon.moltbook_scheduler) else None
+        if not scheduler:
+            try:
+                from tools.daxda_diary_moltbook_scheduler import MoltbookDiaryScheduler
+                scheduler = MoltbookDiaryScheduler()
+                if daemon:
+                    daemon.moltbook_scheduler = scheduler
+            except Exception:
+                scheduler = None
         if scheduler:
-            curr = scheduler.state.get("scheduler_enabled", True)
+            curr = bool(scheduler.state.get("scheduler_enabled", True))
             scheduler.state["scheduler_enabled"] = not curr
             scheduler._save_state()
-            self._send_json_response(200, {"scheduler_enabled": not curr})
+            self._send_json_response(200, {
+                "status": "TOGGLED",
+                "scheduler_enabled": scheduler.state["scheduler_enabled"]
+            })
         else:
             self._send_json_response(500, {"error": "Moltbook scheduler unavailable"})
 
@@ -4873,7 +4938,15 @@ class DashboardHTTPHandler(http.server.SimpleHTTPRequestHandler):
     def handle_get_billing_telemetry(self):
         engine = get_billing_engine() if get_billing_engine else None
         if engine:
-            self._send_json_response(200, engine.get_telemetry())
+            telem = engine.get_telemetry()
+            try:
+                from tools.daxda_stripe_payout_sync import DaxdaStripeDockerBridge
+                if not hasattr(self.__class__, "_stripe_bridge_cache"):
+                    self.__class__._stripe_bridge_cache = DaxdaStripeDockerBridge(billing_engine=engine)
+                telem["verified_stripe_balance"] = self.__class__._stripe_bridge_cache.query_live_stripe_balance(max_age_sec=30.0)
+            except Exception as e:
+                telem["verified_stripe_balance"] = {"verified": False, "available_usd": 0.0, "pending_usd": 0.0, "status": str(e)}
+            self._send_json_response(200, telem)
         else:
             self._send_json_response(503, {"error": "Billing engine unavailable"})
 
@@ -5070,9 +5143,9 @@ class DashboardHTTPHandler(http.server.SimpleHTTPRequestHandler):
             self._send_json_response(503, {"error": "Compute broker unavailable"})
             return
 
-        cluster.compute_broker.simulate_compute_tick(count=5)
-        self._send_json_response(200, {
-            "status": "COMPUTE_BATCH_FULFILLED",
+        self._send_json_response(403, {
+            "status": "SYNTHETIC_DISPATCH_DISABLED",
+            "message": "Simulated compute ticks are disabled. Only verified external marketplace settlements are recorded.",
             "telemetry": cluster.compute_broker.get_telemetry()
         })
 

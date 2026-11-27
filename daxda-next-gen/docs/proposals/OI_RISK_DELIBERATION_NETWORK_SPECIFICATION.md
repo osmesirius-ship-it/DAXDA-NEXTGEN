@@ -129,6 +129,18 @@ graph TD
 6. **Stakeholder Diversity:** Simulating operational impacts across contrasting socioeconomic and geopolitical cohorts;
 7. **Failure-Mode Diversity:** Observers mathematically tuned to optimize for distinct error-detection objectives (e.g., minimizing Type I false alarms vs. minimizing Type II fatal misses).
 
+### 4.1 Measured Channel Independence & Shared-Substrate Dependency Tagging
+
+No separate top-level module is required to enforce non-equivalence; instead, OI-RDN tightens two constraints directly inside existing `ObservationRecord` provenance and `ReconciliationRecord` dependence estimation (`dependence_summary.method = "graded-rho"`):
+
+1. **Measured Channel Independence ($N_\text{addressable} \neq N_\text{independent\_pathways}$):** Evidentiary independence is a property of upstream causal and statistical dependence structure, never a property of logical channel or observer addressability. Given a resolvable $M \times M$ inter-channel correlation matrix $R$ estimated from declared upstream lineage and pre-decision residual covariance, OI weights channels via Generalized Least Squares ($\mathbf{w} = R^{-1}\mathbf{1}_M$) and evaluates effective independent pathways as:
+   $$N_\text{eff}(R) = \mathbf{1}_M^\top R^{-1} \mathbf{1}_M$$
+   When 100 addressable channels operate with independent noise ($R = I_{100}$), $N_\text{eff} = 100$; when 100 addressable channels ride on one tightly coupled substrate ($R \to \mathbf{1}\mathbf{1}^\top$), $N_\text{eff} \to 1.0$, preventing a high-confidence correlated majority from drowning out a low-count genuinely independent minority.
+2. **Shared-Substrate Dependency Tagging:** Common upstream physical or informational infrastructure—shared physical fields/sensors (`substrate_id`), synchronization clocks (`timing_ref_id`), control/feedforward loops (`control_loop_id`), transport corridors, foundation-model weights, or preprocessing transforms (`transform_id`)—must remain visible in provenance and gate consequential authorization on distinct failure-domain diversity ($D_\text{domains} \ge 2$).
+3. **External Physical Analogues & Strict Novelty Boundary:** Two physical-optics results illustrate orthogonal architectural properties without validating OI or transferring inventorship:
+   * *Channel-Preserving Reconstruction Analogue:* Gurses et al. (128-element optical phased array, 2026) analogues retaining per-channel digitized records alongside a global estimate.
+   * *Shared-Substrate Parallel Transfer Warning:* Lou et al. (*Physical Review Letters* **137**, 080801, 2026, DOI: `10.1103/rfz9-3prw`) experimentally demonstrated parallel continuous-variable teleportation across 100 addressable spatial modes sharing one pair of entangled light fields and common holographic/feedforward optics ($N_\text{addressable\_modes} = 100$, $N_\text{shared\_resource} = 1$, $N_\text{independent\_pathways} \neq 100$). OI claims no inventorship over quantum teleportation or spatial-mode multiplexing and does not promote quantum fidelity metrics to epistemic benchmarks; this dependence constraint is tested on synthetic logical channels in `observer-intelligence/experiments/OI-005/`.
+
 ---
 
 ## 5. Formal Risk Representation Schema

@@ -292,8 +292,8 @@ class EnterpriseAndDePINBillingEngine:
                 stripe_payment_url = inv.hosted_invoice_url
                 logger.info(f"Live Stripe invoice created: {stripe_invoice_id} for ${inv.amount_due / 100:,.2f} USD ({stripe_payment_url})")
             except Exception as e:
-                logger.warning(f"Stripe live invoice call notice: {e}. Finalizing internal B2B invoice.")
-                stripe_invoice_id = f"in_sim_{secrets.token_hex(8)}"
+                logger.error(f"Stripe live invoice creation failed: {e}")
+                raise RuntimeError(f"Stripe live invoice creation failed (simulated fallback disabled): {e}") from e
 
         # Save to SQLite
         with self._get_connection() as conn:
@@ -474,10 +474,22 @@ class EnterpriseAndDePINBillingEngine:
             epoch_hasher.update(r.get("signature_digest", "").encode("utf-8"))
         epoch_merkle_root = epoch_hasher.hexdigest()
 
-        # Compute sweep reward at standard compute settlement rate
-        # Realized DePIN broker payout pool (approx $0.0125 per sealed 2,000-op block)
+        # Compute theoretical block valuation, then strictly verify real external Stripe settlement
         rate_per_block_usd = 0.0125
         epoch_gross_reward_usd = round(blocks_count * rate_per_block_usd, 2)
+
+        live_stripe = self.stripe_bridge.query_live_stripe_balance(max_age_sec=0.0)
+        if not live_stripe.get("verified") or live_stripe.get("available_usd", 0.0) < epoch_gross_reward_usd:
+            return {
+                "status": "REJECTED_UNVERIFIED_EXTERNAL_REVENUE",
+                "blocks_pending": blocks_count,
+                "available_stripe_usd": live_stripe.get("available_usd", 0.0),
+                "pending_stripe_usd": live_stripe.get("pending_usd", 0.0),
+                "message": (
+                    "Epoch sweep aborted: local CPU Merkle blocks do not credit USD unless backed by "
+                    f"verified external Stripe funds (available: ${live_stripe.get('available_usd', 0.0):.2f} USD)."
+                ),
+            }
 
         now_iso = datetime.now(timezone.utc).isoformat()
         sweep_id = f"sweep_ep_{epoch_num}_{int(time.time())}"

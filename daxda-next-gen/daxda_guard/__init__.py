@@ -1,5 +1,5 @@
-"""DAXDA Guard Python Package - __init__.py
-Air-Gapped Synchronous AI Security & Audit SDK.
+"""
+DAXDA Guard: Air-Gapped Synchronous AI Security & Autonomous Fail-Closed Interceptor.
 """
 
 from .core import DAXDAGuardCore, Multivector, GovernanceReceipt

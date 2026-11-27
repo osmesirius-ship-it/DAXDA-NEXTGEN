@@ -353,6 +353,11 @@ class HeliosRelayHandler(http.server.SimpleHTTPRequestHandler):
         self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
         super().end_headers()
 
+    def do_HEAD(self):
+        if self.path in ("/", "/cockpit", "/cockpit/"):
+            self.path = "/helios_observer_cockpit.html"
+        return super().do_HEAD()
+
     def do_GET(self):
         # Direct root or /cockpit to helios_observer_cockpit.html
         if self.path in ("/", "/cockpit", "/cockpit/"):

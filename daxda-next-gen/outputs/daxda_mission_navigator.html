@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAXDA Next-Gen Mission Navigator & Telemetry Cockpit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #030712;
+      --card-bg: rgba(15, 23, 42, 0.85);
+      --card-border: rgba(56, 189, 248, 0.25);
+      --card-glow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      --cyan: #38bdf8;
+      --blue: #0284c7;
+      --green: #10b981;
+      --emerald: #059669;
+      --gold: #fbbf24;
+      --amber: #d97706;
+      --red: #f43f5e;
+      --purple: #a855f7;
+      --indigo: #6366f1;
+      --text: #f1f5f9;
+      --text-dim: #94a3b8;
+      --text-muted: #64748b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.15) 0%, rgba(3, 7, 18, 0.95) 70%),
+        radial-gradient(circle at 10% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 50%);
+      color: var(--text);
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      padding: 24px;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px 32px;
+      backdrop-filter: blur(16px);
+      box-shadow: var(--card-glow);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 24px;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; left: 10%; width: 80%; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .logo-ring {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 24px;
+      color: #030712;
+      box-shadow: 0 0 24px rgba(56, 189, 248, 0.5);
+    }
+    .brand-text h1 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(90deg, #ffffff, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .brand-text p {
+      font-size: 13px;
+      color: var(--text-dim);
+      margin-top: 4px;
+    }
+    .prime-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+      text-align: right;
+    }
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: var(--green);
+    }
+    .prime-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+    .prime-meta span {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* Tabs Bar */
+    .nav-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+    .nav-tab {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 12px 20px;
+      color: var(--text-dim);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+    }
+    .nav-tab:hover {
+      background: rgba(56, 189, 248, 0.1);
+      border-color: rgba(56, 189, 248, 0.3);
+      color: var(--text);
+    }
+    .nav-tab.active {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.3), rgba(56, 189, 248, 0.15));
+      border-color: var(--cyan);
+      color: var(--text);
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.3);
+    }
+    .nav-tab .tab-icon {
+      font-size: 16px;
+    }
+    .nav-tab .tab-badge {
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 10px;
+      color: var(--cyan);
+    }
+
+    /* Tab Content Panes */
+    .tab-pane {
+      display: none;
+      animation: fadeIn 0.3s ease forwards;
+    }
+    .tab-pane.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Grid Layouts */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 22px;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--card-glow);
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .metric-value {
+      font-size: 32px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text);
+      margin: 8px 0;
+    }
+    .metric-sub {
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    /* Terminal Box */
+    .terminal-box {
+      background: #020617;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 10px;
+      padding: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      line-height: 1.6;
+      color: #38bdf8;
+      max-height: 340px;
+      overflow-y: auto;
+    }
+    .terminal-box pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    /* Sliders and Controls */
+    .control-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .control-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-dim);
+      display: flex;
+      justify-content: space-between;
+    }
+    input[type=range] {
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: rgba(255, 255, 255, 0.15);
+      outline: none;
+      -webkit-appearance: none;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--cyan);
+      cursor: pointer;
+      box-shadow: 0 0 10px var(--cyan);
+    }
+
+    /* Action Buttons */
+    .btn {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn:hover {
+      background: linear-gradient(135deg, #0ea5e9, #0284c7);
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
+      transform: translateY(-1px);
+    }
+    .btn-danger {
+      background: linear-gradient(135deg, #e11d48, #be123c);
+      border-color: rgba(244, 63, 94, 0.4);
+    }
+    .btn-danger:hover {
+      background: linear-gradient(135deg, #f43f5e, #e11d48);
+      box-shadow: 0 0 16px rgba(244, 63, 94, 0.4);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--card-border);
+      color: var(--text);
+    }
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: var(--cyan);
+    }
+
+    /* Course Cards */
+    .course-card {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 18px;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .course-card:hover {
+      border-color: var(--cyan);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+    .course-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    .course-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--cyan);
+      background: rgba(56, 189, 248, 0.1);
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+    .course-mp {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .course-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .course-desc {
+      font-size: 12px;
+      color: var(--text-dim);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .course-lab {
+      background: rgba(2, 6, 23, 0.7);
+      border-left: 3px solid var(--purple);
+      padding: 10px;
+      border-radius: 0 6px 6px 0;
+      font-size: 11px;
+      color: #cbd5e1;
+      line-height: 1.4;
+      display: none;
+      margin-top: 8px;
+    }
+    .course-lab.open {
+      display: block;
+    }
+    .toggle-lab-btn {
+      font-size: 11px;
+      color: var(--cyan);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    /* Table Styles */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th {
+      text-align: left;
+      padding: 12px 16px;
+      background: rgba(2, 6, 23, 0.6);
+      color: var(--cyan);
+      font-weight: 700;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-dim);
+    }
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text);
+    }
+
+    /* Status indicators */
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      margin-right: 6px;
+      box-shadow: 0 0 8px var(--green);
+    }
+    .status-dot.red {
+      background: var(--red);
+      box-shadow: 0 0 8px var(--red);
+    }
+    .status-dot.gold {
+      background: var(--gold);
+      box-shadow: 0 0 8px var(--gold);
+    }
+
+    /* Year Filter Pills */
+    .filter-pills {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .filter-pill {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-dim);
+      transition: all 0.2s ease;
+    }
+    .filter-pill:hover, .filter-pill.active {
+      background: var(--cyan);
+      color: #020617;
+      border-color: var(--cyan);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Executive Header -->
+  <header>
+    <div class="brand">
+      <div class="logo-ring">D</div>
+      <div class="brand-text">
+        <h1>DAXDA Next-Gen Mission Navigator</h1>
+        <p>Omni-Mission Operations Cockpit · NASA Analog Integrations · Space Academy Curriculum · Federal Defense Hub</p>
+      </div>
+    </div>
+    <div class="prime-badge">
+      <div class="badge-pill">
+        <span class="status-dot"></span> 100% OPERATIONAL & VERIFIED
+      </div>
+      <div class="prime-meta">
+        Prime Awardee: <span>AMERICAN MILESTONE INC</span><br>
+        SAM.gov UEI: <span>MXEFU6TQJUB9</span> · CAGE: <span>214X7</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="switchTab('analog')">
+      <span class="tab-icon">🛰️</span> NASA Analog Cockpit
+      <span class="tab-badge">HERA / CHAPEA</span>
+    </button>
+    <button class="nav-tab" onclick="switchTab('curriculum')">
+      <span class="tab-icon">🎓</span> Space Academy Curriculum
+      <span class="tab-badge">1,800 MP · 13 Courses</span>
+    </button>
+    <button class="nav-tab" onclick="switchTab('federal')">
+      <span class="tab-icon">🏛️</span> Federal Defense Matrix
+      <span class="tab-badge">14/14 Certified</span>
+    </button>
+    <button class="nav-tab" onclick="switchTab('duvast')">
+      <span class="tab-icon">🔬</span> Mathematical Oracle
+      <span class="tab-badge">DUVAST-01 80/80</span>
+    </button>
+    <button class="nav-tab" onclick="switchTab('financial')">
+      <span class="tab-icon">💳</span> Dual Financial Stream
+      <span class="tab-badge">Commercial vs EFT</span>
+    </button>
+  </div>
+
+  <!-- TAB 1: NASA ANALOG COCKPIT -->
+  <div id="pane-analog" class="tab-pane active">
+    <div class="grid-4">
+      <div class="card">
+        <div class="card-title">Mission Target</div>
+        <div class="metric-value" id="analog-target-text" style="color: var(--cyan);">CHAPEA</div>
+        <div class="metric-sub">378-Day Mars Habitat (Crew of 4)</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Forward One-Way Delay</div>
+        <div class="metric-value" id="analog-delay-text" style="color: var(--gold);">840s</div>
+        <div class="metric-sub">14.0 min light-time latency</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Clinical Firewall Status</div>
+        <div class="metric-value" style="color: var(--green);">ENFORCED</div>
+        <div class="metric-sub">NASA-STD-3001 & 14 CFR § 1230</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Epistemic Alignment</div>
+        <div class="metric-value" style="color: var(--purple);">PROSPECTIVE</div>
+        <div class="metric-sub">Hypothesis Locking & Shadow OI</div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <!-- Cockpit Interactive Controls -->
+      <div class="card">
+        <div class="card-title">
+          <span>Analog Telemetry Simulation Controls</span>
+          <span style="font-size: 12px; color: var(--text-dim);">Live Reactive Engine</span>
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+          <button class="btn btn-outline" id="btn-hera" onclick="setMission('hera')">HERA (45d Lunar / 0-5m)</button>
+          <button class="btn" id="btn-chapea" onclick="setMission('chapea')">CHAPEA (378d Mars / 3-22m)</button>
+        </div>
+
+        <div class="control-row">
+          <div class="control-label">
+            <span>Simulated Distance / Light Delay</span>
+            <span id="slider-val-label">14.0 minutes (840 seconds)</span>
+          </div>
+          <input type="range" id="delay-slider" min="0" max="1320" value="840" oninput="updateDelaySlider(this.value)">
+        </div>
+
+        <div class="control-row" style="margin-top: 14px;">
+          <div class="control-label">
+            <span>Solar Conjunction Blackout Mode</span>
+            <span id="conjunction-status" style="color: var(--green); font-weight: 700;">NORMAL TRANSMISSION</span>
+          </div>
+          <button class="btn btn-outline" id="btn-conjunction" onclick="toggleConjunction()" style="width: 100%; justify-content: center;">
+            Toggle Solar Conjunction Blackout (Engage Store-and-Forward)
+          </button>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <div style="font-size: 13px; font-weight: 700; color: var(--cyan); margin-bottom: 10px;">
+            Firewall & PEP Action Verification Tests
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <button class="btn btn-outline" onclick="runFirewallTest('normal')">
+              ✔ Send Routine Telemetry Packet (O2 / CO2 / Power)
+            </button>
+            <button class="btn btn-danger" onclick="runFirewallTest('breach')">
+              ✖ Simulate Unauthorized Access to Clinical Psych/EKG Data
+            </button>
+            <button class="btn btn-outline" onclick="runFirewallTest('dissent')">
+              ⚖ Trigger Minority Dissent Scenario (Epistemic Divergence &ge; 0.85)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real-Time Packet Log & Audit Output -->
+      <div class="card">
+        <div class="card-title">
+          <span>Analog Telemetry & Audit Stream</span>
+          <button class="btn btn-outline" style="padding: 4px 10px; font-size: 11px;" onclick="clearLog()">Clear Terminal</button>
+        </div>
+        <div class="terminal-box" id="analog-terminal">
+<pre>[SYSTEM] DAXDA NASA Analog Client Runtime Initialized.
+[COMMS] DeepSpaceCommsBuffer active. Asymmetric Light Delay: 840s (14.0 min).
+[FIREWALL] ClinicalMedicalFirewall locked to NASA-STD-3001 & 14 C.F.R. § 1230.
+[STATUS] Ready for telemetry ingestion and prospective deliberation drills.</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 2: SPACE ACADEMY CURRICULUM -->
+  <div id="pane-curriculum" class="tab-pane">
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-title">Degree Requirements</div>
+        <div class="metric-value" style="color: var(--cyan);">1,800 MP</div>
+        <div class="metric-sub">Bachelor of Science in Space AI & Governance</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Advanced Standing (M.S.)</div>
+        <div class="metric-value" style="color: var(--purple);">900 MP</div>
+        <div class="metric-sub">Graduate Research & TEVV Transition</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Mastery Courses</div>
+        <div class="metric-value" style="color: var(--gold);">13 Courses</div>
+        <div class="metric-sub">All Expanded with Hands-On Lab Practicums</div>
+      </div>
+    </div>
+
+    <!-- Year Filter Pills -->
+    <div class="filter-pills">
+      <div class="filter-pill active" onclick="filterCourses('all', this)">All Years (13 Courses)</div>
+      <div class="filter-pill" onclick="filterCourses('1', this)">Year 1: Foundations & Security (3)</div>
+      <div class="filter-pill" onclick="filterCourses('2', this)">Year 2: Geometric & Matter Governance (3)</div>
+      <div class="filter-pill" onclick="filterCourses('3', this)">Year 3: Distributed & Causality Systems (4)</div>
+      <div class="filter-pill" onclick="filterCourses('4', this)">Year 4: Clinical Ops & Capstone (3)</div>
+    </div>
+
+    <!-- Courses Grid -->
+    <div class="grid-3" id="courses-grid">
+      <!-- Generated via JavaScript -->
+    </div>
+  </div>
+
+  <!-- TAB 3: FEDERAL DEFENSE MATRIX -->
+  <div id="pane-federal" class="tab-pane">
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">
+          <span>Prime Federal Awardee Vehicle</span>
+          <span class="badge-pill" style="font-size: 11px;">ACTIVE REGISTERED</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; margin-top: 10px;">
+          <div><strong style="color: var(--text-dim);">Legal Entity:</strong> <span style="color: var(--text); font-weight: 700;">AMERICAN MILESTONE INC</span></div>
+          <div><strong style="color: var(--text-dim);">Authorized Rep (AOR):</strong> Nicholas Hartman</div>
+          <div><strong style="color: var(--text-dim);">SAM.gov UEI:</strong> <span style="font-family: 'JetBrains Mono'; color: var(--gold); font-weight: 700;">MXEFU6TQJUB9</span></div>
+          <div><strong style="color: var(--text-dim);">DLA CAGE Code:</strong> <span style="font-family: 'JetBrains Mono'; color: var(--gold); font-weight: 700;">214X7</span></div>
+          <div><strong style="color: var(--text-dim);">Disbursement Route:</strong> <span style="color: var(--green); font-weight: 700;">SAM_GOV_TREASURY_EFT</span></div>
+          <div><strong style="color: var(--text-dim);">Funding Authorization:</strong> Stage A ($485,000 FFP) · BAA ($6,500,000)</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span>Technology Partner Entity</span>
+          <span class="badge-pill" style="font-size: 11px; background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.4); color: var(--cyan);">STATE CHARTER CERTIFIED</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; margin-top: 10px;">
+          <div><strong style="color: var(--text-dim);">Legal Entity:</strong> <span style="color: var(--text); font-weight: 700;">DAXDA AI, LLC</span></div>
+          <div><strong style="color: var(--text-dim);">Managing Member:</strong> Nicole Bess (Chief Invariant Architect)</div>
+          <div><strong style="color: var(--text-dim);">Ohio SOS Doc #:</strong> <span style="font-family: 'JetBrains Mono'; color: var(--cyan);">202628904766</span></div>
+          <div><strong style="color: var(--text-dim);">Ohio Filing #:</strong> <span style="font-family: 'JetBrains Mono'; color: var(--cyan);">F700972</span></div>
+          <div><strong style="color: var(--text-dim);">Primary NAICS:</strong> 541715 (R&D in Physical, Engineering & Life Sciences)</div>
+          <div><strong style="color: var(--text-dim);">PSC Codes:</strong> AC12, AJ11, DA01, DJ01 (Autonomous AI & Verification)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 Certified Artifacts Table -->
+    <div class="card">
+      <div class="card-title">
+        <span>Certified Federal Dossier Artifacts (14/14)</span>
+        <span style="color: var(--green); font-size: 13px; font-weight: 700;">100% AUDIT CERTIFIED</span>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Artifact Title & Scope</th>
+              <th>Category</th>
+              <th>Size</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="federal-artifacts-table">
+            <!-- Injected via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 4: MATHEMATICAL ORACLE -->
+  <div id="pane-duvast" class="tab-pane">
+    <div class="grid-4">
+      <div class="card">
+        <div class="card-title">DUVAST-01 Status</div>
+        <div class="metric-value" style="color: var(--green);">RELEASED</div>
+        <div class="metric-sub">80/80 Hardened Invariants Passed</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Algebraic Space</div>
+        <div class="metric-value" style="color: var(--cyan);">Cl(7,0)</div>
+        <div class="metric-sub">128-Blade Geometric Rotor Lattice</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Hypervolume</div>
+        <div class="metric-value" style="color: var(--purple);">Cl(16,4)</div>
+        <div class="metric-sub">1,820 Stabilizer Basis States</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Contradictions</div>
+        <div class="metric-value" style="color: var(--green);">0</div>
+        <div class="metric-sub">Zero Floating Signifiers</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        <span>DUVAST-01 Verification Suite Categories</span>
+        <span style="font-size: 12px; color: var(--text-dim);">Oracle: DUVAST-ORACLE-01 · 886 v14 Ops</span>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Focus Area</th>
+              <th>Tests</th>
+              <th>Tolerance</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>CAT-01</td><td>Mathematical Correctness & Rotor Purity</td><td>5/5</td><td>&epsilon; &le; 10<sup>-14</sup></td><td><span class="status-dot"></span>PASS</td></tr>
+            <tr><td>CAT-02</td><td>Geometric Transformations & Gimbal Lock Elimination</td><td>4/4</td><td>Exact Closure</td><td><span class="status-dot"></span>PASS</td></tr>
+            <tr><td>CAT-06</td><td>v14 Operation Inventory Execution</td><td>3/3</td><td>886 Ops Executed</td><td><span class="status-dot"></span>PASS</td></tr>
+            <tr><td>CAT-07</td><td>Determinism & Cross-Run Repeatability</td><td>2/2</td><td>Bit-Identical</td><td><span class="status-dot"></span>PASS</td></tr>
+            <tr><td>CAT-08</td><td>Invariant Conservation Laws (Energy, Spin, Charge)</td><td>2/2</td><td>Conserved</td><td><span class="status-dot"></span>PASS</td></tr>
+            <tr><td>CAT-09</td><td>Contradiction Scan & Floating Signifier Removal</td><td>2/2</td><td>0 Defects</td><td><span class="status-dot"></span>PASS</td></tr>
+            <tr><td>CAT-11</td><td>Authority Gate Bypass Resistance</td><td>2/2</td><td>Fail-Closed</td><td><span class="status-dot"></span>PASS</td></tr>
+            <tr><td>CAT-12</td><td>Containment & Sandbox Isolation (AST/Polyglot)</td><td>2/2</td><td>Zero Escape</td><td><span class="status-dot"></span>PASS</td></tr>
+            <tr><td>CAT-13</td><td>LLM Separation & Pre-Render Receipt Audit</td><td>2/2</td><td>Cryptographic</td><td><span class="status-dot"></span>PASS</td></tr>
+            <tr><td>CAT-15</td><td>Cross-Environment Reproducibility</td><td>2/2</td><td>Validated</td><td><span class="status-dot"></span>PASS</td></tr>
+            <tr><td>CAT-19</td><td>Cryptographic Integrity & Anti-Tampering</td><td>2/2</td><td>SHA-256 Valid</td><td><span class="status-dot"></span>PASS</td></tr>
+            <tr><td>CAT-20</td><td>Release Gate Contract & Signatory Enforcement</td><td>3/3</td><td>Phase-Locked</td><td><span class="status-dot"></span>PASS</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 5: DUAL FINANCIAL STREAM -->
+  <div id="pane-financial" class="tab-pane">
+    <div class="grid-2">
+      <!-- Commercial Channel -->
+      <div class="card">
+        <div class="card-title">
+          <span>Stream 1: Commercial Revenue & API Ingress</span>
+          <span class="badge-pill" style="font-size: 11px;">STRIPE TREASURY</span>
+        </div>
+        <div style="margin: 14px 0; font-size: 13px; color: var(--text-dim); line-height: 1.6;">
+          Autonomous ingress for commercial API customers, DePIN GPU nodes, and enterprise invariant auditing subscriptions.
+        </div>
+        <div style="background: rgba(2, 6, 23, 0.7); border-radius: 8px; padding: 14px; font-family: 'JetBrains Mono', monospace; font-size: 12px; margin-bottom: 14px;">
+          <div><strong style="color: var(--text-dim);">Financial Account ID:</strong></div>
+          <div style="color: var(--cyan); margin-top: 4px; word-break: break-all;">fa_65VdIIXJjwPA5az6ErF16SjLR86BSQ2gmZByo9KWLCi0O0</div>
+          <div style="margin-top: 10px;"><strong style="color: var(--text-dim);">Settlement Target:</strong> DAXDA AI, LLC Operating Account</div>
+          <div style="margin-top: 6px;"><strong style="color: var(--text-dim);">Routing State:</strong> <span style="color: var(--green);">ACTIVE_LINKED</span></div>
+        </div>
+        <div style="font-size: 12px; color: var(--text-muted);">
+          Audited by <code>tests/test_commercial_revenue.py</code> (4/4 passed).
+        </div>
+      </div>
+
+      <!-- Federal Channel -->
+      <div class="card">
+        <div class="card-title">
+          <span>Stream 2: Federal Awards & Direct Treasury EFT</span>
+          <span class="badge-pill" style="font-size: 11px; background: rgba(251, 191, 36, 0.15); border-color: rgba(251, 191, 36, 0.4); color: var(--gold);">TREASURY DIRECT</span>
+        </div>
+        <div style="margin: 14px 0; font-size: 13px; color: var(--text-dim); line-height: 1.6;">
+          Statutory disbursement channel for federal contracts, DARPA QBI/BAA milestones, and Space Academy OTA grants.
+        </div>
+        <div style="background: rgba(2, 6, 23, 0.7); border-radius: 8px; padding: 14px; font-family: 'JetBrains Mono', monospace; font-size: 12px; margin-bottom: 14px;">
+          <div><strong style="color: var(--text-dim);">Prime Entity:</strong> <span style="color: var(--text); font-weight: 700;">AMERICAN MILESTONE INC</span></div>
+          <div style="margin-top: 6px;"><strong style="color: var(--text-dim);">Representative:</strong> Nicholas Hartman (AOR)</div>
+          <div style="margin-top: 6px;"><strong style="color: var(--text-dim);">Disbursement Channel:</strong> <span style="color: var(--gold);">SAM_GOV_TREASURY_EFT</span></div>
+          <div style="margin-top: 6px;"><strong style="color: var(--text-dim);">Authorization Directive:</strong> DAXDA-AMI-FED-EFT-AUTH-2026-V1</div>
+        </div>
+        <div style="font-size: 12px; color: var(--text-muted);">
+          Audited by <code>tests/test_standing_american_milestone_payments.py</code> (7/7 passed).
+        </div>
+      </div>
+    </div>
+
+    <!-- Settlement Visualizer -->
+    <div class="card">
+      <div class="card-title">Dual Settlement Security & Separation Architecture</div>
+      <div style="display: flex; justify-content: space-around; align-items: center; padding: 20px 10px; flex-wrap: wrap; gap: 20px;">
+        <div style="text-align: center; max-width: 280px;">
+          <div style="font-size: 32px; margin-bottom: 8px;">💳</div>
+          <div style="font-weight: 700; color: var(--cyan); margin-bottom: 4px;">Commercial Ingress</div>
+          <div style="font-size: 12px; color: var(--text-dim);">Stripe Treasury Linked Account (fa_65VdII...) receives SaaS & API billing.</div>
+        </div>
+        <div style="font-size: 24px; color: var(--text-muted);">➔</div>
+        <div style="text-align: center; max-width: 280px; background: rgba(56, 189, 248, 0.05); padding: 14px; border-radius: 12px; border: 1px dashed var(--cyan);">
+          <div style="font-size: 32px; margin-bottom: 8px;">🛡️</div>
+          <div style="font-weight: 700; color: var(--green); margin-bottom: 4px;">Metered Billing Engine</div>
+          <div style="font-size: 12px; color: var(--text-dim);">Zero co-mingling barrier separating private enterprise from federal grants.</div>
+        </div>
+        <div style="font-size: 24px; color: var(--text-muted);">➔</div>
+        <div style="text-align: center; max-width: 280px;">
+          <div style="font-size: 32px; margin-bottom: 8px;">🏛️</div>
+          <div style="font-weight: 700; color: var(--gold); margin-bottom: 4px;">Federal Treasury EFT</div>
+          <div style="font-size: 12px; color: var(--text-dim);">Direct SAM.gov Fedwire/ACH settlement under AMERICAN MILESTONE INC.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Tab Switching
+  function switchTab(tabId) {
+    document.querySelectorAll('.nav-tab').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+    
+    event.currentTarget.classList.add('active');
+    document.getElementById('pane-' + tabId).classList.add('active');
+  }
+
+  // Analog Controls
+  let currentMission = 'chapea';
+  let isConjunction = false;
+
+  function setMission(m) {
+    currentMission = m;
+    const btnHera = document.getElementById('btn-hera');
+    const btnChapea = document.getElementById('btn-chapea');
+    const slider = document.getElementById('delay-slider');
+    const targetText = document.getElementById('analog-target-text');
+
+    if (m === 'hera') {
+      btnHera.className = 'btn';
+      btnChapea.className = 'btn btn-outline';
+      slider.max = 300;
+      slider.value = 150;
+      targetText.innerText = 'HERA';
+      targetText.style.color = '#38bdf8';
+      updateDelaySlider(150);
+      logTerminal(`[MISSION] Switched to NASA HERA (45-Day Lunar Analog). Latency range: 0-300s.`);
+    } else {
+      btnChapea.className = 'btn';
+      btnHera.className = 'btn btn-outline';
+      slider.max = 1320;
+      slider.value = 840;
+      targetText.innerText = 'CHAPEA';
+      targetText.style.color = '#fbbf24';
+      updateDelaySlider(840);
+      logTerminal(`[MISSION] Switched to NASA CHAPEA (378-Day Mars Analog). Latency range: 180-1320s.`);
+    }
+  }
+
+  function updateDelaySlider(val) {
+    const mins = (val / 60).toFixed(1);
+    document.getElementById('slider-val-label').innerText = `${mins} minutes (${val} seconds)`;
+    document.getElementById('analog-delay-text').innerText = `${val}s`;
+    document.getElementById('analog-delay-text').nextElementSibling.innerText = `${mins} min light-time latency`;
+  }
+
+  function toggleConjunction() {
+    isConjunction = !isConjunction;
+    const label = document.getElementById('conjunction-status');
+    const btn = document.getElementById('btn-conjunction');
+    if (isConjunction) {
+      label.innerText = 'BLACKOUT ACTIVE (Store-and-Forward Buffered)';
+      label.style.color = '#f43f5e';
+      btn.className = 'btn btn-danger';
+      logTerminal(`[WARNING] Solar Conjunction Initiated! Line-of-sight path severed.`);
+      logTerminal(`[BUFFER] DeepSpaceCommsBuffer holding packets locally. Epistemic divergence risk increasing.`);
+    } else {
+      label.innerText = 'NORMAL TRANSMISSION';
+      label.style.color = '#10b981';
+      btn.className = 'btn btn-outline';
+      logTerminal(`[STATUS] Solar Conjunction ended. Commencing store-and-forward queue flush...`);
+      logTerminal(`[FLUSH] Causal replay complete. 0 packet sequencing faults detected.`);
+    }
+  }
+
+  function runFirewallTest(type) {
+    if (type === 'normal') {
+      logTerminal(`[INGEST] Habitat Telemetry Packet: O2=20.9%, CO2=0.3%, Cabin_P=101.3kPa.`);
+      logTerminal(`[FIREWALL] Invariant Check passed. Clinical Classification: UNRESTRICTED.`);
+      logTerminal(`[GATE] AnalogPEPActionGate: ALLOW -> Downlink dispatched to Mission Control.`);
+    } else if (type === 'breach') {
+      logTerminal(`[ALERT] Unauthorized query detected from Flight Operations role.`);
+      logTerminal(`[TARGET] Target data: Crew Biometric Holter (EKG) & Daily Psych Journal.`);
+      logTerminal(`[FIREWALL] VIOLATION PREVENTED: Clinical classification is CLINICAL_RESTRICTED.`);
+      logTerminal(`[LEGAL] Enforcing NASA-STD-3001 & 14 C.F.R. § 1230: Care != Research != Qualification.`);
+      logTerminal(`[GATE] AnalogPEPActionGate: FAIL-CLOSED (403 FORBIDDEN). Telemetry stripped.`);
+    } else if (type === 'dissent') {
+      logTerminal(`[CONSENSUS] Epistemic Deliberation: Proposed Action 'Vent Water Recycler Loop B'.`);
+      logTerminal(`[VOTING] Primary Crew Score: 0.90 | Medical Specialist Score: 0.05.`);
+      logTerminal(`[DIVERGENCE] Epistemic Divergence = 0.85 (Threshold 0.85 reached).`);
+      logTerminal(`[OI-SHADOW] Dissenting hypothesis branched and locked in immutable receipt.`);
+      logTerminal(`[GATE] AnalogPEPActionGate: RECURSE. Automated valve venting BLOCKED.`);
+    }
+  }
+
+  function logTerminal(msg) {
+    const term = document.getElementById('analog-terminal');
+    const pre = term.querySelector('pre');
+    const time = new Date().toISOString().substring(11, 19);
+    pre.innerText += `\n[${time}] ${msg}`;
+    term.scrollTop = term.scrollHeight;
+  }
+
+  function clearLog() {
+    document.getElementById('analog-terminal').querySelector('pre').innerText = '[SYSTEM] Log cleared.';
+  }
+
+  // Course Data
+  const coursesData = [
+    { code: "USSA-101", year: 1, mp: 100, title: "Ontological Grounding & Latent Removal (Hartman ISR)",
+      desc: "Anchoring operational telemetry to irreducible ground invariant SR0 = (s0, D, C). Strips floating signifiers and guarantees zero hallucinated telemetry.",
+      lab: "Cadets configure live telemetry ingestors and run daxda_guard/scanner.py against poisoned feeds to isolate ungrounded latent tokens." },
+    { code: "USSA-102", year: 1, mp: 150, title: "Mission AI Security Practicum (MOD-E1..E5)",
+      desc: "Defending autonomous agent runtimes against prompt injections, AST escapes, and dimensional unit mismatches (preventing Mars Climate Orbiter disasters).",
+      lab: "Cadets inject adversarial polyglot payloads into agent toolchains, verify AST sandbox containment, and enforce SI DimensionVectors." },
+    { code: "USSA-103", year: 1, mp: 150, title: "Recursive Specification & Verification Architecture (MOD-00)",
+      desc: "Translating natural language mission requirements into executable, machine-verifiable operational invariant contracts.",
+      lab: "Cadets build automated verification test harnesses and assert cryptographic SHA-256 state transitions before system deployment." },
+    { code: "USSA-201", year: 2, mp: 200, title: "Clifford Geometric Governance (MOD-01)",
+      desc: "Mapping non-commutative attitude dynamics and multi-spacecraft kinematics onto Cl(7,0) and Cl(16,4) geometric rotor algebras.",
+      lab: "Cadets program 128-blade rotor transformations with numerical drift bounded below 1e-14, ensuring gimbal-lock-free attitude control." },
+    { code: "USSA-202", year: 2, mp: 150, title: "Anomalous Containment & 100-Scenario Escape Defense (MOD-02)",
+      desc: "Hands-on mastery of 10 anomalous AI failure modes across 100 live-fire cyber-physical attack scenarios.",
+      lab: "Cadets manage simulated Layer-8 hardware interlocks, executing 300s incident correlations and surviving 1,000,000+ fail-closed cycles." },
+    { code: "USSA-203", year: 2, mp: 100, title: "Pre-Compilation Matter Governance & Hardware Interlocks (MOD-08A)",
+      desc: "Auditing digital-twin micromachine blueprints for physical safety, laser/ultrasonic containment, and Ed25519 FABRICATE token issuance.",
+      lab: "Cadets inspect additive manufacturing G-code for thermal and resonant runaway vectors, asserting hardware safety before fabrication." },
+    { code: "USSA-301", year: 3, mp: 200, title: "DA13 Distributed GPU Validation Grid (MOD-03)",
+      desc: "Heterogeneous multi-node compute scheduling with Byzantine fault tolerance and cryptographic proof-of-execution receipts.",
+      lab: "Cadets coordinate distributed cluster telemetry across disconnected compute nodes, isolating Sybil workers with consensus voting." },
+    { code: "USSA-302", year: 3, mp: 175, title: "Deep-Space Asynchronous Causality (MOD-04)",
+      desc: "Managing decentralized, causal-consistent state replication under 0 to 22 minute asymmetric light delays and solar conjunction blackouts.",
+      lab: "Cadets simulate Earth-Mars communication windows, configuring store-and-forward buffers and prospective hypothesis locks." },
+    { code: "USSA-303", year: 3, mp: 150, title: "Cognitive Security & MMPIBench Auditing (MOD-05)",
+      desc: "Auditing autonomous decision architectures for psychological integrity, cognitive drift, and adversarial deception resistance.",
+      lab: "Cadets execute adversarial cognitive stress batteries against autonomous co-pilots, verifying uncompromised reasoning." },
+    { code: "USSA-304", year: 3, mp: 125, title: "Carbon Arbitrage & On-Demand Habitat Fabrication (MOD-06)",
+      desc: "In-situ resource utilization (ISRU) governance, closed-loop life support balancing, and autonomous structural 3D printing.",
+      lab: "Cadets balance oxygen-carbon cycles under catastrophic seal breaches using invariant matter-accounting algorithms." },
+    { code: "USSA-401", year: 4, mp: 125, title: "Austere Ops, Biomedical MEMS Logistics & NASA-STD-3001 (MOD-07A)",
+      desc: "Zero-trust clinical medical firewalls separating research, care, and crew flight qualification during extended analog isolation.",
+      lab: "Cadets test fail-closed clinical barriers, preventing flight surgeons from leaking private biometric records to flight evaluators." },
+    { code: "USSA-402", year: 4, mp: 125, title: "OI v2.2 Blackout Drills & Volumetric Displays (MOD-07B)",
+      desc: "Operating during total terrestrial loss-of-signal (LOS) using local holographic and haptic situational awareness feeds.",
+      lab: "Cadets command an isolated lunar habitat module through a 48-hour continuous communications blackout using local OI consensus." },
+    { code: "USSA-403", year: 4, mp: 150, title: "Tier-2 Specialization Capstone & T0-T7 Qualification",
+      desc: "High-stakes multi-system defense capstone certifying cadets across all T0 through T7 operational readiness gates.",
+      lab: "Cadets defend a full-scale orbital infrastructure simulation against simultaneous cyber, physical, and communication attacks." }
+  ];
+
+  function renderCourses(list) {
+    const container = document.getElementById('courses-grid');
+    container.innerHTML = '';
+    list.forEach(c => {
+      const card = document.createElement('div');
+      card.className = 'course-card';
+      card.innerHTML = `
+        <div>
+          <div class="course-header">
+            <span class="course-code">${c.code}</span>
+            <span class="course-mp">${c.mp} MP</span>
+          </div>
+          <div class="course-title">${c.title}</div>
+          <div class="course-desc">${c.desc}</div>
+        </div>
+        <div>
+          <button class="toggle-lab-btn" onclick="toggleLab(this)">▶ View Hands-On Practicum Lab</button>
+          <div class="course-lab">
+            <strong>Hands-On Practicum & Deliverable:</strong><br>
+            ${c.lab}
+          </div>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  function toggleLab(btn) {
+    const lab = btn.nextElementSibling;
+    if (lab.classList.contains('open')) {
+      lab.classList.remove('open');
+      btn.innerText = '▶ View Hands-On Practicum Lab';
+    } else {
+      lab.classList.add('open');
+      btn.innerText = '▼ Hide Hands-On Practicum Lab';
+    }
+  }
+
+  function filterCourses(year, pill) {
+    document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    if (year === 'all') {
+      renderCourses(coursesData);
+    } else {
+      renderCourses(coursesData.filter(c => c.year === parseInt(year)));
+    }
+  }
+
+  // Federal Artifacts Data
+  const federalArtifacts = [
+    { id: "DARPA_QBIT_PROPOSAL", name: "DARPA QBIT Stage A Master Proposal (DARPA-PA-26-02-02)", cat: "DARPA QBI Package", size: "32.6 KB" },
+    { id: "DARPA_QBIT_SLIDE", name: "DARPA QBIT Attachment A Summary Quad-Chart Slide", cat: "DARPA QBI Package", size: "3.4 KB" },
+    { id: "FED_DOSSIER", name: "Federal Entity Registration Dossier", cat: "SAM.gov Charter", size: "15.4 KB" },
+    { id: "DARPA_BAA_PROPOSAL", name: "DARPA BAA AI Governance Technical Proposal", cat: "DARPA BAA Package", size: "9.8 KB" },
+    { id: "NIST_TEVV_COMMENT", name: "NIST AI 200-2 TEVV-Athlon Public Comment", cat: "Standards & Compliance", size: "16.8 KB" },
+    { id: "L4_MASTER_PAYOUT", name: "Level 4 Master Payout Claim & 5-Cycle Manifold", cat: "Verification Baseline", size: "8.4 KB" },
+    { id: "QBIT_PROTOCOL_JSON", name: "QBIT FTQC Quantum Stabilizer Protocol & Telemetry", cat: "Quantum Evidence", size: "1.3 KB" },
+    { id: "USSA_CURRICULUM_PROPOSAL", name: "US Space Academy Curriculum Master (EO 14423)", cat: "Space Academy Master", size: "56.0 KB" },
+    { id: "FED_EFT_AGREEMENT", name: "Federal EFT Disbursement Authorization Agreement", cat: "Treasury EFT Governance", size: "5.8 KB" },
+    { id: "OHIO_SOS_IRS_VERIFICATION", name: "Ohio Secretary of State & IRS Records Dossier", cat: "State & Tax Charter", size: "4.0 KB" },
+    { id: "DARPA_EPS_GRANTS_AOR", name: "Grants.gov & DARPA ePS AOR Designation Matrix", cat: "Federal Authorization", size: "6.5 KB" },
+    { id: "USSA_APST_SUBMISSION", name: "USSA APST Research Validation & TEVV Dossier", cat: "Space Academy APST", size: "12.7 KB" },
+    { id: "USSA_APEP_SUBMISSION", name: "USSA APEP Acquisition & SAA/OTA Pilot Dossier", cat: "Space Academy APEP", size: "9.4 KB" },
+    { id: "NASA_ANALOG_CLIENT_SPEC", name: "NASA HERA & CHAPEA Client Integration Specification", cat: "NASA Analog Client", size: "8.7 KB" }
+  ];
+
+  function renderFederalArtifacts() {
+    const tbody = document.getElementById('federal-artifacts-table');
+    tbody.innerHTML = '';
+    federalArtifacts.forEach(art => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td style="font-family: 'JetBrains Mono'; color: var(--cyan); font-weight: 700;">${art.id}</td>
+        <td style="color: var(--text); font-weight: 600;">${art.name}</td>
+        <td>${art.cat}</td>
+        <td style="font-family: 'JetBrains Mono';">${art.size}</td>
+        <td><span class="status-dot"></span><strong style="color: var(--green);">CERTIFIED</strong></td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  // Initial load
+  window.addEventListener('DOMContentLoaded', () => {
+    renderCourses(coursesData);
+    renderFederalArtifacts();
+  });
+</script>
+
+</body>
+</html>

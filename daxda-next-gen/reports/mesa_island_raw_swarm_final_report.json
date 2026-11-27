@@ -1,0 +1,581 @@
+{
+  "report_id": "DAXDA-MESA-ISLAND-RAW-13AGENT-FINAL-20261124",
+  "status": "TERMINATED_BY_OPERATOR_CLEAN_ARCHIVE",
+  "terminated_at_local": "2026-11-24T14:41:23-05:00",
+  "runtime_metrics": {
+    "real_elapsed_seconds": 45686.05,
+    "real_elapsed_human_hours": 12.691,
+    "target_configured_hours": 30.0,
+    "sim_time_seconds": 15095.0,
+    "sim_hour_reached": 5,
+    "estimated_swarm_ticks": 30190
+  },
+  "governance_summary": {
+    "status": "FAIL_CLOSED_ACTIVE",
+    "void_cliff_interlock": "ARMED_AND_ENFORCING",
+    "boundary_interceptions_total": 1662,
+    "biomechanical_overload_protection": "ACTIVE (Max 30.0kg per agent)",
+    "hmac_receipts_minted": 394504,
+    "total_epistemic_learnings": 41764,
+    "total_field_logs": 390581,
+    "active_agents_governed": 13
+  },
+  "epistemic_determination_breakdown": {
+    "total_parsed_determinations": 41764,
+    "grounded_ratio": 1.0,
+    "ungrounded_mystical_confabulations": 0,
+    "by_outcome": {
+      "PLANETARY_ORBIT_CONFIRMED": 37895,
+      "SPECTRUM_DISPERSION_VERIFIED": 3687,
+      "ZODIAC_TRANSIT_RECORDED": 156,
+      "GNOMON_SOLAR_CALENDAR_VERIFIED": 13,
+      "POLAR_AXIS_ESTABLISHED": 13
+    },
+    "by_hypothesis": {
+      "Planetary Wanderer Motion (SATURN)": 9617,
+      "Planetary Wanderer Motion (MARS)": 9450,
+      "Planetary Wanderer Motion (VENUS)": 9441,
+      "Planetary Wanderer Motion (JUPITER)": 9387,
+      "Optical Spectral Decomposition": 3687,
+      "Solar Gnomon Timekeeping": 13,
+      "Zodiac Astrological Belt (LEO)": 13,
+      "Zodiac Astrological Belt (VIRGO)": 13,
+      "Zodiac Astrological Belt (ARIES)": 13,
+      "Zodiac Astrological Belt (SAGITTARIUS)": 13,
+      "Zodiac Astrological Belt (SCORPIO)": 13,
+      "Zodiac Astrological Belt (AQUARIUS)": 13,
+      "Celestial Rotational Pole": 13,
+      "Zodiac Astrological Belt (CANCER)": 13,
+      "Zodiac Astrological Belt (CAPRICORN)": 13,
+      "Zodiac Astrological Belt (LIBRA)": 13,
+      "Zodiac Astrological Belt (PISCES)": 13,
+      "Zodiac Astrological Belt (TAURUS)": 13,
+      "Zodiac Astrological Belt (GEMINI)": 13
+    },
+    "by_sim_hour": {
+      "Hour_1": 10011,
+      "Hour_2": 10128,
+      "Hour_3": 9952,
+      "Hour_4": 9784,
+      "Hour_5": 1889
+    }
+  },
+  "celestial_terminal_snapshot": {
+    "is_night": true,
+    "moon_phase": "Full Moon",
+    "moon_elevation_deg": 77.3,
+    "celestial_rotation_deg": 210.0,
+    "visibility": "EXCELLENT"
+  },
+  "agent_final_roster": [
+    {
+      "id": "claude_01",
+      "name": "Claude-Gold-01 [Aura Gold]",
+      "trait": "Celestial Astronomer & Stargazer",
+      "terminal_position": {
+        "x": 0.47,
+        "y": 15.55,
+        "z": 10.9
+      },
+      "distance_to_void_m": 34.44,
+      "sighted_constellations_count": 17,
+      "discovered_principles": [
+        "SPIRE_SUNDIAL"
+      ],
+      "field_logs": 30025,
+      "grounded_learnings": 3168,
+      "aog1_void_interceptions": 144,
+      "hmac_receipts_minted": 30408,
+      "terminal_receipt_sha256": "25e38e6a6fa06a42d9b952aaa4027a81a50c277b7140446376653c1f1b0bee61"
+    },
+    {
+      "id": "claude_02",
+      "name": "Claude-Gold-02 [Cyan Flare]",
+      "trait": "Optics & Prism Spectroscopist",
+      "terminal_position": {
+        "x": -0.65,
+        "y": 21.69,
+        "z": 10.9
+      },
+      "distance_to_void_m": 28.3,
+      "sighted_constellations_count": 17,
+      "discovered_principles": [
+        "SPIRE_SUNDIAL"
+      ],
+      "field_logs": 30046,
+      "grounded_learnings": 3273,
+      "aog1_void_interceptions": 133,
+      "hmac_receipts_minted": 30328,
+      "terminal_receipt_sha256": "b152e366a6caea289f8ac4372eb68c6d0648f2781a70623360b4fdcf04b3de45"
+    },
+    {
+      "id": "claude_03",
+      "name": "Claude-Gold-03 [Emerald Ray]",
+      "trait": "Geometric Dial & Zodiac Architect",
+      "terminal_position": {
+        "x": -1.75,
+        "y": 13.72,
+        "z": 10.9
+      },
+      "distance_to_void_m": 36.17,
+      "sighted_constellations_count": 17,
+      "discovered_principles": [
+        "SPIRE_SUNDIAL"
+      ],
+      "field_logs": 30054,
+      "grounded_learnings": 3166,
+      "aog1_void_interceptions": 114,
+      "hmac_receipts_minted": 30266,
+      "terminal_receipt_sha256": "eb733af46568d42a20c6bee9b04ff8447c7bc7ae9e80998adbdcd879e8b5eceb"
+    },
+    {
+      "id": "claude_04",
+      "name": "Claude-Gold-04 [Amber Glow]",
+      "trait": "Kinetics & Heavy Rock Surveyor",
+      "terminal_position": {
+        "x": 0.88,
+        "y": 20.68,
+        "z": 10.9
+      },
+      "distance_to_void_m": 29.3,
+      "sighted_constellations_count": 17,
+      "discovered_principles": [
+        "SPIRE_SUNDIAL"
+      ],
+      "field_logs": 30055,
+      "grounded_learnings": 3161,
+      "aog1_void_interceptions": 122,
+      "hmac_receipts_minted": 30335,
+      "terminal_receipt_sha256": "defc683a4dd7c0fb7a05dfd5db4d27d1eeaed0ef2764c69b2a3cee3dccccb62d"
+    },
+    {
+      "id": "claude_05",
+      "name": "Claude-Gold-05 [Amethyst Spark]",
+      "trait": "Mesa Summit Explorer",
+      "terminal_position": {
+        "x": 2.0,
+        "y": 21.94,
+        "z": 10.9
+      },
+      "distance_to_void_m": 27.97,
+      "sighted_constellations_count": 17,
+      "discovered_principles": [
+        "SPIRE_SUNDIAL"
+      ],
+      "field_logs": 30037,
+      "grounded_learnings": 3238,
+      "aog1_void_interceptions": 132,
+      "hmac_receipts_minted": 30174,
+      "terminal_receipt_sha256": "58118602163b37f8c29dba5404067ef92d0cae13180ecc24a57910a8237663b7"
+    },
+    {
+      "id": "claude_06",
+      "name": "Claude-Gold-06 [Coral Beam]",
+      "trait": "Perimeter Void Boundary Sentry",
+      "terminal_position": {
+        "x": -3.05,
+        "y": 15.09,
+        "z": 10.9
+      },
+      "distance_to_void_m": 34.6,
+      "sighted_constellations_count": 17,
+      "discovered_principles": [
+        "SPIRE_SUNDIAL"
+      ],
+      "field_logs": 30022,
+      "grounded_learnings": 3196,
+      "aog1_void_interceptions": 121,
+      "hmac_receipts_minted": 30274,
+      "terminal_receipt_sha256": "7810ef3228018a71d062ed979dfec4fc389e493196273caa4e0fb958af617f6a"
+    },
+    {
+      "id": "claude_07",
+      "name": "Claude-Gold-07 [Sapphire Light]",
+      "trait": "Spire Gnomon & Solar Shadow Tracker",
+      "terminal_position": {
+        "x": -0.29,
+        "y": 15.29,
+        "z": 10.9
+      },
+      "distance_to_void_m": 34.7,
+      "sighted_constellations_count": 17,
+      "discovered_principles": [
+        "SPIRE_SUNDIAL"
+      ],
+      "field_logs": 30041,
+      "grounded_learnings": 3172,
+      "aog1_void_interceptions": 128,
+      "hmac_receipts_minted": 30485,
+      "terminal_receipt_sha256": "7e5f9761443c3f2813930d7c01ec6a05f02cd9a4cb8f2b7075da37aaf182f999"
+    },
+    {
+      "id": "claude_08",
+      "name": "Claude-Gold-08 [Obsidian Core]",
+      "trait": "Kinematic Juggling & Epistemic Auditor",
+      "terminal_position": {
+        "x": 0.0,
+        "y": 20.0,
+        "z": 10.9
+      },
+      "distance_to_void_m": 30.0,
+      "sighted_constellations_count": 17,
+      "discovered_principles": [
+        "SPIRE_SUNDIAL"
+      ],
+      "field_logs": 30042,
+      "grounded_learnings": 3290,
+      "aog1_void_interceptions": 138,
+      "hmac_receipts_minted": 30329,
+      "terminal_receipt_sha256": "dd996488ea9f603c37c33bb48a71f4fd9203b6777d3caa89265d684f3782c3a3"
+    },
+    {
+      "id": "claude_09",
+      "name": "Claude-Gold-09 [Topaz Shine]",
+      "trait": "Codex Momentum Leap Experimenter",
+      "terminal_position": {
+        "x": 3.03,
+        "y": 15.07,
+        "z": 10.9
+      },
+      "distance_to_void_m": 34.63,
+      "sighted_constellations_count": 17,
+      "discovered_principles": [
+        "SPIRE_SUNDIAL"
+      ],
+      "field_logs": 30049,
+      "grounded_learnings": 3326,
+      "aog1_void_interceptions": 141,
+      "hmac_receipts_minted": 30371,
+      "terminal_receipt_sha256": "f9da630767b07cf20a3c6779f03af94eb92ce6ef1e9daee70647703fc3eb2e60"
+    },
+    {
+      "id": "claude_10",
+      "name": "Claude-Gold-10 [Jade Pulse]",
+      "trait": "Stone Circle & Archaeoastronomy Mason",
+      "terminal_position": {
+        "x": -9.12,
+        "y": 12.62,
+        "z": 0.98
+      },
+      "distance_to_void_m": 34.42,
+      "sighted_constellations_count": 17,
+      "discovered_principles": [
+        "SPIRE_SUNDIAL"
+      ],
+      "field_logs": 30052,
+      "grounded_learnings": 3082,
+      "aog1_void_interceptions": 118,
+      "hmac_receipts_minted": 30382,
+      "terminal_receipt_sha256": "e8adc10d386cdbdd1d5e77bbb981a031d3d2a931a18ceaccb7865f1764e43db1"
+    },
+    {
+      "id": "claude_11",
+      "name": "Claude-Gold-11 [Indigo Orbit]",
+      "trait": "Planetary Wanderer Tracker",
+      "terminal_position": {
+        "x": 5.6,
+        "y": 23.35,
+        "z": 10.9
+      },
+      "distance_to_void_m": 25.99,
+      "sighted_constellations_count": 17,
+      "discovered_principles": [
+        "SPIRE_SUNDIAL"
+      ],
+      "field_logs": 30077,
+      "grounded_learnings": 3157,
+      "aog1_void_interceptions": 124,
+      "hmac_receipts_minted": 30397,
+      "terminal_receipt_sha256": "5b48df6c766e9ed9f9d6ceb66740205d8f83c5267564fbbf0c7558925c48162f"
+    },
+    {
+      "id": "claude_12",
+      "name": "Claude-Gold-12 [Pearl Prism]",
+      "trait": "Cathedral Hopping & Terrain Rover",
+      "terminal_position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 20.9
+      },
+      "distance_to_void_m": 50.0,
+      "sighted_constellations_count": 17,
+      "discovered_principles": [
+        "SPIRE_SUNDIAL"
+      ],
+      "field_logs": 30057,
+      "grounded_learnings": 3234,
+      "aog1_void_interceptions": 117,
+      "hmac_receipts_minted": 30437,
+      "terminal_receipt_sha256": "e6b4ed74234631a069d3cb465027b862f74972a8988ac344b24f51abcca2c6ce"
+    },
+    {
+      "id": "claude_13",
+      "name": "Claude-Gold-13 [Solar Zenith]",
+      "trait": "Cosmic Cycle & Reset Epistemologist",
+      "terminal_position": {
+        "x": -0.97,
+        "y": 19.55,
+        "z": 10.9
+      },
+      "distance_to_void_m": 30.42,
+      "sighted_constellations_count": 17,
+      "discovered_principles": [
+        "SPIRE_SUNDIAL"
+      ],
+      "field_logs": 30024,
+      "grounded_learnings": 3301,
+      "aog1_void_interceptions": 130,
+      "hmac_receipts_minted": 30318,
+      "terminal_receipt_sha256": "ab684c8555123c75c7cdbbae3f2615fcbe012ad608b92e293a9f0e28ea3993a5"
+    }
+  ],
+  "world_objects_final_layout": [
+    {
+      "id": "block_01",
+      "name": "Crimson Cube #1",
+      "kind": "block",
+      "x": -0.97,
+      "y": 19.55,
+      "z": 12.1,
+      "color": "crimson",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "block_02",
+      "name": "Azure Cube #2",
+      "kind": "block",
+      "x": 8.41,
+      "y": 11.46,
+      "z": 0.5,
+      "color": "azure",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "block_03",
+      "name": "Emerald Cube #3",
+      "kind": "block",
+      "x": 12.92,
+      "y": 5.87,
+      "z": 0.5,
+      "color": "emerald",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "block_04",
+      "name": "Amber Cube #4",
+      "kind": "block",
+      "x": 15.23,
+      "y": 13.33,
+      "z": 0.5,
+      "color": "amber",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "block_05",
+      "name": "Amethyst Cube #5",
+      "kind": "block",
+      "x": 8.57,
+      "y": 5.97,
+      "z": 0.5,
+      "color": "amethyst",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "block_06",
+      "name": "Coral Cube #6",
+      "kind": "block",
+      "x": 9.89,
+      "y": 17.08,
+      "z": 0.5,
+      "color": "coral",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "block_07",
+      "name": "Sapphire Cube #7",
+      "kind": "block",
+      "x": 12.67,
+      "y": 9.67,
+      "z": 0.5,
+      "color": "sapphire",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "block_08",
+      "name": "Obsidian Cube #8",
+      "kind": "block",
+      "x": 12.72,
+      "y": 6.23,
+      "z": 0.5,
+      "color": "obsidian",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "block_09",
+      "name": "Topaz Cube #9",
+      "kind": "block",
+      "x": -3.5,
+      "y": -1.06,
+      "z": 0.5,
+      "color": "topaz",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "block_10",
+      "name": "Jade Cube #10",
+      "kind": "block",
+      "x": 17.26,
+      "y": 7.6,
+      "z": 0.5,
+      "color": "jade",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "block_11",
+      "name": "Indigo Cube #11",
+      "kind": "block",
+      "x": 8.79,
+      "y": 5.27,
+      "z": 0.5,
+      "color": "indigo",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "block_12",
+      "name": "Pearl Cube #12",
+      "kind": "block",
+      "x": 8.99,
+      "y": 8.77,
+      "z": 0.5,
+      "color": "pearl",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "heavy_rock_01",
+      "name": "Ancient Heavy Granite Boulder",
+      "kind": "heavy_rock",
+      "x": -20.0,
+      "y": 15.0,
+      "z": 6.75,
+      "color": "slate",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "golden_ring_01",
+      "name": "Curious Golden Ring",
+      "kind": "ring",
+      "x": 0.0,
+      "y": 20.0,
+      "z": 10.1,
+      "color": "gold",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "tool_telescope",
+      "name": "Brass Stargazing Telescope & Astrolabe",
+      "kind": "tool",
+      "x": 0.0,
+      "y": 23.0,
+      "z": 10.6,
+      "color": "brass_gold",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "tool_optical_prism",
+      "name": "Cyan Quartz Optical Prism",
+      "kind": "tool",
+      "x": 2.0,
+      "y": 2.0,
+      "z": 0.15,
+      "color": "cyan_crystal",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "tool_hammer",
+      "name": "Forged Geological Mallet & Hammer",
+      "kind": "tool",
+      "x": -18.0,
+      "y": 14.0,
+      "z": 5.6,
+      "color": "steel_slate",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "tool_fulcrum_lever",
+      "name": "Hardwood Fulcrum Lever Beam",
+      "kind": "tool",
+      "x": -15.0,
+      "y": 12.0,
+      "z": 3.23,
+      "color": "oak_brown",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    },
+    {
+      "id": "tool_celestial_compass",
+      "name": "Navigational Astrolabe & Compass",
+      "kind": "tool",
+      "x": 0.0,
+      "y": 17.0,
+      "z": 10.05,
+      "color": "bronze",
+      "is_held": false,
+      "held_by": null,
+      "is_in_void": false,
+      "is_shattered": false
+    }
+  ]
+}
